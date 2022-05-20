@@ -1,8 +1,8 @@
 .grid {
   display: grid;
   grid-template-columns: repeat(
-    var(--grid-placement, auto-fill),
-    minmax(var(--grid-min-item-size, 15rem), 1fr)
+		var(--grid-placement, auto-fill),
+		minmax(var(--grid-min-item-size, 15rem), 1fr)
   );
   gap: var(--gutter, theme('spacing.s-l'));
 }

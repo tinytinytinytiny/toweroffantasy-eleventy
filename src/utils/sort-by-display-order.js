@@ -5,6 +5,6 @@
  * @returns {Array} the sorted collection
  */
 module.exports = collection =>
-  collection.sort((a, b) =>
-    Number(a.data.displayOrder) > Number(b.data.displayOrder) ? 1 : -1
-  );
+	collection.sort((a, b) =>
+		Number(a.data.displayOrder) > Number(b.data.displayOrder) ? 1 : -1
+	);

@@ -13,7 +13,7 @@ module.exports = {
 		'./src/**/*.{html,js,jsx,mdx,njk,twig,vue}'
 	],
   theme: {
-    colors,
+	colors,
 		fontFamily,
 		fontSize,
 		spacing,
@@ -26,22 +26,22 @@ module.exports = {
 		padding: ({ theme }) => theme('spacing')
   },
 	variantOrder: [
-    'first',
-    'last',
-    'odd',
-    'even',
-    'visited',
-    'checked',
-    'empty',
-    'read-only',
-    'group-hover',
-    'group-focus',
-    'focus-within',
-    'hover',
-    'focus',
-    'focus-visible',
-    'active',
-    'disabled'
+	'first',
+	'last',
+	'odd',
+	'even',
+	'visited',
+	'checked',
+	'empty',
+	'read-only',
+	'group-hover',
+	'group-focus',
+	'focus-within',
+	'hover',
+	'focus',
+	'focus-visible',
+	'active',
+	'disabled'
   ],
 
 	// Disables Tailwind's reset etc
@@ -50,26 +50,26 @@ module.exports = {
 	},
   plugins: [
 		// Generates custom property values from tailwind config
-    plugin(function({ addComponents, config }) {
-      let result = '';
+	plugin(function({ addComponents, config }) {
+	  let result = '';
 
-      const currentConfig = config();
+	  const currentConfig = config();
 
-      const groups = [
-        { key: 'colors', prefix: 'color' },
-        { key: 'spacing', prefix: 'space' },
-        { key: 'fontSize', prefix: 'size' },
-        { key: 'fontFamily', prefix: 'font' }
-      ];
+	  const groups = [
+		{ key: 'colors', prefix: 'color' },
+		{ key: 'spacing', prefix: 'space' },
+		{ key: 'fontSize', prefix: 'size' },
+		{ key: 'fontFamily', prefix: 'font' }
+	  ];
 
-      groups.forEach(({ key, prefix }) => {
-        const group = currentConfig.theme[key];
+	  groups.forEach(({ key, prefix }) => {
+		const group = currentConfig.theme[key];
 
-        if (!group) {
-          return;
-        }
+		if (!group) {
+		  return;
+		}
 
-        Object.keys(group).forEach(key => {
+		Object.keys(group).forEach(key => {
 					const isObject = Boolean(
 						typeof group[key] === 'object'
 						&& group[key] !== null
@@ -83,37 +83,37 @@ module.exports = {
 					} else {
 						result += `--${prefix}-${key}: ${group[key]};`;
 					}
-        });
-      });
+		});
+	  });
 
-      addComponents({
-        ':root': postcssJs.objectify(postcss.parse(result))
-      });
-    }),
+	  addComponents({
+		':root': postcssJs.objectify(postcss.parse(result))
+	  });
+	}),
 
 		// Generates custom utility classes
-    plugin(function({ addUtilities, config }) {
-      const currentConfig = config();
-      const customUtilities = [
-        { key: 'spacing', prefix: 'stack-space', property: '--stack-space' },
-        { key: 'colors', prefix: 'spot-color', property: '--spot-color' }
-      ];
+	plugin(function({ addUtilities, config }) {
+	  const currentConfig = config();
+	  const customUtilities = [
+		{ key: 'spacing', prefix: 'stack-space', property: '--stack-space' },
+		{ key: 'colors', prefix: 'spot-color', property: '--spot-color' }
+	  ];
 
-      customUtilities.forEach(({ key, prefix, property }) => {
-        const group = currentConfig.theme[key];
+	  customUtilities.forEach(({ key, prefix, property }) => {
+		const group = currentConfig.theme[key];
 
-        if (!group) {
-          return;
-        }
+		if (!group) {
+		  return;
+		}
 
-        Object.keys(group).forEach(key => {
-          addUtilities({
-            [`.${prefix}-${key}`]: postcssJs.objectify(
-              postcss.parse(`${property}: ${group[key]}`)
-            )
-          });
-        });
-      });
-    })
+		Object.keys(group).forEach(key => {
+		  addUtilities({
+			[`.${prefix}-${key}`]: postcssJs.objectify(
+			  postcss.parse(`${property}: ${group[key]}`)
+			)
+		  });
+		});
+	  });
+	})
 	]
 }
