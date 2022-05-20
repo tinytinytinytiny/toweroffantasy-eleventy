@@ -1,0 +1,26 @@
+.changelog {
+	@apply text-white/60;
+	background-color: theme('colors.sheet.2');
+	font-family: theme('fontFamily.mono');
+	font-size: theme('fontSize.step--1');
+	letter-spacing: normal;
+	padding: theme('spacing.s-m');
+}
+
+.changelog h3 {
+	@apply bg-black/20;
+	display: inline;
+	font-size: inherit;
+	font-weight: 400;
+	padding: 0.1em 0.35em;
+	vertical-align: baseline;
+}
+
+.changelog h3 + * {
+	display: inline;
+}
+
+.changelog h3 + *::before {
+	content: ' ';
+	font-size: theme('fontSize.step-0');
+}

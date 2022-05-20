@@ -1,0 +1,38 @@
+button, .button {
+	--button-color: theme('colors.primary');
+	align-items: center;
+	background-color: var(--button-color);
+	display: inline-flex;
+	color: theme('colors.sheet.0');
+	cursor: pointer;
+	font-family: theme('fontFamily.fancy');
+	font-weight: bold;
+	gap: 1em;
+	justify-content: center;
+	line-height: 1;
+	padding: 0.65em 0.8em;
+	text-align: center;
+	text-decoration: none;
+	text-transform: uppercase;
+}
+
+button[data-variant~="full-width"],
+.button[data-variant~="full-width"] {
+	display: block;
+}
+
+button[data-variant~="ghost"],
+.button[data-variant~="ghost"] {
+	background: none;
+	border: 0.175em solid var(--button-color);
+	color: var(--button-color);
+}
+
+button > svg,
+button > [data-icon],
+.button > svg,
+.button > [data-icon] {
+	flex-shrink: 0;
+	height: 1.15em;
+	width: auto;
+}

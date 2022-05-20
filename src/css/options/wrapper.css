@@ -1,0 +1,11 @@
+.wrapper {
+  padding-left: var(--gutter, theme('spacing.s-xl'));
+  padding-right: var(--gutter, theme('spacing.s-xl'));
+  position: relative;
+}
+
+.wrapper > * {
+	max-width: var(--wrapper-max-width, 46rem);
+	margin-left: auto;
+	margin-right: auto;
+}

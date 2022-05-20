@@ -1,0 +1,19 @@
+.copy {
+	--stack-space: theme('fontSize.step-1');
+}
+
+.copy h2 {
+	--stack-space: theme('fontSize.step-4');
+}
+
+.copy h3 {
+	--stack-space: theme('fontSize.step-3');
+}
+
+.copy h2 + *, .copy h3 + * {
+	--stack-space: theme('fontSize.step-0');
+}
+
+.copy figure, .copy figure + * {
+	--stack-space: theme('fontSize.step-4');
+}

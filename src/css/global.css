@@ -1,0 +1,12 @@
+@import "global/reset.css";
+@import "global/fonts.css";
+@import "global/global-styles.css";
+
+@import-glob "layouts/*.css";
+@import-glob "options/*.css";
+@import-glob "snowflakes/*.css";
+@import-glob "variants/*.css";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;

@@ -1,0 +1,15 @@
+[data-tmpl] {
+	background-attachment: fixed;
+	background-position: calc(100% + 400px) center;
+	background-repeat: no-repeat;
+}
+
+[data-tmpl] > .sidebar::after {
+	content: '';
+	flex-basis: 20rem;
+	flex-grow: 1;
+}
+
+[data-tmpl="home"] {
+	background-image: url('/assets/images/weila_lihui.png');
+}

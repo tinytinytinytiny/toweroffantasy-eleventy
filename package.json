@@ -1,0 +1,27 @@
+{
+  "name": "tower-of-fantasy-info-test",
+  "version": "1.0.0",
+  "main": ".eleventy.js",
+  "scripts": {
+    "start": "concurrently \"npm run serve\" \"npm run css -- --watch\"",
+    "serve": "npx eleventy --serve",
+    "css": "postcss src/css/global.css -o dist/css/global.css",
+    "copy": "cpx \"src/index.html\" dist"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@11ty/eleventy": "^1.0.1",
+    "concurrently": "^6.5.1",
+    "cpx": "^1.5.0",
+    "cssnano": "^5.1.7",
+    "postcss": "^8.4.8",
+    "postcss-cli": "^9.1.0",
+    "postcss-import": "^14.0.2",
+    "postcss-import-ext-glob": "^2.0.1",
+    "postcss-js": "^4.0.0",
+    "slugify": "^1.6.5",
+    "tailwindcss": "^3.0.23"
+  },
+  "description": ""
+}

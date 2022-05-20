@@ -1,0 +1,10 @@
+.flex-grid {
+	display: flex;
+	flex-flow: row wrap;
+	gap: var(--gutter, theme('spacing.s-l'));
+}
+
+.flex-grid > * {
+	flex-basis: var(--grid-min-item-size, 15rem);
+	flex-grow: 1;
+}

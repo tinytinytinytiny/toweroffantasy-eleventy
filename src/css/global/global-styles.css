@@ -1,0 +1,81 @@
+html, body {
+	height: 100%;
+}
+
+body {
+	background-color: theme('colors.sheet.0');
+	color: theme('colors.base');
+	font-family: theme('fontFamily.sans');
+	font-size: theme('fontSize.step-0');
+	letter-spacing: 0.01em;
+}
+
+h1, h2, h3 {
+	@apply text-white/90;
+	line-height: 1;
+}
+
+h1, h2 {
+	letter-spacing: 0.025em;
+}
+
+h1 {
+	font-family: theme('fontFamily.fancy');
+  font-size: theme('fontSize.step-3');
+	font-weight: bold;
+	text-transform: uppercase;
+}
+
+h2 {
+	font-family: theme('fontFamily.fancy');
+  font-size: theme('fontSize.step-2');
+	font-weight: bold;
+	text-transform: uppercase;
+}
+
+h3 {
+  font-size: theme('fontSize.step-1');
+	font-weight: bold;
+}
+
+a {
+	color: theme('colors.secondary');
+}
+
+b, strong {
+	font-weight: bold;
+}
+
+small {
+	display: block;
+	font-size: theme('fontSize.step--1');
+}
+
+ul[class] {
+	padding: 0;
+}
+
+ul[class] > li {
+	list-style: none;
+}
+
+hr {
+	@apply text-white/20;
+	border: none;
+	border-top: 1px solid;
+	margin: 1em 0;
+	margin: var(--stack-space, 1em) 0;
+}
+
+aside {
+	@apply bg-black/20;
+	border-left: theme('fontSize.step--2') solid;
+	color: theme('colors.secondary');
+	font-weight: bold;
+	padding: theme('spacing.s');
+}
+
+table {
+	max-width: none;
+	overflow-x: auto;
+}

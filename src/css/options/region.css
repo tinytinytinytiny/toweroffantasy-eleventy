@@ -1,0 +1,4 @@
+.region {
+	padding-top: var(--region-space, theme('spacing.l-xl'));
+	padding-bottom: var(--region-space, theme('spacing.l-xl'));
+}

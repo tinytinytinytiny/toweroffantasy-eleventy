@@ -1,0 +1,8 @@
+{% set pageTitle = title + ' - ' + site.name %}
+
+{# We don't want any duplication. This is likely for the homepage #}
+{% if site.name === title %}
+  {% set pageTitle = title %}
+{% endif %}
+
+<title>{{ pageTitle }}</title>

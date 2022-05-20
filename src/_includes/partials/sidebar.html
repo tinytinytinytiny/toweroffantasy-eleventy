@@ -1,0 +1,32 @@
+<nav class="nav">
+	<details class="region stack wrapper" open>
+		<summary class="text-step--1 button" data-variant="ghost">
+			{% include "partials/menu.svg" %}
+			<span class="nav__toggle">Menu</span>
+		</summary>
+		<a href="/" class="nav__head">
+			<img src="assets/images/avatar/tata.png" width="87" height="79" alt="">
+			<span>Tower of Fantasy Index</span>
+		</a>
+		<ul class="nav__links flex-grid">
+			{% for item in navigation.pages %}
+			<li>
+				<a
+					href="{{ item.url }}"
+					{{ helpers.getLinkActiveState(item.url, page.url) | safe }}
+					{% if item.external %}target="_blank"{% endif %}
+				>
+					{{ item.text }}
+				</a>
+			</li>
+			{% endfor %}
+		</ul>
+		<ul class="nav__links flex-grid text-secondary">
+			{% for item in navigation.socials %}
+			<li>
+				<a href="{{ item.url }}">{{ item.text }}</a>
+			</li>
+			{% endfor %}
+		</ul>
+	</details>
+</nav>

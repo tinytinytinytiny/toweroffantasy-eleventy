@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		{% include "partials/meta-info.html" %}
+
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Anonymous+Pro&family=Archivo:wght@340;670&family=Chakra+Petch:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/global.css" />
+		<link rel="icon" href="/assets/images/avatar/tata.png">
+  </head>
+  <body data-tmpl="{{ template }}">
+		{% include "partials/skip-link.html" %}
+		<div class="sidebar">
+			{% include "partials/sidebar.html" %}
+			<main tabindex="-1" id="main-content" class="stack">
+				{{ content | safe }}
+				{% include "partials/footer.html" %}
+			</main>
+		</div>
+  </body>
+</html>

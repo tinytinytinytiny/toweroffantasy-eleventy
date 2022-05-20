@@ -1,0 +1,47 @@
+{
+	"pages": [
+		{
+			"text": "Simulacra",
+			"url": "/simulacra/"
+		},
+		{
+			"text": "Matrices",
+			"url": "/matrices/"
+		},
+		{
+			"text": "Relics",
+			"url": "/relics/"
+		},
+		{
+			"text": "Food",
+			"url": "/food/"
+		},
+		{
+			"text": "Mounts",
+			"url": "/mounts/"
+		},
+		{
+			"text": "Guides",
+			"url": "/guides/"
+		},
+		{
+			"text": "Interactive Map",
+			"url": "https://static-web.ghzs.com/cspage_pro/huantaMap.html#/",
+			"external": true
+		},
+		{
+			"text": "Damage Calculator",
+			"url": "damage-calculator"
+		}
+	],
+	"socials": [
+		{
+			"text": "Discord",
+			"url": "https://discord.gg/qhDevpbJ4N"
+		},
+		{
+			"text": "Reddit",
+			"url": "https://www.reddit.com/r/TowerofFantasy/"
+		}
+	]
+}
