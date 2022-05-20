@@ -1,0 +1,13 @@
+{% extends "layouts/base.html" %}
+
+{% block content %}
+<header class="copy bg-sheet-1 region stack wrapper">
+	{{ content | safe }}
+</header>
+
+{% set changeLogItems = collections.changelog %}
+{% include "partials/recent-changes.html" %}
+
+{% include "partials/credits.html" %}
+
+{% endblock %}

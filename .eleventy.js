@@ -1,4 +1,6 @@
 const stringifyDate = require('./src/filters/stringify-date.js');
+// const groupByYear = require('./src/utils/group-by-year.js');
+const groupByYear = require('./src/filters/group-by-year.js');
 
 module.exports = (config) => {
 	config.addPassthroughCopy('./src/assets/');
@@ -6,12 +8,17 @@ module.exports = (config) => {
 	config.addDataExtension('txt', contents => contents);
 
 	config.addFilter('stringifyDate', stringifyDate);
+	config.addFilter('groupByYear', groupByYear);	
 
 	config.addShortcode('year', () => `${new Date().getFullYear()}`);
 
-	config.addCollection('changes', (collection) => {
-		return [...collection.getFilteredByGlob('./src/content/changes/*.md')].reverse();
+	config.addCollection('changelog', (collection) => {
+		return [...collection.getFilteredByGlob('./src/content/changelog/*.md')].reverse();
 	});
+
+	// config.addCollection('changesByYear', (collection) => {
+	// 	return groupByYear([...collection.getFilteredByGlob('./src/content/changelog/*.md')].reverse());
+	// });
 
 	config.setUseGitIgnore(false);
 

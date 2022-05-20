@@ -1,0 +1,12 @@
+.splitter {
+	align-items: center;
+	display: flex;
+	flex-flow: row wrap;
+	gap: var(--gutter, 1em);
+	justify-content: space-between;
+}
+
+.splitter > * {
+	flex-basis: var(--splitter-min-item-size, 25rem);
+	flex-grow: 1;
+}

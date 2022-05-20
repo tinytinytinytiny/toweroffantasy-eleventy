@@ -1,26 +1,26 @@
 ---
-layout: 'layouts/base.html'
-title: 'Tower of Fantasy Index'
-template: 'home'
+{
+	"title": "Tower of Fantasy Index",
+	"layout": "layouts/home.html",
+	"pagination": {
+		"data": "collections.changelog",
+		"size": 5,
+		"alias": "changelog"
+	},
+	"template": "home"
+}
 ---
 
-<article class="copy bg-sheet-1 region stack wrapper">
-	<h1>Welcome to the Tower of Fantasy Index.</h1>
-	<aside>
-		New here? <a href="/guides/">Check out our guides</a>!
-	</aside>
-	<p>
-		This site will mainly follow the <strong>Global version</strong> of Tower of Fantasy. Content that is exclusive to the Chinese version will be indicated with the <img class="emoji" src="https://openmoji.org/data/color/svg/1F1E8-1F1F3.svg" width="28" height="28" alt="Flag of China"> icon.
-	</p>
-	<p>
-		<strong class="text-primary">Global version localizations and balance changes may not be finalized. We will do our best to bring you any updates as accurately and quickly as possible.</strong>
-	</p>
-	<p>
-		For corrections, suggestions, and bug reports, use #guide-makers-hub on <a href="https://discord.gg/qhDevpbJ4N">Discord</a>, or contact Zakum#3080 directly.
-	</p>
-</article>
-
-{% set changeLogItems = collections.changes %}
-{% include "partials/changelog.html" %}
-
-{% include "partials/credits.html" %}
+<h1>Welcome to the Tower of Fantasy Index.</h1>
+<aside>
+	New here? <a href="/guides/">Check out our guides</a>!
+</aside>
+<p>
+	This site will mainly follow the <b>Global version</b> of Tower of Fantasy. Content that is exclusive to the Chinese version will be indicated with the <img class="emoji" src="https://openmoji.org/data/color/svg/1F1E8-1F1F3.svg" width="28" height="28" alt="Flag of China"> icon.
+</p>
+<p>
+	<strong class="text-primary">Global version localizations and balance changes may not be finalized. We will do our best to bring you any updates as accurately and quickly as possible.</strong>
+</p>
+<p>
+	For corrections, suggestions, and bug reports, use #guide-makers-hub on <a href="{{ "https://discord.gg/qhDevpbJ4N" | safe }}">Discord</a>, or contact Zakum#3080 directly.
+</p>

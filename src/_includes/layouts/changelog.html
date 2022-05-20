@@ -1,0 +1,41 @@
+{% extends "layouts/base.html" %}
+
+{% block content %}
+<div class="copy bg-sheet-1 region stack wrapper">
+	<header class="copy stack">
+		<h1>{{ title }}</h1>
+		<p>{{ content | safe }}</p>
+	</header>
+	<article id="changes-list" class="stack mt-2xl">
+		{% for year, yearChanges in changelog | groupByYear %}
+		<section class="stack stack-space-2xl">
+			<h2>{{ year }}</h2>
+			<div class="changelog">
+				{% for item in yearChanges %}
+				<article>
+					<h3>{{ item.date | stringifyDate }}</h3>
+					<p>{{ item.template.frontMatter.content }}</p>
+				</article>
+				{% endfor %}
+			</div>
+			{% endfor %}
+		</section>
+	</article>
+	<footer>
+		<nav class="pagination">
+			{% if pagination.href.next %}
+			<a href="{{ pagination.href.next }}#changes-list" class="button" data-variant="ghost" data-color="secondary">
+				{% include "icons/arrow-left.svg" %}
+				<span>{{ paginationNextText if paginationNextText else 'Older' }}</span>
+			</a>
+			{% endif %}
+			{% if pagination.href.previous %}
+			<a href="{{ pagination.href.previous }}#changes-list" class="button" data-variant="ghost" data-color="secondary">
+				<span>{{ paginationPrevText if paginationPrevText else 'Newer' }}</span>
+				{% include "icons/arrow-right.svg" %}
+			</a>
+			{% endif %}
+		</nav>
+	</footer>
+</div>
+{% endblock %}

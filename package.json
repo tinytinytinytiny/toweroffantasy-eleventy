@@ -6,14 +6,13 @@
     "start": "concurrently \"npm run serve\" \"npm run css -- --watch\"",
     "serve": "npx eleventy --serve",
     "css": "postcss src/css/global.css -o dist/css/global.css",
-    "copy": "cpx \"src/index.html\" dist"
+    "production": "NODE_ENV=production npx eleventy && NODE_ENV=production npm run css"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "@11ty/eleventy": "^1.0.1",
     "concurrently": "^6.5.1",
-    "cpx": "^1.5.0",
     "cssnano": "^5.1.7",
     "postcss": "^8.4.8",
     "postcss-cli": "^9.1.0",

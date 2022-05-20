@@ -8,12 +8,12 @@ const fontSize = require('./src/design-tokens/font-sizes.js');
 const spacing = require('./src/design-tokens/spacing.js');
 
 module.exports = {
-  content: [
+	content: [
 		'./src/*.{html,js,jsx,mdx,njk,twig,vue}',
 		'./src/**/*.{html,js,jsx,mdx,njk,twig,vue}'
 	],
-  theme: {
-	colors,
+	theme: {
+		colors,
 		fontFamily,
 		fontSize,
 		spacing,
@@ -24,56 +24,70 @@ module.exports = {
 			...theme('spacing')
 		}),
 		padding: ({ theme }) => theme('spacing')
-  },
+	},
 	variantOrder: [
-	'first',
-	'last',
-	'odd',
-	'even',
-	'visited',
-	'checked',
-	'empty',
-	'read-only',
-	'group-hover',
-	'group-focus',
-	'focus-within',
-	'hover',
-	'focus',
-	'focus-visible',
-	'active',
-	'disabled'
-  ],
+		'first',
+		'last',
+		'odd',
+		'even',
+		'visited',
+		'checked',
+		'empty',
+		'read-only',
+		'group-hover',
+		'group-focus',
+		'focus-within',
+		'hover',
+		'focus',
+		'focus-visible',
+		'active',
+		'disabled'
+	],
 
 	// Disables Tailwind's reset etc
 	corePlugins: {
 		preflight: false
 	},
-  plugins: [
+	plugins: [
 		// Generates custom property values from tailwind config
-	plugin(function({ addComponents, config }) {
-	  let result = '';
+		plugin(function({ addComponents, config }) {
+			if (process.env.NODE_ENV === 'production') return;
 
-	  const currentConfig = config();
+			let result = '';
 
-	  const groups = [
-		{ key: 'colors', prefix: 'color' },
-		{ key: 'spacing', prefix: 'space' },
-		{ key: 'fontSize', prefix: 'size' },
-		{ key: 'fontFamily', prefix: 'font' }
-	  ];
+			const currentConfig = config();
 
-	  groups.forEach(({ key, prefix }) => {
-		const group = currentConfig.theme[key];
+			const groups = [
+				{
+					key: 'colors',
+					prefix: 'color'
+				},
+				{
+					key: 'spacing',
+					prefix: 'space'
+				},
+				{
+					key: 'fontSize',
+					prefix: 'size'
+				},
+				{
+					key: 'fontFamily',
+					prefix: 'font'
+				}
+			];
 
-		if (!group) {
-		  return;
-		}
+			groups.forEach(({ key, prefix }) => {
+				const group = currentConfig.theme[key];
 
-		Object.keys(group).forEach(key => {
+				if (!group) {
+					return;
+				}
+
+				Object.keys(group).forEach(key => {
 					const isObject = Boolean(
-						typeof group[key] === 'object'
-						&& group[key] !== null
-						&& !Array.isArray(group[key])
+						typeof group[key] === 'object' &&
+						group[key] !== null &&
+						!Array.isArray(group[key])
 					);
 
 					if (isObject) {
@@ -83,37 +97,48 @@ module.exports = {
 					} else {
 						result += `--${prefix}-${key}: ${group[key]};`;
 					}
-		});
-	  });
+				});
+			});
 
-	  addComponents({
-		':root': postcssJs.objectify(postcss.parse(result))
-	  });
-	}),
+			addComponents({
+				':root': postcssJs.objectify(postcss.parse(result))
+			});
+		}),
 
 		// Generates custom utility classes
-	plugin(function({ addUtilities, config }) {
-	  const currentConfig = config();
-	  const customUtilities = [
-		{ key: 'spacing', prefix: 'stack-space', property: '--stack-space' },
-		{ key: 'colors', prefix: 'spot-color', property: '--spot-color' }
-	  ];
+		plugin(function({ addUtilities, config }) {
+			const currentConfig = config();
+			const customUtilities = [{
+					key: 'spacing',
+					prefix: 'stack-space',
+					property: '--stack-space'
+				},
+				{
+					key: 'colors',
+					prefix: 'spot-color',
+					property: '--spot-color'
+				}
+			];
 
-	  customUtilities.forEach(({ key, prefix, property }) => {
-		const group = currentConfig.theme[key];
+			customUtilities.forEach(({
+				key,
+				prefix,
+				property
+			}) => {
+				const group = currentConfig.theme[key];
 
-		if (!group) {
-		  return;
-		}
+				if (!group) {
+					return;
+				}
 
-		Object.keys(group).forEach(key => {
-		  addUtilities({
-			[`.${prefix}-${key}`]: postcssJs.objectify(
-			  postcss.parse(`${property}: ${group[key]}`)
-			)
-		  });
-		});
-	  });
-	})
+				Object.keys(group).forEach(key => {
+					addUtilities({
+						[`.${prefix}-${key}`]: postcssJs.objectify(
+							postcss.parse(`${property}: ${group[key]}`)
+						)
+					});
+				});
+			});
+		})
 	]
 }

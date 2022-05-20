@@ -1,19 +1,19 @@
 .copy {
-	--stack-space: theme('fontSize.step-1');
+	--stack-space: theme('spacing.m');
 }
 
 .copy h2 {
-	--stack-space: theme('fontSize.step-4');
+	--stack-space: theme('spacing.2xl');
 }
 
 .copy h3 {
-	--stack-space: theme('fontSize.step-3');
+	--stack-space: theme('spacing.l');
 }
 
 .copy h2 + *, .copy h3 + * {
-	--stack-space: theme('fontSize.step-0');
+	--stack-space: 1em;
 }
 
 .copy figure, .copy figure + * {
-	--stack-space: theme('fontSize.step-4');
+	--stack-space: theme('spacing.l');
 }

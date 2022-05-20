@@ -1,0 +1,17 @@
+---
+{
+	"title": "Changelog",
+	"layout": "layouts/changelog.html",
+	"pagination": {
+		"data": "collections.changelog",
+		"size": 20,
+		"alias": "changelog"
+	},
+	"template": "home",
+	"paginationPrevText": "Newer",
+	"paginationNextText": "Older",
+	"permalink": "changelog{% if pagination.pageNumber > 0 %}/page/{{ pagination.pageNumber }}{% endif %}/index.html"
+}
+---
+
+Here are all of the changes that have been made to the website. {{ site.name }} will continue to be updated until Blue Protocol releases in the year 2069.

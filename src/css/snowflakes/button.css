@@ -7,10 +7,10 @@ button, .button {
 	cursor: pointer;
 	font-family: theme('fontFamily.fancy');
 	font-weight: bold;
-	gap: 1em;
+	gap: 0.7em;
 	justify-content: center;
 	line-height: 1;
-	padding: 0.65em 0.8em;
+	padding: 0.7em 1em;
 	text-align: center;
 	text-decoration: none;
 	text-transform: uppercase;
@@ -24,14 +24,24 @@ button[data-variant~="full-width"],
 button[data-variant~="ghost"],
 .button[data-variant~="ghost"] {
 	background: none;
-	border: 0.175em solid var(--button-color);
+	border: 0.17em solid var(--button-color);
 	color: var(--button-color);
 }
 
+button[data-color="secondary"],
+.button[data-color="secondary"] {
+	--button-color: theme('colors.secondary');
+}
+
+button[data-color="secondary"][data-variant~="ghost"],
+.button[data-color="secondary"][data-variant~="ghost"] {
+	color: theme('colors.base');
+}
+
 button > svg,
-button > [data-icon],
+button > .icon,
 .button > svg,
-.button > [data-icon] {
+.button > .icon {
 	flex-shrink: 0;
 	height: 1.15em;
 	width: auto;
