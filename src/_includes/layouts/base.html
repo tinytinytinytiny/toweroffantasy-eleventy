@@ -8,13 +8,13 @@
 
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-		<link href="https://fonts.googleapis.com/css2?family=Anonymous+Pro&family=Archivo:wght@340;670&family=Chakra+Petch:wght@700&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Anonymous+Pro&family=Archivo:wght@340;670&family=Chakra+Petch:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="/css/global.css" />
 		<link rel="icon" href="/assets/images/avatar/tata.png">
   </head>
   <body data-bg="{{ background }}">
 		{% include "partials/skip-link.html" %}
-		<div class="sidebar">
+		<div class="sidebar gap-0">
 			{% include "partials/sidebar.html" %}
 			<main tabindex="-1" id="main-content" class="stack">
 				{% block content %}{% endblock %}
@@ -22,6 +22,7 @@
 			</main>
 		</div>
 		{% block extras %}{% endblock %}
+		<script src="/js/main.js"></script>
 		{% block scripts %}{% endblock %}
   </body>
 </html>

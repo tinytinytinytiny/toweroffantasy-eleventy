@@ -1,0 +1,8 @@
+<header class="copy stack mb-2xl">
+	<h1>{{ title }}</h1>
+	{% if summary %}
+	{{ summary | safe }}
+	{% else %}
+	{{ content | safe }}
+	{% endif %}
+</header>

@@ -1,0 +1,34 @@
+{% extends "layouts/base.html" %}
+
+{% set title = name %}
+{% set background = page.fileSlug %}
+
+{% block content %}
+<div class="bg-sheet-1 region stack wrapper">
+	<header class="mb-2xl">
+		<h1>{{ title }}</h1>
+		<p class="font-fancy uppercase text-step-1">
+			<span class="rarity-highlight">{{ string.rarity[rarity - 1] }}</span> Simulacrum
+		</p>
+	</header>
+	<article class="stack">
+		<h2>Weapon</h2>
+		<div class="grid">
+			<img src="/assets/images/wep/{{ page.fileSlug }}.png" alt="" width="128" height="128" loading="lazy">
+			<div class="stack stack-space-xs">
+				<h3>{{ weapon.name }}</h3>
+				{% include "partials/simulacrum/icon.html" %}
+				{{ icon(weapon.resonance, 'reso_' + weapon.resonance), weapon.resonance | capitalize }}
+				<div>
+					<p>
+						<b>Charge:</b> {{ weapon.charge.toFixed(2) }}
+					</p>
+					<p>
+						<b>Shatter:</b> {{ weapon.shatter.toFixed(2) }}
+					</p>
+				</div>
+			</div>
+		</div>
+	</article>
+</div>
+{% endblock %}

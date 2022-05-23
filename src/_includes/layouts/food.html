@@ -2,11 +2,9 @@
 
 {% block content %}
 <div class="bg-sheet-1 region stack wrapper">
-	<header class="copy stack">
-		<h1>{{ title }}</h1>
-		{{ content | safe }}
-	</header>
-	<article class="max-w-none p-0 mt-2xl overflow-x-auto wrapper">
+	{% set summary = content | safe %}
+	{% include "partials/article-header.html" %}
+	<article class="max-w-none p-0 overflow-x-auto wrapper">
 		<table class="max-w-none" data-stripe="odd">
 			<thead>
 				<tr>
@@ -20,6 +18,7 @@
 			<tbody>
 				{% for food in items.food | sortByRarity %}
 				<tr id="{{ food.name | slugify }}">
+					{# food name and image #}
 					<th scope="row">
 						<figure class="stack stack-space-2xs">
 							<div class="item-frame mr-2xs-xs" data-rarity="{{ food.rarity }}" data-size="m">
@@ -33,9 +32,11 @@
 							<figcaption class="inline-block font-bold mb-2xs">{{ food.name }}</figcaption>
 						</figure>
 					</th>
+					{# rarity (visually hidden) #}
 					<td class="visually-hidden">
 						<span>{{ food.rarity }}</span>
 					</td>
+					{# stars (visually hidden) #}
 					<td class="visually-hidden text-center">
 						<span>{{ food.stars }}</span>
 					</td>
@@ -46,8 +47,9 @@
 							{% endfor %}
 						</ul>
 					</td>
+					{# ingredients #}
 					<td>
-						<ul class="min-w-max stack stack-space-2xs">
+						<ul class="min-w-max whitespace-nowrap stack stack-space-2xs">
 							{% for ingredient in helpers.sortIngredientsByRarity(food.ingredients, items.ingredients) %}
 							{% set ingredientItem = items.ingredients[ingredient[0]] %}
 							{% set ingredientQty = ingredient[1] %}

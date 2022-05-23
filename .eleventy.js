@@ -7,6 +7,7 @@ const sortByRarity = require('./src/filters/sort-by-rarity.js');
 
 module.exports = (config) => {
 	config.addPassthroughCopy('./src/assets/');
+	config.addPassthroughCopy('./src/js/');
 
 	config.addFilter('limitTo', limitTo);
 	config.addFilter('stringifyDate', stringifyDate);

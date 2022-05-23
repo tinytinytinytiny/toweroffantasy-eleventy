@@ -10,9 +10,9 @@
 	flex-grow: 1;
 }
 
-[data-bg="home"] {
+/* [data-bg="home"] {
 	background-image: url('/assets/images/art/weila_lihui.png');
-}
+} */
 
 [data-bg="food"] {
 	background-position: 100% bottom;

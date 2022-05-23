@@ -1,12 +1,10 @@
 {% extends "layouts/base.html" %}
 
 {% block content %}
-<div class="copy bg-sheet-1 region stack wrapper">
-	<header class="copy stack">
-		<h1>{{ title }}</h1>
-		{{ content | safe }}
-	</header>
-	<article id="changes-list" class="stack mt-2xl">
+<div class="bg-sheet-1 region stack wrapper">
+	{% set summary = content | safe %}
+	{% include "partials/article-header.html" %}
+	<article id="changes-list" class="copy stack">
 		{% for year, yearChanges in changelog | groupByYear %}
 		<section class="stack stack-space-2xl" aria-label="Changes in {{ year }}">
 			<h2>{{ year }}</h2>

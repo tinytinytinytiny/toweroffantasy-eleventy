@@ -15,7 +15,7 @@
 }
 
 .item-frame[data-size="m"] {
-	--frame-border-width: 2px;
+	--frame-border-width: 3px;
 	font-size: theme('fontSize.step-1');
 	height: 78px;
 	width: 78px;
@@ -26,7 +26,7 @@
 }
 
 .item-frame[data-size="s"] {
-	--frame-border-width: 1px;
+	--frame-border-width: 2px;
 	font-size: theme('fontSize.step-0');
 	height: 40px;
 	width: 40px;

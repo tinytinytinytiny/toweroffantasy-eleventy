@@ -44,7 +44,7 @@ h2 {
 }
 
 h3 {
-	color: theme('colors.primary');
+/* 	color: theme('colors.primary'); */
   font-size: theme('fontSize.step-1');
 	font-family: theme('fontFamily.fancy');
 	font-weight: bold;
@@ -100,16 +100,11 @@ table * {
 	vertical-align: middle;
 }
 
-table p,
-table span,
-table figcaption,
-table ul,
-table h2,
-table h3 {
-	max-width: 15rem;
+table[data-stripe] {
+	@apply bg-sheet-0/80;
 }
 
-table:has([data-stripe]), table[data-stripe] {
+table:has([data-stripe]) {
 	@apply bg-sheet-0/80;
 }
 
