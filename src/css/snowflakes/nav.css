@@ -18,6 +18,7 @@
 .nav summary {
 	@apply bg-sheet-0/60;
 	backdrop-filter: blur(0.1em);
+	list-style-type: none;
 }
 
 .nav a {
@@ -71,6 +72,11 @@
 
 .nav__links a {
 	color: inherit;
+}
+
+.nav__links [data-state="active"] {
+	color: theme('colors.primary');
+	font-weight: bold;
 }
 
 @container (min-width: 100vw) {

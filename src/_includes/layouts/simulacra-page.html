@@ -1,0 +1,8 @@
+{% extends "layouts/base.html" %}
+
+{% set title = character.data.name %}
+{% set background = character.fileSlug %}
+
+{% block content %}
+{{ character.data.mimicEffects[0].effect | markdown | safe }}
+{% endblock %}

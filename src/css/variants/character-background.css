@@ -1,16 +1,20 @@
-[data-tmpl] {
+[data-bg] {
 	background-attachment: fixed;
 	background-position: calc(100% + 400px) center;
 	background-repeat: no-repeat;
 }
 
-[data-tmpl] > .sidebar::after {
+[data-bg] > .sidebar::after {
 	content: '';
 	flex-basis: 20rem;
 	flex-grow: 1;
 }
 
-/* [data-tmpl="home"] {
-	background-image: url('/assets/images/weila_lihui.png');
+[data-bg="home"] {
+	background-image: url('/assets/images/art/weila_lihui.png');
 }
- */
+
+[data-bg="food"] {
+	background-position: 100% bottom;
+	background-image: url('/assets/images/art/huodong_meishi_guo.png');
+}

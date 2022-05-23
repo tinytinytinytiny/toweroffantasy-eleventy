@@ -1,0 +1,6 @@
+.pagination {
+	align-items: center;
+	display: flex;
+	gap: var(--gutter, theme('spacing.s-l'));
+	justify-content: space-between;
+}

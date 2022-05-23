@@ -22,11 +22,11 @@
 			{% endfor %}
 		</ul>
 		<ul class="nav__links flex-grid text-secondary">
-			{% for item in navigation.socials %}
+			{% for item in navigation.socials -%}
 			<li>
 				<a href="{{ item.url }}">{{ item.text }}</a>
 			</li>
-			{% endfor %}
+			{%- endfor %}
 		</ul>
 	</details>
 </nav>

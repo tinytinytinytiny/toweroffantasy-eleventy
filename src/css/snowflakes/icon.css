@@ -1,0 +1,13 @@
+.icon {
+	display: inline-block;
+	height: 1.15em;
+	width: 1.15em;
+}
+
+.icon[data-variant="emoji"] {
+	height: 1.5em;
+	padding-left: 0.1em;
+	padding-right: 0.1em;
+	vertical-align: bottom;
+	width: 1.5em;
+}

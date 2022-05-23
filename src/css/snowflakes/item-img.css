@@ -1,0 +1,124 @@
+.item-frame {
+	--frame-border-width: 4px;
+	align-items: center;
+	display: inline-flex;
+	font-size: theme('fontSize.step-2');
+	height: 108px;
+	justify-content: center;
+	position: relative;
+	width: 108px;
+}
+
+.item-frame > img {
+	min-width: 128px;
+	height: auto;
+}
+
+.item-frame[data-size="m"] {
+	--frame-border-width: 2px;
+	font-size: theme('fontSize.step-1');
+	height: 78px;
+	width: 78px;
+}
+
+.item-frame[data-size="m"] > img {
+	min-width: 91px;
+}
+
+.item-frame[data-size="s"] {
+	--frame-border-width: 1px;
+	font-size: theme('fontSize.step-0');
+	height: 40px;
+	width: 40px;
+}
+
+.item-frame[data-size="s"] > img {
+	min-width: 48px;
+}
+
+.item-frame[data-rarity] {
+	@apply shadow-lg;
+	--rarity-base-color: theme('colors.rarity.1.base');
+	--rarity-base-rgb-values: theme('colors.rarity.1.baseRGB');
+	--rarity-backdrop-color: theme('colors.rarity.1.backdrop');
+	background-color: var(--rarity-backdrop-color);
+	background-image:
+		linear-gradient(0deg,
+			var(--rarity-base-color) 0%,
+			var(--rarity-base-color) var(--frame-border-width),
+			transparent var(--frame-border-width)
+		),
+		linear-gradient(316deg,
+			rgba(var(--rarity-base-rgb-values), 0.3) 0%,
+			rgba(var(--rarity-base-rgb-values), 0.25) 50%,
+			var(--rarity-backdrop-color) 50%,
+			var(--rarity-backdrop-color) 100%
+		);
+	background-size: cover, calc(100% - calc(var(--frame-border-width) * 2)) calc(100% - calc(var(--frame-border-width) * 3));
+	background-position: center, center var(--frame-border-width);
+	background-repeat: no-repeat;
+	border: calc(var(--frame-border-width) / 2) solid var(--rarity-base-color);
+	outline: calc(var(--frame-border-width) / 2) solid rgba(0, 0, 0, 0.5);
+}
+
+.item-frame[data-rarity="2"] {
+	--rarity-base-color: theme('colors.rarity.2.base');
+	--rarity-base-rgb-values: theme('colors.rarity.2.baseRGB');
+	--rarity-backdrop-color: theme('colors.rarity.2.backdrop');
+}
+
+.item-frame[data-rarity="3"] {
+	--rarity-base-color: theme('colors.rarity.3.base');
+	--rarity-base-rgb-values: theme('colors.rarity.3.baseRGB');
+	--rarity-backdrop-color: theme('colors.rarity.3.backdrop');
+}
+
+.item-frame[data-rarity="4"] {
+	--rarity-base-color: theme('colors.rarity.4.base');
+	--rarity-base-rgb-values: theme('colors.rarity.4.baseRGB');
+	--rarity-backdrop-color: theme('colors.rarity.4.backdrop');
+}
+
+.item-frame[data-rarity="5"] {
+	--rarity-base-color: theme('colors.rarity.5.base');
+	--rarity-base-rgb-values: theme('colors.rarity.5.baseRGB');
+	--rarity-backdrop-color: theme('colors.rarity.5.backdrop');
+}
+
+.item-frame[data-rarity][data-size="m"] {
+	@apply shadow-md;
+}
+
+.item-frame[data-rarity][data-size="s"] {
+	@apply shadow;
+}
+
+.item-frame__info {
+	bottom: 0;
+	left: 0.1em;
+	right: 0.1em;
+	color: #fff;
+	content: attr(data-quantity);
+	font-family: theme('fontFamily.fancy');
+	line-height: 1;
+	position: absolute;
+	text-shadow: -1px -1px 0 theme('colors.sheet.0'),
+     0 -1px 0 theme('colors.sheet.0'),
+     1px -1px 0 theme('colors.sheet.0'),
+     1px 0 0 theme('colors.sheet.0'),
+     1px 1px 0 theme('colors.sheet.0'),
+     0 1px 0 theme('colors.sheet.0'),
+    -1px 1px 0 theme('colors.sheet.0'),
+    -1px 0 0 theme('colors.sheet.0'),
+		0 0 0.1em rgba(0, 0, 0, 0.6),
+		0 0 0.2em rgba(0, 0, 0, 0.6),
+		0 0 0.25em rgba(0, 0, 0, 0.6);
+}
+
+.item-frame__info[data-align="center"] {
+	text-align: center;
+}
+
+.item-frame__info[data-align="right"] {
+	text-align: right;
+}

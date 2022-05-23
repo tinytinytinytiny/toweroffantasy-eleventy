@@ -5,7 +5,7 @@
 	{{ content | safe }}
 </header>
 
-{% set changeLogItems = collections.changelog %}
+{% set changeLogItems = collections.changelog | limitTo(5) %}
 {% include "partials/recent-changes.html" %}
 
 {% include "partials/credits.html" %}

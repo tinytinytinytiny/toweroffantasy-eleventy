@@ -10,8 +10,10 @@
 .changelog h3 {
 	@apply bg-black/20 text-white/90;
 	display: inline;
+	font-family: inherit;
 	font-size: inherit;
 	font-weight: 400;
+	letter-spacing: inherit;
 	padding: 0.1em 0.35em;
 	vertical-align: baseline;
 }

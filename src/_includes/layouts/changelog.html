@@ -4,13 +4,13 @@
 <div class="copy bg-sheet-1 region stack wrapper">
 	<header class="copy stack">
 		<h1>{{ title }}</h1>
-		<p>{{ content | safe }}</p>
+		{{ content | safe }}
 	</header>
 	<article id="changes-list" class="stack mt-2xl">
 		{% for year, yearChanges in changelog | groupByYear %}
-		<section class="stack stack-space-2xl">
+		<section class="stack stack-space-2xl" aria-label="Changes in {{ year }}">
 			<h2>{{ year }}</h2>
-			<div class="changelog">
+			<div class="changelog stack">
 				{% for item in yearChanges %}
 				<article>
 					<h3>{{ item.date | stringifyDate }}</h3>
@@ -22,7 +22,7 @@
 		</section>
 	</article>
 	<footer>
-		<nav class="pagination">
+		<nav class="spread">
 			{% if pagination.href.next %}
 			<a href="{{ pagination.href.next }}#changes-list" class="button" data-variant="ghost" data-color="secondary">
 				{% include "icons/arrow-left.svg" %}

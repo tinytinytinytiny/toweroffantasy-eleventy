@@ -1,9 +1,7 @@
-<section class="bg-sheet-1 region stack wrapper">
-	<header>
-		<h2>Recent Changes</h2>
-	</header>
+<article class="bg-sheet-1 region stack wrapper">
+	<h2>Recent Changes</h2>
 	<div class="changelog scroll-box mt-s stack">
-		{% for item in changelog %}
+		{% for item in changeLogItems %}
 		<article>
 			<h3>{{ item.date | stringifyDate }}</h3>
 			<p>{{ item.template.frontMatter.content }}</p>
@@ -13,4 +11,4 @@
 	<p class="text-right">
 		<a class="button" href="/changelog/">Full Changelog {% include "icons/arrow-right.svg" %}</a>
 	</p>
-</section>
+</article>

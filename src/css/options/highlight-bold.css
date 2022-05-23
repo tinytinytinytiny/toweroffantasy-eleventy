@@ -1,0 +1,3 @@
+.highlight-bold b, .highlight-bold strong {
+	color: theme('colors.secondary');
+}

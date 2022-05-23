@@ -1,0 +1,15 @@
+{
+	"name": "Nut Tea",
+	"image": "nuttea.png",
+	"rarity": 4,
+	"stars": 2,
+	"effects": [
+		"Recovers **20** satiety",
+		"Recovers **20% + 60,000** HP"
+	],
+	"ingredients": [
+		["nut", 1],
+		["pinecone", 1],
+		["honey", 1]
+	]
+}

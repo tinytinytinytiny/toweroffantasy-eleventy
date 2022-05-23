@@ -14,6 +14,7 @@
 	--stack-space: 1em;
 }
 
-.copy figure, .copy figure + * {
+.copy figure:not([class*="stack-space"]),
+.copy figure:not([class*="stack-space"]) + * {
 	--stack-space: theme('spacing.l');
 }

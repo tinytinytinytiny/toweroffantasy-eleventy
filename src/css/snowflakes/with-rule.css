@@ -1,9 +1,0 @@
-.with-rule > * + *::before,
-.with-rule[data-rule-top="true"] > *:first-child::before {
-	@apply text-white/20;
-	border-top: 1px solid;
-	content: '';
-	font-size: initial;
-	margin-bottom: var(--stack-space, 1em);
-	width: 100%;
-}

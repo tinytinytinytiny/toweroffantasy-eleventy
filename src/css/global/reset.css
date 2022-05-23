@@ -7,6 +7,10 @@
   box-sizing: border-box;
 }
 
+[hidden] {
+	display: none;
+}
+
 /* Remove default margin */
 body,
 h1,

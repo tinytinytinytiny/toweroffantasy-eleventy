@@ -1,14 +1,21 @@
+const MarkdownIt = require('markdown-it');
+
+const limitTo = require('./src/filters/limit-to.js');
 const stringifyDate = require('./src/filters/stringify-date.js');
-// const groupByYear = require('./src/utils/group-by-year.js');
 const groupByYear = require('./src/filters/group-by-year.js');
+const sortByRarity = require('./src/filters/sort-by-rarity.js');
 
 module.exports = (config) => {
 	config.addPassthroughCopy('./src/assets/');
 
-	config.addDataExtension('txt', contents => contents);
-
+	config.addFilter('limitTo', limitTo);
 	config.addFilter('stringifyDate', stringifyDate);
-	config.addFilter('groupByYear', groupByYear);	
+	config.addFilter('groupByYear', groupByYear);
+	config.addFilter('sortByRarity', sortByRarity);
+	config.addFilter('markdown', (value) => {
+		const md = new MarkdownIt();
+		return md.render(value);
+	});
 
 	config.addShortcode('year', () => `${new Date().getFullYear()}`);
 
@@ -16,9 +23,9 @@ module.exports = (config) => {
 		return [...collection.getFilteredByGlob('./src/content/changelog/*.md')].reverse();
 	});
 
-	// config.addCollection('changesByYear', (collection) => {
-	// 	return groupByYear([...collection.getFilteredByGlob('./src/content/changelog/*.md')].reverse());
-	// });
+	config.addCollection('characters', (collection) => {
+		return [...collection.getFilteredByGlob('./src/content/characters/*')].reverse();
+	});
 
 	config.setUseGitIgnore(false);
 

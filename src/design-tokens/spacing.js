@@ -1,6 +1,8 @@
 // @link https://utopia.fyi/space/calculator?c=320,16,1.2,1800,19.5,1.333,5,2,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l|l-2xl|s-xl
 
 module.exports = {
+	'0': '0',
+
 	'3xs': 'clamp(0.25rem, calc(0.24rem + 0.07vw), 0.31rem)',
 	'2xs': 'clamp(0.50rem, calc(0.47rem + 0.14vw), 0.63rem)',
 	'xs': 'clamp(0.75rem, calc(0.71rem + 0.20vw), 0.94rem)',

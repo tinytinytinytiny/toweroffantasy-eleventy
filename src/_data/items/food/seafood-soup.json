@@ -1,0 +1,17 @@
+{
+	"name": "Seafood Soup",
+	"image": "seafoodsoup.png",
+	"rarity": 3,
+	"stars": 1,
+	"effects": [
+		"Recovers **10** satiety",
+		"**Ice Damage +1%**",
+		"**Ice Damage +45**",
+		"Duration **900** sec"
+	],
+	"ingredients": [
+		["hornedconch", 3],
+		["seaconch", 2],
+		["lettuce", 1]
+	]
+}

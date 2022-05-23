@@ -1,0 +1,308 @@
+{
+	"mushroom": {
+		"name": "Mushroom",
+		"image": "mushroom.png",
+		"rarity": 1,
+		"source": "Found on Astra (around giant mushrooms) and in Crown"
+	},
+	"silverperch": {
+		"name": "Silver Bass",
+		"image": "silverperch.png",
+		"rarity": 1,
+		"source": "Found in rivers"
+	},
+	"wheat": {
+		"name": "Homi Grain",
+		"image": "wheat.png",
+		"rarity": 1,
+		"source": "Found on Astra (meadows) and Banges (meadows)"
+	},
+	"meat": {
+		"name": "Game Meat",
+		"image": "meat.png",
+		"rarity": 1,
+		"source": "Obtained by hunting wild animals"
+	},
+	"lettuce": {
+		"name": "Lettuce",
+		"image": "lettuce.png",
+		"rarity": 1,
+		"source": "Found on Astra (meadows)"
+	},
+	"dressing": {
+		"name": "Salad Dressing",
+		"image": "dressing.png",
+		"rarity": 1,
+		"source": "Purchased at food vendor"
+	},
+	"egg": {
+		"name": "Poultry Egg",
+		"image": "egg.png",
+		"rarity": 1,
+		"source": "Found in bird nests (high elevations)"
+	},
+	"seaweed": {
+		"name": "Laver",
+		"image": "seaweed.png",
+		"rarity": 2,
+		"source": "Found in Banges (North Sea Beach)"
+	},
+	"milk": {
+		"name": "Milk",
+		"image": "milk.png",
+		"rarity": 1,
+		"source": "Purchased at food vendor"
+	},
+	"drumstick": {
+		"name": "Poultry Meat",
+		"image": "drumstick.png",
+		"rarity": 1,
+		"source": "Obtained by hunting birds"
+	},
+	"rice": {
+		"name": "Rice",
+		"image": "rice.png",
+		"rarity": 1,
+		"source": "Purchased at food vendor"
+	},
+	"tomato": {
+		"name": "Thornmato",
+		"image": "tomato.png",
+		"rarity": 2,
+		"source": "Found on Astra (around alpine shrubs) and in Navia (around trees)"
+	},
+	"hornedconch": {
+		"name": "Conch",
+		"image": "hornedconch.png",
+		"rarity": 2,
+		"source": "Found in Banges (South Sea Beach) and Navia (beach)"
+	},
+	"potato": {
+		"name": "Potato",
+		"image": "potato.png",
+		"rarity": 2,
+		"source": "Found in Banges (around bushes)"
+	},
+	"fruitdrop": {
+		"name": "Fallen Fruit",
+		"image": "fruitdrop.png",
+		"rarity": 2,
+		"source": "Found on Astra (around trees) and in Banges (around trees)"
+	},
+	"honey": {
+		"name": "Honey",
+		"image": "honey.png",
+		"rarity": 2,
+		"source": "Obtained from hives and bees"
+	},
+	"ghostmushroom": {
+		"name": "Ghost Mushroom",
+		"image": "ghostmushroom.png",
+		"rarity": 2,
+		"source": "Found on Astra (Keel, Graveyard)"
+	},
+	"broccoli": {
+		"name": "Broccoli",
+		"image": "broccoli.png",
+		"rarity": 2,
+		"source": "Found on Astra (meadows)"
+	},
+	"dandelion": {
+		"name": "Dandelion Seed",
+		"image": "dandelion.png",
+		"rarity": 1,
+		"source": "Obtained from dandelion pom-poms"
+	},
+	"sturgeon": {
+		"name": "Darby's Sturgeon",
+		"image": "sturgeon.png",
+		"rarity": 2,
+		"source": "Found in rivers of Astra, Navia, and Warren"
+	},
+	"redwheat": {
+		"name": "Brown Rice",
+		"image": "redwheat.png",
+		"rarity": 2,
+		"source": "Found in Navia (meadows)"
+	},
+	"fireear": {
+		"name": "Firecap",
+		"image": "fireear.png",
+		"rarity": 2,
+		"source": "Found in Crown"
+	},
+	"blackmoss": {
+		"name": "Black Moss",
+		"image": "blackmoss.png",
+		"rarity": 2,
+		"source": "Found in Crown"
+	},
+	"seaconch": {
+		"name": "Scallop",
+		"image": "seaconch.png",
+		"rarity": 3,
+		"source": "Found in Banges (South Sea Beach)"
+	},
+	"hindleg": {
+		"name": "Rear Hock",
+		"image": "hindleg.png",
+		"rarity": 3,
+		"source": "Obtained by hunting rabbits, mountain hares, boars, bears, wolves, and honey badgers"
+	},
+	"shuttlecrab": {
+		"name": "Portunid",
+		"image": "shuttlecrab.png",
+		"rarity": 3,
+		"source": "Found on the beaches of Astra, Banges, and Crown"
+	},
+	"strawberry": {
+		"name": "Strawberry",
+		"image": "strawberry.png",
+		"rarity": 3,
+		"source": "Found in Navia (around bushes)"
+	},
+	"blueberry": {
+		"name": "Small Blueberry Jar",
+		"image": "blueberry.png",
+		"rarity": 3,
+		"source": "Obtained from defeating the Sons of Aida (robotic enemies)"
+	},
+	"sparklingwater": {
+		"name": "Carbonated Water",
+		"image": "sparklingwater.png",
+		"rarity": 1,
+		"source": "Purchased at food vendor"
+	},
+	"seaurchin": {
+		"name": "Sea Urchin",
+		"image": "seaurchin.png",
+		"rarity": 3,
+		"source": "Found in Banges (North Sea Beach) and Crown (beach)"
+	},
+	"spinach": {
+		"name": "Fiddlehead",
+		"image": "spinach.png",
+		"rarity": 3,
+		"source": "Found near the Banges factory"
+	},
+	"cocoabeans": {
+		"name": "Cocoa Beans",
+		"image": "cocoabeans.png",
+		"rarity": 3,
+		"source": "Found in Navia (Minyu Island)"
+	},
+	"balloonfruit": {
+		"name": "Balloon Fruit",
+		"image": "balloonfruit.png",
+		"rarity": 3,
+		"source": "Found on Astra and in Navia"
+	},
+	"thundereel": {
+		"name": "Electric Eel",
+		"image": "thundereel.png",
+		"rarity": 3,
+		"source": "Found in the rivers of Banges, Navia, and Warren"
+	},
+	"hermitcrab": {
+		"name": "Hermit Crab",
+		"image": "hermitcrab.png",
+		"rarity": 3,
+		"source": "Found on the beaches of Banges, Navia, and Crown"
+	},
+	"pomegranate": {
+		"name": "Phosphogranate",
+		"image": "pomegranate.png",
+		"rarity": 3,
+		"source": "Found in Navia (around rocks)"
+	},
+	"dragonfruit": {
+		"name": "Firedragon Fruit",
+		"image": "dragonfruit.png",
+		"rarity": 3,
+		"source": "Found near rivers in Navia and Crown"
+	},
+	"barnacle": {
+		"name": "Barnacle",
+		"image": "barnacle.png",
+		"rarity": 3,
+		"source": "Found near the sea in Warren"
+	},
+	"onion": {
+		"name": "Onion",
+		"image": "onion.png",
+		"rarity": 3,
+		"source": "Purchased at food vendor"
+	},
+	"snowblossom": {
+		"name": "Snow Azalea",
+		"image": "snowblossom.png",
+		"rarity": 3,
+		"source": "Found in Warren"
+	},
+	"pinecone": {
+		"name": "Pinecone",
+		"image": "pinecone.png",
+		"rarity": 3,
+		"source": "Found in Warren (around pine trees)"
+	},
+	"caviar": {
+		"name": "Caviar",
+		"image": "caviar.png",
+		"rarity": 3,
+		"source": "Obtained from raider camp enemies"
+	},
+	"nut": {
+		"name": "Hazelnut",
+		"image": "nut.png",
+		"rarity": 4,
+		"source": "Found in Navia"
+	},
+	"birdpotato": {
+		"name": "Purple Yam",
+		"image": "birdpotato.png",
+		"rarity": 4,
+		"source": "Found in Warren"
+	},
+	"snowlotus": {
+		"name": "Snow Lotus",
+		"image": "snowlotus.png",
+		"rarity": 4,
+		"source": "Found in Warren"
+	},
+	"blacktruffle": {
+		"name": "Black Truffle",
+		"image": "blacktruffle.png",
+		"rarity": 4,
+		"source": "Found in Warren"
+	},
+	"cordyceps": {
+		"name": "Caterpillar Fungus",
+		"image": "cordyceps.png",
+		"rarity": 4,
+		"source": "Found in Warren"
+	},
+	"firmmeat": {
+		"name": "Prime Cut",
+		"image": "firmmeat.png",
+		"rarity": 4,
+		"source": "Obtained by hunting wild animals"
+	},
+	"fattymeat": {
+		"name": "Fatty Cut",
+		"image": "fattymeat.png",
+		"rarity": 4,
+		"source": "Obtained by hunting wild animals"
+	},
+	"salmon": {
+		"name": "Lake Bass",
+		"image": "salmon.png",
+		"rarity": 4,
+		"source": "Found in rivers in Crown and Warren"
+	},
+	"snail": {
+		"name": "Carrion Snail",
+		"image": "snail.png",
+		"rarity": 4,
+		"source": "Found in Navia (beach)"
+	}
+}

@@ -12,7 +12,7 @@
 	<link rel="stylesheet" href="/css/global.css" />
 		<link rel="icon" href="/assets/images/avatar/tata.png">
   </head>
-  <body data-tmpl="{{ template }}">
+  <body data-bg="{{ background }}">
 		{% include "partials/skip-link.html" %}
 		<div class="sidebar">
 			{% include "partials/sidebar.html" %}
@@ -21,5 +21,7 @@
 				{% include "partials/footer.html" %}
 			</main>
 		</div>
+		{% block extras %}{% endblock %}
+		{% block scripts %}{% endblock %}
   </body>
 </html>

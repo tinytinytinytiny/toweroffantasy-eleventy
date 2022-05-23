@@ -1,0 +1,14 @@
+{
+	"name": "Surf and Turf",
+	"image": "pearlfish.png",
+	"rarity": 2,
+	"stars": 2,
+	"effects": [
+		"Recovers **8** satiety",
+		"Recovers **13% + 10,000** HP"
+	],
+	"ingredients": [
+		["sturgeon", 1],
+		["egg", 2]
+	]
+}
