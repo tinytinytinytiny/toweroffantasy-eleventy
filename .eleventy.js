@@ -20,11 +20,11 @@ module.exports = (config) => {
 	config.addShortcode('year', () => `${new Date().getFullYear()}`);
 
 	config.addCollection('changelog', (collection) => {
-		return [...collection.getFilteredByGlob('./src/content/changelog/*.md')].reverse();
+		return [...collection.getFilteredByGlob('./src/changelog/*.md')].reverse();
 	});
 
 	config.addCollection('characters', (collection) => {
-		return [...collection.getFilteredByGlob('./src/content/characters/*')].reverse();
+		return [...collection.getFilteredByGlob('./src/characters/*')].reverse();
 	});
 
 	config.setUseGitIgnore(false);

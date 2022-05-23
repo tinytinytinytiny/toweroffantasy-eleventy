@@ -9,6 +9,8 @@ Thumbs.db
 .sass-cache
 .env
 .cache
+.atom-build.*
+.atom-live-server.*
 
 # Node modules and output
 node_modules

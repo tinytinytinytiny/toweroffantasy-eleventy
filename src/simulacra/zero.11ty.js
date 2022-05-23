@@ -2,7 +2,7 @@ module.exports = {
 	data() {
 		return {
 			name: 'Zero',
-			rarity: 'SSR',
+			rarity: 5,
 			traits: {
 				gender: 'Male',
 				height: '155 cm',
@@ -75,10 +75,6 @@ module.exports = {
 					affinity: 4000,
 					effect: 'When Zero uses a weapon skill, reduce cooldown time for Relics in cooldown by **3** seconds. Can only activate for the same weapon **1** time every **5** seconds.'
 				}
-			],
-			chipEffects: [
-				'Upon using a discharge skill to switch to the current weapon, gain a shield equal to **120%/150%/180%/210%** of ATK for **4** seconds.',
-				'While the shield is active, you and your teammates deal **16%/20%/24%/28%** more damage.'
 			],
 			recChips: [
 				['samir', 4],

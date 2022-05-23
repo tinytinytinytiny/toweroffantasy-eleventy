@@ -18,8 +18,7 @@
 				</tr>
 			</thead>
 			<tbody>
-				{% set foods = helpers.getObjectValues(items.food) | sortByRarity %}
-				{% for food in foods %}
+				{% for food in items.food | sortByRarity %}
 				<tr id="{{ food.name | slugify }}">
 					<th scope="row">
 						<figure class="stack stack-space-2xs">

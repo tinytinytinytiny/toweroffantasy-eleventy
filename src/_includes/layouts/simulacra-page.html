@@ -1,8 +1,8 @@
 {% extends "layouts/base.html" %}
 
-{% set title = character.data.name %}
-{% set background = character.fileSlug %}
+{% set title = name %}
+{% set background = fileSlug %}
 
 {% block content %}
-{{ character.data.mimicEffects[0].effect | markdown | safe }}
+{{ mimicEffects[0].effect | markdown | safe }}
 {% endblock %}
