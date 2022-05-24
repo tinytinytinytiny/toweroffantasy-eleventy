@@ -21,6 +21,7 @@
 	--region-space: theme('spacing.s-l');
 	max-height: 100vh;
 	overflow-y: auto;
+	padding-bottom: calc(theme('spacing.s-l') + env(safe-area-inset-bottom));
 	position: sticky;
 	top: 0;
 }
