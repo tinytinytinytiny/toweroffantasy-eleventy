@@ -3,13 +3,18 @@
 	background-color: theme('colors.sheet.0');
 }
 
-.nav:has(> details[open]) {
-	background-color: theme('colors.sheet.0');
-}
-
 .nav:not(:has(> details[open])) {
 	background-color: transparent;
 }
+
+/* html:has(.nav[data-state="collapsed"] > details[open]),
+body:has(.nav[data-state="collapsed"] > details[open]) {
+	overflow: hidden;
+}
+
+.nav[data-state="collapsed"]:has(> details[open]) + main {
+	pointer-events: none;
+} */
 
 .nav[data-state="collapsed"] {
 	position: sticky;
@@ -20,14 +25,15 @@
 .nav > details {
 	--region-space: theme('spacing.s-l');
 	max-height: 100vh;
+	max-height: -webkit-fill-available;
 	overflow-y: auto;
 	padding-bottom: calc(theme('spacing.s-l') + env(safe-area-inset-bottom));
 	position: sticky;
 	top: 0;
 }
 
-.nav[data-state="collapsed"] > details {
-	position: relative;
+.nav > details[open] {
+	background-color: theme('colors.sheet.0');
 }
 
 .nav summary.button {
@@ -125,6 +131,9 @@
 	background-image: linear-gradient(90deg,
 		theme('colors.sheet.2') 20%,
 		transparent 130%
+	), linear-gradient(90deg,
+		 rgba(255, 255, 255, 0.1) 0%,
+		 transparent 100%
 	);
 }
 

@@ -3,7 +3,6 @@
 {% block content %}
 <header class="copy bg-sheet-1 region stack wrapper">
 	{{ content | safe }}
-	{% include "partials/debug.html" %}
 </header>
 
 {% set changeLogItems = collections.changelog | limitTo(5) %}

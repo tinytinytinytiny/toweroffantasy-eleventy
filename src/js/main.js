@@ -1,11 +1,8 @@
 'use strict';
 
-if ('querySelector' in document) {
+if ('querySelector' in document && 'ResizeObserver' in window) {
 	const nav = document.querySelector('.nav');
 	const details = document.querySelector('details');
-
-	document.getElementById('navWidth').textContent = nav.offsetWidth;
-	document.getElementById('screenWidth').textContent = window.innerWidth;
 
 	if (nav.offsetWidth > window.innerWidth * 0.9) {
 		forceCloseMenu();
@@ -13,38 +10,33 @@ if ('querySelector' in document) {
 		openMenu();
 	}
 
-	if ('ResizeObserver' in window) {
-		let prevInlineSize;
+	let prevInlineSize;
 
-		const resizeObserver = new ResizeObserver((entries) => {
-			for (const entry of entries) {
-				if (entry.borderBoxSize) {
-					const borderBoxSize = Array.isArray(entry.borderBoxSize) ? entry.borderBoxSize[0] : entry.borderBoxSize;
+	const resizeObserver = new ResizeObserver((entries) => {
+		for (const entry of entries) {
+			if (entry.borderBoxSize) {
+				const borderBoxSize = Array.isArray(entry.borderBoxSize) ? entry.borderBoxSize[0] : entry.borderBoxSize;
 
-					if (borderBoxSize.inlineSize !== prevInlineSize) {
-						prevInlineSize = borderBoxSize.inlineSize;
-						handleWidthChange(borderBoxSize.inlineSize);
-					}
-				} else {
-					if (entry.contentRect.width !== prevInlineSize) {
-						prevInlineSize = entry.contentRect.width;
-						handleWidthChange(entry.contentRect.width);
-					}
+				if (borderBoxSize.inlineSize !== prevInlineSize) {
+					prevInlineSize = borderBoxSize.inlineSize;
+					handleWidthChange(borderBoxSize.inlineSize);
+				}
+			} else {
+				if (entry.contentRect.width !== prevInlineSize) {
+					prevInlineSize = entry.contentRect.width;
+					handleWidthChange(entry.contentRect.width);
 				}
 			}
-		});
+		}
+	});
 
-		resizeObserver.observe(nav);
+	resizeObserver.observe(nav);
 
-		function handleWidthChange(width) {
-			document.getElementById('navWidth').textContent = nav.offsetWidth;
-			document.getElementById('screenWidth').textContent = window.innerWidth;
-
-			if (width < window.innerWidth * 0.9) {
-				openMenu();
-			} else {
-				forceCloseMenu();
-			}
+	function handleWidthChange(width) {
+		if (width < window.innerWidth * 0.9) {
+			openMenu();
+		} else {
+			forceCloseMenu();
 		}
 	}
 
