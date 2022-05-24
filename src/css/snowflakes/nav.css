@@ -3,11 +3,21 @@
 	background-color: theme('colors.sheet.0');
 }
 
+.nav:has(> details[open]) {
+	background-color: theme('colors.sheet.0');
+}
+
 .nav:not(:has(> details[open])) {
 	background-color: transparent;
 }
 
-.nav > * {
+.nav[data-state="collapsed"] {
+	position: sticky;
+	top: 0;
+	z-index: 1;
+}
+
+.nav > details {
 	--region-space: theme('spacing.s-l');
 	max-height: 100vh;
 	overflow-y: auto;
@@ -15,8 +25,13 @@
 	top: 0;
 }
 
+.nav[data-state="collapsed"] > details {
+	position: relative;
+}
+
 .nav summary.button {
 	@apply bg-sheet-0/60;
+	-webkit-backdrop-filter: blur(10px);
 	backdrop-filter: blur(10px);
 	list-style: none;
 }
@@ -135,12 +150,6 @@
 	border-left: 0.45em solid theme('colors.primary');
 	opacity: 1;
 	z-index: -1;
-}
-
-.nav[data-state="collapsed"] {
-	position: sticky;
-	top: 0;
-	z-index: 1;
 }
 
 .nav:not([data-state="collapsed"]) .nav__head {

@@ -56,6 +56,7 @@ if ('querySelector' in document) {
 
 	function openMenu() {
 		details.setAttribute('open', '');
+		nav.getAttribute('data-state');
 		nav.removeAttribute('data-state');
 	}
 }
