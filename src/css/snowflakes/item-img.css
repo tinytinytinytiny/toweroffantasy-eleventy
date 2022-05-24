@@ -48,13 +48,13 @@
 			var(--rarity-base-color) var(--frame-border-width),
 			transparent var(--frame-border-width)
 		),
-		linear-gradient(316deg,
+		linear-gradient(315deg,
 			rgba(var(--rarity-base-rgb-values), 0.3) 0%,
-			rgba(var(--rarity-base-rgb-values), 0.25) 50%,
+			rgba(var(--rarity-base-rgb-values), 0.15) 50%,
 			var(--rarity-backdrop-color) 50%,
 			var(--rarity-backdrop-color) 100%
 		);
-	background-size: cover, calc(100% - calc(var(--frame-border-width) * 2)) calc(100% - calc(var(--frame-border-width) * 3));
+	background-size: cover, calc(100% - var(--frame-border-width) * 2) calc(100% - var(--frame-border-width) * 3);
 	background-position: center, center var(--frame-border-width);
 	background-repeat: no-repeat;
 	border: calc(var(--frame-border-width) / 2) solid var(--rarity-base-color);

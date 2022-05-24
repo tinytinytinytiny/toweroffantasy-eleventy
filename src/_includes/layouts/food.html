@@ -22,7 +22,7 @@
 					<th scope="row">
 						<figure class="stack stack-space-2xs">
 							<div class="item-frame mr-2xs-xs" data-rarity="{{ food.rarity }}" data-size="m">
-								<img src="/assets/images/food/{{ food.image }}"	alt="" width="96" height="96" loading="lazy">
+								<img src="/assets/images/food/{{ food.image }}"	alt="" width="96" height="96" {% if loop.index > 4 %}loading="lazy"{% endif %}>
 								<span class="item-frame__info text-step-0 tracking-tighter">
 									{% for i in range(0, food.stars) %}
 									<span class="inline-block -rotate-12">★</span>
