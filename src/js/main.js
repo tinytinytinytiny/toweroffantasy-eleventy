@@ -2,6 +2,9 @@ if ('querySelector' in document) {
 	const nav = document.querySelector('.nav');
 	const details = document.querySelector('details');
 
+	document.getElementById('navWidth').textContent = nav.offsetWidth;
+	document.getElementById('screenWidth').textContent = window.innerWidth;
+
 	if (nav.offsetWidth > window.innerWidth * 0.9) {
 		forceCloseMenu();
 	} else {
@@ -32,6 +35,9 @@ if ('querySelector' in document) {
 		resizeObserver.observe(nav);
 
 		function handleWidthChange(width) {
+			document.getElementById('navWidth').textContent = nav.offsetWidth;
+			document.getElementById('screenWidth').textContent = window.innerWidth;
+
 			if (width < window.innerWidth * 0.9) {
 				openMenu(details);
 			} else {
