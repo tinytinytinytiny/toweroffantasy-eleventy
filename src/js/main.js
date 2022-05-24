@@ -1,4 +1,3 @@
-<script>
 if ('querySelector' in document) {
 	const nav = document.querySelector('.nav');
 	const details = document.querySelector('details');
@@ -74,4 +73,3 @@ function isSupportsFlexGap() {
 
 	return isSupported;
 }
-</script>
