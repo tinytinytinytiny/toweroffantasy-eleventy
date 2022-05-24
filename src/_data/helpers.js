@@ -17,5 +17,8 @@ module.exports = {
 	},
 	sortIngredientsByRarity(ingredients, pathToIngredients) {
 		return ingredients.sort((a, b) => pathToIngredients[a[0]].rarity - pathToIngredients[b[0]].rarity);
+	},
+	getWeaponRating(value, data) {
+		return data.filter(i => value > i.threshold )[0];
 	}
 };

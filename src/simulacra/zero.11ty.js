@@ -33,13 +33,12 @@ module.exports = {
 				name: 'Negating Cube',
 				element: 'fire',
 				resonance: 'support',
-				effect: 'Fully charged weapons will set the target on fire for **8** seconds with the next attack, causing ongoing damage of **58.00%** of ATK every second. Ignited targets receive **50%** efficacy from healing.',
 				awakening: [
 					'Deal damage and produce a healing orb, which lasts for **20** seconds and restore HP of any teammate who picks it up equal to **60%** of ATK. **2**-second cooldown.',
 					'Increase the current weapon’s base ATK growth by **16%**.',
 					'Reduce skill cooldown from **90** seconds to **45** seconds. Restore HP equal to **30%** of ATK every second while the shield is active.',
 					'Increase the current weapon’s base HP growth by **32%**.',
-					'Deal damage and produce a damage orb, which lsts for **20** seconds and increases ATK of any teammate who picks it up by **1.5%**. Stacks up to **10** times and lasts for **45** seconds. **2.5**-second cooldown.\n\n<img class=\"icon\" src=\"images/cn.svg\"> Deal damage and produce a damage orb, which lsts for **20** seconds and increases ATK of any teammate who picks it up by **2%**. Stacks up to **10** times and lasts for **45** seconds. **2.5**-second cooldown.',
+					'Deal damage and produce a damage orb, which lsts for **20** seconds and increases ATK of any teammate who picks it up by **1.5%**. Stacks up to **10** times and lasts for **45** seconds. **2.5**-second cooldown.\n\n<abbr title="China exclusive" class="china-badge">CN</abbr> Deal damage and produce a damage orb, which lasts for **20** seconds and increases ATK of any teammate who picks it up by **2%**. Stacks up to **10** times and lasts for **45** seconds. **2.5**-second cooldown.',
 					'Using an ability grants allies healing orbs and damage orbs equal to the number of Omnium Cubes.'
 				],
 				charge: 13,

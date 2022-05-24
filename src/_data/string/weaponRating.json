@@ -1,0 +1,17 @@
+[
+	{
+		"rank": "s",
+		"threshold": 10,
+		"rarityColor": 5
+	},
+	{
+		"rank": "a",
+		"threshold": 7,
+		"rarityColor": 4
+	},
+	{
+		"rank": "b",
+		"threshold": 0,
+		"rarityColor": 3
+	}
+]

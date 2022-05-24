@@ -1,0 +1,15 @@
+.china-badge {
+	background-color: #df2407;
+	border-radius: 2px;
+	clip-path: polygon(0 0, 100% 0, 100% 70%, 80% 100%, 0 100%);
+	color: #fff;
+	cursor: default;
+	display: inline-block;
+	font-family: theme('fontFamily.fancy');
+	font-size: theme('fontSize.step--1');
+	line-height: 1;
+	letter-spacing: 0.05em;
+	padding: 0.2em 0.42em 0.2em 0.36em;
+	text-decoration: none;
+	user-select: none;
+}

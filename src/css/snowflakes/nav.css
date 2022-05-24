@@ -15,9 +15,9 @@
 	top: 0;
 }
 
-.nav summary {
+.nav summary.button {
 	@apply bg-sheet-0/60;
-	backdrop-filter: blur(0.1em);
+	backdrop-filter: blur(10px);
 	list-style: none;
 }
 
@@ -94,9 +94,12 @@
 .nav__links a:focus,
 .nav__links a:focus-within {
 	border: 0;
+	color: theme('colors.sheet.0');
+	font-weight: bold;
 	outline: 0;
 	box-shadow: none;
 }
+
 .nav__links a::before,
 .nav__links a::after {
 	content: '';
@@ -111,31 +114,43 @@
 
 .nav__links a::before {
 	background-image: linear-gradient(90deg,
-		rgba(255, 255, 255, 1) 10%,
-		rgba(255, 255, 255, 0.75) 100%
+		theme('colors.sheet.2') 20%,
+		transparent 130%
 	);
 }
 
 .nav__links a:hover::before {
-	opacity: 0.2;
+	opacity: 1;
+	z-index: -1;
 }
 
 .nav__links a:focus::before {
-	border: 0.3rem solid theme('colors.sheet.0');
+	background-image: linear-gradient(90deg,
+		#fff 20%,
+		rgba(255, 255, 255, 0.8) 125%
+	);
+	opacity: 1;
+	z-index: -1;
 }
 
-.nav__links a:focus::after {
+/* .nav__links a:focus::after {
 	border: 0.15rem solid theme('colors.primary');
 	outline-offset: var(--gutter);
 	opacity: 1;
-}
+} */
 
 .nav__links [data-state="active"] {
-	color: theme('colors.sheet.0');
+	color: theme('colors.primary');
 	font-weight: bold;
 }
 
 .nav__links a[data-state="active"]::before {
+	/* background-color: theme('colors.primary');
+	background-image: linear-gradient(90deg,
+		transparent 10%,
+		rgba(0, 0, 0, 0.1) 100%
+	); */
+	border-left: 0.45em solid theme('colors.primary');
 	opacity: 1;
 	z-index: -1;
 }
@@ -163,6 +178,11 @@
 	padding-bottom: calc(var(--gutter) / 2);
 }
 
+[data-flex-gap="false"] .nav__links a:focus,
+[data-flex-gap="false"] .nav__links a:focus-within {
+	color: inherit;
+}
+
 [data-flex-gap="false"] .nav__links:first-of-type {
 	margin-top: var(--gutter);
 }
@@ -170,10 +190,6 @@
 [data-flex-gap="false"] .nav__links::before {
 	margin-top: 0;
 	margin-bottom: calc(var(--gutter) / 2);
-}
-
-[data-flex-gap="false"] .nav__links a[data-state="active"] {
-	color: theme('colors.primary');
 }
 
 [data-flex-gap="false"] .nav__links a::before {

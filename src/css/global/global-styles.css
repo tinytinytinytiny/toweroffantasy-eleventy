@@ -31,7 +31,7 @@ h1, h2 {
 
 h1 {
 	font-family: theme('fontFamily.fancy');
-  font-size: theme('fontSize.step-4');
+  font-size: theme('fontSize.step-5');
 	font-weight: bold;
 	text-transform: uppercase;
 }

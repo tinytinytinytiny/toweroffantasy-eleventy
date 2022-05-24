@@ -1,4 +1,6 @@
-const MarkdownIt = require('markdown-it');
+const md = require('markdown-it')({
+	html: true
+});
 
 const limitTo = require('./src/filters/limit-to.js');
 const stringifyDate = require('./src/filters/stringify-date.js');
@@ -14,11 +16,11 @@ module.exports = (config) => {
 	config.addFilter('groupByYear', groupByYear);
 	config.addFilter('sortByRarity', sortByRarity);
 	config.addFilter('markdown', (value) => {
-		const md = new MarkdownIt();
 		return md.render(value);
 	});
 
 	config.addShortcode('year', () => `${new Date().getFullYear()}`);
+	config.addShortcode('china', () => `<abbr title="China exclusive" class="china-badge">CN</abbr>`);
 
 	config.addCollection('changelog', (collection) => {
 		return [...collection.getFilteredByGlob('./src/changelog/*.md')].reverse();
