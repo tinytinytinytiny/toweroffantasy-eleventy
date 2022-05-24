@@ -1,3 +1,5 @@
+'use strict';
+
 if ('querySelector' in document) {
 	const nav = document.querySelector('.nav');
 	const details = document.querySelector('details');
@@ -39,14 +41,15 @@ if ('querySelector' in document) {
 			document.getElementById('screenWidth').textContent = window.innerWidth;
 
 			if (width < window.innerWidth * 0.9) {
-				openMenu(details);
+				openMenu();
 			} else {
-				forceCloseMenu(details);
+				forceCloseMenu();
 			}
 		}
 	}
 
 	function forceCloseMenu() {
+		details.getAttribute('open');
 		details.removeAttribute('open');
 		nav.setAttribute('data-state', 'collapsed');
 	}
