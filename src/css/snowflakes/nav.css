@@ -32,6 +32,7 @@ body:has(.nav[data-state="collapsed"] > details[open]) {
 
 .nav > details[open] {
 	background-color: theme('colors.sheet.0');
+	height: 100vh;
 }
 
 .nav[data-state="collapsed"] {
