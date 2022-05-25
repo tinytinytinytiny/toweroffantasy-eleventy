@@ -1,0 +1,19 @@
+<article class="highlight-bold stack">
+	<h3>Awakening</h3>
+	<table data-stripe="even">
+		<thead class="visually-hidden">
+			<tr>
+				<th scope="col">Stars</th>
+				<th scope="col">Bonus</th>
+			</tr>
+		</thead>
+		<tbody>
+			{% for item in weapon.awakening %}
+			<tr>
+				<th scope="row" class="text-primary whitespace-nowrap">{{ loop.index }} ★</th>
+				<td class="stack">{{ item | markdown | safe }}</td>
+			</tr>
+			{% endfor %}
+		</tbody>
+	</table>
+</article>

@@ -18,3 +18,7 @@
 .copy figure:not([class*="stack-space"]) + * {
 	--stack-space: theme('spacing.l');
 }
+
+.not-copy {
+	--stack-space: unset;
+}

@@ -24,53 +24,57 @@
 	</header>
 	<article class="stack">
 		<h2>Weapon</h2>
-		<article class="stack">
-			<img src="/assets/images/wep/{{ page.fileSlug }}.png" alt="" width="128" height="128">
-			<h3>{{ weapon.name }}</h3>
-			{{ icon('reso_' + weapon.resonance, weapon.resonance, 'Resonance: ' + weapon.resonance | capitalize) }}
-			{{ icon('ele_' + weapon.element, weapon.element, 'Element: ' + weapon.element | capitalize) }}
-			<div>
-				<p>
-					{% set chargeRating = helpers.getWeaponRating(weapon.charge, string.weaponRating) %}
-					<span class="highlight-rarity" data-rarity="{{ chargeRating.rarityColor }}">{{ chargeRating.rank | upper }}</span>
-					Charge: <b>{{ weapon.charge.toFixed(2) }}</b>
-				</p>
-				<p>
-					{% set shatterRating = helpers.getWeaponRating(weapon.shatter, string.weaponRating) %}
-					<span class="highlight-rarity" data-rarity="{{ shatterRating.rarityColor }}">{{ shatterRating.rank | upper }}</span>
-					Shatter: <b>{{ weapon.shatter.toFixed(2) }}</b>
-				</p>
+		<article>
+			<img class="inline-block" src="/assets/images/wep/{{ page.fileSlug }}.png" alt="" width="128" height="128">
+			<div class="inline-block stack stack-space-2xs ml-s">
+				<h3>{{ weapon.name }}</h3>
+				<div>
+					{{ icon('reso_' + weapon.resonance, weapon.resonance, 'Resonance: ' + weapon.resonance | capitalize) }}
+					{{ icon('ele_' + weapon.element, weapon.element, 'Element: ' + weapon.element | capitalize) }}
+				</div>
+				<div>
+					<p>
+						{% set chargeRating = helpers.getWeaponRating(weapon.charge, string.weaponRating) %}
+						<span class="highlight-rarity" data-rarity="{{ chargeRating.rarityColor }}">{{ chargeRating.rank | upper }}</span>
+						Charge: <b>{{ weapon.charge.toFixed(2) }}</b>
+					</p>
+					<p>
+						{% set shatterRating = helpers.getWeaponRating(weapon.shatter, string.weaponRating) %}
+						<span class="highlight-rarity" data-rarity="{{ shatterRating.rarityColor }}">{{ shatterRating.rank | upper }}</span>
+						Shatter: <b>{{ weapon.shatter.toFixed(2) }}</b>
+					</p>
+				</div>
 			</div>
-			<div class="highlight-bold stack">
-				<h4 class="highlight-element highlight-bold font-fancy">{{ string.element[weapon.element].effectName }}</h4>
-				{{ string.element[weapon.element].description | markdown | safe }}
-			</div>
-			{% if weapon.exclusiveEffect %}
-			<div class="highlight-bold stack">
-				<h4 class="highlight-bold font-fancy">Bonus Effect</h4>
-				{{ weapon.exclusiveEffect | markdown | safe }}
-			</div>
-			{% endif %}
 		</article>
 		<article class="highlight-bold stack">
-			<h3>Awakening</h3>
-			<table data-stripe="even">
-				<thead class="visually-hidden">
-					<tr>
-						<th scope="col">Stars</th>
-						<th scope="col">Bonus</th>
-					</tr>
-				</thead>
-				<tbody>
-					{% for item in weapon.awakening %}
-					<tr>
-						<th scope="row" class="text-primary whitespace-nowrap">{{ loop.index }} ★</th>
-						<td class="stack">{{ item | markdown | safe }}</td>
-					</tr>
-					{% endfor %}
-				</tbody>
-			</table>
+			<h4 class="highlight-element highlight-bold font-fancy">{{ string.element[weapon.element].effectName }}</h4>
+			{{ string.element[weapon.element].description | markdown | safe }}
 		</article>
+		{% if weapon.exclusiveEffect %}
+		<article class="highlight-bold stack">
+			<h4 class="highlight-bold font-fancy">Bonus Effect</h4>
+			{{ weapon.exclusiveEffect | markdown | safe }}
+		</article>
+		{% endif %}
+		<article class="stack">
+			<h3>Breakthrough Materials</h3>
+			<div class="inline-block">
+				{% for i in range(1, 3) %}
+				<figure class="item-frame" data-size="m" data-rarity="2">
+					<img src="/assets/images/mat/{{ weapon.materials[0] }}{{ i }}.png" alt="" width="40" height="40">
+				</figure>
+				{% if not loop.last %}
+				<div class="stack stack-space-3xs">
+					{% quantity = '4' if loop.index === 1 %}
+					{% set quantity = '5' if loop.index === 2 %}
+					{% include "icons/arrow-left.svg" %}
+					<span class="text-step--1">×{{ quantity }}</span>
+				</div>
+				{% endif %}
+				{% endfor %}
+			</div>
+		</article>
+		{% include "partials/simulacrum/awakening.html" %}
 	</article>
 </div>
 {% endblock %}
