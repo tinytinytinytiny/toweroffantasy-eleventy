@@ -93,6 +93,26 @@
 	@apply shadow;
 }
 
+.item-frame[data-variant="matrix"] {
+	display: flex;
+	height: 130px;
+	width: 136px;
+	overflow: hidden;
+}
+
+.item-frame[data-variant="matrix"] > img {
+	min-width: 205px;
+}
+
+.item-frame[data-variant="matrix"][data-size="s"] {
+	height: 65px;
+	width: 68px;
+}
+
+.item-frame[data-variant="matrix"][data-size="s"] > img {
+	min-width: 102.5px;
+}
+
 .item-frame__info {
 	bottom: 0;
 	left: 0.1em;

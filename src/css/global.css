@@ -1,5 +1,4 @@
-@import "global/reset.css";
-@import "global/global-styles.css";
+@import-glob "global/*.css";
 
 @import-glob "layouts/*.css";
 @import-glob "options/*.css";

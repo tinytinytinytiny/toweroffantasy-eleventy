@@ -1,0 +1,3 @@
+.grid[data-variant="matrix-grid"] {
+	--grid-min-item-size: 136px;
+}

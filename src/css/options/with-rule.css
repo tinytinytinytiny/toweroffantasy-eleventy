@@ -5,6 +5,7 @@
 	content: '';
 	display: block;
 	font-size: initial;
-	margin-bottom: var(--stack-space, 1em);
+/* 	margin-bottom: var(--stack-space, 1em); */
 	width: 100%;
 }
+

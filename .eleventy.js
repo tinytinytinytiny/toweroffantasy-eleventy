@@ -25,9 +25,11 @@ module.exports = (config) => {
 	config.addCollection('changelog', (collection) => {
 		return [...collection.getFilteredByGlob('./src/changelog/*.md')].reverse();
 	});
-
-	config.addCollection('characters', (collection) => {
-		return [...collection.getFilteredByGlob('./src/characters/*')].reverse();
+	config.addCollection('simulacra', (collection) => {
+		return collection.getFilteredByGlob('./src/simulacra/*.11ty.js');
+	});
+	config.addCollection('matrices', (collection) => {
+		return collection.getFilteredByGlob('./src/matrices/*.11ty.js');
 	});
 
 	config.setUseGitIgnore(false);

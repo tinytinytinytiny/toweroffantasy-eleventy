@@ -57,6 +57,14 @@ a {
 	text-decoration-color: theme('colors.secondary');
 }
 
+a[data-variant~="hover"] {
+	text-decoration: none;
+}
+
+a[data-variant~="hover"]:hover {
+	text-decoration: underline theme('colors.secondary') 0.14em;
+}
+
 a:focus {
 	border: 0;
 	box-shadow: none;
@@ -95,6 +103,14 @@ aside {
 	color: theme('colors.secondary');
 	font-weight: bold;
 	padding: theme('spacing.s');
+}
+
+summary {
+	cursor: pointer;
+}
+
+summary h2, summary h3, summary h4 {
+	display: inline-block;
 }
 
 table {

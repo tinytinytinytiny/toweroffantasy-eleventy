@@ -19,7 +19,6 @@ body:has(.nav[data-state="collapsed"] > details[open]) {
 .nav > details {
 	--region-space: theme('spacing.s-l');
 	max-height: 100vh;
-	max-height: -webkit-fill-available;
 	overflow-y: auto;
 	padding-bottom: calc(theme('spacing.s-l') + env(safe-area-inset-bottom));
 	position: sticky;
@@ -32,7 +31,6 @@ body:has(.nav[data-state="collapsed"] > details[open]) {
 
 .nav > details[open] {
 	background-color: theme('colors.sheet.0');
-	height: 100vh;
 }
 
 .nav[data-state="collapsed"] {
@@ -43,10 +41,12 @@ body:has(.nav[data-state="collapsed"] > details[open]) {
 
 .nav[data-state="collapsed"] > details {
 	position: relative;
+	max-height: -webkit-fill-available;
 }
 
 .nav[data-state="collapsed"] > details[open] {
 	@apply shadow-2xl;
+	height: 100vh;
 }
 
 .nav[data-state="collapsed"] > details[open]::before {
@@ -112,6 +112,12 @@ body:has(.nav[data-state="collapsed"] > details[open]) {
 .nav__head > img {
 	flex-grow: 0;
 	flex-basis: 87px;
+}
+
+@media screen and (orientation: landscape) {
+	[data-state="collapsed"] .nav__head > img {
+		display: none;
+	}
 }
 
 .nav__links {

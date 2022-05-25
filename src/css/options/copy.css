@@ -6,12 +6,16 @@
 	--stack-space: theme('spacing.2xl');
 }
 
-.copy h3 {
+.copy h3, .copy h4 {
 	--stack-space: theme('spacing.l');
 }
 
 .copy h2 + *, .copy h3 + * {
 	--stack-space: 1em;
+}
+
+.copy h4 + * {
+	--stack-space: theme('spacing.2xs');
 }
 
 .copy figure:not([class*="stack-space"]),

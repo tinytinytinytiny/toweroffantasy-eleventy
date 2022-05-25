@@ -15,6 +15,12 @@ module.exports = {
 	getObjectValues(object) {
 		return Object.values(object);
 	},
+	findCollection(collection, fileSlug) {
+		if (collection === undefined || collection === null) {
+			return false;
+		}
+		return collection.filter(i => i.fileSlug === fileSlug)[0];
+	},
 	sortIngredientsByRarity(ingredients, pathToIngredients) {
 		return ingredients.sort((a, b) => pathToIngredients[a[0]].rarity - pathToIngredients[b[0]].rarity);
 	},
