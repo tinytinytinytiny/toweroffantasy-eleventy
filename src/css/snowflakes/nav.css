@@ -1,5 +1,5 @@
 .nav {
-	--gutter: theme('spacing.s-l');
+	--gutter: theme('spacing.m-l');
 	background-color: theme('colors.sheet.0');
 }
 
@@ -16,12 +16,6 @@ body:has(.nav[data-state="collapsed"] > details[open]) {
 	pointer-events: none;
 } */
 
-.nav[data-state="collapsed"] {
-	position: sticky;
-	top: 0;
-	z-index: 1;
-}
-
 .nav > details {
 	--region-space: theme('spacing.s-l');
 	max-height: 100vh;
@@ -32,8 +26,45 @@ body:has(.nav[data-state="collapsed"] > details[open]) {
 	top: 0;
 }
 
+.nav > details > *:last-child {
+	padding-bottom: 1rem;
+}
+
 .nav > details[open] {
 	background-color: theme('colors.sheet.0');
+}
+
+.nav[data-state="collapsed"] {
+	position: sticky;
+	top: 0;
+	z-index: 10;
+}
+
+.nav[data-state="collapsed"] > details {
+	position: relative;
+}
+
+.nav[data-state="collapsed"] > details[open] {
+	@apply shadow-2xl;
+}
+
+.nav[data-state="collapsed"] > details[open]::before {
+	@apply bg-sheet-0/60;
+	-webkit-backdrop-filter: blur(10px);
+	backdrop-filter: blur(10px);
+	content: '';
+	display: block;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	position: fixed;
+	overscroll-behavior: none;
+	z-index: -1;
+}
+
+.nav[data-state="collapsed"] > details > *:last-child {
+	padding-bottom: 2rem;
 }
 
 .nav summary.button {
@@ -41,6 +72,9 @@ body:has(.nav[data-state="collapsed"] > details[open]) {
 	-webkit-backdrop-filter: blur(10px);
 	backdrop-filter: blur(10px);
 	list-style: none;
+	position: sticky;
+	top: 0;
+	z-index: 5;
 }
 
 .nav summary::-webkit-details-marker,
@@ -122,7 +156,7 @@ body:has(.nav[data-state="collapsed"] > details[open]) {
 	right: 0;
 	bottom: calc(var(--gutter) * -1 / 2);
 	display: block;
-	left: calc(-1 * theme('spacing.s-l'));
+	left: calc(-1 * theme('spacing.m-l'));
 	opacity: 0;
 	position: absolute;
 }
@@ -139,7 +173,6 @@ body:has(.nav[data-state="collapsed"] > details[open]) {
 
 .nav__links a:hover::before {
 	opacity: 1;
-	z-index: -1;
 }
 
 .nav__links a:focus::before {
@@ -148,7 +181,6 @@ body:has(.nav[data-state="collapsed"] > details[open]) {
 		rgba(255, 255, 255, 0.8) 125%
 	);
 	opacity: 1;
-	z-index: -1;
 }
 
 .nav__links [data-state="active"] {
@@ -159,7 +191,10 @@ body:has(.nav[data-state="collapsed"] > details[open]) {
 .nav__links a[data-state="active"]::before {
 	border-left: 0.45em solid theme('colors.primary');
 	opacity: 1;
-	z-index: -1;
+}
+
+.nav__links a > span {
+	position: relative;
 }
 
 .nav:not([data-state="collapsed"]) .nav__head {
@@ -195,11 +230,4 @@ body:has(.nav[data-state="collapsed"] > details[open]) {
 
 [data-flex-gap="false"] .nav__links a::before {
 	display: none;
-}
-
-@container (min-width: 100vw) {
-	.nav__head {
-		justify-content: center;
-		text-align: center;
-	}
 }

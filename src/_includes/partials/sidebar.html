@@ -16,7 +16,7 @@
 					{{ helpers.getLinkActiveState(item.url, page.url) | safe }}
 					{% if item.external %}target="_blank"{% endif %}
 				>
-					{{ item.text }}
+					<span>{{ item.text }}</span>
 				</a>
 			</li>
 			{% endfor %}
@@ -24,7 +24,7 @@
 		<ul class="nav__links flex-grid text-secondary">
 			{% for item in navigation.socials -%}
 			<li>
-				<a href="{{ item.url }}">{{ item.text }}</a>
+				<a href="{{ item.url }}"><span>{{ item.text }}</span></a>
 			</li>
 			{%- endfor %}
 		</ul>
