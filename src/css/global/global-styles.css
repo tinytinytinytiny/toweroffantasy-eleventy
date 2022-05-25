@@ -60,7 +60,7 @@ a {
 a:focus {
 	border: 0;
 	box-shadow: none;
-	outline: 0.12em solid var(--color-primary);
+	outline: 0.12em solid theme('colors.primary');
 	outline-offset: 0.2em;
 }
 
