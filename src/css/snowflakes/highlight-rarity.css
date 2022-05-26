@@ -1,0 +1,38 @@
+.highlight-rarity {
+	background-image: linear-gradient(-45deg, transparent 15%, rgba(0, 0, 0, 0.6) 15%);
+	border-radius: 2px;
+	display: inline-block;
+	font-family: theme('fontFamily.fancy');
+	font-style: italic;
+	padding: 0 0.6em 0 0.5em;
+}
+
+.highlight-rarity[data-variant="weapon-rank"] {
+	font-size: 1.35rem;
+	height: 31px;
+	line-height: 31px;
+	padding: 0;
+	text-align: center;
+	vertical-align: middle;
+	width: 34px;
+}
+
+.highlight-rarity[data-rarity="1"] {
+	color: theme('colors.rarity.1.base');
+}
+
+.highlight-rarity[data-rarity="2"] {
+	color: theme('colors.rarity.2.base');
+}
+
+.highlight-rarity[data-rarity="3"] {
+	color: theme('colors.rarity.3.base');
+}
+
+.highlight-rarity[data-rarity="4"] {
+	color: theme('colors.rarity.4.base');
+}
+
+.highlight-rarity[data-rarity="5"] {
+	color: theme('colors.rarity.5.base');
+}

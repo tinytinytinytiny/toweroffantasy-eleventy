@@ -20,9 +20,10 @@ main:focus {
 	box-shadow: none;
 }
 
-h1, h2, h3 {
+h1, h2, h3, h4 {
 	@apply text-white/90;
 	line-height: 1;
+	font-family: theme('fontFamily.fancy');
 }
 
 h1, h2 {
@@ -30,14 +31,12 @@ h1, h2 {
 }
 
 h1 {
-	font-family: theme('fontFamily.fancy');
   font-size: theme('fontSize.step-5');
 	font-weight: bold;
 	text-transform: uppercase;
 }
 
 h2 {
-	font-family: theme('fontFamily.fancy');
   font-size: theme('fontSize.step-3');
 	font-weight: bold;
 	text-transform: uppercase;
@@ -46,7 +45,6 @@ h2 {
 h3 {
 /* 	color: theme('colors.primary'); */
   font-size: theme('fontSize.step-1');
-	font-family: theme('fontFamily.fancy');
 	font-weight: bold;
 	letter-spacing: normal;
 }

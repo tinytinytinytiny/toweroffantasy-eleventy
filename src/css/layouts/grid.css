@@ -2,7 +2,7 @@
   display: grid;
   grid-template-columns: repeat(
 		var(--grid-placement, auto-fill),
-		minmax(var(--grid-min-item-size, 15rem), 1fr)
+		minmax(var(--grid-min-item-size, 12rem), 1fr)
   );
   gap: var(--gutter, theme('spacing.s'));
 }

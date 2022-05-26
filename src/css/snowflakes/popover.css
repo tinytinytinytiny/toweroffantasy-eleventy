@@ -1,0 +1,7 @@
+.popover {
+	@apply shadow-xl;
+	background-color: theme('colors.sheet.2');
+	border-top: 0.2em solid theme('colors.primary');
+	box-sizing: content-box;
+	padding: theme('spacing.m-l');
+}

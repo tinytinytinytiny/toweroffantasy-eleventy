@@ -3,10 +3,10 @@
 	--switch-gap: theme('spacing.s-l');
 	display: flex;
 	flex-wrap: wrap;
+	gap: var(--switch-gap);
 }
 
 .switcher > * {
 	flex-grow: 1;
 	flex-basis: calc((var(--switch-threshold) - 100%) * 999);
-	gap: var(--switch-gap);
 }

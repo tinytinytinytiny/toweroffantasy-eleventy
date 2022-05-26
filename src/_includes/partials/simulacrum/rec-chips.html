@@ -1,19 +1,21 @@
 <h3>Recommended Matrices</h3>
-<div class="grid" data-variant="matrix-grid">
+<ul class="switcher" data-variant="matrix-grid">
 	{% for chip, quantity in recChips %}
 	{% if helpers.findCollection(collections.matrices, chip) %}
 	{% set chipName = helpers.findCollection(collections.matrices, chip).data.name %}
 	{% else %}
 	{% set chipName = chip | capitalize %}
 	{% endif %}
-	<figure>
-		<div class="item-frame" data-variant="matrix">
-			<img src="/assets/images/chip/{{ chip }}.png" alt="{{ chipName }}" width="205" height="205">
-			<span class="item-frame__info" data-align="right">×{{ quantity }}</span>
-		</div>
-		<figcaption>
-			<a href="/matrices/{{ chip }}/" data-variant="hover">{{ chipName }}</a>
-		</figcaption>
-	</figure>
+	<li>
+		<figure class="card">
+			<div class="item-frame" data-variant="matrix">
+				<img src="/assets/images/chip/{{ chip }}.png" alt="{{ chipName }}" width="205" height="205">
+				<span class="item-frame__info" data-align="right">×{{ quantity }}</span>
+			</div>
+			<figcaption>
+				<a class="card__link" href="/matrices/{{ chip }}/" data-variant="hover">{{ chipName }}</a>
+			</figcaption>
+		</figure>
+	</li>
 	{% endfor %}
-</div>
+</ul>

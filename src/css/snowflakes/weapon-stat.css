@@ -1,0 +1,27 @@
+.weapon-stat {
+	display: flex;
+	align-items: center;
+	gap: theme('spacing.2xs');
+}
+
+.weapon-stat img {
+	display: inline-block;
+}
+
+.weapon-stat__title {
+	color: theme('colors.base');
+	font-family: theme('fontFamily.sans');
+	font-size: theme('fontSize.step--1');
+	/* font-weight: normal; */
+	letter-spacing: 0.025em;
+	/* text-transform: uppercase; */
+}
+
+.weapon-stat__value {
+	color: theme('colors.primary');
+	display: block;
+	font-family: theme('fontFamily.fancy');
+	letter-spacing: 0.025em;
+	line-height: 1.1;
+	text-transform: uppercase;
+}

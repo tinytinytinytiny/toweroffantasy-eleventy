@@ -6,7 +6,11 @@
 	--stack-space: theme('spacing.2xl');
 }
 
-.copy h3, .copy h4 {
+.copy h3 {
+	--stack-space: theme('spacing.xl');
+}
+
+.copy h4 {
 	--stack-space: theme('spacing.l');
 }
 
@@ -15,7 +19,7 @@
 }
 
 .copy h4 + * {
-	--stack-space: theme('spacing.2xs');
+	--stack-space: theme('spacing.xs');
 }
 
 .copy figure:not([class*="stack-space"]),
@@ -23,6 +27,6 @@
 	--stack-space: theme('spacing.l');
 }
 
-.not-copy {
+.not-copy, .not-copy * {
 	--stack-space: unset;
 }
