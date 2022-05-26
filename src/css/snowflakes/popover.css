@@ -1,7 +1,21 @@
 .popover {
+	--border-color: theme('colors.primary');
 	@apply shadow-xl;
 	background-color: theme('colors.sheet.2');
-	border-top: 0.2em solid theme('colors.primary');
+	border-top: 0.3em solid var(--border-color);
 	box-sizing: content-box;
-	padding: theme('spacing.m-l');
+	padding: theme('spacing.s-l');
+}
+
+.popover[data-color="secondary"] {
+	--border-color: theme('colors.secondary');
+}
+
+.popover[data-border="none"] {
+	border: 0;
+}
+
+.popover[data-border="left"] {
+	border: 0;
+	border-left: 0.3em solid var(--border-color);
 }

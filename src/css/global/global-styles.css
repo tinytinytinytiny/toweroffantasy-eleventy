@@ -1,3 +1,7 @@
+html, body {
+	overflow-x: hidden;
+}
+
 html {
 	scroll-padding-top: 2em;
 }
@@ -93,14 +97,6 @@ hr {
 	border-top: 1px solid;
 	margin: 1em 0;
 	margin: var(--stack-space, 1em) 0;
-}
-
-aside {
-	@apply bg-black/20;
-	border-left: theme('fontSize.step--2') solid;
-	color: theme('colors.secondary');
-	font-weight: bold;
-	padding: theme('spacing.s');
 }
 
 summary {

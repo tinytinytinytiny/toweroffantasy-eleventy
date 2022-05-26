@@ -3,6 +3,6 @@
 	max-height: 20rem;
 }
 
-.scroll-box:not(.box) {
-	padding-inline-end: 1rem;
+.scroll-box {
+	padding-right: 1rem;
 }

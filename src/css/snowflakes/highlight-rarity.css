@@ -4,7 +4,7 @@
 	display: inline-block;
 	font-family: theme('fontFamily.fancy');
 	font-style: italic;
-	padding: 0 0.6em 0 0.5em;
+	padding: 0 0.7em 0 0.5em;
 }
 
 .highlight-rarity[data-variant="weapon-rank"] {
