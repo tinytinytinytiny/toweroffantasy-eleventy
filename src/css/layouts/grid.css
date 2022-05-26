@@ -1,18 +1,9 @@
 .grid {
-  display: grid;
-  grid-template-columns: repeat(
-		var(--grid-placement, auto-fill),
-		minmax(var(--grid-min-item-size, 12rem), 1fr)
-  );
-  gap: var(--gutter, theme('spacing.s'));
-}
-
-.grid[data-rows='masonry'] {
-  grid-template-rows: masonry;
-  align-items: start;
-}
-
-.grid[data-layout='50-50'] {
-  --grid-placement: auto-fit;
-  --grid-min-item-size: clamp(12rem, 50vw, 25rem);
+	--grid-column-count: 4;
+	--gap-count: calc(var(--grid-column-count) - 1);
+	--total-gap-width: calc(var(--gap-count) * var(--gutter));
+	--grid-max-item-size: calc((100% - var(--total-gap-width)) / var(--grid-column-count));
+	display: grid;
+	gap: var(--gutter, theme('spacing.s'));
+	grid-template-columns: repeat(auto-fill, minmax(max(var(--grid-min-item-size), var(--grid-max-item-size)), 1fr));
 }

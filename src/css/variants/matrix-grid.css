@@ -1,6 +1,3 @@
 [data-variant="matrix-grid"] {
 	--grid-min-item-size: 136px;
-	--gutter: theme('spacing.2xs');
-	--switch-gap: theme('spacing.2xs');
-	--switch-threshold: 136px;
 }

@@ -1,6 +1,6 @@
 .item-frame[data-variant="matrix"] {
 	display: flex;
-	height: 130px;
+	height: 136px;
 	width: 136px;
 	overflow: hidden;
 }

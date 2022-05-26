@@ -7,11 +7,7 @@
 }
 
 .copy h3 {
-	--stack-space: theme('spacing.xl');
-}
-
-.copy h4 {
-	--stack-space: theme('spacing.l');
+	--stack-space: theme('spacing.2xl');
 }
 
 .copy h2 + *, .copy h3 + * {
@@ -19,7 +15,7 @@
 }
 
 .copy h4 + * {
-	--stack-space: theme('spacing.xs');
+	--stack-space: theme('spacing.2xs');
 }
 
 .copy figure:not([class*="stack-space"]),
@@ -27,6 +23,12 @@
 	--stack-space: theme('spacing.l');
 }
 
-.not-copy, .not-copy * {
+.not-copy,
+.not-copy *,
+.not-copy h2 + *,
+.not-copy h3 + *,
+.not-copy h4 + *,
+.not-copy figure:not([class*="stack-space"]),
+.not-copy figure:not([class*="stack-space"]) + * {
 	--stack-space: unset;
 }

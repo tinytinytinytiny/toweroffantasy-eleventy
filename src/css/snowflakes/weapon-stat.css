@@ -12,9 +12,8 @@
 	color: theme('colors.base');
 	font-family: theme('fontFamily.sans');
 	font-size: theme('fontSize.step--1');
-	/* font-weight: normal; */
 	letter-spacing: 0.025em;
-	/* text-transform: uppercase; */
+	line-height: 1;
 }
 
 .weapon-stat__value {

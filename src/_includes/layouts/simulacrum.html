@@ -27,47 +27,16 @@
 {% block content %}
 <header class="bg-sheet-1 region wrapper">
 	<h1>{{ title }}</h1>
-	<p class="font-fancy uppercase text-step-2">
+	<p class="font-fancy italic uppercase text-step-2">
 		<span class="highlight-rarity" data-rarity="{{ rarity }}">{{ string.rarity[rarity - 1] }}</span> Simulacrum
 	</p>
 </header>
 <article class="copy bg-sheet-1 region stack wrapper">
 	<h2>Weapon</h2>
-	<article class="popover flex-grid items-center mt-l">
-		<img class="drop-shadow-[0_0.8em_1em_rgba(0,0,0,0.3)] flex-none" src="/assets/images/wep/{{ page.fileSlug }}.png" alt="{{ name }}’s weapon" width="128" height="128">
-		<div class="stack">
-			<h3>{{ weapon.name }}</h3>
-			<div class="grid" data-variant="weapon-stat-grid">
-				{% set figure = icon('reso_' + weapon.resonance, 'Resonance: ' + weapon.resonance | capitalize) %}
-				{{ weaponStat(figure, 'Resonance', weapon.resonance | capitalize) }}
-				{% set figure = icon('ele_' + weapon.element, 'Element: ' + weapon.element | capitalize) %}
-				{{ weaponStat(figure, 'Element', weapon.element | capitalize) }}
-				{% set figure %}
-					{% set chargeRating = helpers.getWeaponRating(weapon.charge, string.weaponRating) %}
-					<span class="highlight-rarity" data-rarity="{{ chargeRating.rarityColor }}" data-variant="weapon-rank">{{ chargeRating.rank | upper }}</span>
-				{% endset %}
-				{{ weaponStat(figure, 'Charge', weapon.charge.toFixed(2)) }}
-				{% set figure %}
-					{% set shatterRating = helpers.getWeaponRating(weapon.shatter, string.weaponRating) %}
-					<span class="highlight-rarity" data-rarity="{{ shatterRating.rarityColor }}" data-variant="weapon-rank">{{ shatterRating.rank | upper }}</span>
-				{% endset %}
-				{{ weaponStat(figure, 'Shatter', weapon.shatter.toFixed(2)) }}
-			</div>
-		</div>
-	</article>
-	<h3>Weapon Effects</h3>
-	<h4 class="highlight-element color-bold font-fancy">{{ string.element[weapon.element].effectName }}</h4>
-	<div class="color-bold">
-		{{ string.element[weapon.element].description | markdown | safe }}
-	</div>
-	{% if weapon.exclusiveEffect %}
-	<h4 class="color-bold font-fancy">Bonus Effect</h4>
-	<div class="color-bold">
-		{{ weapon.exclusiveEffect | markdown | safe }}
-	</div>
-	{% endif %}
+	{% include "partials/simulacrum/weapon-info.html" %}
+	{% include "partials/simulacrum/weapon-effect.html" %}
+	{% include "partials/simulacrum/awakening.html" %}
 	{% include "partials/simulacrum/materials.html" %}
 	{% include "partials/simulacrum/rec-chips.html" %}
-	{% include "partials/simulacrum/awakening.html" %}
 </article>
 {% endblock %}

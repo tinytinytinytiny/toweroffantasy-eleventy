@@ -1,0 +1,18 @@
+.auto-grid {
+  display: grid;
+  grid-template-columns: repeat(
+		var(--grid-placement, auto-fill),
+		minmax(var(--grid-min-item-size, 12rem), 1fr)
+  );
+  gap: var(--gutter, theme('spacing.s'));
+}
+
+.auto-grid[data-rows='masonry'] {
+  grid-template-rows: masonry;
+  align-items: start;
+}
+
+.auto-grid[data-layout='50-50'] {
+  --grid-placement: auto-fit;
+  --grid-min-item-size: clamp(12rem, 50vw, 25rem);
+}

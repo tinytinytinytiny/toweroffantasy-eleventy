@@ -5,7 +5,11 @@
 	content: '';
 	display: block;
 	font-size: initial;
-/* 	margin-bottom: var(--stack-space, 1em); */
+	margin-bottom: var(--stack-space, 1em);
 	width: 100%;
 }
 
+.with-rule[data-margin="none"] > * + *::before,
+.with-rule[data-margin="none"] > *:first-child::before {
+	margin-bottom: 0;
+}

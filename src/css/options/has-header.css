@@ -1,0 +1,15 @@
+.has-h2 {
+	margin-top: theme('fontSize.step-3');
+}
+
+.has-h3 {
+	margin-top: theme('fontSize.step-1');
+}
+
+.copy .has-h2, .copy .has-h3 {
+	margin-top: theme('spacing.2xl');
+}
+
+.copy .has-h4 {
+	margin-top: theme('spacing.l');
+}

@@ -4,7 +4,7 @@ module.exports = {
 
 	// Brand
 	primary: '#fed249',
-	secondary: '#49c4fe',
+	secondary: '#57cdff',
 	tertiary: '#fe49a8',
 
 	// Background

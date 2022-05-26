@@ -1,0 +1,22 @@
+<article class="popover flex-grid items-center mt-l">
+	<img class="drop-shadow-[0_0.8em_1em_rgba(0,0,0,0.3)] flex-none" src="/assets/images/wep/{{ page.fileSlug }}.png" alt="{{ name }}’s weapon" width="128" height="128">
+	<div class="stack">
+		<h3>{{ weapon.name }}</h3>
+		<div class="grid" data-variant="weapon-stat-grid">
+			{% set figure = icon('reso_' + weapon.resonance, 'Resonance: ' + weapon.resonance | capitalize) %}
+			{{ weaponStat(figure, 'Resonance', weapon.resonance | capitalize) }}
+			{% set figure = icon('ele_' + weapon.element, 'Element: ' + weapon.element | capitalize) %}
+			{{ weaponStat(figure, 'Element', weapon.element | capitalize) }}
+			{% set figure %}
+				{% set chargeRating = helpers.getWeaponRating(weapon.charge, string.weaponRating) %}
+				<span class="highlight-rarity" data-rarity="{{ chargeRating.rarityColor }}" data-variant="weapon-rank">{{ chargeRating.rank | upper }}</span>
+			{% endset %}
+			{{ weaponStat(figure, 'Charge', weapon.charge.toFixed(2)) }}
+			{% set figure %}
+				{% set shatterRating = helpers.getWeaponRating(weapon.shatter, string.weaponRating) %}
+				<span class="highlight-rarity" data-rarity="{{ shatterRating.rarityColor }}" data-variant="weapon-rank">{{ shatterRating.rank | upper }}</span>
+			{% endset %}
+			{{ weaponStat(figure, 'Shatter', weapon.shatter.toFixed(2)) }}
+		</div>
+	</div>
+</article>

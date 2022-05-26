@@ -4,6 +4,11 @@
 	font-family: theme('fontFamily.mono');
 	font-size: theme('fontSize.step--1');
 	letter-spacing: normal;
+	padding: theme('spacing.s-m');
+}
+
+.popover.changelog {
+	box-sizing: border-box;
 }
 
 .changelog h3 {

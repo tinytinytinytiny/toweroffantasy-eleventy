@@ -1,0 +1,4 @@
+.sidebar[data-variant="copy"] >:first-child:not(.flex-none) {
+	flex-basis: 10em;
+	line-height: inherit;
+}
