@@ -1,4 +1,4 @@
-.pagination {
+.spread {
 	align-items: center;
 	display: flex;
 	gap: var(--gutter, theme('spacing.s-l'));

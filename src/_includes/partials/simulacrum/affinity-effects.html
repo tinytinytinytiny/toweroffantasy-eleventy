@@ -1,0 +1,19 @@
+<h3>Unlocks</h3>
+<div class="color-bold overflow-x-auto">
+	<table data-stripe="odd">
+		<thead>
+			<tr>
+				<th scope="col">Affinity</th>
+				<th scope="col">Reward</th>
+			</tr>
+		</thead>
+		<tbody>
+			{% for item in mimicEffects %}
+			<tr>
+				<th scope="row" class="text-primary">{{ item.affinity }}</th>
+				<td>{{ item.effect | markdown | safe }}</td>
+			</tr>
+			{% endfor %}
+		</tbody>
+	</table>
+</div>

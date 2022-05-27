@@ -1,39 +1,37 @@
 {% extends "layouts/base.html" %}
 
+{% block header %}
+{% include "partials/article-header.html" %}
+{% endblock %}
+
 {% block content %}
-<div class="bg-sheet-1 region stack wrapper">
-	{% set summary = content | safe %}
-	{% include "partials/article-header.html" %}
-	<article id="changes-list" class="copy stack">
-		{% for year, yearChanges in changelog | groupByYear %}
-		<section class="stack has-h2" aria-label="Changes in {{ year }}">
-			<h2>{{ year }}</h2>
-			<div class="changelog layer stack">
-				{% for item in yearChanges %}
-				<article>
-					<h3>{{ item.date | stringifyDate }}</h3>
-					<p>{{ item.template.frontMatter.content }}</p>
-				</article>
-				{% endfor %}
-			</div>
-			{% endfor %}
-		</section>
-	</article>
-	<footer>
-		<nav class="spread">
-			{% if pagination.href.next %}
-			<a href="{{ pagination.href.next }}#changes-list" class="button" data-variant="ghost" data-color="secondary">
-				{% include "icons/arrow-left.svg" %}
-				<span>{{ paginationNextText if paginationNextText else 'Older' }}</span>
-			</a>
-			{% endif %}
-			{% if pagination.href.previous %}
-			<a href="{{ pagination.href.previous }}#changes-list" class="button" data-variant="ghost" data-color="secondary">
-				<span>{{ paginationPrevText if paginationPrevText else 'Newer' }}</span>
-				{% include "icons/arrow-right.svg" %}
-			</a>
-			{% endif %}
-		</nav>
-	</footer>
-</div>
+<article id="changes-list" class="copy stack">
+	{% for year, yearChanges in changelog | groupByYear %}
+	<h2>{{ year }}</h2>
+	<div class="changelog layer stack">
+		{% for item in yearChanges %}
+		<article>
+			<h3>{{ item.date | stringifyDate }}</h3>
+			<p>{{ item.template.frontMatter.content }}</p>
+		</article>
+		{% endfor %}
+	</div>
+	{% endfor %}
+</article>
+<footer>
+	<nav class="spread">
+		{% if pagination.href.next %}
+		<a href="{{ pagination.href.next }}#changes-list" class="button" data-variant="ghost" data-color="secondary">
+			{% include "icons/arrow-left.svg" %}
+			<span>{{ paginationNextText if paginationNextText else 'Older' }}</span>
+		</a>
+		{% endif %}
+		{% if pagination.href.previous %}
+		<a href="{{ pagination.href.previous }}#changes-list" class="button" data-variant="ghost" data-color="secondary">
+			<span>{{ paginationPrevText if paginationPrevText else 'Newer' }}</span>
+			{% include "icons/arrow-right.svg" %}
+		</a>
+		{% endif %}
+	</nav>
+</footer>
 {% endblock %}

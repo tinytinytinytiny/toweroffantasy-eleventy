@@ -46,6 +46,15 @@ h2 {
 	text-transform: uppercase;
 }
 
+h2:not([class]):not(:first-of-type)::before,
+h2[data-rule]::before {
+	content: '';
+	display: block;
+	width: 100%;
+	border-top: 1px solid rgba(255, 255, 255, 0.2);
+	margin-bottom: theme('spacing.l-xl');
+}
+
 h3 {
 /* 	color: theme('colors.primary'); */
   font-size: theme('fontSize.step-1');
@@ -95,9 +104,8 @@ ul[class] > li {
 }
 
 hr {
-	@apply text-white/20;
 	border: none;
-	border-top: 1px solid;
+	border-top: 1px solid rgba(255, 255, 255, 0.2);
 	margin: 1em 0;
 	margin: var(--stack-space, 1em) 0;
 }

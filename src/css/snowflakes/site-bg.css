@@ -1,0 +1,16 @@
+.site-bg {
+	background-position: calc(100% + 200px) center;
+	background-repeat: no-repeat;
+	display: block;
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+}
+
+.site-bg + .sidebar::after {
+	content: '';
+	flex-basis: 20rem;
+	flex-grow: 1;
+}

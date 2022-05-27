@@ -33,41 +33,6 @@ body:has(.nav[data-state="collapsed"] > details[open]) {
 	background-color: theme('colors.sheet.0');
 }
 
-.nav[data-state="collapsed"] {
-	position: sticky;
-	top: 0;
-	z-index: 10;
-}
-
-.nav[data-state="collapsed"] > details {
-	position: relative;
-	max-height: -webkit-fill-available;
-}
-
-.nav[data-state="collapsed"] > details[open] {
-	@apply shadow-2xl;
-	height: 100vh;
-}
-
-.nav[data-state="collapsed"] > details[open]::before {
-	@apply bg-sheet-0/60;
-	-webkit-backdrop-filter: blur(10px);
-	backdrop-filter: blur(10px);
-	content: '';
-	display: block;
-	top: 0;
-	right: 0;
-	bottom: 0;
-	left: 0;
-	position: fixed;
-	overscroll-behavior: none;
-	z-index: -1;
-}
-
-.nav[data-state="collapsed"] > details > *:last-child {
-	padding-bottom: 2rem;
-}
-
 .nav summary.button {
 	@apply bg-sheet-0/60;
 	-webkit-backdrop-filter: blur(10px);
@@ -112,12 +77,6 @@ body:has(.nav[data-state="collapsed"] > details[open]) {
 .nav__head > img {
 	flex-grow: 0;
 	flex-basis: 87px;
-}
-
-@media screen and (orientation: landscape) {
-	[data-state="collapsed"] .nav__head > img {
-		display: none;
-	}
 }
 
 .nav__links {
@@ -212,6 +171,41 @@ body:has(.nav[data-state="collapsed"] > details[open]) {
 	display: none;
 }
 
+.nav[data-state="collapsed"] {
+	position: sticky;
+	top: 0;
+	z-index: 10;
+}
+
+.nav[data-state="collapsed"] > details {
+	position: relative;
+	max-height: -webkit-fill-available;
+}
+
+.nav[data-state="collapsed"] > details[open] {
+	@apply shadow-2xl;
+	height: 100vh;
+}
+
+.nav[data-state="collapsed"] > details[open]::before {
+	@apply bg-sheet-0/60;
+	-webkit-backdrop-filter: blur(10px);
+	backdrop-filter: blur(10px);
+	content: '';
+	display: block;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	position: fixed;
+	overscroll-behavior: none;
+	z-index: -1;
+}
+
+.nav[data-state="collapsed"] > details > *:last-child {
+	padding-bottom: 2rem;
+}
+
 [data-flex-gap="false"] .nav__links {
 	gap: 0;
 }
@@ -237,4 +231,10 @@ body:has(.nav[data-state="collapsed"] > details[open]) {
 
 [data-flex-gap="false"] .nav__links a::before {
 	display: none;
+}
+
+@media screen and (orientation: landscape) {
+	[data-state="collapsed"] .nav__head > img {
+		display: none;
+	}
 }

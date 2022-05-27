@@ -12,12 +12,17 @@
 	<link rel="stylesheet" href="/css/global.css" />
 		<link rel="icon" href="/assets/images/avatar/tata.png">
   </head>
-  <body data-bg="{{ background }}">
+  <body>
 		{% include "partials/skip-link.html" %}
+		<div class="site-bg" data-bg="{{ background }}" role="presentation"></div>
 		<div class="sidebar">
 			{% include "partials/sidebar.html" %}
-			<main tabindex="-1" id="main-content" class="stack">
-				{% block content %}{% endblock %}
+			<main tabindex="-1" id="main-content">
+				{% block header %}{% endblock %}
+				{% set isCopy = true %}
+				<div class="{% if isCopy %}copy{% endif %} bg-sheet-1 region stack wrapper">
+					{% block content %}{% endblock %}
+				</div>
 				{% include "partials/footer.html" %}
 			</main>
 		</div>

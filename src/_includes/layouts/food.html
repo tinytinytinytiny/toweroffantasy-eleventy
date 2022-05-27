@@ -1,76 +1,78 @@
 {% extends "layouts/base.html" %}
 
+{% block header %}
+{% include "partials/article-header.html" %}
+{% endblock %}
+
+{% set isCopy = false %}
+
 {% block content %}
-<div class="bg-sheet-1 region stack wrapper">
-	{% set summary = content | safe %}
-	{% include "partials/article-header.html" %}
-	<article class="max-w-none p-0 overflow-x-auto wrapper">
-		<table class="max-w-none" data-stripe="odd">
-			<thead>
-				<tr>
-					<th scope="col">Food</th>
-					<th scope="col" class="visually-hidden">Rarity</th>
-					<th scope="col" class="visually-hidden text-center">Stars</th>
-					<th scope="col">Effect</th>
-					<th scope="col">Ingredients</th>
-				</tr>
-			</thead>
-			<tbody>
-				{% for food in items.food | sortByRarity %}
-				<tr id="{{ food.name | slugify }}">
-					{# food name and image #}
-					<th scope="row">
-						<figure class="stack stack-space-2xs">
-							<div class="item-frame mr-2xs-xs" data-rarity="{{ food.rarity }}" data-size="m">
-								<img src="/assets/images/food/{{ food.image }}"	alt="" width="96" height="96" {% if loop.index > 4 %}loading="lazy"{% endif %}>
-								<span class="item-frame__info text-step-0 tracking-tighter">
-									{% for i in range(0, food.stars) %}
-									<span class="inline-block -rotate-12">★</span>
-									{% endfor %}
-								</span>
-							</div>
-							<figcaption class="inline-block font-bold mb-2xs">{{ food.name }}</figcaption>
-						</figure>
-					</th>
-					{# rarity (visually hidden) #}
-					<td class="visually-hidden">
-						<span>{{ food.rarity }}</span>
-					</td>
-					{# stars (visually hidden) #}
-					<td class="visually-hidden text-center">
-						<span>{{ food.stars }}</span>
-					</td>
-					<td>
-						<ul class="color-bold">
-							{% for effect in food.effects %}
-							<li>{{ effect | markdown | safe }}</li>
-							{% endfor %}
-						</ul>
-					</td>
-					{# ingredients #}
-					<td>
-						<ul class="min-w-max whitespace-nowrap stack stack-space-2xs">
-							{% for ingredient in helpers.sortIngredientsByRarity(food.ingredients, items.ingredients) %}
-							{% set ingredientItem = items.ingredients[ingredient[0]] %}
-							{% set ingredientQty = ingredient[1] %}
-							<li>
-								<figure title="{{ ingredientItem.name }}: {{ ingredientItem.source }}">
-									<div class="item-frame mr-3xs" data-rarity="{{ ingredientItem.rarity }}" data-size="s">
-										<img src="/assets/images/food/{{ ingredientItem.image }}" alt="" width="48" height="48" loading="lazy">
-										<span class="item-frame__info" data-align="right">{{ ingredientQty }}</span>
-									</div>
-									<figcaption class="inline-block text-step--1 tracking-wide">
-										{{ ingredientItem.name }}
-									</figcaption>
-								</figure>
-							</li>
-							{% endfor %}
-						</ul>
-					</td>
-				</tr>
-				{% endfor %}
-			</tbody>
-		</table>
-	</article>
-</div>
+<article class="max-w-none p-0 overflow-x-auto wrapper">
+	<table class="max-w-none" data-stripe="odd">
+		<thead>
+			<tr>
+				<th scope="col">Food</th>
+				<th scope="col" class="visually-hidden">Rarity</th>
+				<th scope="col" class="visually-hidden text-center">Stars</th>
+				<th scope="col">Effect</th>
+				<th scope="col">Ingredients</th>
+			</tr>
+		</thead>
+		<tbody>
+			{% for food in items.food | sortBy(['rarity', 'stars']) %}
+			<tr id="{{ food.name | slugify }}">
+				{# food name and image #}
+				<th scope="row">
+					<figure class="stack stack-space-2xs">
+						<div class="item-frame mr-2xs-xs" data-rarity="{{ food.rarity }}" data-size="m">
+							<img src="/assets/images/food/{{ food.image }}"	alt="" width="96" height="96" {% if loop.index > 4 %}loading="lazy"{% endif %}>
+							<span class="item-frame__info text-step-0 tracking-tighter">
+								{% for i in range(0, food.stars) %}
+								<span class="inline-block -rotate-12">★</span>
+								{% endfor %}
+							</span>
+						</div>
+						<figcaption class="inline-block font-bold mb-2xs">{{ food.name }}</figcaption>
+					</figure>
+				</th>
+				{# rarity (visually hidden) #}
+				<td class="visually-hidden">
+					<span>{{ food.rarity }}</span>
+				</td>
+				{# stars (visually hidden) #}
+				<td class="visually-hidden text-center">
+					<span>{{ food.stars }}</span>
+				</td>
+				<td>
+					<ul class="color-bold">
+						{% for effect in food.effects %}
+						<li>{{ effect | markdown | safe }}</li>
+						{% endfor %}
+					</ul>
+				</td>
+				{# ingredients #}
+				<td>
+					<ul class="min-w-max whitespace-nowrap stack stack-space-2xs">
+						{% for ingredient in helpers.sortIngredientsByRarity(food.ingredients, items.ingredients) %}
+						{% set ingredientItem = items.ingredients[ingredient[0]] %}
+						{% set ingredientQty = ingredient[1] %}
+						<li>
+							<figure title="{{ ingredientItem.name }}: {{ ingredientItem.source }}">
+								<div class="item-frame mr-3xs" data-rarity="{{ ingredientItem.rarity }}" data-size="s">
+									<img src="/assets/images/food/{{ ingredientItem.image }}" alt="" width="48" height="48" loading="lazy">
+									<span class="item-frame__info" data-align="right">{{ ingredientQty }}</span>
+								</div>
+								<figcaption class="inline-block text-step--1 tracking-wide">
+									{{ ingredientItem.name }}
+								</figcaption>
+							</figure>
+						</li>
+						{% endfor %}
+					</ul>
+				</td>
+			</tr>
+			{% endfor %}
+		</tbody>
+	</table>
+</article>
 {% endblock %}

@@ -1,15 +1,3 @@
-[data-bg] {
-	background-attachment: fixed;
-	background-position: calc(100% + 200px) center;
-	background-repeat: no-repeat;
-}
-
-[data-bg] > .sidebar::after {
-	content: '';
-	flex-basis: 20rem;
-	flex-grow: 1;
-}
-
 [data-bg="home"] {
 	background-image: url('/assets/images/art/weila_lihui.png');
 	background-position: calc(100% + 400px) center;

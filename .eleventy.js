@@ -5,7 +5,7 @@ const md = require('markdown-it')({
 const limitTo = require('./src/filters/limit-to.js');
 const stringifyDate = require('./src/filters/stringify-date.js');
 const groupByYear = require('./src/filters/group-by-year.js');
-const sortByRarity = require('./src/filters/sort-by-rarity.js');
+const sortByCategories = require('./src/filters/sort-by-categories.js');
 
 module.exports = (config) => {
 	config.addPassthroughCopy('./src/assets/');
@@ -14,7 +14,8 @@ module.exports = (config) => {
 	config.addFilter('limitTo', limitTo);
 	config.addFilter('stringifyDate', stringifyDate);
 	config.addFilter('groupByYear', groupByYear);
-	config.addFilter('sortByRarity', sortByRarity);
+	config.addFilter('sortBy', sortByCategories);
+	config.addFilter('values', (obj) => Object.values(obj));
 	config.addFilter('markdown', (value) => {
 		return md.render(value);
 	});
@@ -32,12 +33,15 @@ module.exports = (config) => {
 		return collection.getFilteredByGlob('./src/matrices/*.11ty.js');
 	});
 
+	config.setLibrary('md', md);
+	
 	config.setUseGitIgnore(false);
 
   return {
 		markdownTemplateEngine: 'njk',
 		dataTemplateEngine: 'njk',
 		htmlTemplateEngine: 'njk',
+		templateEngineOverride: 'njk, md',
 	dir: {
 	  input: 'src',
 	  output: 'dist'

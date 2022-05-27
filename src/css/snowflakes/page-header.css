@@ -1,0 +1,5 @@
+.page-header {
+	--region-space: theme('spacing.xl-2xl');
+	background-image: linear-gradient(45deg, theme('colors.sheet.0') 25%, transparent);
+	text-shadow: 0 0 0.1em var(--color-sheet-0), 0 0 1.5em var(--color-sheet-0);
+}

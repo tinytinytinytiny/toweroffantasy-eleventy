@@ -1,0 +1,8 @@
+.reel {
+	align-items: center;
+	display: flex;
+	flex-flow: row nowrap;
+	gap: var(--gutter, theme('spacing.s-l'));
+	justify-content: flex-start;
+	overflow-x: auto;
+}
