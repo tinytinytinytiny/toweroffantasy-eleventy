@@ -1,11 +1,12 @@
-.knockout {
+.chip {
 	background-color: theme('colors.base');
 	border-radius: 1px;
 	color: theme('colors.sheet.0');
 	display: inline-block;
+	line-height: inherit;
 	padding: 0.1em 0.42em;
 }
 
-a.knockout, a.knockout:hover {
-	text-decoration-color: theme('colors.sheet.0');
+a.chip, a.chip:hover {
+	text-decoration-color: currentColor;
 }

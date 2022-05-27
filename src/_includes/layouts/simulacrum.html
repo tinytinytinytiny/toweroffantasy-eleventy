@@ -25,11 +25,12 @@
 {% endmacro %}
 
 {% block content %}
-<header class="bg-sheet-1 region wrapper">
+<header class="bg-sheet-1 region stack wrapper">
 	<h1>{{ title }}</h1>
-	<p class="font-fancy italic uppercase text-step-2">
-		<span class="highlight-rarity" data-rarity="{{ rarity }}">{{ string.rarity[rarity - 1] }}</span> Simulacrum
-	</p>
+	<div class="mt-xl">
+		<p>Simulacrum</p>
+		<p>{{ string.rarity[rarity - 1] }} Rarity</p>
+	</div>
 </header>
 <article class="copy bg-sheet-1 region stack wrapper">
 	<h2>Weapon</h2>

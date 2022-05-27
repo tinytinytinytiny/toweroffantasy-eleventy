@@ -8,7 +8,7 @@
 		{% for year, yearChanges in changelog | groupByYear %}
 		<section class="stack has-h2" aria-label="Changes in {{ year }}">
 			<h2>{{ year }}</h2>
-			<div class="changelog popover stack">
+			<div class="changelog layer stack">
 				{% for item in yearChanges %}
 				<article>
 					<h3>{{ item.date | stringifyDate }}</h3>

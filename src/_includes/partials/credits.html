@@ -1,17 +1,15 @@
 <article class="bg-sheet-1 copy region stack wrapper">
 	<h2>Contributors</h2>
-	<div class="credits stack with-rule" data-rule-top="true">
+	<div class="credits stack">
 		{% for entry in credits %}
-		<article class="sidebar stack {{ 'has-h3' if loop.index > 1 }}">
-			<h3 class="text-primary">{{ entry.title }}</h3>
-			<ul class="auto-grid">
-				{% for contributor in entry.contributors %}
-				<li>
-					<span>{{ contributor.split('#')[0] }}</span><span class="text-base/60 tracking-[0.03em]">{{ '#' + contributor.split('#')[1] }}</span>
-				</li>
-				{% endfor %}
-			</ul>
-		</article>
+		<h3 class="chip block">{{ entry.title }}</h3>
+		<ul class="auto-grid">
+			{% for contributor in entry.contributors %}
+			<li>
+				<span>{{ contributor.split('#')[0] }}</span><span class="text-base/60 tracking-[0.03em]">{{ '#' + contributor.split('#')[1] }}</span>
+			</li>
+			{% endfor %}
+		</ul>
 		{% endfor %}
 	</div>
 </article>

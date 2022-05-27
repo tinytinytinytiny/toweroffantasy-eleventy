@@ -33,6 +33,7 @@ module.exports = {
 				name: 'Negating Cube',
 				element: 'fire',
 				resonance: 'support',
+				exclusiveEffect: 'Est **arces locum veloci** et femina semperque contactu vultus, mitia fuit fatentem frondis obscura rubefecit. Volucrem ego minister mole vetitorum mitra, nec et vestra dixit nymphae furibunda **vellem reluxit male**.',
 				awakening: [
 					'Deal damage and produce a healing orb, which lasts for **20** seconds and restore HP of any teammate who picks it up equal to **60%** of ATK. **2**-second cooldown.',
 					'Increase the current weapon’s base ATK growth by **16%**.',

@@ -1,40 +1,56 @@
 .highlight-rarity {
-	background-image: linear-gradient(-45deg, transparent 15%, rgba(0, 0, 0, 0.6) 15%);
-	border-radius: 2px;
+	color: var(--rarity-color);
 	display: inline-block;
 	font-family: theme('fontFamily.fancy');
-	font-style: italic;
-	padding: 0 0.7em 0 0.5em;
-	text-shadow: 0 0 0.3em var(--rarity-color),
-		0 0 1.65em var(--rarity-color);
+	/* text-shadow: 0 0 0.3em var(--rarity-color),
+		0 0 1.65em var(--rarity-color); */
 }
 
 .highlight-rarity[data-variant="weapon-rank"] {
+	background-image: linear-gradient(-45deg, transparent 15%, var(--rarity-color) 15%);
+	border-radius: 2px;
 	font-size: 1.35rem;
+	font-style: italic;
 	height: 31px;
 	line-height: 31px;
 	padding: 0;
+	position: relative;
 	text-align: center;
 	vertical-align: middle;
 	width: 34px;
 }
 
+.highlight-rarity[data-variant="weapon-rank"] > * {
+	position: relative;
+	z-index: 1;
+}
+
+.highlight-rarity[data-variant="weapon-rank"]::before {
+	content: '';
+	background-image: linear-gradient(-45deg, transparent 15%, rgba(0, 0, 0, 0.85) 15%);
+	position: absolute;
+	top: 1px;
+	right: 1px;
+	bottom: 1px;
+	left: 1px;
+}
+
 .highlight-rarity[data-rarity="1"] {
-	--rarity-color: theme('colors.rarity.1.base');
+	--rarity-color: theme('colors.rarity.1.text');
 }
 
 .highlight-rarity[data-rarity="2"] {
-	--rarity-color: theme('colors.rarity.2.base');
+	--rarity-color: theme('colors.rarity.2.text');
 }
 
 .highlight-rarity[data-rarity="3"] {
-	--rarity-color: theme('colors.rarity.3.base');
+	--rarity-color: theme('colors.rarity.3.text');
 }
 
 .highlight-rarity[data-rarity="4"] {
-	--rarity-color: theme('colors.rarity.4.base');
+	--rarity-color: theme('colors.rarity.4.text');
 }
 
 .highlight-rarity[data-rarity="5"] {
-	--rarity-color: theme('colors.rarity.5.base');
+	--rarity-color: theme('colors.rarity.5.text');
 }

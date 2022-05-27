@@ -1,4 +1,4 @@
-.popover {
+.layer {
 	--border-color: theme('colors.primary');
 	@apply shadow-xl;
 	background-color: theme('colors.sheet.2');
@@ -7,15 +7,20 @@
 	padding: theme('spacing.s-l');
 }
 
-.popover[data-color="secondary"] {
+.layer[data-layer="0"] {
+	@apply bg-sheet-0/80;
+	box-shadow: none;
+}
+
+.layer[data-border-color="secondary"] {
 	--border-color: theme('colors.secondary');
 }
 
-.popover[data-border="none"] {
+.layer[data-border="none"] {
 	border: 0;
 }
 
-.popover[data-border="left"] {
+.layer[data-border="left"] {
 	border: 0;
 	border-left: 0.3em solid var(--border-color);
 }

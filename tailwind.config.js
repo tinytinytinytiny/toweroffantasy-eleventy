@@ -25,6 +25,12 @@ module.exports = {
 		}),
 		padding: ({ theme }) => theme('spacing')
 	},
+	safelist: [
+		'border-element-electric',
+		'border-element-fire',
+		'border-element-ice',
+		'border-element-physical'
+	],
 	variantOrder: [
 		'first',
 		'last',

@@ -1,5 +1,5 @@
 .grid[data-variant="weapon-stat-grid"] {
 	--grid-column-count: 2;
 	--grid-min-item-size: 9rem;
-	--gutter: 0.8rem;
+	--gutter: theme('spacing.s');
 }

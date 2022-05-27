@@ -9,15 +9,16 @@
 }
 
 .weapon-stat__title {
-	color: theme('colors.base');
+	@apply text-base/90;
 	font-family: theme('fontFamily.sans');
 	font-size: theme('fontSize.step--1');
-	letter-spacing: 0.025em;
-	line-height: 1;
+	font-weight: normal;
+	letter-spacing: 0.035em;
+	line-height: 1.1;
 }
 
 .weapon-stat__value {
-	color: theme('colors.primary');
+	@apply text-white/90;
 	display: block;
 	font-family: theme('fontFamily.fancy');
 	letter-spacing: 0.025em;

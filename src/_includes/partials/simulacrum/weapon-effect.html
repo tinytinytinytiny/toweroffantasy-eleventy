@@ -1,13 +1,9 @@
-<h3>Weapon Effects</h3>
-<article class="color-bold sidebar gap-2xs" data-variant="copy">
-	<header>
-		<h4 class="knockout">{{ string.element[weapon.element].effectName }}</h4>
-	</header>
+<h3>Weapon Effect</h3>
+<article class="layer color-bold box-border stack" data-variant="copy" data-layer="0" data-border="none">
+	<h4 class="chip">{{ string.element[weapon.element].effectName }}</h4>
 	{{ string.element[weapon.element].description | markdown | safe }}
-</article>
-{% if weapon.exclusiveEffect %}
-<article class="color-bold sidebar" data-variant="copy">
-	<h4>Bonus Effect</h4>
+	{% if weapon.exclusiveEffect %}
+	<h4 class="chip">Bonus Effect</h4>
 	{{ weapon.exclusiveEffect | markdown | safe }}
+	{% endif %}
 </article>
-{% endif %}

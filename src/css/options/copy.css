@@ -10,6 +10,10 @@
 	--stack-space: theme('spacing.2xl');
 }
 
+.copy h4 {
+	--stack-space: theme('spacing.l')
+}
+
 .copy h2 + *, .copy h3 + * {
 	--stack-space: 1em;
 }
@@ -24,11 +28,13 @@
 }
 
 .not-copy,
-.not-copy *,
+.not-copy h2,
+.not-copy h3,
+.not-copy h4,
+.not-copy figure:not([class*="stack-space"]),
 .not-copy h2 + *,
 .not-copy h3 + *,
 .not-copy h4 + *,
-.not-copy figure:not([class*="stack-space"]),
 .not-copy figure:not([class*="stack-space"]) + * {
 	--stack-space: unset;
 }
