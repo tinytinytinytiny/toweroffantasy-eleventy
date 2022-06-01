@@ -16,6 +16,7 @@ const cum = require('./src/shortcodes/cum.js');
 const htmlMinTransform = require('./src/transforms/html-min-transform.js');
 
 module.exports = (config) => {
+	config.addPassthroughCopy('_redirects');
 	config.addPassthroughCopy('./src/assets/');
 	config.addPassthroughCopy('./src/js/');
 
