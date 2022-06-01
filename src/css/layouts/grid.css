@@ -3,7 +3,8 @@
 	--gap-count: calc(var(--grid-column-count) - 1);
 	--total-gap-width: calc(var(--gap-count) * var(--gutter));
 	--grid-max-item-size: calc((100% - var(--total-gap-width)) / var(--grid-column-count));
+	--gutter: theme('spacing.s');
 	display: grid;
-	gap: var(--gutter, theme('spacing.s'));
+	gap: var(--gutter);
 	grid-template-columns: repeat(auto-fill, minmax(max(var(--grid-min-item-size), var(--grid-max-item-size)), 1fr));
 }

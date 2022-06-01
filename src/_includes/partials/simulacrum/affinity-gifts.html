@@ -1,6 +1,14 @@
 <h3>Preferred Gifts</h3>
-<ul class="cluster gap-s">
-	{% for item in gifts.categories %}
-	<li class="chip font-bold">{{ string.giftCategories[item].name }}</li>
+<ul class="cluster gap-xs">
+	{% for cat in gifts.categories %}
+		<li class="chip" style="background-color: {{ string.giftCategories[cat].color }}">{{ string.giftCategories[cat].name }}</li>
+	{% endfor %}
+</ul>
+<ul class="cluster gap-xs">
+	{% for gift, value in gifts.items | sortBy(['rarity', 'name'], items.gifts, 0) | sortBy([1]) | reverse %}
+		<div class="item-frame" data-rarity="{{ items.gifts[gift].rarity }}" data-size="m">
+			<img src="/assets/images/affinity/{{ gift }}.png" title="{{ items.gifts[gift].name }}" alt="{{ items.gifts[gift].name }}" width="91" height="91" loading="lazy">
+			<span class="item-frame__info" data-align="right">+{{ value }}</span>
+		</div>
 	{% endfor %}
 </ul>

@@ -3,10 +3,22 @@
 	border-radius: 1px;
 	color: theme('colors.sheet.0');
 	display: inline-block;
+	font-weight: bold;
 	line-height: inherit;
+	letter-spacing: normal;
 	padding: 0.1em 0.42em;
 }
 
 a.chip, a.chip:hover {
 	text-decoration-color: currentColor;
+}
+
+.chip[data-wrap-length] {
+	padding-top: 0.3em;
+	padding-bottom: 0.3em;
+	line-height: 1.2;
+}
+
+.chip[data-wrap-length="s"] {
+	max-width: 15ch;
 }

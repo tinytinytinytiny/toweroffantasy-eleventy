@@ -1,15 +1,5 @@
-.weapon-stat {
-	display: flex;
-	align-items: center;
-	gap: theme('spacing.2xs');
-}
-
-.weapon-stat img {
-	display: inline-block;
-}
-
-.weapon-stat__title {
-	@apply text-base/90;
+.infobite > :first-child {
+	color: theme('colors.glare');
 	font-family: theme('fontFamily.sans');
 	font-size: theme('fontSize.step--1');
 	font-weight: normal;
@@ -17,7 +7,7 @@
 	line-height: 1.1;
 }
 
-.weapon-stat__value {
+.infobite > :last-child {
 	@apply text-white/90;
 	display: block;
 	font-family: theme('fontFamily.fancy');

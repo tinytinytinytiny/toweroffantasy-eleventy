@@ -5,7 +5,7 @@
 	position: relative;
 }
 
-.card__link::before {
+.card a::before {
 	content: '';
 	position: absolute;
 	top: 0;

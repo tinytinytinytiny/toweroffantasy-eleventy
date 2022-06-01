@@ -1,0 +1,43 @@
+.pros, .cons {
+	min-width: 23ch;
+}
+
+/* .pros > li, .cons > li {
+	padding-left: 0.7ch;
+} */
+
+.pros > li::before {
+	content: '✅ ';
+	padding-right: 0.1em;
+}
+
+.cons > li::before {
+	content: '❌ ';
+	padding-right: 0.1em;
+}
+
+@supports selector(li::marker) {
+	ul.pros, ul.cons {
+		padding-left: 1.6em;
+	}
+
+	.pros > li, .cons > li {
+		padding-left: 0.7ch;
+	}
+
+	.pros > li::before {
+		content: none;
+	}
+
+	.cons > li::before {
+		content: none;
+	}
+
+	.pros > li::marker {
+		content: '✅';
+	}
+
+	.cons > li::marker {
+		content: '❌';
+	}
+}

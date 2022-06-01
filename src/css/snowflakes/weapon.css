@@ -1,0 +1,35 @@
+.weapon {
+	--image-width: 128px;
+}
+
+.weapon-info .grid {
+	--grid-column-count: 2;
+	--grid-min-item-size: 9rem;
+	--gutter: theme('spacing.xs');
+}
+
+.weapon-stat {
+	display: flex;
+	align-items: center;
+	gap: theme('spacing.2xs');
+}
+
+.weapon-stat img {
+	display: inline-block;
+}
+
+.weapon[data-element="electric"] {
+	border-color: theme('colors.element.electric');
+}
+
+.weapon[data-element="fire"] {
+	border-color: theme('colors.element.fire');
+}
+
+.weapon[data-element="ice"] {
+	border-color: theme('colors.element.ice');
+}
+
+.weapon[data-element="physical"] {
+	border-color: theme('colors.element.physical');
+}

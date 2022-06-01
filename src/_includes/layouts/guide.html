@@ -1,0 +1,39 @@
+{% extends "layouts/base.html" %}
+
+{% block header %}
+	<header class="page-header region stack wrapper">
+		<div class="page-header__inner with-rule stack stack-space-s-l">
+			<div class="stack">
+				<h1 class="text-step-4 normal-case">{{ title }}</h1>
+				<p>
+					By <span class="text-primary">{{ authors.join('<span class="text-base">, </span>') | safe }}</span>
+				</p>
+			</div>
+			<div>
+				<ul class="cluster gap-xs mb-0">
+					{% for tag in tags %}
+					<li>
+						<a class="chip" href="/guides/tag/{{ tag }}" data-variant="hover">
+							#&#8202;<span class="font-bold">{{ tag | capitalize }}</span>
+						</a>
+					</li>
+					{% endfor %}
+				</ul>
+			</div>
+		</div>
+	</header>
+{% endblock %}
+
+{% block content %}
+	{{ content | safe }}
+{% endblock %}
+
+{% block ending %}
+	{% set guideList = helpers.getSiblingContent(collections.guides, page) %}
+	{% if guideList | length %}
+		<section class="ending copy region stack wrapper" aria-label="Ending">
+			<h2>More Guides</h2>
+			{% include "partials/guide-list.html" %}
+		</section>
+	{% endif %}
+{% endblock %}

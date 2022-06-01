@@ -1,9 +1,11 @@
 <h3>Weapon Effect</h3>
-<article class="layer color-bold box-border stack" data-variant="copy" data-layer="0" data-border="none">
+<div class="color-bold box-border stack copy">
 	<h4 class="chip">{{ string.element[weapon.element].effectName }}</h4>
 	{{ string.element[weapon.element].description | markdown | safe }}
 	{% if weapon.exclusiveEffect %}
-	<h4 class="chip">Bonus Effect</h4>
-	{{ weapon.exclusiveEffect | markdown | safe }}
+		{% for effect in weapon.exclusiveEffect %}
+			<h4 class="chip">{{ effect.name }}</h4>
+			{{ effect.effect | markdown | safe }}
+		{% endfor %}
 	{% endif %}
-</article>
+</div>

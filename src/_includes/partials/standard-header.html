@@ -1,0 +1,10 @@
+<header class="page-header region stack wrapper">
+	<div class="page-header__inner copy stack">
+		<h1>{{ title }}</h1>
+		{% if summary %}
+		{{ summary | safe }}
+		{% else %}
+		{{ content | safe }}
+		{% endif %}
+	</div>
+</header>

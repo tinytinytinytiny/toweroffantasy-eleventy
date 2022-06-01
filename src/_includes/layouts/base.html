@@ -8,21 +8,31 @@
 
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-		<link href="https://fonts.googleapis.com/css2?family=Anonymous+Pro&family=Archivo:wght@340;670&family=Chakra+Petch:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wdth,wght@0,100,340;0,100,670;0,108,670;1,100,340&family=Chakra+Petch:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="/css/global.css" />
 		<link rel="icon" href="/assets/images/avatar/tata.png">
   </head>
   <body>
 		{% include "partials/skip-link.html" %}
-		<div class="site-bg" data-bg="{{ background }}" role="presentation"></div>
-		<div class="sidebar">
+		{% if 'guides' in page.filePathStem %}
+			{% set dataBg = 'guides' %}
+		{% elif page.fileSlug %}
+			{% set dataBg = page.fileSlug %}
+		{% else %}
+			{% set dataBg = 'home' %}
+		{% endif %}
+		<div class="site-bg fuckyousafari fuckyoufuckyoufkcu" data-bg="{{ dataBg }}" role="presentation" style="background-image: url('/assets/images/{{ background }}');"></div>
+		<div class="sidebar" data-variant="center-content constrain-content">
 			{% include "partials/sidebar.html" %}
-			<main tabindex="-1" id="main-content">
-				{% block header %}{% endblock %}
+			<main class="stack" tabindex="-1" id="main-content">
+				{% block header %}
+					{% include "partials/standard-header.html" %}
+				{% endblock %}
 				{% set isCopy = true %}
-				<div class="{% if isCopy %}copy{% endif %} bg-sheet-1 region stack wrapper">
+				<div class="{% if isCopy %}copy{% endif %} bg-sheet-1 mt-0 region stack wrapper">
 					{% block content %}{% endblock %}
 				</div>
+				{% block ending %}{% endblock %}
 				{% include "partials/footer.html" %}
 			</main>
 		</div>

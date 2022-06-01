@@ -5,7 +5,7 @@
 			<span class="nav__toggle">Menu</span>
 		</summary>
 		<a href="/" class="nav__head" aria-label="{{ site.name }} - home">
-			<img src="/assets/images/avatar/tata.png" width="87" height="79" alt="">
+			<img src="/assets/images/fixed_btn_cbt_small.png" width="100" height="142" alt="">
 			<span>Tower of Fantasy Index</span>
 		</a>
 		<ul class="nav__links flex-grid">
@@ -24,7 +24,9 @@
 		<ul class="nav__links flex-grid text-secondary">
 			{% for item in navigation.socials -%}
 			<li>
-				<a href="{{ item.url }}"><span>{{ item.text }}</span></a>
+				<a href="{{ item.url }}" {% if item.external %}target="_blank"{% endif %}>
+					<span>{{ item.text }}</span>
+				</a>
 			</li>
 			{%- endfor %}
 		</ul>

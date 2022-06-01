@@ -37,11 +37,13 @@
 	"socials": [
 		{
 			"text": "Discord",
-			"url": "https://discord.gg/qhDevpbJ4N"
+			"url": "https://discord.gg/qhDevpbJ4N",
+			"external": true
 		},
 		{
 			"text": "Reddit",
-			"url": "https://www.reddit.com/r/TowerofFantasy/"
+			"url": "https://www.reddit.com/r/TowerofFantasy/",
+			"external": true
 		}
 	]
 }

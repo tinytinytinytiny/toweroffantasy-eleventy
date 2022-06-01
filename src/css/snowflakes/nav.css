@@ -1,25 +1,17 @@
 .nav {
-	--gutter: theme('spacing.m-l');
-	background-color: theme('colors.sheet.0');
+	--wrapper-padding: theme('spacing.m-l');
+	/* background-color: theme('colors.sheet.0'); */
 }
 
-.nav:not(:has(> details[open])) {
+/* .nav:not(:has(> details[open])) {
 	background-color: transparent;
-}
-
-/* html:has(.nav[data-state="collapsed"] > details[open]),
-body:has(.nav[data-state="collapsed"] > details[open]) {
-	overflow: hidden;
-}
-
-.nav[data-state="collapsed"]:has(> details[open]) + main {
-	pointer-events: none;
 } */
 
 .nav > details {
 	--region-space: theme('spacing.s-l');
 	max-height: 100vh;
 	overflow-y: auto;
+	overscroll-behavior: contain;
 	padding-bottom: calc(theme('spacing.s-l') + env(safe-area-inset-bottom));
 	position: sticky;
 	top: 0;
@@ -84,7 +76,7 @@ body:has(.nav[data-state="collapsed"] > details[open]) {
 }
 
 .nav__links::before {
-	@apply text-white/20;
+	@apply text-glare/20;
 	border-top: 1px solid;
 	content: '';
 	margin-top: calc(var(--gutter) / 2);
@@ -155,7 +147,7 @@ body:has(.nav[data-state="collapsed"] > details[open]) {
 }
 
 .nav__links a[data-state="active"]::before {
-	border-left: 0.45em solid theme('colors.primary');
+	border-left: 0.31em solid theme('colors.primary');
 	opacity: 1;
 }
 

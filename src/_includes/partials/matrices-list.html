@@ -1,0 +1,24 @@
+<ul class="auto-grid max-w-none">
+	{% for item in items | sortBy(['isNew', 'isChina', 'name']) | reverse %}
+		<li class="sheet card stack box-border p-s" data-border="none">
+			<div class="item-frame" data-variant="matrix">
+				<img class="drop-shadow-xl" src="/assets/images/chip/{{ item.fileSlug }}.png" alt="" width="205" height="205" loading="{{ 'lazy' if loop.index > 5 else 'auto' }}">
+				{% if item.data.isNew %}
+					<span class="new-badge" aria-hidden="true">
+						New
+					</span>
+				{% endif %}
+			</div>
+			<div class="font-bold text-center stack">
+				<div class="absolute top-3xs left-3xs leading-none">
+					{% if item.data.isChina %}
+						{% china %}
+					{% endif %}
+				</div>
+				<a class="text-white/90" href="/matrices/{{ item.fileSlug }}" data-variant="hover">
+					{{ item.data.name }}
+				</a>
+			</div>
+		</li>
+	{% endfor %}
+</ul>

@@ -1,0 +1,27 @@
+<article class="character-info profile sheet box-border" data-border="none" data-ratio="1-5" data-direction="rtl" data-china="{{ isChina }}">
+	<figure>
+		<img src="/assets/images/charts/{{ page.fileSlug }}.png" alt="Radar chart of {{ name }}’s personality traits" width="464" height="251" loading="lazy">
+	</figure>
+	<div class="auto-grid">
+		<article class="infobite">
+			<h3>Gender</h3>
+			<p>{{ traits.gender }}</p>
+		</article>
+		<article class="infobite">
+			<h3>Height</h3>
+			<p>{{ traits.height }}</p>
+		</article>
+		<article class="infobite">
+			<h3>Birthplace</h3>
+			<p>{{ traits.birthplace }}</p>
+		</article>
+		<article class="infobite">
+			<h3>Horoscope</h3>
+			<p>{{ traits.horoscope }}</p>
+		</article>
+		<article class="infobite">
+			<h3>Birthday</h3>
+			<p>{{ traits.birthday }}</p>
+		</article>
+	</div>
+</article>

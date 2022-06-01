@@ -2,32 +2,37 @@
 	--stack-space: theme('spacing.m');
 }
 
-.copy h2 {
-	--stack-space: theme('spacing.2xl');
+.copy > h2 {
+	--stack-space: theme('spacing.xl-2xl');
 }
 
-.copy h3 {
-	--stack-space: theme('spacing.2xl');
+.copy > h3 {
+	--stack-space: theme('spacing.xl-2xl');
 }
 
-.copy h4 {
+.copy > h4 {
 	--stack-space: theme('spacing.l')
 }
 
-.copy h2 + *, .copy h3 + * {
+.copy > h2 + *, .copy > h3 + * {
 	--stack-space: 1em;
 }
 
-.copy h4 + * {
+.copy > h4 + * {
 	--stack-space: theme('spacing.2xs');
 }
 
-.copy figure:not([class*="stack-space"]),
-.copy figure:not([class*="stack-space"]) + * {
-	--stack-space: theme('spacing.l');
+.copy > figure,
+.copy > figure + *,
+.copy > aside,
+.copy > aside + *,
+.copy > hr,
+.copy > hr + * {
+	--stack-space: theme('spacing.xl');
 }
 
-.not-copy,
+/* .not-copy,
+.not-copy > * + *,
 .not-copy h2,
 .not-copy h3,
 .not-copy h4,
@@ -37,4 +42,4 @@
 .not-copy h4 + *,
 .not-copy figure:not([class*="stack-space"]) + * {
 	--stack-space: unset;
-}
+} */

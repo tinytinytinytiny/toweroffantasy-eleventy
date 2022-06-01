@@ -1,5 +1,5 @@
 .site-footer {
-	@apply text-white/60 tracking-wide;
+	/* @apply text-white/60 tracking-wide; */
 	text-shadow:
 		0 0 0.1em theme('colors.sheet.0'),
 		0 0 0.15em theme('colors.sheet.0'),

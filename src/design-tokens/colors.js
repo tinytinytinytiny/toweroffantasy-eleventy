@@ -5,7 +5,7 @@ module.exports = {
 	// Brand
 	primary: '#FFD082',
 	secondary: '#2bcae8',
-	tertiary: '#FF7C7C',
+	tertiary: '#f36b6b',
 
 	// Background
 	sheet: {
@@ -17,36 +17,37 @@ module.exports = {
 
 	// Text
 	base: '#dfdfdf',
+	glare: '#c5c8e7',
 
 	// Rarity
 	rarity: {
 		1: {
-			base: '#a7bddb',
-			baseRGB: '166, 188, 219',
-			backdrop: '#6d88a3',
+			base: '#aac0da',
+			baseRGB: '170, 192, 218',
+			backdrop: '#6f8ba6',
 			text: '#dfdfdf'
 		},
 		2: {
-			base: '#2eb49b',
-			baseRGB: '46, 180, 155',
+			base: '#28b79b',
+			baseRGB: '40, 183, 155',
 			backdrop: '#1f8474',
 			text: '#84e5b0'
 		},
 		3: {
-			base: '#229af0',
-			baseRGB: '34, 154, 240',
+			base: '#1c9cf7',
+			baseRGB: '28, 156, 247',
 			backdrop: '#196b9d',
 			text: '#aee1f2'
 		},
 		4: {
-			base: '#c068d9',
-			baseRGB: '192, 104, 217',
+			base: '#c464e1',
+			baseRGB: '196, 100, 225',
 			backdrop: '#865195',
-			text: 'f2c8fa'
+			text: '#f2c8fa'
 		},
 		5: {
-			base: '#e1ad48',
-			baseRGB: '224, 173, 72',
+			base: '#e2ae48',
+			baseRGB: '226, 174, 72',
 			backdrop: '#ad7c37',
 			text: '#ffe593'
 		}

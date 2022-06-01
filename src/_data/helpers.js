@@ -16,12 +16,28 @@ module.exports = {
 		if (collection === undefined || collection === null) {
 			return false;
 		}
-		return collection.filter(i => i.fileSlug === fileSlug)[0];
-	},
-	sortIngredientsByRarity(ingredients, ingredientsDataObject) {
-		return ingredients.sort((a, b) => ingredientsDataObject[a[0]].rarity - ingredientsDataObject[b[0]].rarity);
+		return collection.find(i => i.fileSlug === fileSlug);
 	},
 	getWeaponRating(value, data) {
-		return data.filter(i => value > i.threshold )[0];
+		return data.find(i => value > i.threshold );
+	},
+	getFilteredByTag(collection, tag) {
+		return collection.filter(i => i.data.tags.includes(tag));
+	},
+	getSiblingContent(collection, item, limit = 3, random = true) {
+		let filteredItems = collection.filter(i => i.url !== item.url);
+
+		if (random) {
+			for (let i = 0; i < filteredItems.length; i++) {
+				const j = Math.floor(Math.random() * (i + 1));
+			  [filteredItems[i], filteredItems[j]] = [filteredItems[j], filteredItems[i]];
+			}
+		}
+
+		if (limit > 0) {
+			filteredItems = filteredItems.slice(0, limit);
+		}
+
+		return filteredItems;
 	}
 };

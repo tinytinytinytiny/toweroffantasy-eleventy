@@ -1,21 +1,21 @@
 <h3>Recommended Matrices</h3>
-<ul class="auto-grid mt-[1em]" data-variant="matrix-grid">
+<ul class="cluster mt-[1em] {{ 'gap-0' if recChips | length > 5 }}" data-variant="matrix-grid">
 	{% for chip, quantity in recChips %}
-	{% if helpers.findCollection(collections.matrices, chip) %}
-	{% set chipName = helpers.findCollection(collections.matrices, chip).data.name %}
-	{% else %}
-	{% set chipName = chip | capitalize %}
-	{% endif %}
-	<li>
-		<figure class="card">
+		{% if helpers.findCollection(collections.matrices, chip) %}
+			{% set chipName = helpers.findCollection(collections.matrices, chip).data.name %}
+		{% else %}
+			{% set chipName = chip | capitalize %}
+		{% endif %}
+		<li class="card">
 			<div class="item-frame" data-variant="matrix">
-				<img src="/assets/images/chip/{{ chip }}.png" width="205" height="205">
-				<span class="item-frame__info" data-align="right">×{{ quantity }}</span>
+				<img src="/assets/images/chip/{{ chip }}.png" width="205" height="205" alt="" loading="lazy">
+				<span class="item-frame__info" data-align="right" aria-hidden="true">×{{ quantity }}</span>
 			</div>
-			<figcaption>
-				<a class="card__link chip font-bold text-step--1" href="/matrices/{{ chip }}/" data-variant="hover">{{ chipName }}</a>
-			</figcaption>
-		</figure>
-	</li>
+			<div>
+				<a class="card__link inline-block font-bold text-center text-step--1 leading-[1.2] max-w-[15ch]" href="/matrices/{{ chip }}/" data-variant="hover">
+					{{ chipName }}<span class="visually-hidden"> {{ quantity }}-set</span>
+				</a>
+			</div>
+		</li>
 	{% endfor %}
 </ul>

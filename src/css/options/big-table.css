@@ -1,0 +1,9 @@
+.big-table, .wrapper > .big-table {
+	--wrapper-padding: 0;
+	max-width: none;
+	overflow-x: auto;
+}
+
+.big-table > table {
+	max-width: none;
+}

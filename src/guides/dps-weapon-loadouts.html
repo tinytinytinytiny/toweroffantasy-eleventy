@@ -1,0 +1,323 @@
+---
+{
+	"title": "DPS Weapon Loadouts",
+	"tags": ["gear"],
+	"authors": ["Cytus#4151"]
+}
+---
+{% macro table() %}
+<figure class="big-table wrapper">
+	<table>
+		<thead>
+			<tr>
+				<th>Weapon</th>
+				<th>Pros</th>
+				<th>Cons</th>
+			</tr>
+		</thead>
+		<tbody>
+			{{ caller() }}
+		</tbody>
+	</table>
+</figure>
+{% endmacro %}
+
+{% macro weapon(name) %}
+<div class="card">
+	<img src="/assets/images/wep/{{ name | slugify }}.png" alt="{{ name }}’s weapon" width="128" height="128" loading="lazy">
+	<a href="/simulacra/{{ name | slugify }}" class="font-bold inline-block" data-variant="hover">{{ name }}</a>
+</div>
+{% endmacro %}
+
+{% macro pros() %}
+<td>
+	<ul class="pros">
+		{{ caller() }}
+	</ul>
+</td>
+{% endmacro %}
+
+{% macro cons() %}
+<td>
+	<ul class="cons">
+		{{ caller() }}
+	</ul>
+</td>
+{% endmacro %}
+
+<h2>Shield Breaker</h2>
+<p>
+	Deal the highest damage to shields. Necessary as most bosses and minibosses have shields that significantly reduce damage taken. Bosses will also use powerful attacks if their shield is not broken in time. These weapons tend to unlock a crucial shield break effect at 1★ or 3★.
+</p>
+
+{% call table() %}
+<tr>
+	<th class="align-top">
+		{{ weapon('Baiyuekui') }}
+	</th>
+	{% call pros() %}
+		<li>Insanely high damage with skills and dash attacks, instant burst on shieldbreak (3★)</li>
+		<li>i-frames on active skill</li>
+		<li>Can be paired with 2 support weapons</li>
+	{% endcall %}
+	<td></td>
+</tr>
+<tr>
+	<th class="align-top">
+		{{ weapon('Ruby') }}
+	</th>
+	{% call pros() %}
+		<li>Very high damage numbers, can be used as Main DPS</li>
+		<li>Detonates burn effects, synergize with fire weapons</li>
+		<li>Can permastun elite mobs and be effective at long range</li>
+	{% endcall %}
+	{% call cons() %}
+		<li>Not as efficient as other shieldbreakers til 5★</li>
+	{% endcall %}
+</tr>
+<tr>
+	<th class="align-top">
+		{{ weapon('KING') }}
+	</th>
+	{% call pros() %}
+		<li>High DoT on shieldbreak</li>
+		<li>Area burst with skills</li>
+	{% endcall %}
+	{% call cons() %}
+		<li>Easily interrupted when casting and basic attacking</li>
+	{% endcall %}
+</tr>
+<tr>
+	<th class="align-top">
+		{{ weapon('Meryl')}}
+	</th>
+	{% call pros() %}
+		<li>Highest shieldbreak efficiency, self-heal on shieldbreak (1★)</li>
+		<li>Immune to interrupts</li>
+	{% endcall %}
+	{% call cons() %}
+		<li>No shieldbreak damage</li>
+		<li>Clunky switch skill</li>
+	{% endcall %}
+</tr>
+<tr>
+	<th class="align-top">
+		{{ weapon('Shiro') }}
+	</th>
+	{% call pros() %}
+		<li>High burst with active skill + 3 dash attacks</li>
+		<li>3★ resets CDs on shieldbreak, benefits other weapons</li>
+	{% endcall %}
+	{% call cons() %}
+		<li>Skill has small range, useless if enemies are mobile</li>
+		<li>Switch skill is terrible</li>
+	{% endcall %}
+</tr>
+<tr>
+	<th class="align-top">
+		{{ weapon('Huma') }}
+	</th>
+	{% call pros() %}
+		<li>Decent shieldbreaking efficiency</li>
+		<li>Relatively high energy charge</li>
+	{% endcall %}
+	{% call cons() %}
+		<li>No shieldbreak effect</li>
+	{% endcall %}
+</tr>
+{% endcall %}
+
+<h2>Main DPS</h2>
+<p>
+	Highest standing DPS to unshielded targets; the weapon you want to be on most of the time. These weapons tend to have low damage to shields and average charge rate.
+</p>
+
+{% call table() %}
+<tr>
+	<th class="align-top">
+		{{ weapon('Cobalt-B') }}
+	</th>
+	{% call pros() %}
+		<li>Applies multiple high damage burn effects</li>
+		<li>Very high damage active skill</li>
+	{% endcall %}
+	{% call cons() %}
+		<li>Reliant on 2 set Cobalt chips to apply 3rd burn</li>
+		<li>Reliant on 6★ to reduce skill cooldown</li>
+	{% endcall %}
+</tr>
+<tr>
+	<th class="align-top">
+		{{ weapon('Samir') }}
+	</th>
+	{% call pros() %}
+		<li>Fast hits, good DPS and charge rate</li>
+		<li>Safe AoE air attack</li>
+	{% endcall %}
+	{% call cons() %}
+		<li>Final hit of ground basic attack is terrible</li>
+		<li>Bad long range attack, ineffective anti-air</li>
+	{% endcall %}
+</tr>
+<tr>
+	<th class="align-top">
+		{{ weapon('Crow') }}
+	</th>
+	{% call pros() %}
+		<li>Backstabs, execute, built-in crit buffs</li>
+		<li>Air attack has very high DPS potential</li>
+	{% endcall %}
+	{% call cons() %}
+		<li>Very difficult to use, requires 2pc Claudia chips</li>
+		<li>Weak at low ★s</li>
+	{% endcall %}
+</tr>
+<tr>
+	<th class="align-top">
+		{{ weapon('Frigg') }}
+	</th>
+	{% call pros() %}
+		<li>Ice field allows free dash attacks and buffs other ice weapons</li>
+		<li>Large AOE attacks</li>
+		<li>i-frames on active skill</li>
+	{% endcall %}
+	{% call cons() %}
+		<li>Slow attacks, reliant on staying in ice field</li>
+	{% endcall %}
+</tr>
+<tr>
+	<th class="align-top">
+		{{ weapon('Tsubasa') }}
+	</th>
+	{% call pros() %}
+		<li>High charge rate</li>
+		<li>Good dash attack and arrow rain damage</li>
+		<li>i-frames on active skill</li>
+	{% endcall %}
+	{% call cons() %}
+		<li>Basic attacks are weak and blocked by other players</li>
+	{% endcall %}
+</tr>
+<tr>
+	<th class="align-top">
+		{{ weapon('Ene') }}
+	</th>
+	{% call pros() %}
+		<li>Good DPS for SR</li>
+		<li>Provides good CC and CC immunity</li>
+		<li>Active skill allows dash attack spam</li>
+	{% endcall %}
+	{% call cons() %}
+		<li>Slow attacks</li>
+	{% endcall %}
+</tr>
+{% endcall %}
+
+<h2>Support DPS</h2>
+<p>
+	Increase your overall DPS through damage buffs and other means. These weapons are best used as “quickswap” weapon, by rotating frequently to throw out their burst and refresh their buffs.
+</p>
+
+{% call table() %}
+<tr>
+	<th class="align-top">
+		{{ weapon('Marc') }}
+	</th>
+	{% call pros() %}
+		<li>35% all damage buff (3★) & CC immunity buff (6★)</li>
+		<li>High charge rate</li>
+	{% endcall %}
+	{% call cons() %}
+		<li>No useful buffs before 3★, takes damage for allies</li>
+	{% endcall %}
+</tr>
+<tr>
+	<th class="align-top">
+		{{ weapon('Nemesis') }}
+	</th>
+	{% call pros() %}
+		<li>20%/40%(5★)/50%(6★) electric attack buff</li>
+		<li>Heals while doing good passive dps (3★+)</li>
+	{% endcall %}
+	{% call cons() %}
+		<li>Only supports electric weapons</li>
+	{% endcall %}
+</tr>
+<tr>
+	<th class="align-top">
+		{{ weapon('Tsubasa') }}
+	</th>
+	{% call pros() %}
+		<li>Highest charge rate against grouped enemies</li>
+		<li>24% (1★)/40% (6★) all damage buff</li>
+	{% endcall %}
+	{% call cons() %}
+		<li>Reliant on dash attacks to apply buff until 6★</li>
+	{% endcall %}
+</tr>
+<tr>
+	<th class="align-top">
+		{{ weapon('Claudia') }}
+	</th>
+	{% call pros() %}
+		<li>24% all damage buff (1★), 10% (3★)/20% (6★) phys damage increase, 20% skill damage buff (5★)</li>
+		<li>High charge rate</li>
+	{% endcall %}
+	{% call cons() %}
+		<li>Vulnerable during skill</li>
+		<li>No main physical DPS to support</li>
+	{% endcall %}
+</tr>
+<tr>
+	<th class="align-top">
+		{{ weapon('Shiro') }}
+	</th>
+	{% call pros() %}
+		<li>1★ greatly increases team burst damage and shieldbreak during active skill</li>
+		<li>3★ resets cooldowns on shieldbreak, benefitting other weapons</li>
+	{% endcall %}
+	{% call cons() %}
+		<li>Reliant on active skill</li>
+	{% endcall %}
+</tr>
+<tr>
+	<th class="align-top">
+		{{ weapon('Bai Ling') }}
+	</th>
+	{% call pros() %}
+		<li>Applies wounded debuff on dash attacks (increase all damage to target by 20%)</li>
+		<li>Useful in group raid if you don't have good DPS options yourself</li>
+	{% endcall %}
+	{% call cons() %}
+	{% endcall %}
+</tr>
+{% endcall %}
+
+{% macro weaponList(list) %}
+<div class="sheet box-border p-s" data-border="none">
+	<ul class="cluster m-0 justify-center">
+		{% for item in list %}
+			<li>
+				{{ weapon(item) }}
+				<p class="text-center text-glare text-step--1 tracking-wide">
+					{% if loop.index === 1 %}
+						Shield Breaker
+					{% elif loop.index === 2 %}
+						Main DPS
+					{% elif loop.index === 3 %}
+						Support
+					{% endif %}
+				</p>
+			</li>
+		{% endfor %}
+	</ul>
+</div>
+{% endmacro %}
+
+<h2>Strongest Setups</h2>
+<h3>6★, Maxed Chips</h3>
+{{ weaponList(['Baiyuekui', 'Marc', 'Nemesis']) }}
+{{ weaponList(['Baiyuekui', 'Claudia', 'Nemesis']) }}
+{{ weaponList(['Ruby', 'Cobalt-B', 'Marc']) }}
+<h3>Without Limited Weapons</h3>
+{{ weaponList(['KING', 'Samir', 'Tsubasa']) }}

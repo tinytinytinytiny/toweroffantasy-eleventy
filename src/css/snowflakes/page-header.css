@@ -1,5 +1,42 @@
 .page-header {
 	--region-space: theme('spacing.xl-2xl');
-	background-image: linear-gradient(45deg, theme('colors.sheet.0') 25%, transparent);
-	text-shadow: 0 0 0.1em var(--color-sheet-0), 0 0 1.5em var(--color-sheet-0);
+	align-items: flex-start;
+	display: flex;
+	flex-flow: column;
+	justify-content: flex-end;
+	min-height: 280px;
+	position: relative;
+	text-shadow: 0 0 0.1em var(--color-sheet-0),
+		0 0 0.2em var(--color-sheet-0),
+		0 0 0.4em var(--color-sheet-0),
+		0 0 0.6em var(--color-sheet-0),
+		0 0 1.2em var(--color-sheet-0),
+		0 0 2.4em var(--color-sheet-0),
+		0 0 4.8em var(--color-sheet-0);
+}
+
+.page-header::before {
+	background-image: linear-gradient(90deg, theme('colors.sheet.0') 20%, transparent);
+	content: '';
+	position: absolute;
+	top: -20rem;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	mix-blend-mode: darken;
+	z-index: -1;
+}
+
+.page-header__inner {
+	width: 100%;
+}
+
+.page-header[data-variant="item"] .page-header__inner {
+	display: flex;
+	flex-flow: column-reverse nowrap;
+	gap: var(--stack-space, 1em);
+}
+
+.page-header .chip {
+	text-shadow: none;
 }

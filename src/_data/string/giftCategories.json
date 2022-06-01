@@ -1,8 +1,42 @@
 {
+	"collectibles": {
+		"name": "Collectibles",
+		"color": "#8b8bc5"
+	},
+	"decorations": {
+		"name": "Decorations",
+		"color": "#ababa5"
+	},
+	"everyday-items": {
+		"name": "Everyday Items",
+		"color": "#c08f8d"
+	},
+	"figurines": {
+		"name": "Figurines",
+		"color": "#da849f"
+	},
 	"games": {
-		"name": "Games"
+		"name": "Games",
+		"color": "#8faecb"
 	},
 	"limited-time-items": {
-		"name": "Limited Time Items"
+		"name": "Limited Time Items",
+		"color": "#ddc392"
+	},
+	"metalware": {
+		"name": "Metalware",
+		"color": "#b09cea"
+	},
+	"rare-items": {
+		"name": "Rare Items",
+		"color": "#dd64a9"
+	},
+	"toys": {
+		"name": "Toys",
+		"color": "#dd9cea"
+	},
+	"vera": {
+		"name": "Vera",
+		"color": "#cba79a"
 	}
 }

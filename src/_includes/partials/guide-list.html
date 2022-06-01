@@ -1,0 +1,15 @@
+<ul class="stack">
+	{% for guide in guideList %}
+		<li class="sheet card block box-border p-s-m" data-border="none">
+			<a class="text-step-1 font-bold" href="{{ guide.url }}" data-variant="hover">
+				{% if 'china' in guide.data.tags %}
+					{% china %}
+				{% endif %}
+				{{ guide.data.title }}
+			</a>
+			<p class="text-step--1 tracking-wide">
+				By <span class="text-primary">{{ guide.data.authors.join('<span class="text-base">, </span>') | safe }}</span>
+			</p>
+		</li>
+	{% endfor %}
+</ul>

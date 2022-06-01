@@ -1,6 +1,6 @@
 .with-rule > * + *::before,
 .with-rule[data-rule-top="true"] > *:first-child::before {
-	@apply text-white/20;
+	@apply text-glare/20;
 	border-top: 1px solid;
 	content: '';
 	display: block;

@@ -1,13 +1,13 @@
 <h2>Contributors</h2>
 <div class="credits stack">
 	{% for entry in credits %}
-	<h3 class="chip block text-step-0 font-sans {% if loop.index > 1 %}mt-l{% endif %}">{{ entry.title }}</h3>
-	<ul class="auto-grid">
-		{% for contributor in entry.contributors %}
-		<li>
-			<span>{{ contributor.split('#')[0] }}</span><span class="text-base/60 tracking-[0.03em]">{{ '#' + contributor.split('#')[1] }}</span>
-		</li>
-		{% endfor %}
-	</ul>
+		<h3 class="chip block text-step-0 font-sans stack-space-l">{{ entry.title }}</h3>
+		<ul class="auto-grid">
+			{% for contributor in entry.contributors %}
+				<li>
+					<span>{{ contributor.split('#')[0] }}</span><span class="text-base/60 tracking-[0.03em]">{{ '#' + contributor.split('#')[1] }}</span>
+				</li>
+			{% endfor %}
+		</ul>
 	{% endfor %}
 </div>

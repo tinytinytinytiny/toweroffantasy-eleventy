@@ -1,0 +1,15 @@
+.character-info {
+	--image-width: 464px;
+}
+
+.character-info img {
+	filter: hue-rotate(204deg) saturate(9);
+}
+
+.character-info > .auto-grid {
+	--grid-min-item-size: 8rem;
+}
+
+.character-info[data-china="true"] img {
+	filter: none;
+}

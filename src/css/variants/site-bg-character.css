@@ -1,13 +1,24 @@
 [data-bg="home"] {
-	background-image: url('/assets/images/art/weila_lihui.png');
-	background-position: calc(100% + 400px) center;
+	--background-offset: 500px;
 }
 
 [data-bg="food"] {
 	background-position: 100% bottom;
-	background-image: url('/assets/images/art/huodong_meishi_guo.png');
 }
 
-[data-bg="zero"] {
-	background-image: url('/assets/images/art/zero.png');
+[data-bg="guides"] {
+	background-position-y: center;
+}
+
+[data-bg="relics"] {
+	--background-offset: 150px;
+	background-position-y: center;
+}
+
+[data-bg="echo"] {
+	--background-offset: 400px;
+}
+
+[data-bg="fuwasaki"] {
+	--background-offset: 370px;
 }

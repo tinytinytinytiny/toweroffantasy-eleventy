@@ -1,51 +1,38 @@
 {% extends "layouts/base.html" %}
 
 {% set title = name %}
-{% set background = page.fileSlug %}
-
-{% macro icon(src, alt, title) %}
-<img
-	src="/assets/images/icon/{{ src }}.png"
-	alt=""
-	title="{{ title }}"
-	class="inline-block"
-	width="34"
-	height="31"
->
-{% endmacro %}
-
-{% macro weaponStat(figure, statTitle, statValue) %}
-<figure class="weapon-stat">
-	{{ figure | safe }}
-	<figcaption>
-		<h4 class="weapon-stat__title">{{ statTitle }}</h4>
-		<span class="weapon-stat__value">{{ statValue }}</span>
-	</figcaption>
-</figure>
-{% endmacro %}
+{% set background = 'art/' + page.fileSlug + '.png' %}
 
 {% block header %}
-<header class="page-header region stack wrapper">
-	<div>
-		<img src="/assets/images/avatar/{{ page.fileSlug }}.png" alt="" width="88" height="88">
-	</div>
-	<div>
-		<h1>{{ title }}</h1>
-		<p class="font-fancy text-step-1">
-			<span class="highlight-rarity" data-rarity="{{ rarity }}">{{ string.rarity[rarity - 1] }}</span> Simulacrum
-		</p>
-	</div>
-</header>
+	<header class="page-header region stack wrapper">
+		<div class="page-header__inner with-rule stack stack-space-s-l">
+			<div>
+				<h1>{{ title }}</h1>
+				<p class="font-fancy uppercase text-step-2 tracking-wide leading-none">
+					<span class="highlight-rarity italic" data-rarity="{{ rarity }}">{{ string.rarity[rarity - 1] }}</span> Simulacrum
+				</p>
+			</div>
+			<nav aria-label="Secondary">
+				<ul class="cluster font-bold mb-0">
+					<li><a href="#weapon">Weapon</a></li>
+					<li><a href="#affinity">Affinity</a></li>
+					<li><a href="#character-info">Character Info</a></li>
+				</ul>
+			</nav>
+		</div>
+	</header>
 {% endblock %}
 
 {% block content %}
-<h2 id="weapon">Weapon</h2>
-{% include "partials/simulacrum/weapon-info.html" %}
-{% include "partials/simulacrum/weapon-effect.html" %}
-{% include "partials/simulacrum/awakening.html" %}
-{% include "partials/simulacrum/materials.html" %}
-{% include "partials/simulacrum/rec-chips.html" %}
-<h2 id="affinity">Affinity</h2>
-{% include "partials/simulacrum/affinity-effects.html" %}
-{% include "partials/simulacrum/affinity-gifts.html" %}
+	<h2 id="weapon">Weapon</h2>
+	{% include "partials/simulacrum/weapon-info.html" %}
+	{% include "partials/simulacrum/weapon-effect.html" %}
+	{% include "partials/simulacrum/awakening.html" %}
+	{% include "partials/simulacrum/materials.html" %}
+	{% include "partials/simulacrum/rec-chips.html" %}
+	<h2 id="affinity">Affinity</h2>
+	{% include "partials/simulacrum/affinity-effects.html" %}
+	{% include "partials/simulacrum/affinity-gifts.html" %}
+	<h2 id="character-info">Character Info</h2>
+	{% include "partials/simulacrum/character-info.html" %}
 {% endblock %}

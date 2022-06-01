@@ -1,6 +1,6 @@
 .wrapper {
-  padding-left: var(--gutter, theme('spacing.s-xl'));
-  padding-right: var(--gutter, theme('spacing.s-xl'));
+  padding-left: var(--wrapper-padding, theme('spacing.s-xl'));
+  padding-right: var(--wrapper-padding, theme('spacing.s-xl'));
   position: relative;
 }
 

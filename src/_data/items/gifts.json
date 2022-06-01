@@ -1,0 +1,166 @@
+{
+	"dumbbells": {
+		"name": "Dumbbells",
+		"rarity": 2
+	},
+	"flowers": {
+		"name": "Flowers",
+		"rarity": 2
+	},
+	"harmonica": {
+		"name": "Harmonica",
+		"rarity": 2
+	},
+	"photo": {
+		"name": "Photo",
+		"rarity": 2
+	},
+	"photo-album": {
+		"name": "Photo Album",
+		"rarity": 2
+	},
+	"plant": {
+		"name": "Plant",
+		"rarity": 2
+	},
+	"scarf": {
+		"name": "Scarf",
+		"rarity": 2
+	},
+	"snack-box": {
+		"name": "Snack Box",
+		"rarity": 2
+	},
+	"strange-plant": {
+		"name": "Strange Plant",
+		"rarity": 2
+	},
+	"trading-card": {
+		"name": "Trading Card",
+		"rarity": 2
+	},
+	"chess-set": {
+		"name": "Chess Set",
+		"rarity": 3
+	},
+	"diary": {
+		"name": "Diary",
+		"rarity": 3
+	},
+	"elf-figure": {
+		"name": "Elf Figure",
+		"rarity": 3
+	},
+	"juice-pouch": {
+		"name": "Juice Pouch",
+		"rarity": 3
+	},
+	"necklace": {
+		"name": "Necklace",
+		"rarity": 3
+	},
+	"perfume": {
+		"name": "Perfume",
+		"rarity": 3
+	},
+	"pumpkin-figure": {
+		"name": "Pumpkin Figure",
+		"rarity": 3
+	},
+	"spider-figure": {
+		"name": "Spider Figure",
+		"rarity": 3
+	},
+	"strange-fragment": {
+		"name": "Strange Fragment",
+		"rarity": 3
+	},
+	"suit": {
+		"name": "Suit",
+		"rarity": 3
+	},
+	"toolbox": {
+		"name": "Toolbox",
+		"rarity": 3
+	},
+	"vial": {
+		"name": "Vial",
+		"rarity": 3
+	},
+	"android-figure": {
+		"name": "Android Figure",
+		"rarity": 4
+	},
+	"bear-figure": {
+		"name": "Bear Figure",
+		"rarity": 4
+	},
+	"cat-figure": {
+		"name": "Cat Figure",
+		"rarity": 4
+	},
+	"fox-figure": {
+		"name": "Fox Figure",
+		"rarity": 4
+	},
+	"gold-coin": {
+		"name": "Gold Coin",
+		"rarity": 4
+	},
+	"kitchenware": {
+		"name": "Kitchenware",
+		"rarity": 4
+	},
+	"linye-figure": {
+		"name": "Linye Figure",
+		"rarity": 4
+	},
+	"mia-figure": {
+		"name": "Mi-a Figure",
+		"rarity": 4
+	},
+	"pearl": {
+		"name": "Pearl",
+		"rarity": 4
+	},
+	"pepper-figure": {
+		"name": "Pepper Figure",
+		"rarity": 4
+	},
+	"present": {
+		"name": "Present",
+		"rarity": 4
+	},
+	"prince-tata-figure": {
+		"name": "Prince Tata Figure",
+		"rarity": 4
+	},
+	"psp": {
+		"name": "PSP",
+		"rarity": 4
+	},
+	"seal": {
+		"name": "Seal",
+		"rarity": 4
+	},
+	"snowglobe": {
+		"name": "Snowglobe",
+		"rarity": 4
+	},
+	"tata-cards": {
+		"name": "Tata Cards",
+		"rarity": 4
+	},
+	"tata-figure": {
+		"name": "Tata Figure",
+		"rarity": 4
+	},
+	"tata-plush": {
+		"name": "Tata Plush",
+		"rarity": 4
+	},
+	"ufo": {
+		"name": "UFO",
+		"rarity": 4
+	}
+}

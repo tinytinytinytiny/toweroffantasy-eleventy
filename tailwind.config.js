@@ -9,8 +9,8 @@ const spacing = require('./src/design-tokens/spacing.js');
 
 module.exports = {
 	content: [
-		'./src/*.{html,js,jsx,mdx,njk,twig,vue}',
-		'./src/**/*.{html,js,jsx,mdx,njk,twig,vue}'
+		'./src/*.{html,js,njk,md}',
+		'./src/**/*.{html,js,njk,md}'
 	],
 	theme: {
 		colors,
@@ -25,12 +25,6 @@ module.exports = {
 		}),
 		padding: ({ theme }) => theme('spacing')
 	},
-	safelist: [
-		'border-element-electric',
-		'border-element-fire',
-		'border-element-ice',
-		'border-element-physical'
-	],
 	variantOrder: [
 		'first',
 		'last',

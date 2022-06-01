@@ -2,7 +2,6 @@
 	display: flex;
 	height: 136px;
 	width: 136px;
-	overflow: hidden;
 }
 
 .item-frame[data-variant="matrix"] > img {

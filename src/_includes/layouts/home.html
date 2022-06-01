@@ -1,8 +1,10 @@
 {% extends "layouts/base.html" %}
 
+{% block header %}{% endblock %}
+
 {% block content %}
-{{ content | safe }}
-{% set changeLogItems = collections.changelog | limitTo(5) %}
-{% include "partials/recent-changes.html" %}
-{% include "partials/credits.html" %}
+	{{ content | safe }}
+	{% set changeLogItems = collections.changelog | limitTo(5) %}
+	{% include "partials/recent-changes.html" %}
+	{% include "partials/credits.html" %}
 {% endblock %}

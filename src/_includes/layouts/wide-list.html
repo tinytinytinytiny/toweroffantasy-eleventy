@@ -1,0 +1,11 @@
+{% extends "layouts/base.html" %}
+
+{% block content %}
+	{% for rarity, items in collections[collection] | groupBy('rarity') %}
+		<h2 class="max-w-none">
+			<span class="highlight-rarity italic" data-rarity="{{ rarity }}">{{ string.rarity[rarity - 1] }}</span><span class="text-white/90"> {{ title }}</span>
+		</h2>
+		{% set items = items | reverse %}
+		{% include "partials/" + collection + "-list.html" %}
+	{% endfor %}
+{% endblock %}

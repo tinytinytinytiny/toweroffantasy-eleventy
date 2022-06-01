@@ -1,0 +1,16 @@
+.new-badge {
+	@apply shadow-lg;
+	background-color: theme('colors.primary');
+	border: 0.1em solid #fff;
+	border-radius: 1px;
+	color: theme('colors.sheet.0');
+	font-size: theme('fontSize.step--2');
+	font-weight: bold;
+	position: absolute;
+	bottom: -0.7em;
+	right: 25%;
+	left: 25%;
+	outline: 0.2em solid;
+	text-align: center;
+	text-transform: uppercase;
+}

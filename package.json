@@ -5,7 +5,7 @@
   "scripts": {
     "start": "set NODE_ENV=development && concurrently \"npm run serve\" \"npm run css -- --watch\"",
     "serve": "npx eleventy --serve",
-    "css": "postcss src/css/global.css -o dist/css/global.css",
+    "css": "postcss src/css/global.css -o _site/css/global.css",
     "production": "NODE_ENV=production npx eleventy && NODE_ENV=production npm run css"
   },
   "author": "",
@@ -14,6 +14,7 @@
     "@11ty/eleventy": "^1.0.1",
     "concurrently": "^6.5.1",
     "cssnano": "^5.1.7",
+    "html-minifier": "^4.0.0",
     "markdown-it": "^13.0.1",
     "postcss": "^8.4.8",
     "postcss-cli": "^9.1.0",

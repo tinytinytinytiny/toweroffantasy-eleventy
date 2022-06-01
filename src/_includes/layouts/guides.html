@@ -1,0 +1,18 @@
+{% extends "layouts/base.html" %}
+
+{% if tag %}
+	{% set title = tag | capitalize + ' Guides' %}
+{% endif %}
+
+{% block content %}
+	{% if tag %}
+		{% set guideList = helpers.getFilteredByTag(collections.guides, tag)  %}
+		{% include "partials/guide-list.html" %}
+	{% elif featuredTags %}
+		{% for tag in featuredTags %}
+			<h2>{{ tag | capitalize }} Guides</h2>
+			{% set guideList = collections[tag] | limitTo(5) %}
+			{% include "partials/guide-list.html" %}
+		{% endfor %}
+	{% endif %}
+{% endblock %}

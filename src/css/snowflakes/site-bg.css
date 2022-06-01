@@ -1,16 +1,10 @@
 .site-bg {
-	background-position: calc(100% + 200px) center;
+	background-position: calc(100% + var(--background-offset, 300px) - 5vw) top;
 	background-repeat: no-repeat;
 	display: block;
+	height: 100vh;
+	overscroll-behavior: none;
 	position: fixed;
-	top: 0;
-	right: 0;
-	bottom: 0;
-	left: 0;
-}
-
-.site-bg + .sidebar::after {
-	content: '';
-	flex-basis: 20rem;
-	flex-grow: 1;
+	width: 100vw;
+	z-index: -1;
 }
