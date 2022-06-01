@@ -1,43 +1,19 @@
 .pros, .cons {
-	min-width: 23ch;
+	margin: 0;
 }
 
-/* .pros > li, .cons > li {
-	padding-left: 0.7ch;
-} */
-
-.pros > li::before {
-	content: '✅ ';
-	padding-right: 0.1em;
+.pros > li, .cons > li {
+	background-position: 0 0.2em;
+	background-repeat: no-repeat;
+	background-size: 1em;
+	padding-left: 1.6em;
 }
 
-.cons > li::before {
-	content: '❌ ';
-	padding-right: 0.1em;
+.pros > li {
+	background-image: url('/assets/icons/check-circled-outline.svg');
 }
 
-@supports selector(li::marker) {
-	ul.pros, ul.cons {
-		padding-left: 1.6em;
-	}
-
-	.pros > li, .cons > li {
-		padding-left: 0.7ch;
-	}
-
-	.pros > li::before {
-		content: none;
-	}
-
-	.cons > li::before {
-		content: none;
-	}
-
-	.pros > li::marker {
-		content: '✅';
-	}
-
-	.cons > li::marker {
-		content: '❌';
-	}
+.cons > li {
+	@apply text-base/70;
+	background-image: url('/assets/icons/minus-circled-outline.svg');
 }

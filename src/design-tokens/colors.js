@@ -19,6 +19,10 @@ module.exports = {
 	base: '#dfdfdf',
 	glare: '#c5c8e7',
 
+	// Semantic
+	success: '#2bcae8',
+	error: '#f36b6b',
+
 	// Rarity
 	rarity: {
 		1: {

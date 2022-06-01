@@ -10,9 +10,9 @@
 		0 0 0.2em var(--color-sheet-0),
 		0 0 0.4em var(--color-sheet-0),
 		0 0 0.6em var(--color-sheet-0),
-		0 0 1.2em var(--color-sheet-0),
-		0 0 2.4em var(--color-sheet-0),
-		0 0 4.8em var(--color-sheet-0);
+		0 0 1em var(--color-sheet-0),
+		0 0 3em var(--color-sheet-0),
+		0 0 5em var(--color-sheet-0);
 }
 
 .page-header::before {

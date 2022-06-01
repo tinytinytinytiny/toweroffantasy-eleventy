@@ -25,6 +25,11 @@ module.exports = {
 		}),
 		padding: ({ theme }) => theme('spacing')
 	},
+	safelist: [
+		'bg-primary',
+		'bg-secondary',
+		'bg-tertiary'
+	],
 	variantOrder: [
 		'first',
 		'last',

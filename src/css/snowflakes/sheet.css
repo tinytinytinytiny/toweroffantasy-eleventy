@@ -25,6 +25,10 @@
 	--border-color: theme('colors.secondary');
 }
 
+.sheet[data-border-color="tertiary"] {
+	--border-color: theme('colors.tertiary');
+}
+
 .sheet[data-border="none"] {
 	border: 0;
 }
