@@ -48,8 +48,7 @@ if ('querySelector' in document && 'ResizeObserver' in window) {
 
 	function openMenu() {
 		details.setAttribute('open', '');
-		nav.getAttribute('data-state');
-		nav.removeAttribute('data-state');
+		nav.setAttribute('data-state', 'expanded');
 	}
 }
 

@@ -9,10 +9,9 @@
 
 .nav > details {
 	--region-space: theme('spacing.s-l');
+	padding-bottom: calc(theme('spacing.s-l') + env(safe-area-inset-bottom));
 	max-height: 100vh;
 	overflow-y: auto;
-	overscroll-behavior: contain;
-	padding-bottom: calc(theme('spacing.s-l') + env(safe-area-inset-bottom));
 	position: sticky;
 	top: 0;
 }
@@ -155,11 +154,16 @@
 	position: relative;
 }
 
-.nav:not([data-state="collapsed"]) .nav__head {
+.nav[data-state="expanded"] > details,
+.nav[data-state="collapsed"] > details {
+	overscroll-behavior: contain;
+}
+
+.nav[data-state="expanded"] .nav__head {
 	margin-top: 0;
 }
 
-.nav:not([data-state="collapsed"]) summary {
+.nav[data-state="expanded"] summary {
 	display: none;
 }
 
