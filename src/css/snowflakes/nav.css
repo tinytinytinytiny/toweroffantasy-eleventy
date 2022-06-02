@@ -22,6 +22,9 @@
 
 .nav > details[open] {
 	background-color: theme('colors.sheet.0');
+	height: 100vh;
+	max-height: -webkit-fill-available;
+	overscroll-behavior: contain;
 }
 
 .nav summary.button {
@@ -154,17 +157,12 @@
 	position: relative;
 }
 
-.nav[data-state="expanded"] > details,
-.nav[data-state="collapsed"] > details {
-	overscroll-behavior: contain;
+.nav[data-state="expanded"] summary {
+	display: none;
 }
 
 .nav[data-state="expanded"] .nav__head {
 	margin-top: 0;
-}
-
-.nav[data-state="expanded"] summary {
-	display: none;
 }
 
 .nav[data-state="collapsed"] {
@@ -175,12 +173,10 @@
 
 .nav[data-state="collapsed"] > details {
 	position: relative;
-	max-height: -webkit-fill-available;
 }
 
 .nav[data-state="collapsed"] > details[open] {
 	@apply shadow-2xl;
-	height: 100vh;
 }
 
 .nav[data-state="collapsed"] > details[open]::before {
