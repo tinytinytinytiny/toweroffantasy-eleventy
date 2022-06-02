@@ -1,4 +1,5 @@
 .character-info {
+	--content-min-width: 10ch;
 	--image-width: 464px;
 }
 

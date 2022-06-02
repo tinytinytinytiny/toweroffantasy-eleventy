@@ -1,7 +1,3 @@
-.pros, .cons {
-	margin: 0;
-}
-
 .pros > li, .cons > li {
 	background-position: 0 0.2em;
 	background-repeat: no-repeat;

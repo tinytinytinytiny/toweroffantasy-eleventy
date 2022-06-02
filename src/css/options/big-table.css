@@ -7,3 +7,7 @@
 .big-table > table {
 	max-width: none;
 }
+
+.big-table[data-width="stretch"] > table {
+	width: 100%;
+}

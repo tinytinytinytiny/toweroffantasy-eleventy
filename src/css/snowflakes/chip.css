@@ -13,6 +13,19 @@ a.chip, a.chip:hover {
 	text-decoration-color: currentColor;
 }
 
+a.chip:hover, summary.chip:hover {
+	background-color: #fff;
+}
+
+summary.chip {
+	display: list-item;
+}
+
+summary.chip:focus {
+	outline: none;
+	background-color: theme('colors.primary');
+}
+
 .chip[data-wrap-length] {
 	padding-top: 0.3em;
 	padding-bottom: 0.3em;

@@ -2,7 +2,7 @@
 	{% for item in items | sortBy(['isNew', 'isChina', 'name']) | reverse %}
 		<li class="sheet card stack box-border p-s" data-border="none">
 			<div class="relative">
-				<img class="shadow-xl rounded-full bg-sheet-3 outline outline-1 outline-sheet-1/40" src="/assets/images/avatar/{{ item.fileSlug }}.png" alt="" width="88" height="88" loading="{{ 'lazy' if loop.index > 5 else 'auto' }}">
+				<img class="shadow-xl rounded-full bg-sheet-3" src="/assets/images/avatar/{{ item.fileSlug }}.png" alt="" width="88" height="88" loading="{{ 'lazy' if loop.index > 5 else 'auto' }}">
 				{% if item.data.isNew %}
 					<span class="new-badge" aria-hidden="true">
 						New

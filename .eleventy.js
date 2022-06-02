@@ -43,13 +43,17 @@ module.exports = (config) => {
 		const content = md.render(children);
 		return `<aside class="sheet font-bold stack" data-border="left" data-border-color="secondary">${content}</aside>`
 	});
-	config.addPairedShortcode('bigTable', (children) => {
+	config.addPairedShortcode('bigTable', (children, stretch) => {
 		const content = md.render(children);
-		return `<div class="big-table wrapper">${content}</div>`;
+		return `<div class="big-table wrapper" ${(stretch) ? 'data-width="stretch"' : ''}>${content}</div>`;
 	});
 	config.addPairedShortcode('sheet', (children, border = 'top', borderColor = 'primary') => {
 		const content = md.render(children);
 		return `<div class="sheet copy stack" data-border="${border}" data-border-color="${borderColor}">${content}</div>`;
+	});
+	config.addPairedShortcode('details', (children, summary) => {
+		const content = md.render(children);
+		return `<details class="stack copy"><summary class="chip">${summary}</summary>${content}</details>`;
 	});
 
 	config.addCollection('changelog', (collection) => {

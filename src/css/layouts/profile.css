@@ -20,7 +20,7 @@
 .profile > :last-child {
 	flex-basis: 0;
 	flex-grow: var(--content-proportional-size, 4);
-	min-width: 50%;
+	min-width: var(--content-min-width, 30ch);
 }
 
 .profile[data-direction="rtl"] {
@@ -41,6 +41,10 @@
 
 .profile[data-ratio="1-5"] > :last-child {
 	flex-grow: 5;
+}
+
+.profile[data-ratio="1-8"] > :last-child {
+	flex-grow: 8;
 }
 
 .profile[data-ratio="1-999"] > :last-child {

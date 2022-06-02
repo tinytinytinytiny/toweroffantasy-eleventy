@@ -13,13 +13,18 @@ Accept the quest in the “Event/Reward Box” menu on the top of your screen. Y
 <img src="/assets/images/guides/developer-logs.jpg" alt="Map of Artificial Island showing locations for Developer Logs" width="1366" height="768">
 </figure>
 
-{% aside %}
-<img class="rounded-full" src="/assets/images/guides/developer-log.jpg" alt="Developer Log" width="80" height="80">
-
-Developer Logs are marked on the map with the icon above.
+{% aside -%}
+<div class="profile" data-ratio="1-999">
+<div><img class="rounded-full" src="/assets/images/guides/developer-log.jpg" alt="Developer Log" width="80" height="80"></div>
+<div class="stack">
+{% markdown -%}
+Developer Logs are marked on the map with this icon.
 
 To find Artificial Island on the [Interactive Map](https://static-web.ghzs.com/cspage_pro/huantaMap.html#/map623d5c94e4616a000162d95d), the Chinese name for Artificial Island is **人工岛地图**.
-{% endaside %}
+{%- endmarkdown %}
+</div>
+</div>
+{%- endaside %}
 
 To build on your Home Island, you will need 1170 exploration points on Artificial Island (inner island only).
 
