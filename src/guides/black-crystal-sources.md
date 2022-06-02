@@ -7,7 +7,7 @@
 ---
 
 {% macro bc(n) -%}
-<span class="whitespace-nowrap">{{ n }} <img class="inline-block align-middle" src="/assets/images/bc.png" alt="Black Crystal" width="26" height="23"></span>
+<span class="inline-block whitespace-nowrap w-max">{{ n }} <img class="inline-block align-middle" src="/assets/images/bc.png" alt="Black Crystal" width="26" height="23"></span>
 {%- endmacro %}
 
 ## Achievements **(3,625)**

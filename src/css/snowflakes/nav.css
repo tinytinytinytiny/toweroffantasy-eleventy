@@ -1,11 +1,7 @@
 .nav {
 	--wrapper-padding: theme('spacing.m-l');
-	/* background-color: theme('colors.sheet.0'); */
+	background-color: theme('colors.sheet.0');
 }
-
-/* .nav:not(:has(> details[open])) {
-	background-color: transparent;
-} */
 
 .nav > details {
 	--region-space: theme('spacing.s-l');
@@ -155,6 +151,11 @@
 
 .nav__links a > span {
 	position: relative;
+}
+
+.nav[data-state="expanded"],
+.nav[data-state="collapsed"] {
+	background: transparent;
 }
 
 .nav[data-state="expanded"] summary {

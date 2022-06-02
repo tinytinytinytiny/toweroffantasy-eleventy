@@ -1,0 +1,68 @@
+{
+	"vac": {
+		"name": "Chaser",
+		"isChina": false,
+		"materials": 2,
+		"source": "Supply pod at Rusty Belt in northern Astra (-829, 473)."
+	},
+	"legs": {
+		"name": "Omnium Beast VII",
+		"isChina": false,
+		"materials": 3,
+		"source": "Obtained during the [Navia Ecological Park](https://www.youtube.com/watch?v=CWBbNM2SHyw) hidden quest line."
+	},
+	"car": {
+		"name": "Voyager",
+		"isChina": false,
+		"materials": 4,
+		"source": "Obtained during the [Navia Ecological Park](https://www.youtube.com/watch?v=CWBbNM2SHyw) hidden quest line."
+	},
+	"horse": {
+		"name": "Monocross",
+		"isChina": false,
+		"materials": 4,
+		"source": "[Crown hidden quest line](https://docs.google.com/document/d/1bJUMjVT06XEph7TK-D1ORSg004TLwtnyflJ7IBoXfkc/edit?usp=sharing)."
+	},
+	"wheel": {
+		"name": "Dust Wheeler",
+		"isChina": false,
+		"materials": 1,
+		"source": "Rewarded at the end of the season for achieving the Grand Marshal rank in PvP."
+	},
+	"cube": {
+		"name": "2613",
+		"isChina": true,
+		"materials": 1,
+		"source": "Pre-registration reward."
+	},
+	"bird": {
+		"name": "Mechabird",
+		"isChina": true,
+		"materials": 1,
+		"source": "Purchasable from event shop during event period."
+	},
+	"marc": {
+		"name": "Heavy Bike",
+		"isChina": true,
+		"materials": 1,
+		"source": "Reward for transcending Marc to 3★."
+	},
+	"bike": {
+		"name": "Crimson Meteor",
+		"isChina": true,
+		"materials": 1,
+		"source": "Standard version can be purchased from Housing System shop.\nReskins can be obtained at a small chance from gachapon boxes sold during the event period."
+	},
+	"jetski": {
+		"name": "Jerboa",
+		"isChina": true,
+		"materials": 2,
+		"source": "Obtained from the Gachapon Capsule Machines found in Mirror City - District A."
+	},
+	"camel": {
+		"name": "Desert Rower",
+		"isChina": true,
+		"materials": 0,
+		"source": "Obtained from the event Gachapon."
+	}
+}

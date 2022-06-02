@@ -11,3 +11,7 @@
 .big-table[data-width="stretch"] > table {
 	width: 100%;
 }
+
+summary + .big-table {
+	margin-top: 0;
+}

@@ -1,1 +1,50 @@
 {% extends "layouts/base.html" %}
+
+{% block content %}
+	{% for mount in pagination.pages[1] %}
+		<header class="has-h2 stack">
+			<img src="/assets/images/mount/{{ mount }}.png" alt="" width="308" height="206" loading="{{ 'lazy' if loop.index > 3 else 'auto' }}">
+			<h2>{{ items.mounts[mount].name }} {% if items.mounts[mount].isChina %}{% china %}{% endif %}</h2>
+		</header>
+		{{ items.mounts[mount].source | markdown | safe }}
+		{% if items.mounts[mount].materials %}
+			<details>
+				<summary class="chip">Materials</summary>
+				<div class="sheet box-border p-s-m mt-0" data-border="none">
+					<ul class="cluster gap-s m-0">
+						{% for i in range(0, items.mounts[mount].materials) %}
+							<li>
+								<div class="item-frame" data-rarity="1">
+									<img src="/assets/images/mount/{{ mount }}-{{ loop.index }}.png" alt="" width="128" height="128">
+								</div>
+							</li>
+						{% endfor %}
+					</ul>
+				</div>
+			</details>
+		{% endif %}
+	{% endfor %}
+	{# {% for slug, data in items.mounts | entries | sortBy('name', items.mounts, 0) | reverse | sortBy('isChina', items.mounts, 0) %}
+		<header class="has-h2 stack">
+			<img src="/assets/images/mount/{{ slug }}.png" alt="" width="308" height="206" loading="{{ 'lazy' if loop.index > 3 else 'auto' }}">
+			<h2>{{ data.name }} {% if data.isChina %}{% china %}{% endif %}</h2>
+		</header>
+		{{ data.source | markdown | safe }}
+		{% if data.materials %}
+			<details>
+				<summary class="chip">Materials</summary>
+				<div class="sheet box-border p-s-m mt-0" data-border="none">
+					<ul class="cluster gap-s m-0">
+						{% for i in range(0, data.materials) %}
+							<li>
+								<div class="item-frame" data-rarity="1">
+									<img src="/assets/images/mount/{{ slug }}-{{ loop.index }}.png" alt="" width="128" height="128">
+								</div>
+							</li>
+						{% endfor %}
+					</ul>
+				</div>
+			</details>
+		{% endif %}
+	{% endfor %} #}
+{% endblock %}

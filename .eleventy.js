@@ -26,6 +26,7 @@ module.exports = (config) => {
 	config.addFilter('groupBy', groupBy);
 	config.addFilter('groupByYear', groupByYear);
 	config.addFilter('except', except);
+	config.addFilter('entries', obj => Object.entries(obj));
 	config.addFilter('keys', obj => Object.keys(obj));
 	config.addFilter('values', obj => Object.values(obj));
 	config.addFilter('markdown', (value) => {

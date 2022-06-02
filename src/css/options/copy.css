@@ -6,6 +6,18 @@
 	--stack-space: theme('spacing.xl-2xl');
 }
 
+.copy > * + h2:not([data-rule="none"])::before,
+.copy > h2[data-rule]:not([data-rule="none"])::before,
+.copy > * + .has-h2:not([data-rule="none"])::before,
+.copy > .has-h2[data-rule]:not([data-rule="none"])::before {
+	@apply text-glare/20;
+	border-top: 1px solid;
+	content: '';
+	display: block;
+	width: 100%;
+	margin-bottom: theme('spacing.l-xl');
+}
+
 .copy > h3 {
 	--stack-space: theme('spacing.xl-2xl');
 }
@@ -30,16 +42,3 @@
 .copy > hr + * {
 	--stack-space: theme('spacing.xl');
 }
-
-/* .not-copy,
-.not-copy > * + *,
-.not-copy h2,
-.not-copy h3,
-.not-copy h4,
-.not-copy figure:not([class*="stack-space"]),
-.not-copy h2 + *,
-.not-copy h3 + *,
-.not-copy h4 + *,
-.not-copy figure:not([class*="stack-space"]) + * {
-	--stack-space: unset;
-} */

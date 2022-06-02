@@ -9,7 +9,7 @@
 {% macro weapon(name) %}
 <div class="card">
 	<img src="/assets/images/wep/{{ name | slugify }}.png" alt="{{ name }}’s weapon" width="128" height="128" loading="lazy">
-	<a href="/simulacra/{{ name | slugify }}" class="font-bold inline-block" data-variant="hover">{{ name }}</a>
+	<a href="/simulacra/{{ name | slugify }}" class="font-bold inline-block" data-variant="hover"><span>{{ name }}</span></a>
 </div>
 {% endmacro %}
 

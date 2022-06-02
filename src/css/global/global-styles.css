@@ -55,16 +55,6 @@ h2 {
 	text-transform: uppercase;
 }
 
-* + h2:not([data-rule="none"])::before,
-h2[data-rule]:not([data-rule="none"])::before {
-	@apply text-glare/20;
-	border-top: 1px solid;
-	content: '';
-	display: block;
-	width: 100%;
-	margin-bottom: theme('spacing.l-xl');
-}
-
 h3 {
 	@apply text-white/90;
   font-size: theme('fontSize.step-1');
@@ -151,7 +141,7 @@ summary:has(h2, h3) + * {
 	margin-top: 1em;
 }
 
-summary + table, summary + .big-table {
+summary + table {
 	margin-top: 0;
 }
 

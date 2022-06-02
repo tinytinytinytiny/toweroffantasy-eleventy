@@ -1,8 +1,18 @@
----
+---js
 {
-	"title": "Mounts",
-	"layout": "layouts/mounts.html",
-	"background": "art/samir.png"
+	title: 'Mounts',
+	layout: 'layouts/mounts.html',
+	background: 'art/samir.png',
+	pagination: {
+		data: 'items.mounts',
+		size: 5,
+		alias: 'mounts',
+		before: function(paginationData, fullData) {
+			return paginationData
+				.sort((a, b) => fullData.items.mounts[a].name.localeCompare(fullData.items.mounts[b].name))
+				.sort((a, b) => fullData.items.mounts[a].isChina - fullData.items.mounts[b].isChina);
+		}
+	}
 }
 ---
 <p>
