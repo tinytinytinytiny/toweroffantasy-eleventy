@@ -13,3 +13,7 @@
 	bottom: 0;
 	left: 0;
 }
+
+.card a:hover::before {
+	background-color: theme('colors.ring');
+}

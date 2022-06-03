@@ -122,9 +122,9 @@ aside > * {
 }
 
 hr {
-	@apply text-glare/20;
 	border: none;
 	border-top: 1px solid;
+	color: theme('colors.divider');
 	margin: 1em 0;
 	margin: var(--stack-space, 1em) 0;
 }

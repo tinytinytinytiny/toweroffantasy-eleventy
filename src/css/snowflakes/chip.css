@@ -1,23 +1,13 @@
 .chip {
 	@apply bg-glare/14 shadow-md;
+	-webkit-backdrop-filter: blur(10px);
 	backdrop-filter: blur(10px);
+	box-shadow: var(--tw-shadow), inset 0 0 0 1px theme('colors.ring');
 	display: inline-block;
 	font-weight: bold;
 	line-height: inherit;
 	padding: 0.16em 0.46em;
-}
-
-@supports (pointer-events: none) {
-	.chip::before {
-		@apply border border-solid border-glare/5;
-		content: '';
-		position: absolute;
-		top: 0;
-		right: 0;
-		bottom: 0;
-		left: 0;
-		pointer-events: none;
-	}
+	position: relative;
 }
 
 a.chip, a.chip:hover {

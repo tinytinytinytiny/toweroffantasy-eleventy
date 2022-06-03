@@ -10,8 +10,8 @@
 .copy > h2[data-rule]:not([data-rule="none"])::before,
 .copy > * + .has-h2:not([data-rule="none"])::before,
 .copy > .has-h2[data-rule]:not([data-rule="none"])::before {
-	@apply text-glare/20;
 	border-top: 1px solid;
+	color: theme('colors.divider');
 	content: '';
 	display: block;
 	width: 100%;

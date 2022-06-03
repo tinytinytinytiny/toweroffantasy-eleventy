@@ -1,7 +1,7 @@
 .with-rule > * + *::before,
 .with-rule[data-rule-top="true"] > *:first-child::before {
-	@apply text-glare/20;
 	border-top: 1px solid;
+	color: theme('colors.divider');
 	content: '';
 	display: block;
 	font-size: initial;

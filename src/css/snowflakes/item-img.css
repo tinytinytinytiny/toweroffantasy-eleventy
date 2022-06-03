@@ -48,7 +48,7 @@
 			var(--rarity-base-color) var(--frame-border-width),
 			transparent var(--frame-border-width)
 		),
-		linear-gradient(315deg,
+		linear-gradient(316deg,
 			rgba(var(--rarity-base-rgb-values), 0.3) 0%,
 			rgba(var(--rarity-base-rgb-values), 0.15) 50%,
 			var(--rarity-backdrop-color) 50%,

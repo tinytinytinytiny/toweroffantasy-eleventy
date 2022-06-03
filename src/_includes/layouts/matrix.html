@@ -20,28 +20,31 @@
 {% endblock %}
 
 {% block content %}
-	<article class="big-table wrapper">
-		<table class="color-bold" data-width="stretch">
-			<thead>
-				<tr>
-					<th scope="col">Stars</th>
-					{% for n in sets %}
-						<th scope="col">{{ n }}-set Bonus</th>
-					{% endfor %}
-				</tr>
-			</thead>
-			<tbody>
-				{% for effects in chipEffects %}
+	{% for i in range(0, sets.length) %}
+		<h2>{{ sets[i] }}-Set</h2>
+		<div class="color-bold stack copy">
+			{{ chipEffects[0][i] | markdown | safe }}
+		</div>
+		<details>
+			<summary class="chip">Progression</summary>
+			<table class="color-bold">
+				<thead>
 					<tr>
-						<th class="text-primary" scope="row">
-							{{ loop.index0 }} ★ <span class="visually-hidden"> star{{ 's' if loop.index > 1 }}</span>
-						</th>
-						{% for effect in effects -%}
-							<td class="stack align-top">{{ effect | markdown | safe }}</td>
-						{%- endfor %}
+						<th scope="col">Stars</th>
+						<th scope="col">{{ sets[i] }}-set Bonus</th>
 					</tr>
-				{% endfor %}
-			</tbody>
-		</table>
-	</article>
+				</thead>
+				<tbody>
+					{% for effects in chipEffects %}
+						<tr>
+							<th class="text-primary" scope="row">
+								{{ loop.index0 }} ★ <span class="visually-hidden"> star{{ 's' if loop.index > 1 }}</span>
+							</th>
+							<td class="stack align-top">{{ effects[i] | markdown | safe }}</td>
+						</tr>
+					{% endfor %}
+				</tbody>
+			</table>
+		</details>
+	{% endfor %}
 {% endblock %}
