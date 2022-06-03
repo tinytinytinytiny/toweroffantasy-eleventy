@@ -58,7 +58,7 @@
 	background-position: center, center var(--frame-border-width);
 	background-repeat: no-repeat;
 	border: calc(var(--frame-border-width) / 2) solid var(--rarity-base-color);
-	outline: calc(var(--frame-border-width) / 2) solid rgba(0, 0, 0, 0.5);
+	outline: 1px solid rgba(0, 0, 0, 0.5);
 }
 
 .item-frame[data-rarity="2"] {

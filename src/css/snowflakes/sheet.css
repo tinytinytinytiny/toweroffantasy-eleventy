@@ -31,6 +31,10 @@
 	box-shadow: none;
 }
 
+.sheet[data-layer="0"]::before {
+	content: none;
+}
+
 .sheet[data-border-color="text"] {
 	--border-color: currentColor;
 }

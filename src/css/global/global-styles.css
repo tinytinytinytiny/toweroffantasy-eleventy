@@ -131,6 +131,8 @@ hr {
 
 summary {
 	cursor: pointer;
+	position: relative;
+	z-index: 1;
 }
 
 summary h2, summary h3, summary h4 {
@@ -155,16 +157,6 @@ table * {
 	vertical-align: middle;
 }
 
-thead {
-	@apply bg-sheet-0/80;
-}
-
-thead th {
-	font-size: theme('fontSize.step--1');
-	letter-spacing: 0.05em;
-	text-transform: uppercase;
-}
-
 th {
 	font-family: theme('fontFamily.fancy');
 	letter-spacing: normal;
@@ -174,12 +166,21 @@ th, td {
 	padding: calc(theme('spacing.l') / 2) calc(theme('spacing.l-xl') / 2);
 }
 
-tbody tr:nth-of-type(2n) {
+thead th {
+	@apply bg-sheet-0/80;
+	font-size: theme('fontSize.step--1');
+	letter-spacing: 0.05em;
+	text-transform: uppercase;
+}
+
+tbody tr:nth-of-type(2n) > td,
+tbody tr:nth-of-type(2n) > th {
 	@apply bg-sheet-0/80;
 }
 
-tbody tr:nth-of-type(2n+1) {
-	@apply bg-sheet-2/80;
+tbody tr:nth-of-type(2n+1) > td,
+tbody tr:nth-of-type(2n+1) > th {
+	background-color: theme('colors.sheet.1');
 }
 
 td {
@@ -198,14 +199,16 @@ details table {
 	min-width: 100%;
 }
 
-[data-stripe="even"] tbody tr:nth-of-type(2n) {
-	@apply bg-sheet-2/80;
+[data-stripe="even"] thead th {
+	background-color: theme('colors.sheet.1');
 }
 
-[data-stripe="even"] tbody tr:nth-of-type(2n+1) {
+[data-stripe="even"] tbody tr:nth-of-type(2n) > td,
+[data-stripe="even"] tbody tr:nth-of-type(2n) > th {
+	background-color: theme('colors.sheet.1');
+}
+
+[data-stripe="even"] tbody tr:nth-of-type(2n+1) > td,
+[data-stripe="even"] tbody tr:nth-of-type(2n+1) > th {
 	@apply bg-sheet-0/80;
-}
-
-[data-stripe="even"] thead {
-	@apply bg-sheet-2/80;
 }

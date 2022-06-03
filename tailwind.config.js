@@ -27,6 +27,7 @@ module.exports = {
 		extend: {
 			opacity: {
 				'12': '.12',
+				'14': '.14',
 				'15': '.15'
 			}
 		}

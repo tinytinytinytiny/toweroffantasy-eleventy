@@ -1,5 +1,5 @@
 .chip {
-	@apply bg-glare/12 shadow-md;
+	@apply bg-glare/14 shadow-md;
 	backdrop-filter: blur(10px);
 	display: inline-block;
 	font-weight: bold;
@@ -32,25 +32,25 @@ summary.chip {
 	display: list-item;
 }
 
-a.chip:focus,
+/* a.chip:focus,
 summary.chip:focus,
 details[open] > summary.chip:focus {
 	background-color: theme('colors.primary');
 	color: theme('colors.sheet.0');
 	outline: none;
-}
+} */
 
-a.chip:focus::before,
+/* a.chip:focus::before,
 summary.chip:focus::before,
 details[open] > summary.chip::before {
 	border-color: rgba(255, 255, 255, 0.2);
-}
+} */
 
-details[open] > summary.chip {
+/* details[open] > summary.chip {
 	background-color: theme('colors.base');
 	color: theme('colors.sheet.0');
 	outline: none;
-}
+} */
 
 .chip[data-color~="knockout"] {
 	background-color: theme('colors.base');
@@ -68,7 +68,7 @@ a.chip[data-color~="knockout"]:hover {
 
 a.chip[data-color~="knockout"]:focus {
 	background-color: #fff;
-	outline: 0.12em solid theme('colors.primary');
+	/* outline: 0.12em solid theme('colors.primary'); */
 }
 
 .chip[data-color~="fadeout"] {

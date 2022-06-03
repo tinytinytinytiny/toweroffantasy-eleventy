@@ -10,7 +10,7 @@
 		{% if items.mounts[mount].materials %}
 			<details>
 				<summary class="chip">Materials ({{ items.mounts[mount].materials }})</summary>
-				<div class="sheet box-border p-s-m mt-0" data-border="none">
+				<div class="sheet box-border p-s-m mt-0" data-layer="0" data-border="none">
 					<ul class="cluster gap-s m-0">
 						{% for i in range(0, items.mounts[mount].materials) %}
 							<li>
