@@ -21,7 +21,7 @@
 
 {% block content %}
 	{% for i in range(0, sets.length) %}
-		<h2>{{ sets[i] }}-Set</h2>
+		<h2 id="set-{{ sets[i] }}">{{ sets[i] }}-Set</h2>
 		<div class="color-bold stack copy">
 			{{ chipEffects[0][i] | markdown | safe }}
 		</div>

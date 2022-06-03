@@ -1,17 +1,16 @@
-[data-bg="home"],
-[data-bg="changelog"] {
+[data-bg="weila"] {
 	--background-offset: 500px;
 }
 
-[data-bg="food"] {
+[data-bg="huodong_meishi_guo"] {
 	background-position: 100% bottom;
 }
 
-[data-bg="guides"] {
+[data-bg="claudia2"] {
 	background-position-y: center;
 }
 
-[data-bg="relics"] {
+[data-bg="vmech"] {
 	--background-offset: 150px;
 	background-position-y: center;
 }

@@ -14,14 +14,7 @@
   </head>
   <body>
 		{% include "partials/skip-link.html" %}
-		{% if 'guides' in page.filePathStem %}
-			{% set dataBg = 'guides' %}
-		{% elif page.fileSlug %}
-			{% set dataBg = page.fileSlug %}
-		{% else %}
-			{% set dataBg = 'home' %}
-		{% endif %}
-		<div class="site-bg fuckyousafari fuckyoufuckyoufkcu" data-bg="{{ dataBg }}" role="presentation" style="background-image: url('/assets/images/{{ background }}');"></div>
+		<div class="site-bg fuckyousafari fuckyoufuckyoufkcu" data-bg="{{ background.split('.')[0].split('/') | last }}" role="presentation" style="background-image: url('/assets/images/{{ background }}');"></div>
 		<div class="sidebar" data-variant="center-content constrain-content">
 			{% include "partials/sidebar.html" %}
 			<main class="stack" tabindex="-1" id="main-content">
