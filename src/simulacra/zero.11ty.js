@@ -79,10 +79,9 @@ module.exports = {
 			],
 			recChips: [
 				['samir', 4],
-				['coco', 2],
-				['coco', 4],
+				['coco-ritter', [2, 4]],
 				['pepper', 3],
-				['exploding-core', 3]
+				['explosive-core', 3]
 			]
 		};
 	}

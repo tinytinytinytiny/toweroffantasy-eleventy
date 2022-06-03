@@ -1,14 +1,16 @@
 {% extends "layouts/base.html" %}
 
 {% set title = name %}
-{% set background = 'art/' + page.fileSlug + '.png' %}
+{% if rarity > 3 %}
+	{% set background = 'art/' + page.fileSlug + '.png' %}
+{% endif %}
 
 {% block header %}
 	<header class="page-header region wrapper" data-variant="item">
 		<div class="page-header__inner stack-space-s-l">
 			<div>
 				<h1>{{ title }}</h1>
-				<p class="font-fancy uppercase text-step-2 tracking-wide leading-none">
+				<p class="font-fancy uppercase text-step-2 tracking-wide">
 					<span class="highlight-rarity italic" data-rarity="{{ rarity }}">{{ string.rarity[rarity - 1] }}</span> Matrix
 				</p>
 			</div>
@@ -19,32 +21,42 @@
 	</header>
 {% endblock %}
 
+{% set extraClassNames = 'color-bold' %}
+
 {% block content %}
 	{% for i in range(0, sets.length) %}
 		<h2 id="set-{{ sets[i] }}">{{ sets[i] }}-Set</h2>
-		<div class="color-bold stack copy">
-			{{ chipEffects[0][i] | markdown | safe }}
-		</div>
-		<details>
-			<summary class="chip">Progression</summary>
-			<table class="color-bold">
-				<thead>
-					<tr>
-						<th scope="col">Stars</th>
-						<th scope="col">{{ sets[i] }}-set Bonus</th>
-					</tr>
-				</thead>
-				<tbody>
-					{% for effects in chipEffects %}
-						<tr>
-							<th class="text-primary" scope="row">
-								{{ loop.index0 }} ★ <span class="visually-hidden"> star{{ 's' if loop.index > 1 }}</span>
-							</th>
-							<td class="stack align-top">{{ effects[i] | markdown | safe }}</td>
-						</tr>
-					{% endfor %}
-				</tbody>
-			</table>
-		</details>
+		{{ chipEffects[0][i] | markdown | safe }}
+		{% if chipEffects.length > 1 %}
+			<details>
+				<summary class="chip">Awakening Progression</summary>
+				<div class="big-table wrapper">
+					<table data-stripe="even">
+						<thead class="visually-hidden">
+							<tr>
+								<th scope="col">Stars</th>
+								<th scope="col">{{ sets[i] }}-set Bonus</th>
+							</tr>
+						</thead>
+						<tbody>
+							{% for effects in chipEffects %}
+								{% if loop.index > 1 %}
+									<tr>
+										<th class="text-primary whitespace-nowrap" scope="row">
+											{{ loop.index0 }} ★ <span class="visually-hidden"> star{{ 's' if loop.index > 1 }}</span>
+										</th>
+										<td class="stack align-top">{{ effects[i] | markdown | safe }}</td>
+									</tr>
+								{% endif %}
+							{% endfor %}
+						</tbody>
+					</table>
+				</div>
+			</details>
+		{% else %}
+			<p>
+				<small class="text-base/60">This matrix cannot be starred.</small>
+			</p>
+		{% endif %}
 	{% endfor %}
 {% endblock %}

@@ -1,5 +1,9 @@
+{% macro set(x) %}
+	<span class="item-frame__info" data-align="right" aria-hidden="true">{{ x }}</span>
+{% endmacro %}
+
 <h3>Recommended Matrices</h3>
-<ul class="cluster mt-[1em] {{ 'gap-0' if recChips | length > 5 }}" data-variant="matrix-grid">
+<ul class="auto-grid mt-[1em]" data-variant="matrix-grid">
 	{% for chip, quantity in recChips %}
 		{% if helpers.findCollection(collections.matrices, chip) %}
 			{% set chipName = helpers.findCollection(collections.matrices, chip).data.name %}
@@ -9,10 +13,19 @@
 		<li class="card">
 			<div class="item-frame" data-variant="matrix">
 				<img src="/assets/images/chip/{{ chip }}.png" width="205" height="205" alt="" loading="lazy">
-				<span class="item-frame__info" data-align="right" aria-hidden="true">×{{ quantity }}</span>
+				{% if helpers.isArray(quantity) %}
+					{% set comma = joiner(', ') %}
+					{% set text = '' %}
+					{% for i in quantity %}
+						{% set text = text + comma() + '×' + i %}
+					{% endfor %}
+					{{ set(text) }}
+				{% else %}
+					{{ set('×' + quantity) }}
+				{% endif %}
 			</div>
 			<div>
-				<a class="card__link inline-block font-bold text-center text-step--1 leading-[1.2] max-w-[15ch]" href="/matrices/{{ chip }}#set-{{ quantity }}" data-variant="hover">
+				<a class="card__link inline-block font-bold text-center text-step--1 leading-[1.2] max-w-[15ch]" href="/matrices/{{ chip }}" data-variant="hover">
 					{{ chipName }}<span class="visually-hidden"> {{ quantity }}-set</span>
 				</a>
 			</div>

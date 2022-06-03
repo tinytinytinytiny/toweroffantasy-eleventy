@@ -1,0 +1,44 @@
+{% extends "layouts/base.html" %}
+
+{% set title = name %}
+{% set bgCategory = 'relics' %}
+{% set background = 'gadget/' + page.fileSlug + '.png' %}
+
+{% block header %}
+	<header class="page-header region wrapper">
+		<div class="page-header__inner stack-space-s-l">
+			<div>
+				<h1>{{ title }}</h1>
+				<p class="font-fancy uppercase text-step-2 tracking-wide">
+					<span class="highlight-rarity italic" data-rarity="{{ rarity }}">{{ string.rarity[rarity - 1] }}</span> Relic
+				</p>
+			</div>
+		</div>
+	</header>
+{% endblock %}
+
+{% set extraClassNames = 'color-bold' %}
+
+{% block content %}
+	<h2>Relic Effect</h2>
+	{{ description | markdown | safe }}
+	<h2>Awakening</h2>
+	<table data-stripe="even">
+		<thead class="visually-hidden">
+			<tr>
+				<th scope="col">Stars</th>
+				<th scope="col">Bonus</th>
+			</tr>
+		</thead>
+		<tbody>
+			{% for item in awakening %}
+				<tr>
+					<th scope="row" class="text-primary whitespace-nowrap">
+						{{ loop.index }} ★ <span class="visually-hidden"> star{{ 's' if loop.index > 1 }}</span>
+					</th>
+					<td>{{ item | markdown | safe }}</td>
+				</tr>
+			{% endfor %}
+		</tbody>
+	</table>
+{% endblock %}

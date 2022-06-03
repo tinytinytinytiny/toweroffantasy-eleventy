@@ -10,7 +10,7 @@
 	background-position-y: center;
 }
 
-[data-bg="vmech"] {
+[data-bg="type-v-armor"] {
 	--background-offset: 150px;
 	background-position-y: center;
 }
@@ -21,4 +21,8 @@
 
 [data-bg="fuwasaki"] {
 	--background-offset: 370px;
+}
+
+.site-bg[data-category="relics"] {
+	--background-offset: 150px;
 }

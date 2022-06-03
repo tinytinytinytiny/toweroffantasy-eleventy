@@ -15,5 +15,6 @@
 }
 
 .card.sheet a:hover::before {
-	background-image: linear-gradient(135deg, theme(colors.ring) 20%, transparent 130%);
+	background-color: theme('colors.ring');
+	background-image: linear-gradient(135deg, theme('colors.ring'), transparent);
 }

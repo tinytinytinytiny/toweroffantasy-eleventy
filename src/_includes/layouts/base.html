@@ -14,7 +14,14 @@
   </head>
   <body>
 		{% include "partials/skip-link.html" %}
-		<div class="site-bg fuckyousafari fuckyoufuckyoufkcu" data-bg="{{ background.split('.')[0].split('/') | last }}" role="presentation" style="background-image: url('/assets/images/{{ background }}');"></div>
+		{% if background %}
+			{% set bgImg = "url('/assets/images/" + background + "')" %}
+			{% set bgSlug = background.split('.')[0].split('/') | last %}
+		{% else %}
+			{% set bgImg = 'none' %}
+			{% set bgSlug = '' %}
+		{% endif %}
+		<div class="site-bg fuckyousafari fuckyoufuckyoufkcu" data-bg="{{ bgSlug }}" data-category="{{ bgCategory }}" role="presentation" style="background-image: {{ bgImg }};"></div>
 		<div class="sidebar" data-variant="center-content constrain-content">
 			{% include "partials/sidebar.html" %}
 			<main class="stack" tabindex="-1" id="main-content">
@@ -22,7 +29,7 @@
 					{% include "partials/standard-header.html" %}
 				{% endblock %}
 				{% set isCopy = true %}
-				<div class="{% if isCopy %}copy{% endif %} bg-sheet-1 mt-0 region stack wrapper">
+				<div class="{% if isCopy %}copy{% endif %} bg-sheet-1 mt-0 region stack wrapper {{ extraClassNames }}">
 					{% block content %}{% endblock %}
 				</div>
 				{% block ending %}{% endblock %}

@@ -66,6 +66,9 @@ module.exports = (config) => {
 	config.addCollection('matrices', (collection) => {
 		return collection.getFilteredByGlob('./src/matrices/*.11ty.js');
 	});
+	config.addCollection('relics', (collection) => {
+		return collection.getFilteredByGlob('./src/relics/*.11ty.js');
+	});
 	config.addCollection('guides', (collection) => {
 		return collection.getFilteredByGlob('./src/guides/*');
 	});

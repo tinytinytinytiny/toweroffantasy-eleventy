@@ -2,7 +2,4 @@
 	--grid-min-item-size: 130px;
 	--grid-column-count: 6;
 	--gutter: theme('spacing.s');
-	align-items: flex-start;
-	justify-content: center;
-	max-width: 60rem;
 }

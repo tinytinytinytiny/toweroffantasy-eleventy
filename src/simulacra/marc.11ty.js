@@ -66,8 +66,7 @@ module.exports = {
 				}
 			],
 			recChips: [
-				['marc', 2],
-				['marc', 4],
+				['marc', [2, 4]],
 				['king', 2],
 				['shiro', 2],
 				['provocateurs', 3],
