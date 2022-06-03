@@ -1,12 +1,23 @@
 .chip {
-	background-color: theme('colors.base');
-	border-radius: 1px;
-	color: theme('colors.sheet.0');
+	@apply bg-glare/12 shadow-md;
+	backdrop-filter: blur(10px);
 	display: inline-block;
 	font-weight: bold;
 	line-height: inherit;
-	letter-spacing: normal;
-	padding: 0.1em 0.42em;
+	padding: 0.16em 0.46em;
+}
+
+@supports (pointer-events: none) {
+	.chip::before {
+		@apply border border-solid border-glare/5;
+		content: '';
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		pointer-events: none;
+	}
 }
 
 a.chip, a.chip:hover {
@@ -14,16 +25,64 @@ a.chip, a.chip:hover {
 }
 
 a.chip:hover, summary.chip:hover {
-	background-color: #fff;
+	@apply bg-glare/20;
 }
 
 summary.chip {
 	display: list-item;
 }
 
-summary.chip:focus {
-	outline: none;
+a.chip:focus,
+summary.chip:focus,
+details[open] > summary.chip:focus {
 	background-color: theme('colors.primary');
+	color: theme('colors.sheet.0');
+	outline: none;
+}
+
+a.chip:focus::before,
+summary.chip:focus::before,
+details[open] > summary.chip::before {
+	border-color: rgba(255, 255, 255, 0.2);
+}
+
+details[open] > summary.chip {
+	background-color: theme('colors.base');
+	color: theme('colors.sheet.0');
+	outline: none;
+}
+
+.chip[data-color~="knockout"] {
+	background-color: theme('colors.base');
+	color: theme('colors.sheet.0');
+	letter-spacing: normal;
+}
+
+.chip[data-color~="fadeout"]::before {
+	border: none;
+}
+
+a.chip[data-color~="knockout"]:hover {
+	background-color: #fff;
+}
+
+a.chip[data-color~="knockout"]:focus {
+	background-color: #fff;
+	outline: 0.12em solid theme('colors.primary');
+}
+
+.chip[data-color~="fadeout"] {
+	background: transparent;
+	background-image: linear-gradient(90deg, theme('colors.sheet.2'), transparent 130%), linear-gradient(90deg, rgba(255, 255, 255, 0.1), transparent);
+}
+
+.chip[data-color~="fadeout"]::before {
+	border: none;
+}
+
+.chip[data-color~="mad-cool"] {
+	border: 0;
+	border-bottom: 0.16em solid var(--border-color, currentColor);
 }
 
 .chip[data-wrap-length] {

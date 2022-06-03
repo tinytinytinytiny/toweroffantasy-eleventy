@@ -42,7 +42,7 @@ module.exports = (config) => {
 	});
 	config.addPairedShortcode('aside', (children) => {
 		const content = md.render(children);
-		return `<aside class="sheet font-bold stack" data-border="left" data-border-color="secondary">${content}</aside>`
+		return `<aside class="sheet stack" data-border="left" data-border-color="secondary">${content}</aside>`
 	});
 	config.addPairedShortcode('bigTable', (children, stretch) => {
 		const content = md.render(children);

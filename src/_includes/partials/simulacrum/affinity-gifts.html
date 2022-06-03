@@ -1,7 +1,7 @@
 <h3>Preferred Gifts</h3>
 <ul class="cluster gap-xs">
 	{% for cat in gifts.categories %}
-		<li class="chip" style="background-color: {{ string.giftCategories[cat].color }}">{{ string.giftCategories[cat].name }}</li>
+		<li class="chip" data-color="mad-cool" style="color: {{ string.giftCategories[cat].color }}">{{ string.giftCategories[cat].name }}</li>
 	{% endfor %}
 </ul>
 <ul class="cluster gap-xs">

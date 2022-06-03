@@ -1,7 +1,7 @@
 {% extends "layouts/base.html" %}
 
 {% block content %}
-	{% for mount in pagination.pages[1] %}
+	{% for mount in mounts %}
 		<header class="has-h2 stack">
 			<img src="/assets/images/mount/{{ mount }}.png" alt="" width="308" height="206" loading="{{ 'lazy' if loop.index > 3 else 'auto' }}">
 			<h2>{{ items.mounts[mount].name }} {% if items.mounts[mount].isChina %}{% china %}{% endif %}</h2>
@@ -9,7 +9,7 @@
 		{{ items.mounts[mount].source | markdown | safe }}
 		{% if items.mounts[mount].materials %}
 			<details>
-				<summary class="chip">Materials</summary>
+				<summary class="chip">Materials ({{ items.mounts[mount].materials }})</summary>
 				<div class="sheet box-border p-s-m mt-0" data-border="none">
 					<ul class="cluster gap-s m-0">
 						{% for i in range(0, items.mounts[mount].materials) %}

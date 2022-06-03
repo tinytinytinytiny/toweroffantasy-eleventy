@@ -23,7 +23,13 @@ module.exports = {
 			auto: 'auto',
 			...theme('spacing')
 		}),
-		padding: ({ theme }) => theme('spacing')
+		padding: ({ theme }) => theme('spacing'),
+		extend: {
+			opacity: {
+				'12': '.12',
+				'15': '.15'
+			}
+		}
 	},
 	safelist: [
 		'bg-primary',

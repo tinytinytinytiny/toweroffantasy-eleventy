@@ -1,4 +1,5 @@
-[data-bg="home"] {
+[data-bg="home"],
+[data-bg="changelog"] {
 	--background-offset: 500px;
 }
 

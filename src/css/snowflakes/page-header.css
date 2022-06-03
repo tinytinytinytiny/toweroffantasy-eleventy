@@ -6,13 +6,13 @@
 	justify-content: flex-end;
 	min-height: 280px;
 	position: relative;
-	text-shadow: 0 0 0.1em var(--color-sheet-0),
-		0 0 0.2em var(--color-sheet-0),
-		0 0 0.4em var(--color-sheet-0),
-		0 0 0.6em var(--color-sheet-0),
-		0 0 1em var(--color-sheet-0),
-		0 0 3em var(--color-sheet-0),
-		0 0 5em var(--color-sheet-0);
+	text-shadow: 0 0 0.1em theme('colors.sheet.0'),
+		0 0 0.2em theme('colors.sheet.0'),
+		0 0 0.4em theme('colors.sheet.0'),
+		0 0 0.6em theme('colors.sheet.0'),
+		0 0 1em theme('colors.sheet.0'),
+		0 0 3em theme('colors.sheet.0'),
+		0 0 5em theme('colors.sheet.0');
 }
 
 .page-header::before {
@@ -23,7 +23,7 @@
 	right: 0;
 	bottom: 0;
 	left: 0;
-/* 	mix-blend-mode: darken; */
+	mix-blend-mode: darken;
 	z-index: -1;
 }
 

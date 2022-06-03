@@ -10,6 +10,20 @@
 	border-top: 0.3em solid var(--border-color);
 	box-sizing: content-box;
 	padding: theme('spacing.s-l');
+	position: relative;
+}
+
+@supports (pointer-events: none) {
+	.sheet::before {
+		@apply border border-solid border-glare/5;
+		content: '';
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		pointer-events: none;
+	}
 }
 
 .sheet[data-layer="0"] {

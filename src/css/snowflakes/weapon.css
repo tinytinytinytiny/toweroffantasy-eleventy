@@ -19,17 +19,17 @@
 }
 
 .weapon[data-element="electric"] {
-	border-color: theme('colors.element.electric');
+	--border-color: theme('colors.element.electric');
 }
 
 .weapon[data-element="fire"] {
-	border-color: theme('colors.element.fire');
+	--border-color: theme('colors.element.fire');
 }
 
 .weapon[data-element="ice"] {
-	border-color: theme('colors.element.ice');
+	--border-color: theme('colors.element.ice');
 }
 
 .weapon[data-element="physical"] {
-	border-color: theme('colors.element.physical');
+	--border-color: theme('colors.element.physical');
 }

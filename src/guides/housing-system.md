@@ -20,7 +20,7 @@ Accept the quest in the “Event/Reward Box” menu on the top of your screen. Y
 {% markdown -%}
 Developer Logs are marked on the map with this icon.
 
-To find Artificial Island on the [Interactive Map](https://static-web.ghzs.com/cspage_pro/huantaMap.html#/map623d5c94e4616a000162d95d), the Chinese name for Artificial Island is **人工岛地图**.
+To find Artificial Island on the [Interactive Map](https://static-web.ghzs.com/cspage_pro/huantaMap.html#/map623d5c94e4616a000162d95d), the Chinese name for Artificial Island is *人工岛地图*.
 {%- endmarkdown %}
 </div>
 </div>
