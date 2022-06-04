@@ -5,32 +5,6 @@ module.exports = {
 			isNew: false,
 			isChina: false,
 			rarity: 5,
-			traits: {
-				gender: 'Male',
-				height: '155 cm',
-				birthplace: 'Banges',
-				horoscope: 'Gemini',
-				birthday: 'Jun 6'
-			},
-			gifts: {
-				categories: [
-					'limited-time-items',
-					'games'
-				],
-				items: [
-					['psp', 80],
-					['gold-coin', 60],
-					['tata-cards', 60],
-					['pearl', 60],
-					['cat-figure', 60],
-					['ufo', 60],
-					['tata-figure', 60],
-					['chess-set',	30],
-					['diary', 30],
-					['trading-card', 15],
-					['snack-box', 15]
-				]
-			},
 			weapon: {
 				name: 'Negating Cube',
 				element: 'fire',
@@ -82,7 +56,33 @@ module.exports = {
 				['coco-ritter', [2, 4]],
 				['pepper', 3],
 				['explosive-core', 3]
-			]
+			],
+			traits: {
+				gender: 'Male',
+				height: '155 cm',
+				birthplace: 'Banges',
+				horoscope: 'Gemini',
+				birthday: 'Jun 6'
+			},
+			gifts: {
+				categories: [
+					'limited-time-items',
+					'games'
+				],
+				items: [
+					['psp', 80],
+					['gold-coin', 60],
+					['tata-cards', 60],
+					['pearl', 60],
+					['cat-figure', 60],
+					['ufo', 60],
+					['tata-figure', 60],
+					['chess-set',	30],
+					['diary', 30],
+					['trading-card', 15],
+					['snack-box', 15]
+				]
+			}
 		};
 	}
 };

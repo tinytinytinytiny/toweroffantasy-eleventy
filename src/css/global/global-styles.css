@@ -31,12 +31,12 @@ img {
 }
 
 h1, h2, h3 {
+	color: theme('colors.bold');
 	font-weight: bold;
 	line-height: 1;
 }
 
 h1 {
-	color: #eee;
   font-size: theme('fontSize.step-5');
 	letter-spacing: -0.015em;
 	text-transform: uppercase;
@@ -49,14 +49,13 @@ h1 {
 }
 
 h2 {
-	@apply text-white/90 tracking-wide;
+	@apply tracking-wide;
 	font-family: theme('fontFamily.fancy');
   font-size: theme('fontSize.step-3');
 	text-transform: uppercase;
 }
 
 h3 {
-	@apply text-white/90;
   font-size: theme('fontSize.step-1');
 }
 

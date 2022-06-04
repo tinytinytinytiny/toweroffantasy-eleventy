@@ -1,5 +1,5 @@
 <details>
-	<summary class="chip">Preferred Items</summary>
+	<summary class="chip">Eligible Items</summary>
 	<ul class="sheet !p-xs-s cluster gap-2xs mt-0" data-layer="0">
 		{% for gift, value in gifts.items | sortBy(['rarity', 'name'], items.gifts, 0) | sortBy([1]) | reverse %}
 		<div class="item-frame" data-rarity="{{ items.gifts[gift].rarity }}" data-size="m">

@@ -224,9 +224,17 @@
 {% endmacro %}
 
 <h2>Strongest Setups</h2>
-<h3>6★, Maxed Chips</h3>
-{{ weaponList(['Baiyuekui', 'Marc', 'Nemesis']) }}
-{{ weaponList(['Baiyuekui', 'Claudia', 'Nemesis']) }}
-{{ weaponList(['Ruby', 'Cobalt-B', 'Marc']) }}
-<h3>Without Limited Weapons</h3>
-{{ weaponList(['KING', 'Samir', 'Tsubasa']) }}
+<details>
+	<summary class="chip">6★, Maxed Chips</summary>
+	<div class="sheet mt-0 stack p-s-m" data-border="none" data-layer="0">
+		{{ weaponList(['Baiyuekui', 'Marc', 'Nemesis']) }}
+		{{ weaponList(['Baiyuekui', 'Claudia', 'Nemesis']) }}
+		{{ weaponList(['Ruby', 'Cobalt-B', 'Marc']) }}
+	</div>
+</details>
+<details>
+	<summary class="chip">Without Limited Weapons</summary>
+	<div class="sheet mt-0 stack p-s-m" data-border="none" data-layer="0">
+		{{ weaponList(['KING', 'Samir', 'Tsubasa']) }}
+	</div>
+</details>

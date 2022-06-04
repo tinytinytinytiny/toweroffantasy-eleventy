@@ -1,7 +1,7 @@
 <h2>Contributors</h2>
-<div class="credits stack">
+<div class="credits stack copy">
 	{% for entry in credits %}
-		<h3 class="chip block text-step-0 font-sans stack-space-l">{{ entry.title }}</h3>
+		<h3 class="text-primary">{{ entry.title }}</h3>
 		<ul class="auto-grid">
 			{% for contributor in entry.contributors %}
 				<li>

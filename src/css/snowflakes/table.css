@@ -41,6 +41,7 @@ thead th {
 
 thead:not(.visually-hidden) + tbody > tr:first-child > th,
 thead:not(.visually-hidden) + tbody > tr:first-child > td {
+	@apply border-base/80;
 	border-top-width: 2px;
 }
 

@@ -10,6 +10,10 @@
 	background-position-y: center;
 }
 
+[data-bg="coco-ritter"] {
+	--background-offset: 400px;
+}
+
 [data-bg="echo"] {
 	--background-offset: 400px;
 }

@@ -1,9 +1,9 @@
 <div class="color-bold stack copy">
-	<h4 class="chip" data-variant="knockout">{{ string.element[weapon.element].effectName }}</h4>
+	<h4 class="text-primary" data-variant="knockout">{{ string.element[weapon.element].effectName }}</h4>
 	{{ string.element[weapon.element].description | markdown | safe }}
 	{% if weapon.exclusiveEffect %}
 		{% for effect in weapon.exclusiveEffect %}
-			<h4 class="chip" data-variant="knockout">{{ effect.name }}</h4>
+			<h4 class="text-primary" data-variant="knockout">{{ effect.name }}</h4>
 			{{ effect.effect | markdown | safe }}
 		{% endfor %}
 	{% endif %}

@@ -17,6 +17,7 @@ module.exports = {
 
 	// Text
 	base: '#dfdfdf',
+	bold: '#fafafa',
 	accent: '#c5c8e7',
 
 	// Semantic

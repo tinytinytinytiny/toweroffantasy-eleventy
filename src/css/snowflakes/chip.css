@@ -36,11 +36,11 @@ details[open] > summary.chip::before {
 	border-color: rgba(255, 255, 255, 0.2);
 } */
 
-/* details[open] > summary.chip {
+details[open] > summary.chip {
 	background-color: theme('colors.base');
 	color: theme('colors.sheet.0');
-	outline: none;
-} */
+/* 	outline: none; */
+}
 
 .chip[data-variant~="knockout"] {
 	background-color: theme('colors.base');

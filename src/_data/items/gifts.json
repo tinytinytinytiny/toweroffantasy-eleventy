@@ -19,6 +19,10 @@
 		"name": "Photo Album",
 		"rarity": 2
 	},
+	"pinwheel": {
+		"name": "Pinwheel",
+		"rarity": 2
+	},
 	"plant": {
 		"name": "Plant",
 		"rarity": 2
@@ -38,6 +42,14 @@
 	"trading-card": {
 		"name": "Trading Card",
 		"rarity": 2
+	},
+	"bunny-doll": {
+		"name": "Cat Plush",
+		"rarity": 3
+	},
+	"cat-plush": {
+		"name": "Cat Plush",
+		"rarity": 3
 	},
 	"chess-set": {
 		"name": "Chess Set",
@@ -65,6 +77,10 @@
 	},
 	"pumpkin-figure": {
 		"name": "Pumpkin Figure",
+		"rarity": 3
+	},
+	"robot-figure": {
+		"name": "R2D2 Figure",
 		"rarity": 3
 	},
 	"spider-figure": {
@@ -100,7 +116,7 @@
 		"rarity": 4
 	},
 	"fox-figure": {
-		"name": "Fox Figure",
+		"name": "Pink Fox Figure",
 		"rarity": 4
 	},
 	"gold-coin": {
@@ -128,7 +144,7 @@
 		"rarity": 4
 	},
 	"present": {
-		"name": "Present",
+		"name": "Pink Present",
 		"rarity": 4
 	},
 	"prince-tata-figure": {
