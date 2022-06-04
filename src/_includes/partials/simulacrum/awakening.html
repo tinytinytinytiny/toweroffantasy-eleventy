@@ -1,21 +1,23 @@
-<h3>Awakening</h3>
-<div class="color-bold sheet overflow-x-auto mt-[1em] shadow-inner py-s" data-layer="1" data-border="none">
-	<table data-stripe="even">
-		<thead class="visually-hidden">
-			<tr>
-				<th scope="col">Stars</th>
-				<th scope="col">Bonus</th>
-			</tr>
-		</thead>
-		<tbody>
-			{% for item in weapon.awakening %}
+<details>
+	<summary class="chip">Awakening</summary>
+	<div class="color-bold big-table wrapper">
+		<table>
+			<thead class="visually-hidden">
 				<tr>
-					<th scope="row" class="text-primary whitespace-nowrap {{ '!border-t-0' if loop.index === 1 }} {{ 'border-b-0' if loop.last }}">
-						{{ loop.index }} ★ <span class="visually-hidden"> star{{ 's' if loop.index > 1 }}</span>
-					</th>
-					<td class="stack {{ '!border-t-0' if loop.index === 1 }} {{ 'border-b-0' if loop.last }}">{{ item | markdown | safe }}</td>
+					<th scope="col">Stars</th>
+					<th scope="col">Bonus</th>
 				</tr>
-			{% endfor %}
-		</tbody>
-	</table>
-</div>
+			</thead>
+			<tbody>
+				{% for item in weapon.awakening %}
+					<tr>
+						<th scope="row" class="text-primary whitespace-nowrap">
+							{{ loop.index }} ★ <span class="visually-hidden"> star{{ 's' if loop.index > 1 }}</span>
+						</th>
+						<td class="stack">{{ item | markdown | safe }}</td>
+					</tr>
+				{% endfor %}
+			</tbody>
+		</table>
+	</div>
+</details>

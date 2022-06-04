@@ -29,6 +29,7 @@
 
 .sheet[data-layer="0"] {
 	@apply bg-sheet-0/80 shadow-inner;
+	border: none;
 }
 
 .sheet[data-layer="0"]::before {

@@ -70,9 +70,13 @@ a.chip[data-variant~="knockout"]:focus {
 	border: none;
 }
 
-.chip[data-variant~="mad-cool"] {
+.chip[data-variant~="blackout"] {
+	@apply bg-sheet-0;
 	border: 0;
 	border-bottom: 0.15em solid var(--border-color, currentColor);
+	box-shadow: var(--tw-shadow);
+	padding-left: 0.5em;
+	padding-right: 0.5em;
 }
 
 .chip[data-wrap-length] {

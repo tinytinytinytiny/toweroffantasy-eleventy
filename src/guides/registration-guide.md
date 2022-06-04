@@ -31,7 +31,7 @@ Below you can view the various registration methods for each client, with their 
 {% macro platforms(list) %}
 <ul class="cluster gap-xs">
 {% for os in list -%}
-	<li class="chip" data-variatn="mad-cool" style="color: {{ articleData[os].color }};">{{ articleData[os].name }}</li>
+	<li class="chip" data-variant="blackout" style="color: {{ articleData[os].color }};">{{ articleData[os].name }}</li>
 {%- endfor %}
 </ul>
 {% endmacro %}
@@ -70,14 +70,13 @@ Email Bilibili customer support ([gamehelp@bilibili.com](mailto:gamehelp@bilibil
 {% macro mono(text) %}
 <span class="text-accent font-mono text-step--1">{{ text }}</span>
 {% endmacro %}
-<h4 class="chip" data-variant="knockout">Subject</h4>
 
-Bili_game ID验证提交
+**Subject:**	Bili_game ID验证提交
 
-<h4 class="chip" data-variant="knockout">Message</h4>  
+**Message:** 哔哩哔哩游戏账号实名认证——海外及中国港澳台用户
 
-哔哩哔哩游戏账号实名认证——海外及中国港澳台用户
-
+<div class="sheet p-s" data-layer="1">
+{% markdown %}
 1. 证件类型：{{ mono('(Government Issued ID card 身份证 / Passport或护照)') }}
 2. 真实姓名：{{ mono('(Your name)') }}
 3. 证件号码：{{ mono('(Your Government issued ID card or Passport ID number)') }}
@@ -87,6 +86,8 @@ Bili_game ID验证提交
 7. Bili_LoginID：{{ mono('(found here PC)') }}
 8. 证件正面照片：{{ mono('(attach photo of front and back of ID)') }}
 9. 申请人本人手持证件照片：{{ mono('(attach photo of yourself holding the ID)') }}
+{% endmarkdown %}
+</div>
 {% endsheet %}
 <figcaption>Account verificaiton email template. There should be 3 photos in total: your id/passport front, back, and photo of yourself holding your id/passport.</figcaption>
 </figure>

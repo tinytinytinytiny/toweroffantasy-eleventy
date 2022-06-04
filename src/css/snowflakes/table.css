@@ -18,7 +18,7 @@ th {
 }
 
 th, td {
-	border-bottom: 1px solid theme('colors.divider');
+	border-top: 1px solid theme('colors.divider');
 	padding: theme('spacing.xs-s') theme('spacing.s-l');
 }
 
@@ -32,7 +32,6 @@ tr > :last-child {
 
 thead th {
 	@apply bg-sheet-0/80;
-	border-bottom-width: 2px;
 	font-size: theme('fontSize.step--1');
 	letter-spacing: 0.05em;
 	line-height: 1.25;
@@ -40,13 +39,13 @@ thead th {
 	vertical-align: bottom;
 }
 
-[data-head-color="transparent"] thead th {
-	background-color: inherit;
+thead:not(.visually-hidden) + tbody > tr:first-child > th,
+thead:not(.visually-hidden) + tbody > tr:first-child > td {
+	border-top-width: 2px;
 }
 
-thead.visually-hidden + tbody tr:first-child > th,
-thead.visually-hidden + tbody tr:first-child > td {
-	border-top: 1px solid theme('colors.divider');
+[data-head-color="transparent"] thead th {
+	background-color: inherit;
 }
 
 /* tbody tr:nth-of-type(2n) > td,

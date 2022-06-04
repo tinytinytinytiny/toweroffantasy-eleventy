@@ -1,11 +1,6 @@
-<h3>Preferred Gifts</h3>
-<ul class="cluster gap-xs">
-	{% for cat in gifts.categories %}
-	<li class="chip bg-sheet-1 shadow-none" data-variant="mad-cool" style="color: {{ string.giftCategories[cat].color }}; --border-color: {{ string.giftCategories[cat].color }}">{{ string.giftCategories[cat].name }}</li>
-	{% endfor %}
-</ul>
-<div class="sheet copy stack" data-layer="1">
-	<ul class="cluster gap-xs m-0">
+<details>
+	<summary class="chip">Preferred Items</summary>
+	<ul class="sheet !p-xs-s cluster gap-2xs mt-0" data-layer="0">
 		{% for gift, value in gifts.items | sortBy(['rarity', 'name'], items.gifts, 0) | sortBy([1]) | reverse %}
 		<div class="item-frame" data-rarity="{{ items.gifts[gift].rarity }}" data-size="m">
 			<img src="/assets/images/affinity/{{ gift }}.png" title="{{ items.gifts[gift].name }}" alt="{{ items.gifts[gift].name }}" width="91" height="91" loading="lazy">
@@ -13,9 +8,9 @@
 		</div>
 		{% endfor %}
 	</ul>
-</div>
-{% if helpers.isArray(gifts.categories) and 'vera' in gifts.categories %}
-<p>
-	<small>Characters with the Vera tag will only receive full affinity from Vera gifts.</small>
-</p>
-{% endif %}
+	{% if helpers.isArray(gifts.categories) and 'vera' in gifts.categories %}
+	<p>
+		<small class="text-accent">Characters with the Vera tag will only receive full affinity from Vera gifts.</small>
+	</p>
+	{% endif %}
+</details>

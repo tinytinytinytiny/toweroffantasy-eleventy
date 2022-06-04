@@ -1,0 +1,5 @@
+<ul class="cluster gap-xs">
+	{% for cat in gifts.categories %}
+	<li class="chip bg-sheet-0 shadow-none" data-variant="blackout" style="color: {{ string.giftCategories[cat].color }}">{{ string.giftCategories[cat].name }}</li>
+	{% endfor %}
+</ul>
