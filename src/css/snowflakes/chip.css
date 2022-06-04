@@ -42,35 +42,35 @@ details[open] > summary.chip::before {
 	outline: none;
 } */
 
-.chip[data-color~="knockout"] {
+.chip[data-variant~="knockout"] {
 	background-color: theme('colors.base');
 	color: theme('colors.sheet.0');
 	letter-spacing: normal;
 }
 
-.chip[data-color~="fadeout"]::before {
+.chip[data-variant~="fadeout"]::before {
 	border: none;
 }
 
-a.chip[data-color~="knockout"]:hover {
+a.chip[data-variant~="knockout"]:hover {
 	background-color: #fff;
 }
 
-a.chip[data-color~="knockout"]:focus {
+a.chip[data-variant~="knockout"]:focus {
 	background-color: #fff;
 	/* outline: 0.12em solid theme('colors.primary'); */
 }
 
-.chip[data-color~="fadeout"] {
+.chip[data-variant~="fadeout"] {
 	background: transparent;
 	background-image: linear-gradient(90deg, theme('colors.sheet.2'), transparent 130%), linear-gradient(90deg, rgba(255, 255, 255, 0.1), transparent);
 }
 
-.chip[data-color~="fadeout"]::before {
+.chip[data-variant~="fadeout"]::before {
 	border: none;
 }
 
-.chip[data-color~="mad-cool"] {
+.chip[data-variant~="mad-cool"] {
 	border: 0;
 	border-bottom: 0.15em solid var(--border-color, currentColor);
 }

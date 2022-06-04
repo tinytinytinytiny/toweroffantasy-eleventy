@@ -40,6 +40,10 @@ thead th {
 	vertical-align: bottom;
 }
 
+[data-head-color="transparent"] thead th {
+	background-color: inherit;
+}
+
 thead.visually-hidden + tbody tr:first-child > th,
 thead.visually-hidden + tbody tr:first-child > td {
 	border-top: 1px solid theme('colors.divider');

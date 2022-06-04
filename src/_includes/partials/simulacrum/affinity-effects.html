@@ -1,5 +1,5 @@
-<div class="color-bold overflow-x-auto">
-	<table data-stripe="odd">
+<div class="sheet color-bold overflow-x-auto py-s" data-layer="1">
+	<table data-stripe="odd" data-head-color="transparent">
 		<thead>
 			<tr>
 				<th scope="col">Affinity</th>
@@ -10,8 +10,8 @@
 			{% for item in mimicEffects %}
 				{% if item.affinity == 1200 or item.affinity == 4000 %}
 					<tr>
-						<th scope="row" class="text-primary">{{ item.affinity }}</th>
-						<td class="stack">{{ item.effect | markdown | safe }}</td>
+						<th scope="row" class="text-primary {{ 'border-b-0' if loop.last }}">{{ item.affinity }}</th>
+						<td class="stack {{ 'border-b-0' if loop.last }}">{{ item.effect | markdown | safe }}</td>
 					</tr>
 				{% endif %}
 			{% endfor %}

@@ -3,7 +3,7 @@
 {% endmacro %}
 
 <h3>Recommended Matrices</h3>
-<ul class="auto-grid mt-[1em]" data-variant="matrix-grid">
+<ul class="sheet reel !p-s-l !pt-s-m" data-layer="1" data-variant="matrix-grid">
 	{% for chip, quantity in recChips %}
 		{% if helpers.findCollection(collections.matrices, chip) %}
 			{% set chipName = helpers.findCollection(collections.matrices, chip).data.name %}

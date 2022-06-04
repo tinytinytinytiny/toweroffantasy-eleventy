@@ -28,12 +28,22 @@
 } */
 
 .sheet[data-layer="0"] {
-	@apply bg-sheet-0/80;
-	box-shadow: none;
+	@apply bg-sheet-0/80 shadow-inner;
 }
 
 .sheet[data-layer="0"]::before {
 	content: none;
+}
+
+.sheet[data-layer="1"] {
+	@apply shadow-inner;
+	background-color: theme('colors.sheet.1');
+	border: none;
+	box-shadow: var(--tw-shadow), 0 0 2px theme('colors.glare');
+}
+
+.sheet[data-layer="3"] {
+	background-color: theme('colors.sheet.3');
 }
 
 .sheet[data-border-color="text"] {

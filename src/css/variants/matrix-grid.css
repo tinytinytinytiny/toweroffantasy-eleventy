@@ -1,5 +1,5 @@
 [data-variant="matrix-grid"] {
 	--grid-min-item-size: 130px;
 	--grid-column-count: 6;
-	--gutter: theme('spacing.s');
+	/* --gutter: theme('spacing.s'); */
 }

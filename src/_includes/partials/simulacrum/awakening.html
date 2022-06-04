@@ -1,5 +1,5 @@
 <h3>Awakening</h3>
-<div class="color-bold overflow-x-auto mt-[1em]">
+<div class="color-bold sheet overflow-x-auto mt-[1em] shadow-inner py-s" data-layer="1" data-border="none">
 	<table data-stripe="even">
 		<thead class="visually-hidden">
 			<tr>
@@ -10,10 +10,10 @@
 		<tbody>
 			{% for item in weapon.awakening %}
 				<tr>
-					<th scope="row" class="text-primary whitespace-nowrap">
+					<th scope="row" class="text-primary whitespace-nowrap {{ '!border-t-0' if loop.index === 1 }} {{ 'border-b-0' if loop.last }}">
 						{{ loop.index }} ★ <span class="visually-hidden"> star{{ 's' if loop.index > 1 }}</span>
 					</th>
-					<td class="stack">{{ item | markdown | safe }}</td>
+					<td class="stack {{ '!border-t-0' if loop.index === 1 }} {{ 'border-b-0' if loop.last }}">{{ item | markdown | safe }}</td>
 				</tr>
 			{% endfor %}
 		</tbody>

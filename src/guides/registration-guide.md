@@ -31,7 +31,7 @@ Below you can view the various registration methods for each client, with their 
 {% macro platforms(list) %}
 <ul class="cluster gap-xs">
 {% for os in list -%}
-	<li class="chip" data-color="mad-cool" style="color: {{ articleData[os].color }};">{{ articleData[os].name }}</li>
+	<li class="chip" data-variatn="mad-cool" style="color: {{ articleData[os].color }};">{{ articleData[os].name }}</li>
 {%- endfor %}
 </ul>
 {% endmacro %}
@@ -70,11 +70,11 @@ Email Bilibili customer support ([gamehelp@bilibili.com](mailto:gamehelp@bilibil
 {% macro mono(text) %}
 <span class="text-accent font-mono text-step--1">{{ text }}</span>
 {% endmacro %}
-<h4 class="chip" data-color="knockout">Subject</h4>
+<h4 class="chip" data-variant="knockout">Subject</h4>
 
 Bili_game ID验证提交
 
-<h4 class="chip" data-color="knockout">Message</h4>  
+<h4 class="chip" data-variant="knockout">Message</h4>  
 
 哔哩哔哩游戏账号实名认证——海外及中国港澳台用户
 
