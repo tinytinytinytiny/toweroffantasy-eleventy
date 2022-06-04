@@ -6,11 +6,22 @@
 	margin-top: theme('fontSize.step-1');
 }
 
-.copy.stack > * + .has-h2,
+.copy.stack > * + .has-h2 {
+	margin-top: theme('spacing.2xl-3xl');
+}
+
 .copy.stack > * + .has-h3 {
 	margin-top: theme('spacing.xl-2xl');
 }
 
 .copy.stack > * + .has-h4 {
 	margin-top: theme('spacing.l');
+}
+
+.copy > .has-h2 + *, .copy > .has-h3 + * {
+	--stack-space: 1em;
+}
+
+.copy > .has-h4 + * {
+	--stack-space: theme('spacing.2xs');
 }

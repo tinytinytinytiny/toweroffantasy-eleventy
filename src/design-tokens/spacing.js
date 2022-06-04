@@ -1,4 +1,4 @@
-// @link https://utopia.fyi/space/calculator?c=320,16,1.2,1800,19.5,1.333,5,2,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l|l-2xl|s-xl
+// @link https://utopia.fyi/space/calculator?c=320,16,1.2,1800,19.5,1.333,5,2,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l|s-xl|m-xl|l-2xl
 
 module.exports = {
 	'0': '0',
@@ -25,6 +25,7 @@ module.exports = {
 
 	// Custom pairs
 	's-l': 'clamp(1.00rem, calc(0.69rem + 1.55vw), 2.44rem)',
-	's-xl': 'clamp(2.00rem, calc(1.38rem + 3.11vw), 4.88rem)',
-	'l-2xl': 'clamp(1.00rem, calc(0.42rem + 2.91vw), 3.69rem)'
+	's-xl': 'clamp(1.00rem, calc(0.42rem + 2.91vw), 3.69rem)',
+	'm-xl': 'clamp(1.50rem, calc(1.03rem + 2.36vw), 3.69rem)',
+	'l-2xl': 'clamp(2.00rem, calc(1.38rem + 3.11vw), 4.88rem)'
 };

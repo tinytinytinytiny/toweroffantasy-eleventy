@@ -1,0 +1,4 @@
+[data-variant="card-list"] {
+	--grid-min-item-size: 9rem;
+	line-height: 1.2;
+}

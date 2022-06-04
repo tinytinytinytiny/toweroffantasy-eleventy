@@ -68,7 +68,7 @@ Email Bilibili customer support ([gamehelp@bilibili.com](mailto:gamehelp@bilibil
 <figure class="sheet-wrapper wrapper">
 {% sheet %}
 {% macro mono(text) %}
-<span class="text-glare font-mono text-step--1">{{ text }}</span>
+<span class="text-accent font-mono text-step--1">{{ text }}</span>
 {% endmacro %}
 <h4 class="chip" data-color="knockout">Subject</h4>
 

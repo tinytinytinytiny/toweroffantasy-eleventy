@@ -5,7 +5,7 @@ module.exports = {
 			isNew: false,
 			isChina: false,
 			rarity: 4,
-			description: 'Enter a quantum state for **10** seconds, during which enemies cannot detect the wearer. The wearer exits quantum state after attacking once. **120</strong-second cooldown.',
+			description: 'Enter a quantum state for **10** seconds, during which enemies cannot detect the wearer. The wearer exits quantum state after attacking once. **120**-second cooldown.',
 			awakening: [
 				'Quantum state lasts for **20** seconds.',
 				'Reduce cooldown to **80** seconds.',

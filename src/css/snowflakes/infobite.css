@@ -1,5 +1,5 @@
 .infobite > :first-child {
-	color: theme('colors.glare');
+	color: theme('colors.accent');
 	font-family: theme('fontFamily.sans');
 	font-size: theme('fontSize.step--1');
 	font-weight: normal;

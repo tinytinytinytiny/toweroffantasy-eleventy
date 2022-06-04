@@ -3,10 +3,10 @@
 }
 
 .copy > h2 {
-	--stack-space: theme('spacing.xl-2xl');
+	--stack-space: theme('spacing.2xl-3xl');
 }
 
-.copy > * + h2:not([data-rule="none"])::before,
+/* .copy > * + h2:not([data-rule="none"])::before,
 .copy > h2[data-rule]:not([data-rule="none"])::before,
 .copy > * + .has-h2:not([data-rule="none"])::before,
 .copy > .has-h2[data-rule]:not([data-rule="none"])::before {
@@ -16,7 +16,7 @@
 	display: block;
 	width: 100%;
 	margin-bottom: theme('spacing.l-xl');
-}
+} */
 
 .copy > h3 {
 	--stack-space: theme('spacing.xl-2xl');

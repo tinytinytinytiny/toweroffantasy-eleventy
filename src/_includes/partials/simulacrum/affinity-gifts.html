@@ -1,7 +1,7 @@
 <h3>Preferred Gifts</h3>
 <ul class="cluster gap-xs">
 	{% for cat in gifts.categories %}
-		<li class="chip" data-color="mad-cool" style="color: {{ string.giftCategories[cat].color }}">{{ string.giftCategories[cat].name }}</li>
+		<li class="chip" data-color="mad-cool" style="--border-color: {{ string.giftCategories[cat].color }}">{{ string.giftCategories[cat].name }}</li>
 	{% endfor %}
 </ul>
 <ul class="cluster gap-xs">
@@ -12,3 +12,8 @@
 		</div>
 	{% endfor %}
 </ul>
+{% if helpers.isArray(gifts.categories) and 'vera' in gifts.categories %}
+	<p>
+		<small>Characters with the Vera tag will only receive full affinity from Vera gifts.</small>
+	</p>
+{% endif %}

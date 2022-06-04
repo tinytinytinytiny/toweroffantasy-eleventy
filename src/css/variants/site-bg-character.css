@@ -10,11 +10,6 @@
 	background-position-y: center;
 }
 
-[data-bg="type-v-armor"] {
-	--background-offset: 150px;
-	background-position-y: center;
-}
-
 [data-bg="echo"] {
 	--background-offset: 400px;
 }

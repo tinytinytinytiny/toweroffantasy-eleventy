@@ -17,11 +17,11 @@ module.exports = {
 
 	// Text
 	base: '#dfdfdf',
-	glare: '#c5c8e7',
+	accent: '#c5c8e7',
 
 	// Semantic
-	ring: 'rgba(197, 200, 231, 0.05)',
 	divider: 'rgba(197, 200, 231, 0.2)',
+	glare: 'rgba(197, 200, 231, 0.05)',
 	success: '#2bcae8',
 	error: '#f36b6b',
 

@@ -74,7 +74,7 @@
 }
 
 .nav__links::before {
-	@apply text-glare/20;
+	@apply text-accent/20;
 	border-top: 1px solid;
 	content: '';
 	margin-top: calc(var(--gutter) / 2);

@@ -18,8 +18,8 @@
 				{% for food in items.food | sortBy(['rarity', 'stars', 'name']) %}
 					<tr class="align-middle" id="{{ food.name | slugify }}">
 						{# food name and image #}
-						<th class="stack stack-space-2xs" scope="row">
-							<div class="item-frame mr-xs-s" data-rarity="{{ food.rarity }}" data-size="m">
+						<th scope="row">
+							<div class="item-frame mr-xs-s mb-2xs mt-2xs" data-rarity="{{ food.rarity }}" data-size="m">
 								<img src="/assets/images/food/{{ food.image }}"	alt="" width="96" height="96" {% if loop.index > 4 %}loading="lazy"{% endif %}>
 								<span class="item-frame__info text-step-0 tracking-tighter" aria-hidden="true">
 									{% for i in range(0, food.stars) %}
@@ -27,7 +27,7 @@
 									{% endfor %}
 								</span>
 							</div>
-							<span class="inline-block font-bold mb-2xs">{{ food.name }}</span>
+							<span class="inline-block font-bold">{{ food.name }}</span>
 						</th>
 						{# rarity (visually hidden) #}
 						<td class="visually-hidden">

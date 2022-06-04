@@ -8,7 +8,7 @@
 	--border-color: theme('colors.primary');
 	background-color: theme('colors.sheet.2');
 	border-top: 0.3em solid var(--border-color);
-	box-shadow: var(--tw-shadow), inset 0 0 0 1px theme('colors.ring');
+	box-shadow: var(--tw-shadow), inset 0 0 0 1px theme('colors.glare');
 	box-sizing: content-box;
 	padding: theme('spacing.s-l');
 	position: relative;
@@ -16,7 +16,7 @@
 
 /* @supports (pointer-events: none) {
 	.sheet::before {
-		@apply border border-solid border-glare/5;
+		@apply border border-solid border-accent/5;
 		content: '';
 		position: absolute;
 		top: 0;

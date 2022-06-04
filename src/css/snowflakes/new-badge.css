@@ -6,10 +6,6 @@
 	color: theme('colors.sheet.0');
 	font-size: theme('fontSize.step--2');
 	font-weight: bold;
-	position: absolute;
-	bottom: -0.7em;
-	right: 25%;
-	left: 25%;
 	outline: 0.2em solid;
 	text-align: center;
 	text-transform: uppercase;

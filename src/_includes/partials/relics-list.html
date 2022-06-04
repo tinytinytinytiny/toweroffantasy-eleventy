@@ -1,10 +1,10 @@
-<ul class="auto-grid max-w-none">
+<ul class="auto-grid max-w-none" data-variant="card-list">
 	{% for item in items | sortBy(['isNew', 'isChina', 'name']) | reverse %}
 		<li class="sheet card stack box-border p-s" data-border="none">
-			<div class="item-frame" data-variant="matrix">
+			<div class="item-frame">
 				<img class="drop-shadow-xl" src="/assets/images/gadget/{{ item.fileSlug }}.png" alt="" width="205" height="205" loading="{{ 'lazy' if loop.index > 5 else 'auto' }}">
 				{% if item.data.isNew %}
-					<span class="new-badge" aria-hidden="true">
+					<span class="new-badge absolute bottom-0 inset-x-1/4" aria-hidden="true">
 						New
 					</span>
 				{% endif %}

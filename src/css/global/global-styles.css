@@ -99,7 +99,7 @@ strong {
 
 figcaption {
 	@apply tracking-wide;
-	color: theme('colors.glare');
+	color: theme('colors.accent');
 	font-size: theme('fontSize.step--1');
 	margin-top: 1em;
 }
@@ -141,74 +141,4 @@ summary h2, summary h3, summary h4 {
 
 summary:has(h2, h3) + * {
 	margin-top: 1em;
-}
-
-summary + table {
-	margin-top: 0;
-}
-
-table {
-	border-spacing: 0;
-	overflow-x: auto;
-	text-align: left;
-}
-
-table * {
-	vertical-align: middle;
-}
-
-th {
-	font-family: theme('fontFamily.fancy');
-	letter-spacing: normal;
-}
-
-th, td {
-	padding: calc(theme('spacing.l') / 2) calc(theme('spacing.l-xl') / 2);
-}
-
-thead th {
-	@apply bg-sheet-0/80;
-	font-size: theme('fontSize.step--1');
-	letter-spacing: 0.05em;
-	text-transform: uppercase;
-}
-
-tbody tr:nth-of-type(2n) > td,
-tbody tr:nth-of-type(2n) > th {
-	@apply bg-sheet-0/80;
-}
-
-tbody tr:nth-of-type(2n+1) > td,
-tbody tr:nth-of-type(2n+1) > th {
-	background-color: theme('colors.sheet.1');
-}
-
-td {
-	vertical-align: top;
-}
-
-table p {
-	min-width: 23ch;
-}
-
-table[data-width="stretch"] {
-	min-width: var(--wrapper-max-width, 46rem);
-}
-
-details table {
-	min-width: 100%;
-}
-
-[data-stripe="even"] thead th {
-	background-color: theme('colors.sheet.1');
-}
-
-[data-stripe="even"] tbody tr:nth-of-type(2n) > td,
-[data-stripe="even"] tbody tr:nth-of-type(2n) > th {
-	background-color: theme('colors.sheet.1');
-}
-
-[data-stripe="even"] tbody tr:nth-of-type(2n+1) > td,
-[data-stripe="even"] tbody tr:nth-of-type(2n+1) > th {
-	@apply bg-sheet-0/80;
 }

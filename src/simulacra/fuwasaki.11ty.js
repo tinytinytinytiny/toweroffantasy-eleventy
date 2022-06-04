@@ -32,29 +32,13 @@ module.exports = {
 				]
 			},
 			mimicEffects: [
-				// {
-				// 	affinity: 200,
-				// 	effect: 'Unlock profile avatar Marc'
-				// },
-				// {
-				// 	affinity: 600,
-				// 	effect: 'Unlock communication [Doomsday Hunters]'
-				// },
 				{
 					affinity: 1200,
 					effect: 'When health is below **70%**, gain **40%** all-element resistance.'
 				},
-				// {
-				// 	affinity: 2000,
-				// 	effect: 'Unlock communication [Reality and the Law]'
-				// },
-				// {
-				// 	affinity: 3000,
-				// 	effect: 'Unlock communication [Thinking about the present]'
-				// },
 				{
 					affinity: 4000,
-					effect: 'When health is below **70%**, gain **40%** all-element resistance and an additional **60%** ice resistance.<br>When blocking with Silent Flow [Surge], provide 3 blocks to the teammate with the lowest health (excluding yourself). Lasting **10** seconds, the block amount will not exceed **15%** of the teammate’s maximum health.'
+					effect: 'When health is below **70%**, gain **40%** all-element resistance and an additional **60%** ice resistance.\n\nWhen blocking with Silent Flow [Surge], provide 3 blocks to the teammate with the lowest health (excluding yourself). Lasting **10** seconds, the block amount will not exceed **15%** of the teammate’s maximum health.'
 				}
 			],
 			recChips: [
@@ -66,21 +50,18 @@ module.exports = {
 			],
 			traits: {
 				gender: 'Female',
-				height: '???',
-				birthplace: '???',
-				horoscope: '???',
-				birthday: '???'
+				height: '157 cm',
+				birthplace: 'Mirror City',
+				horoscope: 'Libra',
+				birthday: 'October 11'
 			},
 			gifts: {
-				categories: ['metalware'],
+				categories: ['metalware', 'everyday-items', 'vera'],
 				items: [
-					['kitchenware', 80],
-					['present', 60],
-					['pearl', 60],
-					['bear-figure', 60],
-					['toolbox', 30],
-					['strange-fragment', 30],
-					['dumbbells', 15]
+					['prince-tata-figure', 60],
+					['linye-figure', 60],
+					['strange-fragment', 40],
+					['strange-plant', 15]
 				]
 			}
 		};

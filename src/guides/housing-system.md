@@ -46,7 +46,7 @@ The main source of materials is killing creatures on your Artificial Island, inc
 <img class="inline-block" src="/assets/images/guides/Home{{ item }}.png" alt="{{ item }}" width="64" height="64">
 {%- endmacro %}
 
-{% bigTable %}
+{% bigTable 'stretch' %}
 | Resource                                           | Animals       | Mobs (Elites Included) | World Bosses |
 |----------------------------------------------------|---------------|------------------------|--------------|
 | {{ resource('Shell') }}                            | 7–10 per kill |                        |              |
