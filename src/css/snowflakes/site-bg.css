@@ -1,11 +1,10 @@
 .site-bg {
 	background-position: calc(100% + var(--background-offset, 300px) - 5vw) top;
-	background-position: calc(100% + var(--background-offset, 300px) - 5vw) max(0px, calc(100vh - var(--background-height, 1080px)));
+	background-position-x: min(calc(100% + var(--background-offset, 300px) - 5vw), calc(50% + 60rem));
 	background-repeat: no-repeat;
 	display: block;
 	height: 100vh;
 	overscroll-behavior: none;
 	position: fixed;
 	width: 100vw;
-	z-index: -1;
 }

@@ -1,10 +1,16 @@
+.site-bg[data-category="relics"] {
+	--background-offset: 150px;
+}
+
 [data-bg="weila"] {
 	--background-offset: 500px;
-	--background-height: 1024px;
+	background-position-y: max(0px, calc(100vh - 1024px));
 }
 
 [data-bg="huodong_meishi_guo"] {
-	background-position: 100% bottom;
+	--background-offset: 5vw;
+	background-position-y: bottom;
+	background-position-y: max(0px, calc(100vh - 342px));
 }
 
 [data-bg="claudia2"] {
@@ -21,9 +27,4 @@
 
 [data-bg="fuwasaki"] {
 	--background-offset: 370px;
-}
-
-.site-bg[data-category="relics"] {
-	--background-offset: 150px;
-	background-position-y: max(0px, calc(50vh - 512px / 2));
 }

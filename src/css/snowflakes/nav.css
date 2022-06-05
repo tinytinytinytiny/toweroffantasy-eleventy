@@ -228,6 +228,10 @@
 }
 
 @media screen and (orientation: landscape) {
+	.nav[data-state="collapsed"] {
+		position: relative;
+	}
+
 	[data-state="collapsed"] .nav__head > img {
 		display: none;
 	}
