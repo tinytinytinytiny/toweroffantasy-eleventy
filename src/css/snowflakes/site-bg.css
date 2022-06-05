@@ -4,7 +4,9 @@
 	background-repeat: no-repeat;
 	display: block;
 	height: 100vh;
+	height: max(100%, 100vh);
 	overscroll-behavior: none;
 	position: fixed;
 	width: 100vw;
+	z-index: -1;
 }

@@ -5,11 +5,16 @@
 
 .nav > details {
 	--region-space: theme('spacing.s-l');
-	padding-bottom: calc(theme('spacing.s-l') + env(safe-area-inset-bottom));
 	max-height: 100vh;
 	overflow-y: auto;
 	position: sticky;
 	top: 0;
+}
+
+@supports (padding: max(0px)) {
+	.nav > details {
+		padding: calc(var(--region-space) + env(safe-area-inset-top)) calc(var(--wrapper-padding) + env(safe-area-inset-right)) calc(var(--region-space) + env(safe-area-inset-bottom)) calc(var(--wrapper-padding) + env(safe-area-inset-left));
+	}
 }
 
 .nav > details > *:last-child {
