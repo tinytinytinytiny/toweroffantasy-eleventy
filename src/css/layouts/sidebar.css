@@ -19,9 +19,9 @@
   flex-direction: row-reverse;
 }
 
-.sidebar[data-variant~="constrain-content"] > :last-child {
+/* .sidebar[data-variant~="constrain-content"] > :last-child {
 	max-width: var(--sidebar-content-max-width, 80rem);
-}
+} */
 
 .sidebar[data-variant~="constrain-content"] > :last-child > * {
 	margin-left: auto;
