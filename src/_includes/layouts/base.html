@@ -2,7 +2,7 @@
 <html lang="en" dir="ltr">
   <head>
 		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
 		{% include "partials/meta-info.html" %}
 
@@ -21,15 +21,15 @@
 			{% set bgImg = 'none' %}
 			{% set bgSlug = '' %}
 		{% endif %}
-		<div class="site-bg fuckyousafari fuckyoufuckyoufkcu" data-bg="{{ bgSlug }}" data-category="{{ bgCategory }}" role="presentation" style="background-image: {{ bgImg }};"></div>
-		<div class="sidebar max-w-[120rem] ml-auto mr-auto" data-variant="center-content constrain-content">
+		<div class="site-bg" data-bg="{{ bgSlug }}" data-category="{{ bgCategory }}" role="presentation" style="background-image: {{ bgImg }};"></div>
+		<div class="sidebar max-w-[120rem] ml-auto mr-auto" data-variant="center-content">
 			{% include "partials/sidebar.html" %}
 			<main class="stack" tabindex="-1" id="main-content">
 				{% block header %}
 					{% include "partials/standard-header.html" %}
 				{% endblock %}
 				{% set isCopy = true %}
-				<div class="{% if isCopy %}copy{% endif %} bg-sheet-1 mt-0 region stack wrapper {{ extraClassNames }}">
+				<div class="{% if isCopy %}copy{% endif %} bg-sheet-1 mt-0 region stack wrapper {{ extraClassNames }}" data-wrapper="site">
 					{% block content %}{% endblock %}
 				</div>
 				{% block ending %}{% endblock %}

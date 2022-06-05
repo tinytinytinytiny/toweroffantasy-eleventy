@@ -31,7 +31,7 @@
 	width: 100%;
 }
 
-.page-header[data-variant="item"] .page-header__inner {
+.page-header[data-page="item"] .page-header__inner {
 	display: flex;
 	flex-flow: column-reverse nowrap;
 	gap: var(--stack-space, 1em);

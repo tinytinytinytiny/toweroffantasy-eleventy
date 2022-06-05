@@ -1,7 +1,7 @@
 {% extends "layouts/base.html" %}
 
 {% block header %}
-	<header class="page-header region stack wrapper">
+	<header class="page-header region stack wrapper" data-wrapper="site">
 		<div class="page-header__inner with-rule stack stack-space-s-l">
 			<div class="stack">
 				<h1 class="text-step-4 normal-case">{{ title }}</h1>
@@ -31,7 +31,7 @@
 {% block ending %}
 	{% set guideList = helpers.getSiblingContent(collections.guides, page) %}
 	{% if guideList | length %}
-		<section class="ending copy region stack wrapper" aria-label="Ending">
+		<section class="ending copy region stack wrapper" aria-label="Ending" data-wrapper="site">
 			<h2>More Guides</h2>
 			{% include "partials/guide-list.html" %}
 		</section>
