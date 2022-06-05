@@ -71,15 +71,12 @@ Email Bilibili customer support ([gamehelp@bilibili.com](mailto:gamehelp@bilibil
 <span class="text-accent font-mono text-step--1">{{ text }}</span>
 {% endmacro %}
 
-<h4 class="chip" data-variant="knockout">Subject</h4>
+**Subject:** Bili_game ID验证提交
 
-Bili_game ID验证提交
-
-<h4 class="chip" data-variant="knockout">Message</h4>
-
+**Message:**  
 哔哩哔哩游戏账号实名认证——海外及中国港澳台用户
 
-<div class="sheet p-s" data-layer="1">
+<div class="sheet p-s stack-space-s" data-layer="1">
 {% markdown %}
 1. 证件类型：{{ mono('(Government Issued ID card 身份证 / Passport或护照)') }}
 2. 真实姓名：{{ mono('(Your name)') }}

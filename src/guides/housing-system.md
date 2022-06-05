@@ -43,17 +43,47 @@ The main source of materials is killing creatures on your Artificial Island, inc
 
 ### Total Resources
 {% macro resource(item) -%}
-<img class="inline-block" src="/assets/images/guides/Home{{ item }}.png" alt="{{ item }}" width="64" height="64">
+<img class="inline-block" src="/assets/images/guides/Home{{ item }}.png" alt="{{ item }}" width="42" height="42">
 {%- endmacro %}
 
-{% bigTable 'stretch' %}
-| Resource                                           | Animals       | Mobs (Elites Included) | World Bosses |
-|----------------------------------------------------|---------------|------------------------|--------------|
-| {{ resource('Shell') }}                            | 7–10 per kill |                        |              |
-| {{ resource('Pumpkin') }} {{ resource('Ore') }}    |               | 1638–1744              |              |
-| {{ resource('FishBones') }} {{ resource('Meat') }} |               | 1606–1674              |              |
-| {{ resource('Rattan') }} {{ resource('Twigs') }}   |               |                        | 284–288      |
-{% endbigTable %}
+<div class="big-table wrapper">
+	<table>
+		<thead>
+			<tr>
+				<th>Resource</th>
+				<th>Animals</th>
+				<th>Mobs (Elites Included)</th>
+				<th>World Bosses</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<th class="whitespace-nowrap w-max">{{ resource('Shell') }}</th>
+				<td>7–10 per kill</td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<th class="whitespace-nowrap w-max">{{ resource('Pumpkin') }} {{ resource('Ore') }}</th>
+				<td></td>
+				<td>1638–1744</td>
+				<td></td>
+			</tr>
+			<tr>
+				<th class="whitespace-nowrap w-max">{{ resource('FishBones') }} {{ resource('Meat') }}</th>
+				<td></td>
+				<td>1606–1674</td>
+				<td></td>
+			</tr>
+			<tr>
+				<th class="whitespace-nowrap w-max">{{ resource('Rattan') }} {{ resource('Twigs') }}</th>
+				<td></td>
+				<td></td>
+				<td>284–288</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
 
 ### Building Levels
 Resources will accumulate for up to 24 hours, after which they must be collected.

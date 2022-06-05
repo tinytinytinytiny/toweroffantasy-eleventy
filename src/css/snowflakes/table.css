@@ -19,7 +19,7 @@ th {
 
 th, td {
 	border-top: 1px solid theme('colors.divider');
-	padding: theme('spacing.xs-s') theme('spacing.s-l');
+	padding: theme('spacing.xs') theme('spacing.s-l');
 }
 
 tr > :first-child {
@@ -32,6 +32,7 @@ tr > :last-child {
 
 thead th {
 	@apply bg-sheet-0/80;
+	border-top-color: theme('colors.glare');
 	font-size: theme('fontSize.step--1');
 	letter-spacing: 0.05em;
 	line-height: 1.25;
@@ -41,7 +42,7 @@ thead th {
 
 thead:not(.visually-hidden) + tbody > tr:first-child > th,
 thead:not(.visually-hidden) + tbody > tr:first-child > td {
-	@apply border-base/80;
+	@apply border-base/90;
 	border-top-width: 2px;
 }
 

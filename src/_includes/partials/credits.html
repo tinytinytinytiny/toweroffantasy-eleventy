@@ -1,13 +1,15 @@
 <h2>Contributors</h2>
-<div class="credits stack copy">
+<div class="credits stack with-rule" data-rule-top="true">
 	{% for entry in credits %}
-		<h3 class="text-primary">{{ entry.title }}</h3>
-		<ul class="auto-grid">
-			{% for contributor in entry.contributors %}
+		<div class="stack copy">
+			<h3 class="text-primary">{{ entry.title }}</h3>
+			<ul class="auto-grid">
+				{% for contributor in entry.contributors %}
 				<li>
 					<span>{{ contributor.split('#')[0] }}</span><span class="text-base/60 tracking-[0.03em]">{{ '#' + contributor.split('#')[1] }}</span>
 				</li>
-			{% endfor %}
-		</ul>
+				{% endfor %}
+			</ul>
+		</div>
 	{% endfor %}
 </div>
