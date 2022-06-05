@@ -1,5 +1,6 @@
 .site-bg {
 	background-position: calc(100% + var(--background-offset, 300px) - 5vw) top;
+	background-position: calc(100% + var(--background-offset, 300px) - 5vw) max(0px, calc(100vh - var(--background-height, 1080px)));
 	background-repeat: no-repeat;
 	display: block;
 	height: 100vh;

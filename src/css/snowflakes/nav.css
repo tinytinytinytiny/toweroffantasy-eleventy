@@ -86,6 +86,7 @@
 }
 
 .nav__links > li {
+	--grid-item-min-size: calc(50vw - var(--wrapper-padding) - var(--gutter));
 	line-height: 1;
 }
 

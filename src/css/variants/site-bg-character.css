@@ -1,5 +1,6 @@
 [data-bg="weila"] {
 	--background-offset: 500px;
+	--background-height: 1024px;
 }
 
 [data-bg="huodong_meishi_guo"] {
@@ -24,4 +25,5 @@
 
 .site-bg[data-category="relics"] {
 	--background-offset: 150px;
+	background-position-y: max(0px, calc(50vh - 512px / 2));
 }
