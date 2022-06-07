@@ -15,22 +15,22 @@
 {% if weapon.materials %}
 	<details>
 		<summary class="chip">Breakthrough Materials</summary>
-		<div class="sheet stack p-s-m" data-layer="0">
-			<div class="sheet box-border reel gap-2xs-xs" data-border="none">
+		<div class="sheet stack p-s-m" data-border="none">
+			<div class="sheet box-border reel gap-2xs-xs" data-layer="1">
 				{{ material(weapon.materials[0], 2, 1) }}
 				{{ progression(4) }}
 				{{ material(weapon.materials[0], 3, 2) }}
 				{{ progression(5) }}
 				{{ material(weapon.materials[0], 4, 3) }}
 			</div>
-			<div class="sheet box-border reel gap-2xs-xs" data-border="none">
+			<div class="sheet box-border reel gap-2xs-xs" data-layer="1">
 				{{ material(weapon.materials[1], 3, 1) }}
 				{{ progression(4) }}
 				{{ material(weapon.materials[1], 4, 2) }}
 				{{ progression(5) }}
 				{{ material(weapon.materials[1], 5, 3) }}
 			</div>
-			<div class="sheet box-border reel gap-2xs-xs" data-border="none">
+			<div class="sheet box-border reel gap-2xs-xs" data-layer="1">
 				{{ material(weapon.materials[2], 4, 1) }}
 				{{ progression(4) }}
 				{{ material(weapon.materials[2], 5, 2) }}

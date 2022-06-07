@@ -203,7 +203,7 @@
 {% endcall %}
 
 {% macro weaponList(list) %}
-<div class="sheet box-border p-s" data-border="none">
+<div class="sheet box-border p-s" data-layer="1">
 	<ul class="cluster m-0 justify-center">
 		{% for item in list %}
 			<li>
@@ -224,17 +224,13 @@
 {% endmacro %}
 
 <h2>Strongest Setups</h2>
-<details>
-	<summary class="chip">6★, Maxed Chips</summary>
-	<div class="sheet mt-0 stack p-s-m" data-border="none" data-layer="0">
-		{{ weaponList(['Baiyuekui', 'Marc', 'Nemesis']) }}
-		{{ weaponList(['Baiyuekui', 'Claudia', 'Nemesis']) }}
-		{{ weaponList(['Ruby', 'Cobalt-B', 'Marc']) }}
-	</div>
-</details>
-<details>
-	<summary class="chip">Without Limited Weapons</summary>
-	<div class="sheet mt-0 stack p-s-m" data-border="none" data-layer="0">
-		{{ weaponList(['KING', 'Samir', 'Tsubasa']) }}
-	</div>
-</details>
+<h3 class="chip block text-step-0" data-variant="knockout">6★, Maxed Chips</h3>
+<div class="sheet box-border mt-0 stack p-s-m" data-border="none">
+	{{ weaponList(['Baiyuekui', 'Marc', 'Nemesis']) }}
+	{{ weaponList(['Baiyuekui', 'Claudia', 'Nemesis']) }}
+	{{ weaponList(['Ruby', 'Cobalt-B', 'Marc']) }}
+</div>
+<h3 class="chip block text-step-0" data-variant="knockout">Without Limited Weapons</h3>
+<div class="sheet box-border mt-0 stack p-s-m" data-border="none">
+	{{ weaponList(['KING', 'Samir', 'Tsubasa']) }}
+</div>

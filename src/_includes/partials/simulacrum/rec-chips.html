@@ -4,7 +4,7 @@
 
 <details>
 	<summary class="chip">Recommended Matrices</summary>
-	<ul class="sheet reel mt-0 !p-s-l !pt-xs-s !pb-s-m box-border" data-layer="0" data-border="none" data-variant="matrix-grid">
+	<ul class="sheet reel mt-0 !p-s-l !pt-xs-s !pb-s-m box-border" data-border="none" data-variant="matrix-grid">
 		{% for chip, quantity in recChips %}
 			{% if helpers.findCollection(collections.matrices, chip) %}
 				{% set chipName = helpers.findCollection(collections.matrices, chip).data.name %}

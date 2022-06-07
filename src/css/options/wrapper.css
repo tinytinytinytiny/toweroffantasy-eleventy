@@ -10,6 +10,10 @@
 	margin-right: auto;
 }
 
+.wrapper[data-wrapper="wide"] {
+	--wrapper-max-width: 100%;
+}
+
 @supports (padding: max(0px)) {
 	.wrapper[data-wrapper="site"] {
 		--wrapper-padding: theme('spacing.m-xl');

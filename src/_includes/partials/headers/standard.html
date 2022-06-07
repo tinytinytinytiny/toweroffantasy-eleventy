@@ -1,0 +1,12 @@
+{% extends "partials/headers/base.html" %}
+
+{% block content %}
+	<div class="page-header__inner copy stack">
+		<h1>{{ title }}</h1>
+		{% if summary %}
+			{{ summary | safe }}
+		{% else %}
+			{{ content | safe }}
+		{% endif %}
+	</div>
+{% endblock %}

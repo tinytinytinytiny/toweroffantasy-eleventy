@@ -31,7 +31,7 @@ Below you can view the various registration methods for each client, with their 
 {% macro platforms(list) %}
 <ul class="cluster gap-xs">
 {% for os in list -%}
-	<li class="chip" data-variant="blackout" style="color: {{ articleData[os].color }};">{{ articleData[os].name }}</li>
+	<li class="chip" data-variant="underline" style="color: {{ articleData[os].color }};">{{ articleData[os].name }}</li>
 {%- endfor %}
 </ul>
 {% endmacro %}

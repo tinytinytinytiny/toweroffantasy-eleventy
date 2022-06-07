@@ -5,19 +5,10 @@
 {% set background = 'gadget/' + page.fileSlug + '.png' %}
 
 {% block header %}
-	<header class="page-header region wrapper" data-wrapper="site">
-		<div class="page-header__inner stack-space-s-l">
-			<div>
-				<h1>{{ title }}</h1>
-				<p class="font-fancy uppercase text-step-2 tracking-wide">
-					<span class="highlight-rarity italic" data-rarity="{{ rarity }}">{{ string.rarity[rarity - 1] }}</span> Relic
-				</p>
-			</div>
-		</div>
-	</header>
+	{% include "partials/headers/relic.html" %}
 {% endblock %}
 
-{% set extraClassNames = 'color-bold' %}
+{% set extraClassNames = 'bold-secondary' %}
 
 {% block content %}
 	<h2>Relic Effect</h2>
@@ -34,7 +25,7 @@
 			{% for item in awakening %}
 				<tr>
 					<th scope="row" class="text-primary whitespace-nowrap">
-						{{ loop.index }} ★ <span class="visually-hidden"> star{{ 's' if loop.index > 1 }}</span>
+						{{ loop.index }}&nbsp;★ <span class="visually-hidden"> star{{ 's' if loop.index > 1 }}</span>
 					</th>
 					<td>{{ item | markdown | safe }}</td>
 				</tr>

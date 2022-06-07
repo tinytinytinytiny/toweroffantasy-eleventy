@@ -1,0 +1,81 @@
+input[type="text"], input[type="number"], select {
+	background-color: theme('colors.sheet.1');
+	border: 1px solid theme('colors.divider');
+	box-shadow: none;
+	color: theme('colors.base');
+	font-weight: bold;
+	line-height: 1;
+	min-height: 40px;
+	min-width: 0;
+	padding: 0.66em 0.8em;
+	position: relative;
+	white-space: nowrap;
+}
+
+input[type="text"]:hover,
+input[type="number"]:hover,
+select:hover {
+	background-color: theme('colors.sheet.0');
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus,
+select:focus {
+	@apply shadow-xl;
+	background-color: theme('colors.bold') !important;
+	box-shadow: none;
+	color: theme('colors.sheet.0');
+	outline: none;
+}
+
+input:invalid {
+	color: theme('colors.error');
+}
+
+label[for], .label {
+	@apply tracking-wide;
+	color: theme('colors.accent');
+	font-family: theme('fontFamily.fancy');
+	font-size: theme('fontSize.step--1');
+	line-height: 1.25;
+	text-transform: uppercase;
+}
+
+label[for] + * {
+	margin-top: theme('spacing.3xs');
+}
+
+.sheet[data-layer="2"] input[type="text"],
+.sheet[data-layer="2"] input[type="number"],
+.sheet[data-layer="2"] select {
+	@apply shadow-inner;
+	border: none;
+}
+
+.sheet[data-layer="3"] input[type="text"],
+.sheet[data-layer="3"] input[type="number"],
+.sheet[data-layer="3"] select {
+	@apply shadow-inner;
+	border: none;
+	background-color: theme('colors.sheet.2');
+}
+
+.sheet[data-layer="3"] input[type="text"]:hover,
+.sheet[data-layer="3"] input[type="number"]:hover,
+.sheet[data-layer="3"] select:hover {
+	background-color: theme('colors.sheet.1');
+}
+
+select {
+	cursor: pointer;
+}
+
+.unit-input {
+	align-items: center;
+	display: flex;
+}
+
+.unit-input > * {
+	flex: 1;
+	width: 0;
+}

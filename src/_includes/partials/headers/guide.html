@@ -1,0 +1,23 @@
+{% extends "partials/headers/base.html" %}
+
+{% block content %}
+<div class="page-header__inner with-rule stack stack-space-s-l">
+	<div class="stack">
+		<h1 class="text-step-4 normal-case">{{ title }}</h1>
+		<p>
+			By <span class="text-primary">{{ authors.join('<span class="text-base">, </span>') | safe }}</span>
+		</p>
+	</div>
+	<div>
+		<ul class="cluster gap-xs mb-0">
+			{% for tag in tags %}
+			<li>
+				<a class="chip" href="/guides/tag/{{ tag }}" data-variant="hover">
+					#&#8202;<span class="font-bold">{{ tag | capitalize }}</span>
+				</a>
+			</li>
+			{% endfor %}
+		</ul>
+	</div>
+</div>
+{% endblock %}

@@ -1,0 +1,15 @@
+{% extends "partials/headers/base.html" %}
+
+{% block content %}
+<div class="page-header__inner stack-space-s-l" data-page="item">
+	<div>
+		<h1>{{ title }}</h1>
+		<p class="font-fancy uppercase text-step-2 tracking-wide">
+			<span class="highlight-rarity italic" data-rarity="{{ rarity }}">{{ string.rarity[rarity - 1] }}</span> Matrix
+		</p>
+	</div>
+	<div class="item-frame" data-variant="matrix">
+		<img src="/assets/images/chip/{{ page.fileSlug }}.png" alt="" width="205" height="205">
+	</div>
+</div>
+{% endblock %}

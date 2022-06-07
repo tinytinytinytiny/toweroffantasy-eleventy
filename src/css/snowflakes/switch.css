@@ -1,0 +1,57 @@
+.switch {
+	user-select: none;
+}
+
+.switch__toggle {
+	cursor: pointer;
+	display: inline-block;
+	flex-shrink: 0;
+	box-sizing: content-box;
+	width: 60px;
+	height: 24px;
+	padding: 6px;
+	position: relative;
+	vertical-align: middle;
+}
+
+.switch__toggle::before {
+	@apply bg-accent/14 shadow-md;
+	box-shadow: var(--tw-shadow), inset 0 0 0 1px theme('colors.glare');
+	content: '';
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+}
+
+.switch__toggle::after {
+	@apply bg-base shadow-md transition-transform;
+	content: '';
+	display: inline-block;
+	height: 24px;
+	position: relative;
+	width: 24px;
+}
+
+.switch__toggle:hover::after {
+	@apply bg-bold;
+}
+
+input:focus-visible + .switch__toggle {
+	outline: 0.12em solid theme('colors.primary');
+	outline-offset: 0.2em;
+}
+
+input:checked + .switch__toggle::before {
+	@apply bg-primary/20;
+}
+
+input:checked + .switch__toggle::after {
+	@apply bg-primary;
+	transform: translateX(150%);
+}
+
+input:checked + .switch__toggle:hover::after {
+	@apply bg-primary;
+}
