@@ -1,6 +1,6 @@
 <details>
 	<summary class="chip">Awakening</summary>
-	<div class="color-bold big-table wrapper">
+	<div class="bold-secondary big-table wrapper">
 		<table>
 			<thead class="visually-hidden">
 				<tr>
@@ -12,7 +12,7 @@
 				{% for item in weapon.awakening %}
 					<tr>
 						<th scope="row" class="text-primary whitespace-nowrap">
-							{{ loop.index }} ★ <span class="visually-hidden"> star{{ 's' if loop.index > 1 }}</span>
+							{{ loop.index }}&nbsp;★ <span class="visually-hidden"> star{{ 's' if loop.index > 1 }}</span>
 						</th>
 						<td class="stack">{{ item | markdown | safe }}</td>
 					</tr>

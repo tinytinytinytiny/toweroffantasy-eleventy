@@ -6,22 +6,10 @@
 {% endif %}
 
 {% block header %}
-	<header class="page-header region wrapper" data-page="item" data-wrapper="site">
-		<div class="page-header__inner stack-space-s-l">
-			<div>
-				<h1>{{ title }}</h1>
-				<p class="font-fancy uppercase text-step-2 tracking-wide">
-					<span class="highlight-rarity italic" data-rarity="{{ rarity }}">{{ string.rarity[rarity - 1] }}</span> Matrix
-				</p>
-			</div>
-			<div class="item-frame" data-variant="matrix">
-				<img src="/assets/images/chip/{{ page.fileSlug }}.png" alt="" width="205" height="205">
-			</div>
-		</div>
-	</header>
+	{% include "partials/headers/matrix.html" %}
 {% endblock %}
 
-{% set extraClassNames = 'color-bold' %}
+{% set extraClassNames = 'bold-secondary' %}
 
 {% block content %}
 	{% for i in range(0, sets.length) %}
@@ -43,7 +31,7 @@
 								{% if loop.index > 1 %}
 									<tr>
 										<th class="text-primary whitespace-nowrap" scope="row">
-											{{ loop.index0 }} ★ <span class="visually-hidden"> star{{ 's' if loop.index > 1 }}</span>
+											{{ loop.index0 }}&nbsp;★ <span class="visually-hidden"> star{{ 's' if loop.index > 1 }}</span>
 										</th>
 										<td class="stack align-top">{{ effects[i] | markdown | safe }}</td>
 									</tr>

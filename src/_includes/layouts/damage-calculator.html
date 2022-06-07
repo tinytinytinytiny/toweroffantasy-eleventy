@@ -1,0 +1,42 @@
+{% extends "layouts/base.html" %}
+
+{% set isCopy = false %}
+
+{% block content %}
+	<form class="stack max-w-none wrapper p-0" id="damage-calculator" data-wrapper="wide">
+		<fieldset class="sheet stack box-border" data-layer="2">
+			<legend class="text-step-3 uppercase font-fancy text-bold tracking-wide">Main Multipliers</legend>
+			<div class="clear-both" role="presentation"></div>
+			<div class="auto-grid mt-m gap-m">
+				{% include "partials/damage-calculator/critical-rate.html" %}
+				{% include "partials/damage-calculator/critical-dmg.html" %}
+				{% include "partials/damage-calculator/mimic-passive.html" %}
+				{% include "partials/damage-calculator/resonance.html" %}
+			</div>
+			{% include "partials/damage-calculator/weapon-buffs.html" %}
+			{% include "partials/damage-calculator/matrices.html" %}
+		</fieldset>
+		<fieldset class="sheet stack box-border" data-layer="2">
+			<legend class="text-step-3 uppercase font-fancy text-bold tracking-wide">Extra Options</legend>
+			<div class="clear-both" role="presentation"></div>
+			<div class="flex-grid mt-m gap-m">
+				{% include "partials/damage-calculator/elemental-resistance.html" %}
+				{% include "partials/damage-calculator/elemental-weakness.html" %}
+				<label class="switch">
+					<p class="label">Heavily Wounded</p>
+					<input class="visually-hidden" type="checkbox" name="wounded">
+					<span class="switch__toggle mt-3xs"></span>
+				</label>
+				{% include "partials/damage-calculator/arc-core-dmg.html" %}
+				{% include "partials/damage-calculator/etc-multipliers.html" %}
+			</div>
+		</fieldset>
+		<div class="cluster gap-s mt-l">
+			<button class="grow-[2]">Calculate</button>
+			<button class="grow" type="reset" data-variant="ghost" data-color="tertiary">Reset</button>
+		</div>
+	</form>
+	<hr class="max-w-none">
+	{% include "partials/damage-calculator/result.html" %}
+	{% include "partials/damage-calculator/notes.html" %}
+{% endblock %}

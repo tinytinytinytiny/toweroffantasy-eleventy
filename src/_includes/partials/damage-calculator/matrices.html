@@ -1,0 +1,47 @@
+<fieldset class="sheet p-s-m" data-layer="3" data-border="none">
+	<legend class="text-step-1 font-bold text-bold">Matrices</legend>
+	<div class="clear-both" role="presentation"></div>
+	<div class="flex-grid mt-xs gap-m-l">
+		{% for i in range(2) %}
+			<fieldset>
+				<legend class="label">Matrix Set {{ loop.index }}</legend>
+				<div class="clear-both" role="presentation"></div>
+				<select class="w-full" name="chip{{ loop.index }}">
+					<option value="">None</option>
+					<optgroup label="2-set">
+						<option value="claudia2">Claudia (2)</option>
+						<option value="crow2">Crow (2)</option>
+						<option value="king2">KING (2)</option>
+						<option value="samir2">Samir (2)</option>
+						<option value="shiro2">Shiro (2)</option>
+						<option value="tsubasa2">Tsubasa (2)</option>
+					</optgroup>
+					{% if loop.index === 1 %}
+						<optgroup label="4-set">
+							<option value="cobalt4">Cobalt (4)</option>
+							<option value="samir4">Samir (4)</option>
+						</optgroup>
+					{% endif %}
+				</select>
+				<div class="cluster gap-xs mt-xs">
+					<label>
+						<input class="visually-hidden" type="radio" name="chip{{ loop.index }}-star" value="0" checked>
+						<span class="chip text-primary">0&#8201;★</span>
+					</label>
+					<label>
+						<input class="visually-hidden" type="radio" name="chip{{ loop.index }}-star" value="1">
+						<span class="chip text-primary">1&#8201;★</span>
+					</label>
+					<label>
+						<input class="visually-hidden" type="radio" name="chip{{ loop.index }}-star" value="2">
+						<span class="chip text-primary">2&#8201;★</span>
+					</label>
+					<label>
+						<input class="visually-hidden" type="radio" name="chip{{ loop.index }}-star" value="3">
+						<span class="chip text-primary">3&#8201;★</span>
+					</label>
+				</div>
+			</fieldset>
+		{% endfor %}
+	</div>
+</fieldset>

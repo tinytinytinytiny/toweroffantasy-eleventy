@@ -1,3 +1,14 @@
+:disabled {
+	color: theme('colors.accent');
+	opacity: 0.65;
+	pointer-events: none;
+	mix-blend-mode: luminosity;
+}
+
+:disabled * {
+	color: theme('colors.accent');
+}
+
 html, body {
 	overflow-x: -moz-hidden-unscrollable;
 	overflow-x: clip;
@@ -77,11 +88,25 @@ a[data-variant~="hover"]:hover {
 	text-decoration: underline theme('colors.secondary') 0.14em;
 }
 
-a:focus, summary:focus, button:focus {
+a:focus,
+button:focus,
+summary:focus {
 	border: 0;
 	box-shadow: none;
 	outline: 0.12em solid theme('colors.primary');
 	outline-offset: 0.2em;
+}
+
+aside > * {
+	--stack-space: 1em;
+}
+
+hr {
+	border: none;
+	border-top: 1px solid;
+	color: theme('colors.divider');
+	margin: 1em 0;
+	margin: var(--stack-space, 1em) 0;
 }
 
 i, em {
@@ -103,6 +128,29 @@ figcaption {
 	margin-top: 1em;
 }
 
+fieldset {
+	border: none;
+	padding: 0;
+	margin: 0;
+}
+
+legend {
+	float: left;
+	padding: 0;
+}
+
+legend + .clear-both {
+	margin: 0;
+}
+
+legend + .clear-both + *:not([class*="mt"]) {
+	margin-top: theme('spacing.3xs');
+}
+
+label {
+	display: block;
+}
+
 small {
 	display: block;
 	font-size: theme('fontSize.step--1');
@@ -114,18 +162,6 @@ ul[class] {
 
 ul[class] > li {
 	list-style: none;
-}
-
-aside > * {
-	--stack-space: 1em;
-}
-
-hr {
-	border: none;
-	border-top: 1px solid;
-	color: theme('colors.divider');
-	margin: 1em 0;
-	margin: var(--stack-space, 1em) 0;
 }
 
 summary {

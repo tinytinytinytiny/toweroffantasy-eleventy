@@ -1,0 +1,15 @@
+<ul class="min-w-max whitespace-nowrap stack stack-space-2xs">
+	{% for ingredient in food.ingredients | sortBy(['rarity', 'name'], items.ingredients, 0) %}
+		{% set ingredientItem = items.ingredients[ingredient[0]] %}
+		{% set ingredientQty = ingredient[1] %}
+		<li title="{{ ingredientItem.name }}: {{ ingredientItem.source }}">
+			<div class="item-frame mr-2xs" data-rarity="{{ ingredientItem.rarity }}" data-size="s">
+				<img src="/assets/images/food/{{ ingredientItem.image }}" alt="" width="48" height="48" loading="lazy">
+				<span class="item-frame__info" data-align="right" aria-hidden="true">{{ ingredientQty }}</span>
+			</div>
+			<span class="inline-block text-step--1 tracking-wide">
+				<span class="visually-hidden">{{ ingredientQty }} of </span>{{ ingredientItem.name }}
+			</span>
+		</li>
+	{% endfor %}
+</ul>

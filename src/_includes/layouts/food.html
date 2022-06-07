@@ -4,7 +4,7 @@
 
 {% block content %}
 	<article class="big-table wrapper">
-		<table class="color-bold">
+		<table class="bold-secondary">
 			<thead>
 				<tr>
 					<th scope="col">Recipe</th>
@@ -17,50 +17,20 @@
 			<tbody>
 				{% for food in items.food | sortBy(['rarity', 'stars', 'name']) %}
 					<tr class="align-middle" id="{{ food.name | slugify }}">
-						{# food name and image #}
 						<th scope="row">
-							<div class="item-frame mr-xs-s mb-2xs mt-2xs" data-rarity="{{ food.rarity }}" data-size="m">
-								<img src="/assets/images/food/{{ food.image }}"	alt="" width="96" height="96" {% if loop.index > 4 %}loading="lazy"{% endif %}>
-								<span class="item-frame__info text-step-0 tracking-tighter" aria-hidden="true">
-									{% for i in range(0, food.stars) %}
-									<span class="inline-block -rotate-12">★</span>
-									{% endfor %}
-								</span>
-							</div>
-							<span class="inline-block font-bold">{{ food.name }}</span>
+							{% include "partials/food/recipe.html" %}
 						</th>
-						{# rarity (visually hidden) #}
 						<td class="visually-hidden">
 							<span>{{ food.rarity }}</span>
 						</td>
-						{# stars (visually hidden) #}
 						<td class="visually-hidden text-center">
 							<span>{{ food.stars }}</span>
 						</td>
 						<td class="align-middle">
-							<ul class="color-bold">
-								{% for effect in food.effects -%}
-									<li>{{ effect | markdown | safe }}</li>
-								{%- endfor %}
-							</ul>
+							{% include "partials/food/effects.html" %}
 						</td>
-						{# ingredients #}
 						<td class="align-middle">
-							<ul class="min-w-max whitespace-nowrap stack stack-space-2xs">
-								{% for ingredient in food.ingredients | sortBy(['rarity', 'name'], items.ingredients, 0) %}
-									{% set ingredientItem = items.ingredients[ingredient[0]] %}
-									{% set ingredientQty = ingredient[1] %}
-									<li title="{{ ingredientItem.name }}: {{ ingredientItem.source }}">
-										<div class="item-frame mr-2xs" data-rarity="{{ ingredientItem.rarity }}" data-size="s">
-											<img src="/assets/images/food/{{ ingredientItem.image }}" alt="" width="48" height="48" loading="lazy">
-											<span class="item-frame__info" data-align="right" aria-hidden="true">{{ ingredientQty }}</span>
-										</div>
-										<span class="inline-block text-step--1 tracking-wide">
-											<span class="visually-hidden">{{ ingredientQty }} of </span>{{ ingredientItem.name }}
-										</span>
-									</li>
-								{% endfor %}
-							</ul>
+							{% include "partials/food/ingredients.html" %}
 						</td>
 					</tr>
 				{% endfor %}

@@ -1,0 +1,9 @@
+<div class="item-frame mr-xs-s mb-2xs mt-2xs" data-rarity="{{ food.rarity }}" data-size="m">
+	<img src="/assets/images/food/{{ food.image }}"	alt="" width="96" height="96" {% if loop.index > 4 %}loading="lazy"{% endif %}>
+	<span class="item-frame__info text-step-0 tracking-tighter" aria-hidden="true">
+		{% for i in range(0, food.stars) %}
+		<span class="inline-block -rotate-12">★</span>
+		{% endfor %}
+	</span>
+</div>
+<span class="inline-block font-bold">{{ food.name }}</span>

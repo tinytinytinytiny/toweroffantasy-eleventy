@@ -1,6 +1,6 @@
 <details>
 	<summary class="chip">Gift Items</summary>
-	<ul class="sheet !p-s cluster gap-2xs mt-0" data-layer="0">
+	<ul class="sheet !p-s cluster gap-2xs mt-0" data-border="none">
 		{% for gift, value in gifts.items | sortBy(['rarity', 'name'], items.gifts, 0) | sortBy([1]) | reverse %}
 		<li class="item-frame" data-rarity="{{ items.gifts[gift].rarity }}" data-size="m">
 			<img src="/assets/images/affinity/{{ gift }}.png" title="{{ items.gifts[gift].name }}" alt="{{ items.gifts[gift].name }}" width="91" height="91" loading="lazy">

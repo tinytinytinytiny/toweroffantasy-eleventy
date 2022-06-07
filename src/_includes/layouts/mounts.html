@@ -12,7 +12,7 @@
 				{% if items.mounts[mount].materials %}
 					<details>
 						<summary class="chip">Materials ({{ items.mounts[mount].materials }})</summary>
-						<ul class="sheet !p-s mt-0 reel gap-2xs m-0" data-layer="1" data-border="none">
+						<ul class="sheet !p-s mt-0 reel gap-2xs m-0" data-layer="3" data-border="none">
 							{% for i in range(0, items.mounts[mount].materials) %}
 							<li class="item-frame" data-size="m" data-rarity="{{ '3' if loop.index === 1 else '1' }}">
 								<img src="/assets/images/mount/{{ mount }}-{{ loop.index }}.png" alt="" width="128" height="128">

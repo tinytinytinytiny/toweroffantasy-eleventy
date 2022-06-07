@@ -26,10 +26,10 @@
 			{% include "partials/sidebar.html" %}
 			<main class="stack" tabindex="-1" id="main-content">
 				{% block header %}
-					{% include "partials/standard-header.html" %}
+					{% include "partials/headers/standard.html" %}
 				{% endblock %}
 				{% set isCopy = true %}
-				<div class="{% if isCopy %}copy{% endif %} bg-sheet-1 mt-0 region stack wrapper {{ extraClassNames }}" data-wrapper="site">
+				<div class="{{ 'copy' if isCopy }} bg-sheet-1 mt-0 region stack wrapper {{ extraClassNames }}" data-wrapper="site">
 					{% block content %}{% endblock %}
 				</div>
 				{% block ending %}{% endblock %}

@@ -33,8 +33,9 @@ tr > :last-child {
 thead th {
 	@apply bg-sheet-0/80;
 	border-top-color: theme('colors.glare');
+	color: theme('colors.bold');
 	font-size: theme('fontSize.step--1');
-	letter-spacing: 0.05em;
+	letter-spacing: 0.075em;
 	line-height: 1.25;
 	text-transform: uppercase;
 	vertical-align: bottom;
