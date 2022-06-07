@@ -1,6 +1,7 @@
 .switch {
 	user-select: none;
 }
+
 .switch__toggle {
 	cursor: pointer;
 	display: inline-block;
@@ -33,7 +34,7 @@
 	width: 24px;
 }
 
-.switch:hover .switch__toggle::after {
+.switch__toggle:hover::after {
 	@apply bg-bold;
 }
 
@@ -51,6 +52,6 @@ input:checked + .switch__toggle::after {
 	transform: translateX(150%);
 }
 
-.switch:hover input:checked + .switch__toggle::after {
+input:checked + .switch__toggle:hover::after {
 	@apply bg-primary;
 }
