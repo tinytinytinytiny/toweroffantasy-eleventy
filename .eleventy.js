@@ -17,6 +17,7 @@ const htmlMinTransform = require('./src/transforms/html-min-transform.js');
 
 module.exports = (config) => {
 	config.addPassthroughCopy('_redirects');
+	config.addPassthroughCopy('service-worker.js');
 	config.addPassthroughCopy('./src/assets/');
 	config.addPassthroughCopy('./src/js/');
 

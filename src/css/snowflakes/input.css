@@ -70,6 +70,22 @@ select {
 	cursor: pointer;
 }
 
+input[type="range"][list] {
+	width: 100%;
+}
+
+input[type="range"] + datalist {
+	display: flex;
+	font-size: theme('fontSize.step--1');
+	justify-content: space-between;
+	width: 100%;
+}
+
+input[type="range"] + datalist > option {
+	padding-left: 0;
+	padding-right: 0;
+}
+
 .unit-input {
 	align-items: center;
 	display: flex;

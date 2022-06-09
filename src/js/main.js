@@ -1,5 +1,15 @@
 'use strict';
 
+if ('serviceWorker' in navigator) {
+	let registration;
+
+	const registerServiceWorker = async () => {
+		registration = await navigator.serviceWorker.register('/service-worker.js');
+	};
+
+	registerServiceWorker();
+}
+
 if ('querySelector' in document && 'ResizeObserver' in window) {
 	const nav = document.querySelector('.nav');
 	const details = document.querySelector('details');
