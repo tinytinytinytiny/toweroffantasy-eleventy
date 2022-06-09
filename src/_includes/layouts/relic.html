@@ -8,14 +8,14 @@
 	{% include "partials/headers/relic.html" %}
 {% endblock %}
 
-{% set extraClassNames = 'bold-secondary' %}
+{% set extraClassNames = 'highlight-bold' %}
 
 {% block content %}
 	<h2>Relic Effect</h2>
 	{{ description | markdown | safe }}
 	<h2>Awakening</h2>
 	<table data-stripe="even">
-		<thead class="visually-hidden">
+		<thead>
 			<tr>
 				<th scope="col">Stars</th>
 				<th scope="col">Bonus</th>

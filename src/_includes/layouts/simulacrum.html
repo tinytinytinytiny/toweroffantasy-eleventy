@@ -2,6 +2,7 @@
 
 {% set title = name %}
 {% set background = 'art/' + page.fileSlug + '.png' %}
+{% set extraClassNames = 'highlight-bold' %}
 
 {% block header %}
 	{% include "partials/headers/simulacrum.html" %}
@@ -12,15 +13,13 @@
 	{% include "partials/simulacrum/weapon-info.html" %}
 	<h3>Weapon Effect</h3>
 	{% include "partials/simulacrum/weapon-effect.html" %}
-	<h3>Upgrades</h3>
 	{% include "partials/simulacrum/awakening.html" %}
 	{% include "partials/simulacrum/materials.html" %}
-	<h3>Builds</h3>
 	{% include "partials/simulacrum/rec-chips.html" %}
+	<h2 id="combat">Combat Abilities</h2>
+	{% include "partials/simulacrum/combat-test.html" %}
 	<h2 id="affinity">Affinity</h2>
 	{% include "partials/simulacrum/affinity-effects.html" %}
-	<h3>Favorite Gifts</h3>
-	{% include "partials/simulacrum/affinity-gift-categories.html" %}
 	{% include "partials/simulacrum/affinity-gifts.html" %}
 	<h2 id="character-info">Character Info</h2>
 	{% include "partials/simulacrum/character-info.html" %}

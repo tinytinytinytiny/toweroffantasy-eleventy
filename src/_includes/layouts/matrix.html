@@ -9,7 +9,7 @@
 	{% include "partials/headers/matrix.html" %}
 {% endblock %}
 
-{% set extraClassNames = 'bold-secondary' %}
+{% set extraClassNames = 'highlight-bold' %}
 
 {% block content %}
 	{% for i in range(0, sets.length) %}
@@ -20,7 +20,7 @@
 				<summary class="chip">Awakening Progression</summary>
 				<div class="big-table wrapper">
 					<table data-stripe="even">
-						<thead class="visually-hidden">
+						<thead>
 							<tr>
 								<th scope="col">Stars</th>
 								<th scope="col">{{ sets[i] }}-set Bonus</th>

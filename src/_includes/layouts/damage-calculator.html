@@ -32,11 +32,14 @@
 			</div>
 		</fieldset>
 		<div class="cluster gap-s mt-l">
-			<button class="grow-[2]">Calculate</button>
+			<button class="grow-[8] order-1">Calculate Damage</button>
 			<button class="grow" type="reset" data-variant="ghost" data-color="tertiary">Reset</button>
 		</div>
 	</form>
-	<hr class="max-w-none">
-	{% include "partials/damage-calculator/result.html" %}
-	{% include "partials/damage-calculator/notes.html" %}
+{% endblock %}
+
+{% block ending %}
+	<div class="ending stack copy wrapper region" data-wrapper="site">
+		{% include "partials/damage-calculator/notes.html" %}
+	</div>
 {% endblock %}

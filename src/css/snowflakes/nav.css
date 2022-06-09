@@ -4,7 +4,7 @@
 }
 
 .nav > details {
-	--region-space: theme('spacing.s-l');
+	--region-space: theme('spacing.m-l');
 	max-height: 100vh;
 	overflow-y: auto;
 	position: sticky;

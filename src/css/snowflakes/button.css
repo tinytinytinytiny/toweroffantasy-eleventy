@@ -1,5 +1,4 @@
 button, .button {
-	@apply tracking-wide;
 	--button-color: theme('colors.primary');
 	align-items: center;
 	background-color: var(--button-color);
@@ -7,7 +6,6 @@ button, .button {
 	display: inline-flex;
 	color: theme('colors.sheet.0');
 	cursor: pointer;
-	font-family: theme('fontFamily.fancy');
 	font-weight: bold;
 	gap: 1ch;
 	justify-content: center;

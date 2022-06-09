@@ -3,7 +3,7 @@
 {% block content %}
 	<article id="changes-list" class="copy stack">
 		{% for year, yearChanges in changelog | groupByYear %}
-			<h2 data-rule="none">{{ year }}</h2>
+			<h2 data-appearance="none">{{ year }}</h2>
 			<div class="changelog sheet stack">
 				{% for item in yearChanges %}
 					<article>

@@ -42,11 +42,11 @@ module.exports = {
 				}
 			],
 			recChips: [
-				['marc', [2, 4]],
-				['king', 2],
-				['shiro', 2],
-				['provocateurs', 3],
-				['cleanup-agreement', 3]
+				['fuwasaki', [2, 4]],
+				['frigg', 2],
+				['crow', 2],
+				['samir', 2],
+				['bullseye', 3]
 			],
 			traits: {
 				gender: 'Female',

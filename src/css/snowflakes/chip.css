@@ -45,6 +45,9 @@ input[type="radio"]:focus-visible + .chip {
 input:checked + .chip,
 details[open] > .chip {
 	@apply shadow-lg;
+}
+
+input:checked + .chip {
 	-webkit-backdrop-filter: none;
 	backdrop-filter: none;
 	background-color: theme('colors.bold');
@@ -52,8 +55,7 @@ details[open] > .chip {
 	color: theme('colors.sheet.0');
 }
 
-input:checked + .chip > *,
-details[open] > .chip > * {
+input:checked + .chip > * {
 	color: theme('colors.sheet.0');
 }
 
@@ -72,6 +74,11 @@ a.chip[data-variant~="knockout"]:hover {
 
 a.chip[data-variant~="knockout"]:focus {
 	background-color: #fff;
+}
+
+.chip[data-variant~="knockout"][data-color="primary"] {
+	background-color: theme('colors.primary');
+	box-shadow: var(--tw-shadow);
 }
 
 .chip[data-variant~="underline"] {

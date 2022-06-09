@@ -1,4 +1,4 @@
 .ending {
-	@apply bg-sheet-0/80;
+	background-color: theme('colors.sheet.1');
 	margin-top: theme('spacing.l-xl');
 }

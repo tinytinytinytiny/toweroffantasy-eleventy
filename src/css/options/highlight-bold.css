@@ -1,0 +1,9 @@
+.highlight-bold b, .highlight-bold strong {
+	color: theme('colors.secondary');
+}
+
+.highlight-bold strong > em,
+.highlight-bold em > strong {
+	color: theme('colors.secondary');
+	font-style: normal;
+}

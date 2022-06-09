@@ -14,6 +14,7 @@ module.exports = {
 	'tertiary-dim': '#D04E59',
 
 	// Background
+	backdrop: '#11121e',
 	sheet: {
 		0: '#13141e',
 		1: 'rgba(26, 27, 38, 0.92)',

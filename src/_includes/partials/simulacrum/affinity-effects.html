@@ -1,4 +1,5 @@
-<div class="bold-secondary overflow-x-auto">
+<h3>Simulacrum Passive</h3>
+<div class="highlight-bold overflow-x-auto">
 	<table data-stripe="odd">
 		<thead>
 			<tr>
@@ -10,8 +11,8 @@
 			{% for item in mimicEffects %}
 				{% if item.affinity == 1200 or item.affinity == 4000 %}
 					<tr>
-						<th scope="row" class="text-primary {{ 'border-b-0' if loop.last }}">{{ item.affinity }}</th>
-						<td class="stack {{ 'border-b-0' if loop.last }}">{{ item.effect | markdown | safe }}</td>
+						<th scope="row" class="text-primary">{{ item.affinity }}</th>
+						<td class="stack">{{ item.effect | markdown | safe }}</td>
 					</tr>
 				{% endif %}
 			{% endfor %}

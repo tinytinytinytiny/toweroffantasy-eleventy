@@ -1,6 +1,11 @@
-<details>
-	<summary class="chip">Gift Items</summary>
-	<ul class="sheet !p-s cluster gap-2xs mt-0" data-border="none">
+<h3>Preferred Gifts</h3>
+<div>
+	<ul class="cluster gap-xs">
+		{% for cat in gifts.categories %}
+		<li class="chip" data-variant="underline" style="color: {{ string.giftCategories[cat].color }}">{{ string.giftCategories[cat].name }}</li>
+		{% endfor %}
+	</ul>
+	<ul class="cluster gap-2xs">
 		{% for gift, value in gifts.items | sortBy(['rarity', 'name'], items.gifts, 0) | sortBy([1]) | reverse %}
 		<li class="item-frame" data-rarity="{{ items.gifts[gift].rarity }}" data-size="m">
 			<img src="/assets/images/affinity/{{ gift }}.png" title="{{ items.gifts[gift].name }}" alt="{{ items.gifts[gift].name }}" width="91" height="91" loading="lazy">
@@ -13,4 +18,4 @@
 		<small class="text-accent">Characters with the Vera tag will only receive full affinity from Vera gifts.</small>
 	</p>
 	{% endif %}
-</details>
+</div>

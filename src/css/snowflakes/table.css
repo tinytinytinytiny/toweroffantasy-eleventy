@@ -8,10 +8,6 @@ table {
 	text-align: left;
 }
 
-table * {
-	vertical-align: middle;
-}
-
 th {
 	font-family: theme('fontFamily.fancy');
 	letter-spacing: normal;
@@ -41,11 +37,22 @@ thead th {
 	vertical-align: bottom;
 }
 
-thead:not(.visually-hidden) + tbody > tr:first-child > th,
-thead:not(.visually-hidden) + tbody > tr:first-child > td {
+thead + tbody > tr:first-child > th,
+thead + tbody > tr:first-child > td {
 	@apply border-base/90;
 	border-top-width: 2px;
 }
+
+thead.visually-hidden + tbody > tr:first-child > th,
+thead.visually-hidden + tbody > tr:first-child > td {
+	@apply border-base/90;
+	border-top: none;
+}
+
+/* tbody > tr:last-child > th,
+tbody > tr:last-child > td {
+	padding-bottom: 0;
+} */
 
 [data-head-color="transparent"] thead th {
 	background-color: inherit;

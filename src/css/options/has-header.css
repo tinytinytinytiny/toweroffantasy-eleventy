@@ -7,11 +7,11 @@
 }
 
 .copy.stack > * + .has-h2 {
-	margin-top: theme('spacing.2xl-3xl');
+	margin-top: theme('spacing.2xl');
 }
 
 .copy.stack > * + .has-h3 {
-	margin-top: theme('spacing.xl-2xl');
+	margin-top: theme('spacing.xl');
 }
 
 .copy.stack > * + .has-h4 {
