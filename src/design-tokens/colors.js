@@ -4,13 +4,13 @@ module.exports = {
 
 	// Brand
 	primary: '#FFD082',
-	'primary-glare': '#FFE8B3',
+	'primary-glare': '#FFDFA1',
 	'primary-dim': '#DBA75F',
 	secondary: '#2bcae8',
-	'secondary-glare': '#7EF7F8',
+	'secondary-glare': '#5DE5F1',
 	'secondary-dim': '#1F9FC7',
 	tertiary: '#f36b6b',
-	'tertiary-glare': '#FBB5A6',
+	'tertiary-glare': '#F7988F',
 	'tertiary-dim': '#D04E59',
 
 	// Background

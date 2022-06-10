@@ -7,7 +7,7 @@
 		<fieldset class="sheet stack box-border" data-layer="2">
 			<legend class="text-step-3 uppercase font-fancy text-bold tracking-wide">Main Multipliers</legend>
 			<div class="clear-both" role="presentation"></div>
-			<div class="auto-grid mt-m gap-m">
+			<div class="auto-grid mt-m gap-m-l">
 				{% include "partials/damage-calculator/critical-rate.html" %}
 				{% include "partials/damage-calculator/critical-dmg.html" %}
 				{% include "partials/damage-calculator/mimic-passive.html" %}
@@ -19,16 +19,20 @@
 		<fieldset class="sheet stack box-border" data-layer="2">
 			<legend class="text-step-3 uppercase font-fancy text-bold tracking-wide">Extra Options</legend>
 			<div class="clear-both" role="presentation"></div>
-			<div class="flex-grid mt-m gap-m">
-				{% include "partials/damage-calculator/elemental-resistance.html" %}
-				{% include "partials/damage-calculator/elemental-weakness.html" %}
-				<label class="switch">
-					<p class="label">Heavily Wounded</p>
-					<input class="visually-hidden" type="checkbox" name="wounded">
-					<span class="switch__toggle mt-3xs"></span>
-				</label>
-				{% include "partials/damage-calculator/arc-core-dmg.html" %}
-				{% include "partials/damage-calculator/etc-multipliers.html" %}
+			<div class="flex-grid mt-m gap-m-l">
+				<div class="stack">
+					{% include "partials/damage-calculator/arc-core-dmg.html" %}
+					{% include "partials/damage-calculator/etc-multipliers.html" %}
+				</div>
+				<div class="stack">
+					<label class="switch">
+						<p class="label">Heavily Wounded</p>
+						<input class="visually-hidden" type="checkbox" name="wounded">
+						<span class="switch__toggle mt-3xs"></span>
+					</label>
+					{% include "partials/damage-calculator/elemental-resistance.html" %}
+					{% include "partials/damage-calculator/elemental-weakness.html" %}
+				</div>
 			</div>
 		</fieldset>
 		<div class="cluster gap-s mt-l">
