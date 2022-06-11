@@ -1,7 +1,14 @@
-.nav {
+/* .nav {
 	--region-space: theme('spacing.m-l');
 	--wrapper-padding: theme('spacing.m-l');
 	background-color: theme('colors.sheet.0');
+}
+
+.nav > details {
+	max-height: 100vh;
+	overflow-y: auto;
+	position: sticky;
+	top: 0;
 }
 
 @supports (padding: max(0px)) {
@@ -16,6 +23,21 @@
 
 .nav > details[open] {
 	background-color: theme('colors.sheet.0');
+	height: 100vh;
+	max-height: -webkit-fill-available;
+	overscroll-behavior: contain;
+}
+
+.nav summary.button {
+	@apply bg-sheet-0/60;
+	-webkit-backdrop-filter: blur(10px);
+	backdrop-filter: blur(10px);
+	display: inline-flex;
+	list-style: none;
+	opacity: 1;
+	position: sticky;
+	top: 0;
+	z-index: 5;
 }
 
 .nav summary::-webkit-details-marker,
@@ -136,22 +158,8 @@
 	background: transparent;
 }
 
-.nav[data-state="expanded"] > details,
-.nav[data-state="collapsed"] > details {
-	max-height: 100vh;
-	overflow-y: auto;
-}
-
-.nav[data-state="expanded"] > details[open],
-.nav[data-state="collapsed"] > details[open] {
-	height: 100vh;
-	max-height: -webkit-fill-available;
-	overscroll-behavior: contain;
-}
-
-.nav[data-state="expanded"] > details {
-	position: sticky;
-	top: 0;
+.nav[data-state="expanded"] summary {
+	display: none;
 }
 
 .nav[data-state="expanded"] .nav__head {
@@ -191,21 +199,6 @@
 	padding-bottom: 2rem;
 }
 
-.nav[data-state="collapsed"] summary.button {
-	@apply bg-sheet-0/60;
-	-webkit-backdrop-filter: blur(10px);
-	backdrop-filter: blur(10px);
-	display: inline-flex;
-	list-style: none;
-	position: sticky;
-	top: 0;
-	z-index: 5;
-}
-
-.nav[data-state="collapsed"] .nav__head {
-	margin-top: var(--stack-space, 1em);
-}
-
 [data-flex-gap="false"] .nav__links {
 	gap: 0;
 }
@@ -242,13 +235,4 @@
 		display: none;
 	}
 }
-
-@media screen and (min-width: 56rem) {
-	.nav summary {
-		display: none;
-	}
-
-	.nav__head {
-		margin-top: 0;
-	}
-}
+ */

@@ -16,5 +16,7 @@ Thumbs.db
 node_modules
 dist
 _site
+.netlify/
+netlify/edge-functions/_generated
 src/_includes/css
 src/__trash

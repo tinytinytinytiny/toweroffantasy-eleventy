@@ -62,7 +62,7 @@ h1 {
 h2 {
 	@apply tracking-wide;
 	font-family: theme('fontFamily.fancy');
-  font-size: theme('fontSize.step-3');
+	font-size: theme('fontSize.step-3');
 	padding: 0.5em calc((100% - min(100%, var(--wrapper-max-width))) / 2);
 	position: relative;
 	text-shadow: 0 0 0.5em theme('colors.divider');

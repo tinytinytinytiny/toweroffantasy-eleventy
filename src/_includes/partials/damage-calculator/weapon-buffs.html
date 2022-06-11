@@ -1,8 +1,26 @@
-<fieldset class="sheet stack p-s-m" data-layer="3" data-border="none">
+<fieldset id="weapon-buffs" class="sheet stack p-s-m" data-layer="3" data-border="none">
 	<legend class="text-step-1 font-bold text-bold">Weapon Buffs</legend>
 	<div class="clear-both" role="presentation"></div>
 	<div class="flex-grid mt-xs gap-m-l">
-		<fieldset class="flex-grow-[999]">
+		{% for i in range(3) %}
+			<div>
+				<label for="wep{{ loop.index }}">Weapon Slot {{ loop.index }}</label>
+				<select id="wep{{ loop.index }}" name="wep{{ loop.index }}" class="w-full">
+					<option value="">None</option>
+					<optgroup label="Awakening Buffs">
+						<option value="claudia1">Claudia&nbsp;1★</option>
+						<option value="tsubasa1">Tsubasa&nbsp;1★</option>
+						<option value="tsubasa6">Tsubasa&nbsp;6★</option>
+						<option value="marc3">Marc&nbsp;3★</option>
+					</optgroup>
+					<optgroup label="Bonus Effects">
+						<option value="baiyuekui">Baiyuekui</option>
+						<option value="frigg">Frigg</option>
+					</optgroup>
+				</select>
+			</div>
+		{% endfor %}
+		{# <fieldset class="flex-grow-[999]">
 			<legend class="label">Awakening Buffs</legend>
 			<div class="clear-both" role="presentation"></div>
 			<div class="cluster gap-xs">
@@ -31,6 +49,6 @@
 				<option value="baiyuekui">Baiyuekui</option>
 				<option value="frigg">Frigg</option>
 			</select>
-		</div>
+		</div> #}
 	</div>
 </fieldset>

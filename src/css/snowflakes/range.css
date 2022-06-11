@@ -99,6 +99,8 @@ input[type="range"][list] {
 }
 
 input[type="range"] + datalist {
+	-webkit-appearance: none;
+	appearance: none;
 	display: flex;
 	font-size: theme('fontSize.step--1');
 	justify-content: space-between;
@@ -106,6 +108,9 @@ input[type="range"] + datalist {
 }
 
 input[type="range"] + datalist > option {
+	-webkit-appearance: none;
+	appearance: none;
+	display: block;
 	padding-left: 0;
 	padding-right: 0;
 }
