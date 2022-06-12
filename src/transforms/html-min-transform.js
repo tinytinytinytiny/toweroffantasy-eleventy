@@ -4,7 +4,7 @@ module.exports = (value, outputPath) => {
 	if (outputPath && outputPath.indexOf('.html') > -1) {
 		return htmlmin.minify(value, {
 			useShortDoctype: true,
-			removeComments: true,
+			removeComments: false,
 			collapseWhitespace: true,
 			minifyCSS: true
 		});

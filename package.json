@@ -6,7 +6,7 @@
     "start": "set NODE_ENV=development && concurrently \"npm run serve\" \"npm run css -- --watch\"",
     "serve": "npx eleventy --serve",
     "css": "postcss src/css/global.css -o _site/css/global.css",
-    "production": "NODE_ENV=production npx eleventy && NODE_ENV=production npm run css"
+    "production": "NODE_ENV=production npx @11ty/eleventy && NODE_ENV=production npm run css"
   },
   "author": "",
   "license": "ISC",

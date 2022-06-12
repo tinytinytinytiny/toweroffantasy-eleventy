@@ -1,6 +1,6 @@
 <div>
 	<label for="elemental-resistance">Enemy’s Elemental Resistance</label>
-	<input type="range" name="elemental-resistance" id="elemental-resistance" list="elemental-resistance-list" min="0" max="2" step="1" value="0">
+	<input type="range" name="elemental-resistance" id="elemental-resistance" list="elemental-resistance-list" min="0" max="2" step="1" value="{% edge %}{{ eleventy.edge.cookies.elementalResistance | default(0) }}{% endedge %}">
 	<datalist id="elemental-resistance-list">
 		<option value="0" label="0%">0%</option>
 		<option value="1" label="50%">50%</option>

@@ -1,3 +1,5 @@
+const { EleventyEdgePlugin } = require('@11ty/eleventy');
+
 const md = require('markdown-it')({
 	html: true,
 	linkify: true,
@@ -16,6 +18,8 @@ const cum = require('./src/shortcodes/cum.js');
 const htmlMinTransform = require('./src/transforms/html-min-transform.js');
 
 module.exports = (config) => {
+	config.addPlugin(EleventyEdgePlugin);
+
 	config.addPassthroughCopy('_redirects');
 	config.addPassthroughCopy('service-worker.js');
 	config.addPassthroughCopy('./src/assets/');

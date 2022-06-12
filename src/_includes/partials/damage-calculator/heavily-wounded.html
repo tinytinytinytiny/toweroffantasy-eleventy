@@ -1,0 +1,5 @@
+<label class="switch">
+	<p class="label">Heavily Wounded</p>
+	<input class="visually-hidden" type="checkbox" name="wounded" {% edge %}{{ 'checked' if eleventy.edge.cookies.wounded == 'on' }}{% endedge %}>
+	<span class="switch__toggle mt-3xs"></span>
+</label>

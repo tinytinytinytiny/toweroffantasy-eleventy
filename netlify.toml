@@ -1,0 +1,7 @@
+[[edge_functions]]
+function = "eleventy-edge"
+path = "/*"
+
+[[edge_functions]]
+function = "calculate-damage"
+path = "/damage-calculator/"

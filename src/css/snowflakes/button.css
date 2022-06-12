@@ -20,6 +20,7 @@ button, .button {
 button[data-variant~="full-width"],
 .button[data-variant~="full-width"] {
 	display: block;
+	width: var(--wrapper-max-width);
 }
 
 button[data-variant~="ghost"],

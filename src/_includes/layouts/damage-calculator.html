@@ -3,7 +3,9 @@
 {% set isCopy = false %}
 
 {% block content %}
-	<form class="stack max-w-none wrapper p-0" id="damage-calculator" data-wrapper="wide">
+	<!-- htmlmin:ignore -->
+	{% include "partials/damage-calculator/result.html" %}
+	<form action="{{ page.url }}#result" method="post" class="stack max-w-none wrapper p-0" id="damage-calculator" data-wrapper="wide">
 		<fieldset class="sheet stack box-border" data-layer="2">
 			<legend class="text-step-3 uppercase font-fancy text-bold tracking-wide">Main Multipliers</legend>
 			<div class="clear-both" role="presentation"></div>
@@ -22,24 +24,18 @@
 			<div class="flex-grid mt-m gap-m-l">
 				<div class="stack">
 					{% include "partials/damage-calculator/arc-core-dmg.html" %}
-					{% include "partials/damage-calculator/etc-multipliers.html" %}
+					{% include "partials/damage-calculator/other-multipliers.html" %}
 				</div>
 				<div class="stack">
-					<label class="switch">
-						<p class="label">Heavily Wounded</p>
-						<input class="visually-hidden" type="checkbox" name="wounded">
-						<span class="switch__toggle mt-3xs"></span>
-					</label>
+					{% include "partials/damage-calculator/heavily-wounded.html" %}
 					{% include "partials/damage-calculator/elemental-resistance.html" %}
 					{% include "partials/damage-calculator/elemental-weakness.html" %}
 				</div>
 			</div>
 		</fieldset>
-		<div class="cluster gap-s mt-l">
-			<button class="grow-[8] order-1">Calculate Damage</button>
-			<button class="grow" type="reset" data-variant="ghost" data-color="tertiary">Reset</button>
-		</div>
+		<button class="block mt-l text-step-1" type="submit">Calculate Damage</button>
 	</form>
+	<!-- htmlmin:ignore -->
 {% endblock %}
 
 {% block ending %}

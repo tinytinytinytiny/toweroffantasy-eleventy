@@ -12,8 +12,7 @@ const filesToCache = [
 	'/relics/',
 	'/food/',
 	'/mounts/',
-	'/guides/',
-	'/damage-calculator/'
+	'/guides/'
 ];
 
 self.addEventListener('activate', e => self.clients.claim());

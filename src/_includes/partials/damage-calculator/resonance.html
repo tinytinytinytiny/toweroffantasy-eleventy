@@ -1,14 +1,14 @@
 <div>
 	<label for="resonance">Resonance</label>
 	<select name="resonance" id="resonance">
-		<option value="">None</option>
+		<option value="">Tank</option>
 		<optgroup label="Balanced">
-			<option value="balancedSolo">Balanced - Solo</option>
-			<option value="balancedGroup">Balanced - Group</option>
+			<option value="balancedSolo" {% edge %}{{ 'selected' if eleventy.edge.cookies.resonance == 'balancedSolo' }}{% endedge %}>Balanced - Solo</option>
+			<option value="balancedGroup" {% edge %}{{ 'selected' if eleventy.edge.cookies.resonance == 'balancedGroup' }}{% endedge %}>Balanced - Group</option>
 		</optgroup>
 		<optgroup label="Attacker">
-			<option value="attackerSolo">Attacker - Solo</option>
-			<option value="attackerGroup">Attacker - Group</option>
+			<option value="attackerSolo" {% edge %}{{ 'selected' if eleventy.edge.cookies.resonance == 'attackerSolo' }}{% endedge %}>Attacker - Solo</option>
+			<option value="attackerGroup" {% edge %}{{ 'selected' if eleventy.edge.cookies.resonance == 'attackerGroup' }}{% endedge %}>Attacker - Group</option>
 		</optgroup>
 	</select>
 </div>

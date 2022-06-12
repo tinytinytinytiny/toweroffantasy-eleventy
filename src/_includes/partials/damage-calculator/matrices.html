@@ -1,45 +1,73 @@
 <fieldset id="matrices" class="sheet p-s-m" data-layer="3" data-border="none">
-	<legend class="text-step-1 font-bold text-bold">Matrices</legend>
+	<legend class="text-step-1 font-bold text-bold">Matrix Sets</legend>
 	<div class="clear-both" role="presentation"></div>
 	<div class="flex-grid mt-xs gap-m-l">
 		{% for i in range(2) %}
-			<fieldset>
+			<fieldset id="chip{{ loop.index }}">
 				<legend class="label">Matrix Set {{ loop.index }}</legend>
 				<div class="clear-both" role="presentation"></div>
 				<select class="w-full" name="chip{{ loop.index }}">
 					<option value="">None</option>
 					<optgroup label="2-set">
-						<option value="claudia2">Claudia (2)</option>
-						<option value="crow2">Crow (2)</option>
-						<option value="king2">KING (2)</option>
-						<option value="samir2">Samir (2)</option>
-						<option value="shiro2">Shiro (2)</option>
-						<option value="tsubasa2">Tsubasa (2)</option>
+						{% if loop.index === 1 %}
+							<option value="claudia2" {% edge %}{{ 'selected' if eleventy.edge.cookies.chip1 == 'claudia2' }}{% endedge %}>Claudia (2)</option>
+							<option value="crow2" {% edge %}{{ 'selected' if eleventy.edge.cookies.chip1 == 'crow2' }}{% endedge %}>Crow (2)</option>
+							<option value="king2" {% edge %}{{ 'selected' if eleventy.edge.cookies.chip1 == 'king2' }}{% endedge %}>KING (2)</option>
+							<option value="samir2" {% edge %}{{ 'selected' if eleventy.edge.cookies.chip1 == 'samir2' }}{% endedge %}>Samir (2)</option>
+							<option value="shiro2" {% edge %}{{ 'selected' if eleventy.edge.cookies.chip1 == 'shiro2' }}{% endedge %}>Shiro (2)</option>
+							<option value="tsubasa2" {% edge %}{{ 'selected' if eleventy.edge.cookies.chip1 == 'tsubasa2' }}{% endedge %}>Tsubasa (2)</option>
+						{% elif loop.index === 2 %}
+							<option value="claudia2" {% edge %}{{ 'selected' if eleventy.edge.cookies.chip2 == 'claudia2' }}{% endedge %}>Claudia (2)</option>
+							<option value="crow2" {% edge %}{{ 'selected' if eleventy.edge.cookies.chip2 == 'crow2' }}{% endedge %}>Crow (2)</option>
+							<option value="king2" {% edge %}{{ 'selected' if eleventy.edge.cookies.chip2 == 'king2' }}{% endedge %}>KING (2)</option>
+							<option value="samir2" {% edge %}{{ 'selected' if eleventy.edge.cookies.chip2 == 'samir2' }}{% endedge %}>Samir (2)</option>
+							<option value="shiro2" {% edge %}{{ 'selected' if eleventy.edge.cookies.chip2 == 'shiro2' }}{% endedge %}>Shiro (2)</option>
+							<option value="tsubasa2" {% edge %}{{ 'selected' if eleventy.edge.cookies.chip2 == 'tsubasa2' }}{% endedge %}>Tsubasa (2)</option>
+						{% endif %}
 					</optgroup>
 					{% if loop.index === 1 %}
 						<optgroup label="4-set">
-							<option value="cobalt4">Cobalt (4)</option>
-							<option value="samir4">Samir (4)</option>
+							<option value="cobalt4" {% edge %}{{ 'selected' if eleventy.edge.cookies.chip1 == 'cobalt4' }}{% endedge %}>Cobalt (4)</option>
+							<option value="samir4" {% edge %}{{ 'selected' if eleventy.edge.cookies.chip1 == 'samir4' }}{% endedge %}>Samir (4)</option>
 						</optgroup>
 					{% endif %}
 				</select>
 				<div class="cluster gap-xs mt-xs">
-					<label>
-						<input class="visually-hidden" type="radio" name="chip{{ loop.index }}-star" value="0" checked>
-						<span class="chip text-primary">0&#8201;★</span>
-					</label>
-					<label>
-						<input class="visually-hidden" type="radio" name="chip{{ loop.index }}-star" value="1">
-						<span class="chip text-primary">1&#8201;★</span>
-					</label>
-					<label>
-						<input class="visually-hidden" type="radio" name="chip{{ loop.index }}-star" value="2">
-						<span class="chip text-primary">2&#8201;★</span>
-					</label>
-					<label>
-						<input class="visually-hidden" type="radio" name="chip{{ loop.index }}-star" value="3">
-						<span class="chip text-primary">3&#8201;★</span>
-					</label>
+					{% if loop.index == 1 %}
+						<label>
+							<input class="visually-hidden" type="radio" name="chip{{ loop.index }}-star" value="0" {% edge %}{{ 'checked' if eleventy.edge.cookies.chip1Star | default(0, true) == 0 }}{% endedge %}>
+							<span class="chip text-primary">0&#8201;★</span>
+						</label>
+						<label>
+							<input class="visually-hidden" type="radio" name="chip{{ loop.index }}-star" value="1" {% edge %}{{ 'checked' if eleventy.edge.cookies.chip1Star == 1 }}{% endedge %}>
+							<span class="chip text-primary">1&#8201;★</span>
+						</label>
+						<label>
+							<input class="visually-hidden" type="radio" name="chip{{ loop.index }}-star" value="2" {% edge %}{{ 'checked' if eleventy.edge.cookies.chip1Star == 2 }}{% endedge %}>
+							<span class="chip text-primary">2&#8201;★</span>
+						</label>
+						<label>
+							<input class="visually-hidden" type="radio" name="chip{{ loop.index }}-star" value="3" {% edge %}{{ 'checked' if eleventy.edge.cookies.chip1Star == 3 }}{% endedge %}>
+							<span class="chip text-primary">3&#8201;★</span>
+						</label>
+					{% elif loop.index == 2 %}
+						<label>
+							<input class="visually-hidden" type="radio" name="chip{{ loop.index }}-star" value="0" {% edge %}{{ 'checked' if eleventy.edge.cookies.chip2Star | default(0, true) == 0 }}{% endedge %}>
+							<span class="chip text-primary">0&#8201;★</span>
+						</label>
+						<label>
+							<input class="visually-hidden" type="radio" name="chip{{ loop.index }}-star" value="1" {% edge %}{{ 'checked' if eleventy.edge.cookies.chip2Star == 1 }}{% endedge %}>
+							<span class="chip text-primary">1&#8201;★</span>
+						</label>
+						<label>
+							<input class="visually-hidden" type="radio" name="chip{{ loop.index }}-star" value="2" {% edge %}{{ 'checked' if eleventy.edge.cookies.chip2Star == 2 }}{% endedge %}>
+							<span class="chip text-primary">2&#8201;★</span>
+						</label>
+						<label>
+							<input class="visually-hidden" type="radio" name="chip{{ loop.index }}-star" value="3" {% edge %}{{ 'checked' if eleventy.edge.cookies.chip2Star == 3 }}{% endedge %}>
+							<span class="chip text-primary">3&#8201;★</span>
+						</label>
+					{% endif %}
 				</div>
 			</fieldset>
 		{% endfor %}
