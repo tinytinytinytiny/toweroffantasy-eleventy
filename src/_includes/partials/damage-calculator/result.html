@@ -1,4 +1,5 @@
 {% edge %}
+{% if eleventy.edge.cookies.totalDmg %}
 <section class="max-w-none stack !stack-space-xs" aria-label="Result">
 	{% set result = eleventy.edge.cookies.totalDmg | default(100, true) %}
 	{% set footnote = eleventy.edge.cookies.totalDmgFootnote | default('', true) | urldecode %}
@@ -12,4 +13,5 @@
 		<small class="text-base/60">Message Zakum#3080 on Discord if the font size needs to be bigger.</small>
 	</p>
 </section>
+{% endif %}
 {% endedge %}
