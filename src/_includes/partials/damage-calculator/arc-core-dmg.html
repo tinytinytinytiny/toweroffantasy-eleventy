@@ -1,7 +1,9 @@
+{% edge %}
 <div>
 	<label for="arc-core-dmg">Arc Core % Damage</label>
 	<div class="unit-input">
-		<input type="number" inputMode="numeric" pattern="[0-9]*" name="arc-core-dmg" id="arc-core-dmg" value="{% edge %}{{ eleventy.edge.cookies.arcCore | default(0) }}{% endedge %}" min="0" max="100">
+		<input type="number" inputMode="numeric" pattern="[0-9]*" name="arc-core-dmg" id="arc-core-dmg" min="0" max="100" value="{{ eleventy.edge.cookies.arcCore | default(0) }}">
 		<span>&nbsp;%</span>
 	</div>
 </div>
+{% endedge %}

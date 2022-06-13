@@ -1,3 +1,4 @@
+{% edge %}
 <fieldset id="weapon-buffs" class="sheet stack p-s-m" data-layer="3" data-border="none">
 	<legend class="text-step-1 font-bold text-bold">Weapon Buffs</legend>
 	<div class="clear-both" role="presentation"></div>
@@ -9,36 +10,36 @@
 					<option value="">None</option>
 					{% if loop.index === 1 %}
 						<optgroup label="Awakening Buffs">
-							<option value="claudia1" {% edge %}{{ 'selected' if eleventy.edge.cookies.wep1 == 'claudia1' }}{% endedge %}>Claudia&nbsp;1★</option>
-							<option value="tsubasa1" {% edge %}{{ 'selected' if eleventy.edge.cookies.wep1 == 'tsubasa1' }}{% endedge %}>Tsubasa&nbsp;1★</option>
-							<option value="tsubasa6" {% edge %}{{ 'selected' if eleventy.edge.cookies.wep1 == 'tsubasa6' }}{% endedge %}>Tsubasa&nbsp;6★</option>
-							<option value="marc3" {% edge %}{{ 'selected' if eleventy.edge.cookies.wep1 == 'marc3' }}{% endedge %}>Marc&nbsp;3★</option>
+							<option value="claudia1" {{ 'selected' if eleventy.edge.cookies.wep1 == 'claudia1' }}>Claudia&nbsp;1★</option>
+							<option value="tsubasa1" {{ 'selected' if eleventy.edge.cookies.wep1 == 'tsubasa1' }}>Tsubasa&nbsp;1★</option>
+							<option value="tsubasa6" {{ 'selected' if eleventy.edge.cookies.wep1 == 'tsubasa6' }}>Tsubasa&nbsp;6★</option>
+							<option value="marc3" {{ 'selected' if eleventy.edge.cookies.wep1 == 'marc3' }}>Marc&nbsp;3★</option>
 						</optgroup>
 						<optgroup label="Bonus Effects">
-							<option value="baiyuekui" {% edge %}{{ 'selected' if eleventy.edge.cookies.wep1 == 'baiyuekui' }}{% endedge %}>Baiyuekui</option>
-							<option value="frigg" {% edge %}{{ 'selected' if eleventy.edge.cookies.wep1 == 'frigg' }}{% endedge %}>Frigg</option>
+							<option value="baiyuekui" {{ 'selected' if eleventy.edge.cookies.wep1 == 'baiyuekui' }}>Baiyuekui</option>
+							<option value="frigg" {{ 'selected' if eleventy.edge.cookies.wep1 == 'frigg' }}>Frigg</option>
 						</optgroup>
 					{% elif loop.index === 2 %}
 						<optgroup label="Awakening Buffs">
-							<option value="claudia1" {% edge %}{{ 'selected' if eleventy.edge.cookies.wep2 == 'claudia1' }}{% endedge %}>Claudia&nbsp;1★</option>
-							<option value="tsubasa1" {% edge %}{{ 'selected' if eleventy.edge.cookies.wep2 == 'tsubasa1' }}{% endedge %}>Tsubasa&nbsp;1★</option>
-							<option value="tsubasa6" {% edge %}{{ 'selected' if eleventy.edge.cookies.wep2 == 'tsubasa6' }}{% endedge %}>Tsubasa&nbsp;6★</option>
-							<option value="marc3" {% edge %}{{ 'selected' if eleventy.edge.cookies.wep2 == 'marc3' }}{% endedge %}>Marc&nbsp;3★</option>
+							<option value="claudia1" {{ 'selected' if eleventy.edge.cookies.wep2 == 'claudia1' }}>Claudia&nbsp;1★</option>
+							<option value="tsubasa1" {{ 'selected' if eleventy.edge.cookies.wep2 == 'tsubasa1' }}>Tsubasa&nbsp;1★</option>
+							<option value="tsubasa6" {{ 'selected' if eleventy.edge.cookies.wep2 == 'tsubasa6' }}>Tsubasa&nbsp;6★</option>
+							<option value="marc3" {{ 'selected' if eleventy.edge.cookies.wep2 == 'marc3' }}>Marc&nbsp;3★</option>
 						</optgroup>
 						<optgroup label="Bonus Effects">
-							<option value="baiyuekui" {% edge %}{{ 'selected' if eleventy.edge.cookies.wep2 == 'baiyuekui' }}{% endedge %}>Baiyuekui</option>
-							<option value="frigg" {% edge %}{{ 'selected' if eleventy.edge.cookies.wep2 == 'frigg' }}{% endedge %}>Frigg</option>
+							<option value="baiyuekui" {{ 'selected' if eleventy.edge.cookies.wep2 == 'baiyuekui' }}>Baiyuekui</option>
+							<option value="frigg" {{ 'selected' if eleventy.edge.cookies.wep2 == 'frigg' }}>Frigg</option>
 						</optgroup>
 					{% elif loop.index === 3 %}
 						<optgroup label="Awakening Buffs">
-							<option value="claudia1" {% edge %}{{ 'selected' if eleventy.edge.cookies.wep3 == 'claudia1' }}{% endedge %}>Claudia&nbsp;1★</option>
-							<option value="tsubasa1" {% edge %}{{ 'selected' if eleventy.edge.cookies.wep3 == 'tsubasa1' }}{% endedge %}>Tsubasa&nbsp;1★</option>
-							<option value="tsubasa6" {% edge %}{{ 'selected' if eleventy.edge.cookies.wep3 == 'tsubasa6' }}{% endedge %}>Tsubasa&nbsp;6★</option>
-							<option value="marc3" {% edge %}{{ 'selected' if eleventy.edge.cookies.wep3 == 'marc3' }}{% endedge %}>Marc&nbsp;3★</option>
+							<option value="claudia1" {{ 'selected' if eleventy.edge.cookies.wep3 == 'claudia1' }}>Claudia&nbsp;1★</option>
+							<option value="tsubasa1" {{ 'selected' if eleventy.edge.cookies.wep3 == 'tsubasa1' }}>Tsubasa&nbsp;1★</option>
+							<option value="tsubasa6" {{ 'selected' if eleventy.edge.cookies.wep3 == 'tsubasa6' }}>Tsubasa&nbsp;6★</option>
+							<option value="marc3" {{ 'selected' if eleventy.edge.cookies.wep3 == 'marc3' }}>Marc&nbsp;3★</option>
 						</optgroup>
 						<optgroup label="Bonus Effects">
-							<option value="baiyuekui" {% edge %}{{ 'selected' if eleventy.edge.cookies.wep3 == 'baiyuekui' }}{% endedge %}>Baiyuekui</option>
-							<option value="frigg" {% edge %}{{ 'selected' if eleventy.edge.cookies.wep3 == 'frigg' }}{% endedge %}>Frigg</option>
+							<option value="baiyuekui" {{ 'selected' if eleventy.edge.cookies.wep3 == 'baiyuekui' }}>Baiyuekui</option>
+							<option value="frigg" {{ 'selected' if eleventy.edge.cookies.wep3 == 'frigg' }}>Frigg</option>
 						</optgroup>
 					{% endif %}
 				</select>
@@ -46,3 +47,4 @@
 		{% endfor %}
 	</div>
 </fieldset>
+{% endedge %}

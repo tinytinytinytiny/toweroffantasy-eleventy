@@ -1,7 +1,9 @@
+{% edge %}
 <div>
 	<label for="other-multipliers">Any Other Multipliers</label>
 	<div class="unit-input">
-		<input type="number" inputMode="numeric" pattern="[0-9]*" name="other-multipliers" id="other-multipliers" value="{% edge %}{{ eleventy.edge.cookies.otherMultipliers | default(0) }}{% endedge %}" min="0" max="100">
+		<input type="number" inputMode="numeric" pattern="[0-9]*" name="other-multipliers" id="other-multipliers" min="0" max="100" value="{{ eleventy.edge.cookies.otherMultipliers | default(0) }}">
 		<span>&nbsp;%</span>
 	</div>
 </div>
+{% endedge %}

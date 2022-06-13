@@ -1,8 +1,10 @@
+{% edge %}
 <div>
 	<label for="mimic-passive">Simulacrum Passive</label>
 	<select name="mimic-passive" id="mimic-passive">
 		<option value="">None</option>
-		<option value="samir" {% edge %}{{ 'selected' if eleventy.edge.cookies.mimicPassive == 'samir' }}{% endedge %}>Samir</option>
-		<option value="crow" {% edge %}{{ 'selected' if eleventy.edge.cookies.mimicPassive == 'crow' }}{% endedge %}>Crow</option>
+		<option value="samir" {{ 'selected' if eleventy.edge.cookies.mimicPassive == 'samir' }}>Samir</option>
+		<option value="crow" {{ 'selected' if eleventy.edge.cookies.mimicPassive == 'crow' }}>Crow</option>
 	</select>
 </div>
+{% endedge %}

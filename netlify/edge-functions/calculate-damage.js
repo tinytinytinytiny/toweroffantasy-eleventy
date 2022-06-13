@@ -38,6 +38,7 @@ export default async(request, context) => {
 				params.get('wep2'),
 				params.get('wep3')
 			],
+			alphaOnly: true,
 			filter(item) {
 				return item in buffs.bonusWeapon;
 			}
@@ -96,7 +97,8 @@ export default async(request, context) => {
 				params.get('wep1'),
 				params.get('wep2'),
 				params.get('wep3')
-			]
+			],
+			alphaOnly: true
 		});
 		weps.forEach((wep, i) => {
 			if (wep in buffs.bonusWeapon) {
