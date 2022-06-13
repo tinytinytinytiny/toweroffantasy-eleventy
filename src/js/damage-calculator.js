@@ -76,6 +76,50 @@ function groupDropdowns({ fieldset, group = 'options', selector } = {}) {
 		optgroupChildren.forEach(option => optgroupValues.add(option.value));
 	}
 
+	const dropdowns = fieldset.querySelectorAll('select');
+	const selections = [...dropdowns]
+		.map(i => stripNumber(i.value))
+		.filter(i => i.length);
+
+	dropdowns.forEach((dropdown) => {
+		const siblingDropdowns = fieldset.querySelectorAll(
+			[...dropdowns]
+				.map(dropdown => dropdown.name)
+				.filter(name => name !== dropdown.name)
+				.map(name => `[name="${name}"]`)
+		);
+
+		if (group === 'options') {
+			siblingDropdowns.forEach((siblingDropdown) => {
+				const options = siblingDropdown.querySelectorAll(selector || 'option');
+
+				options.forEach((option) => {
+					if (selections.includes(stripNumber(option.value)) && stripNumber(option.value) !== stripNumber(siblingDropdown.value)) {
+						option.setAttribute('hidden', '');
+					} else {
+						option.getAttribute('hidden');
+						option.removeAttribute('hidden');
+					}
+				});
+			});
+		}
+
+		if (group === 'optgroup') {
+			siblingDropdowns.forEach((siblingDropdown) => {
+				const optgroup = dropdown.querySelector(selector || 'optgroup');
+
+				if (optgroupValues.has(stripNumber(siblingDropdown.value))) {
+					optgroup.setAttribute('hidden', '');
+				} else {
+					if (!selections.filter(i => optgroupValues.has(i)).length) {
+						optgroup.getAttribute('hidden');
+						optgroup.removeAttribute('hidden');
+					}
+				}
+			});
+		}
+	});
+
 	fieldset.addEventListener('change', (e) => {
 		if (e.target.tagName.toLowerCase() !== 'select' && e.target.tagName.toLowerCase() !== 'option') {
 			return;
@@ -117,7 +161,7 @@ function groupDropdowns({ fieldset, group = 'options', selector } = {}) {
 			dropdownsExceptSelected.forEach((dropdown) => {
 				const optgroup = dropdown.querySelector(selector || 'optgroup');
 
-				if (optgroupValues.has(e.target.value)) {
+				if (optgroupValues.has(stripNumber(e.target.value))) {
 					optgroup.setAttribute('hidden', '');
 				} else {
 					if (!selections.filter(i => optgroupValues.has(i)).length) {
@@ -137,8 +181,4 @@ function groupDropdowns({ fieldset, group = 'options', selector } = {}) {
 
 function stripNumber(str) {
 	return str.replace(/[0-9]/g, '');
-}
-
-function getCookie(name) {
-	return document.cookie.match('(^|;)\\s*' + name + '\\s*=\\s*([^;]+)')?.pop() || '';
 }

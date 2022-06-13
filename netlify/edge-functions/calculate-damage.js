@@ -10,7 +10,7 @@ export default async(request, context) => {
 			name,
 			value,
 			path: '/',
-			httpOnly: false,
+			httpOnly: true,
 			secure: true,
 			sameSite: 'Lax'
 		});
