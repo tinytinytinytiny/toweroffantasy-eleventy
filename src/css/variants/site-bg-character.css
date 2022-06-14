@@ -30,6 +30,11 @@
 	--background-offset: 400px;
 }
 
+[data-bg="pepper"] {
+	--background-offset: 400px;
+}
+
 [data-bg="fuwasaki"] {
 	--background-offset: 370px;
 }
+
