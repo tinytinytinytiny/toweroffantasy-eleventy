@@ -21,14 +21,14 @@ export default async(request, context) => {
 		const params = new Map(body);
 
 		const heavilyWounded = (params.get('wounded')) ? 1.2 : 1;
-		const critRate = Number(params.get('critical-rate') || 0) * 0.01;
-		const critDmg = Number(params.get('critical-dmg') || 0) * 0.01;
+		const critRate = clamp(0, Number(params.get('critical-rate') || 0), 100) * 0.01;
+		const critDmg = Math.max(0, Number(params.get('critical-dmg') || 0)) * 0.01;
 		let dmgFromNonCrit = 1 - critRate;
 		let dmgFromCrit = (1 + critDmg) * critRate;
-		const arcCore = 1 + (Number(params.get('arc-core-dmg')) * 0.01);
-		const enemyEleResist = [0, 0.5, 0.65][params.get('elemental-resistance') || 0];
-		const enemyEleWeakness = [0, 0.3, 0.5, 0.75][params.get('elemental-weakness') || 0];
-		const otherMultipliers = Number(params.get('other-multipliers')) * 0.01;
+		const arcCore = 1 + (clamp(0, Number(params.get('arc-core-dmg')), 100) * 0.01);
+		const enemyEleResist = [0, 0.5, 0.65][clamp(0, params.get('elemental-resistance') || 0, 2)];
+		const enemyEleWeakness = [0, 0.3, 0.5, 0.75][clamp(0, params.get('elemental-weakness') || 0, 3)];
+		const otherMultipliers = clamp(0, Number(params.get('other-multipliers')), 100) * 0.01;
 		const resoBuff = buffs.resonance[params.get('resonance')] || 0;
 		const mimicBuff = buffs.mimic[params.get('mimic-passive')] || 0;
 		// i will forget how all code below this line works the day after i write it

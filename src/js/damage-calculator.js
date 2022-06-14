@@ -96,9 +96,12 @@ function groupDropdowns({ fieldset, group = 'options', selector } = {}) {
 				options.forEach((option) => {
 					if (selections.includes(stripNumber(option.value)) && stripNumber(option.value) !== stripNumber(siblingDropdown.value)) {
 						option.setAttribute('hidden', '');
+						option.setAttribute('disabled', '');
 					} else {
 						option.getAttribute('hidden');
 						option.removeAttribute('hidden');
+						option.getAttribute('disabled');
+						option.removeAttribute('disabled');
 					}
 				});
 			});
@@ -110,10 +113,13 @@ function groupDropdowns({ fieldset, group = 'options', selector } = {}) {
 
 				if (optgroupValues.has(stripNumber(siblingDropdown.value))) {
 					optgroup.setAttribute('hidden', '');
+					optgroup.setAttribute('disabled', '');
 				} else {
 					if (!selections.filter(i => optgroupValues.has(i)).length) {
 						optgroup.getAttribute('hidden');
 						optgroup.removeAttribute('hidden');
+						optgroup.getAttribute('disabled');
+						optgroup.removeAttribute('disabled');
 					}
 				}
 			});
@@ -144,9 +150,12 @@ function groupDropdowns({ fieldset, group = 'options', selector } = {}) {
 				options.forEach((option) => {
 				  if (selections.includes(stripNumber(option.value)) && stripNumber(option.value) !== stripNumber(dropdown.value)) {
 				  	option.setAttribute('hidden', '');
+						option.setAttribute('disabled', '');
 				  } else {
 				  	option.getAttribute('hidden');
 						option.removeAttribute('hidden');
+						option.getAttribute('disabled');
+						option.removeAttribute('disabled');
 				  }
 				});
 
@@ -163,10 +172,13 @@ function groupDropdowns({ fieldset, group = 'options', selector } = {}) {
 
 				if (optgroupValues.has(stripNumber(e.target.value))) {
 					optgroup.setAttribute('hidden', '');
+					optgroup.setAttribute('disabled', '');
 				} else {
 					if (!selections.filter(i => optgroupValues.has(i)).length) {
 						optgroup.getAttribute('hidden');
 						optgroup.removeAttribute('hidden');
+						optgroup.getAttribute('disabled');
+						optgroup.removeAttribute('disabled');
 					}
 				}
 
