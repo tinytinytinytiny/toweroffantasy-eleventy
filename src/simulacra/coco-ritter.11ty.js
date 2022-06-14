@@ -72,6 +72,9 @@ module.exports = {
 					'rare-items'
 				],
 				items: [
+					// [60, ['fox-figure', 'cat-figure', 'present', 'ufo', 'mia-figure']],
+					// [30, ['tata-plush', 'spider-figure', 'vial', 'elf-figure', 'bunny-doll', 'cat-plush', 'robot-figure', 'tata-plush', 'spider-figure', 'vial', 'elf-figure', 'bunny-doll', 'cat-plush', 'robot-figure']],
+					// [15, ['photo-album', 'photo', 'plant', 'harmonica', 'pinwheel']]
 					['fox-figure', 60],
 					['cat-figure', 60],
 					['present', 60],
