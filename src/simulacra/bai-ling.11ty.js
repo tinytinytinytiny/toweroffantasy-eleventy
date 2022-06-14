@@ -9,6 +9,13 @@ module.exports = {
 				name: 'Nightingale’s Feather',
 				element: 'physical',
 				resonance: 'damage',
+				charge: 10,
+				shatter: 6,
+				materials: [
+					'physical',
+					'green',
+					'blue'
+				],
 				awakening: [
 					'Restore 1 dodge attempt every fifth normal attack or after using **Piercing Shot**.',
 					'Increase the current weapon’s base ATK growth by **10%**.',
@@ -16,13 +23,60 @@ module.exports = {
 					'Increase the current weapon’s base ATK growth by **20%**.',
 					'Dodge skills inflict grievous on targets for **7** seconds.',
 					'Increase crit rate by **30%** and crit damage by **50%** against grievous targets.'
+				]
+			},
+			skills: {
+				normal: [
+					{
+						name: 'Quickdraw',
+						desc: 'While on the ground, draw the bow repeatedly to attack 5 times.',
+						breakdown: [
+							'Deal damage equal to **33.7%** of ATK + **2**.',
+							'Deal damage equal to **30.2%** of ATK + **2**.',
+							'Deal damage equal to **54.3%** of ATK + **3**.',
+							'Deal damage equal to **83.5%** of ATK + **4**.'
+						]
+					},
+					{
+						name: 'Charged Arrow',
+						desc: 'Tap and hold normal attack to charge the weapon. Deal basic damage equal to **60.5%** of ATK + **3**, and **50%** more for each **1** second spent charging, up to **3** seconds. Deal double damage when scoring a headshot or when hitting an enemy’s weakness, knocking them down (headshots are ineffective against Wanderers).'
+					},
+					{
+						name: 'Arrow Rain',
+						desc: 'After any normal attack, hold the normal attack button to unleash Arrow Rain, dealing up to **198.7%** of ATK + **10** area damage to targets.'
+					},
+					{
+						name: 'Air Volley',
+						desc: 'While airborne, tap normal attack to attack 4 times in a row in the air.',
+						breakdown: [
+							'Deal damage equal to **38.8%** of ATK + **2**.',
+							'Deal damage equal to **51%** of ATK + **3**.',
+							'Deal damage equal to **77.7%** of ATK + **4**.',
+							'Deal damage equal to **117%** of ATK + **6**.'
+						]
+					}
 				],
-				charge: 10,
-				shatter: 6,
-				materials: [
-					'physical',
-					'green',
-					'blue'
+				dodge: [
+					{
+						name: 'Dodge',
+						desc: 'Dodge right before getting hit to activate a Phantasia, which reduces the speed of enemies within the area. Cooldown: 15 seconds. While dodging, you gain hitstun immunity for **0.5** seconds.'
+					},
+					{
+						name: 'Loaded Arrow',
+						desc: 'Tap attack after dodging to trigger Loaded Arrow, knocking the target back by a short distance and dealing damage equal to **85.5%** of ATK + **5**.'
+					}
+				],
+				skill: [
+					{
+						name: 'Piercing Shot',
+						desc: 'Backflips and fires **1** piercing arrow forward, dealing damage equal to **154.8%** of ATK + **8** and knocking the target back. **12**-second cooldown.'
+					}
+				],
+				discharge: [
+					{
+						name: 'Explosive Barrage',
+						desc: 'When ***weapon charge*** is full or ***Phantasia*** is triggered, **remove all debuffs from the wielder**, and unleashes Explosive Barrage on the target upon switching to this weapon, dealing damage equal to **486.6%** of ATK + **26**.'
+					}
 				]
 			},
 			mimicEffects: [
@@ -30,22 +84,10 @@ module.exports = {
 					affinity: 200,
 					effect: 'Unlock profile avatar Bai Ling'
 				},
-				// {
-				// 	affinity: 600,
-				// 	effect: 'Unlock communication []'
-				// },
 				{
 					affinity: 1200,
 					effect: 'When Bai Ling puts the Glider or the Wayboard away, increase speed by **8%** for **12** seconds. Cooldown: **60** seconds.'
 				},
-				// {
-				// 	affinity: 2000,
-				// 	effect: 'Unlock communication []'
-				// },
-				// {
-				// 	affinity: 3000,
-				// 	effect: 'Unlock communication []'
-				// },
 				{
 					affinity: 4000,
 					effect: 'When Bai Ling puts the Glider or the Wayboard away, increase speed by **15%** for **12** seconds. Cooldown: **60** seconds.'

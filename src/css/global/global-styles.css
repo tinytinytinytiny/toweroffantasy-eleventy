@@ -200,8 +200,5 @@ summary {
 
 summary h2, summary h3, summary h4 {
 	display: inline-block;
-}
-
-summary:has(h2, h3) + * {
-	margin-top: 1em;
+	font-size: theme('fontSize.step-0');
 }

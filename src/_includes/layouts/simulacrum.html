@@ -16,8 +16,10 @@
 	{% include "partials/simulacrum/awakening.html" %}
 	{% include "partials/simulacrum/materials.html" %}
 	{% include "partials/simulacrum/rec-chips.html" %}
-	<h2 id="combat">Combat Abilities</h2>
-	{% include "partials/simulacrum/combat-test.html" %}
+	{% if skills %}
+		<h2 id="combat">Combat Abilities</h2>
+		{% include "partials/simulacrum/skills.html" %}
+	{% endif %}
 	<h2 id="affinity">Affinity</h2>
 	{% include "partials/simulacrum/affinity-effects.html" %}
 	{% include "partials/simulacrum/affinity-gifts.html" %}
