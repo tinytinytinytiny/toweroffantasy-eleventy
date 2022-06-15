@@ -22,6 +22,14 @@
 	background-position-y: clamp(-140px, calc(100vh - 1386px), 0px);
 }
 
+[data-bg="baiyuekui"] {
+	--background-offset: 380px;
+}
+
+[data-bg="claudia"] {
+	--background-offset: 350px;	
+}
+
 [data-bg="coco-ritter"] {
 	--background-offset: 400px;
 }
@@ -30,11 +38,10 @@
 	--background-offset: 400px;
 }
 
-[data-bg="pepper"] {
-	--background-offset: 400px;
-}
-
 [data-bg="fuwasaki"] {
 	--background-offset: 370px;
 }
 
+[data-bg="pepper"] {
+	--background-offset: 400px;
+}

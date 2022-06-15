@@ -2,7 +2,7 @@
 	<details class="stack copy" data-collapse="always">
 		<summary class="chip"><h3>{{ string.skillCategories[category] }}</h3></summary>
 		{% for skill in list %}
-			<h4 class="text-primary {{ 'mt-[1em]' if loop.index === 1 }}">{{ skill.name }}</h4>
+			<h4 class="text-primary">{{ skill.name }}</h4>
 			{{ skill.desc | markdown | safe }}
 			{% if skill.breakdown %}
 				<ol>

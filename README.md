@@ -1,6 +1,6 @@
 # Learn Eleventy From Scratch
 
-this is a ripoff of https://toweroffantasy.info/
+this is a ripoff of https://toweroffantasy.info/ by senior developer Zakum
 
 ## Live Website
 https://tinytinytiny.netlify.app/

@@ -1,3 +1,7 @@
+.highlight-bold em {
+	color: theme('colors.accent');
+}
+
 .highlight-bold b, .highlight-bold strong {
 	color: theme('colors.secondary');
 }
