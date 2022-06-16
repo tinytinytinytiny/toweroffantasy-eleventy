@@ -9,10 +9,9 @@ module.exports = {
 				name: 'Thunderous Halberd',
 				element: 'electric',
 				resonance: 'damage',
-				charge: 7,
 				shatter: 11,
+				charge: 7,
 				materials: [
-					'electric',
 					'red',
 					'black'
 				],

@@ -23,6 +23,12 @@ module.exports = {
 						"effect": "Mecha basic attack/Double Smash/Impact Slash will give **1** point of Mecha Energy. At **20** points, convert **20%** of your current HP into a [Omni Shield] with **1.5×** your max HP (cannot exceed 1.5× max HP and healing is reduced by 50% while active). The shield lasts for **15** seconds and cannot be gained if you are below **10%** HP.\n\nAfter the duration, **66.7%** of the remaining shield value is converted to HP, and hitting a weak target nets **2** points of energy.\n\nWhen triggering the effect, convert active HP shields into [Omni Shield]. Other HP shields cannot be obtained while active."
 					}
 				],
+				shatter: 9,
+				charge: 12,
+				materials: [
+					'red',
+					'black'
+				],
 				awakening: [
 					'Activating Re-entry, Form Switch, or Full Shot will instantly grant [Omni Shield].',
 					'Increase the current weapon’s base HP growth by **16%**.',
@@ -30,13 +36,6 @@ module.exports = {
 					'Increase the current weapon’s base HP growth by **32%**.',
 					'When [Omni Shield] breaks or refreshes, inflict **160%** of ATK + **5%** of lost HP to nearby targets and gains **50** weapon charge points on hit.',
 					'While [Omni Shield] is active, Physical Resistance is **doubled** and provides Dominance effect. [Omni Shield] can be obtained when another Weapon Skill or Discharge Skill hits the target while the shield is active.'
-				],
-				charge: 12,
-				shatter: 9,
-				materials: [
-					'physical',
-					'red',
-					'black'
 				]
 			},
 			mimicEffects: [

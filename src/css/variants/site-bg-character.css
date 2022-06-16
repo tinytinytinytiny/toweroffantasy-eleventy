@@ -34,6 +34,10 @@
 	--background-offset: 400px;
 }
 
+[data-bg="crow"] {
+	--background-offset: 340px;
+}
+
 [data-bg="echo"] {
 	--background-offset: 400px;
 }

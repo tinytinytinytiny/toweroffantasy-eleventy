@@ -9,10 +9,9 @@ module.exports = {
 				name: 'Absolute Zero',
 				element: 'ice',
 				resonance: 'support',
-				charge: 12.5,
 				shatter: 4,
+				charge: 12.5,
 				materials: [
-					'ice',
 					'green',
 					'blue'
 				],

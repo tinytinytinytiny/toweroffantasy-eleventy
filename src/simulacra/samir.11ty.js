@@ -9,10 +9,9 @@ module.exports = {
 				name: 'Dual EM Stars',
 				element: 'electric',
 				resonance: 'damage',
-				charge: 10.7,
 				shatter: 6,
+				charge: 10.7,
 				materials: [
-					'electric',
 					'red',
 					'black'
 				],

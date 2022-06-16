@@ -6,24 +6,16 @@ module.exports = {
 			isChina: false,
 			rarity: 5,
 			sets: [2, 4],
-			chipEffects: [
-				[
-					'Upon using a discharge skill to switch to the current weapon, gain a shield equal to **120%** of ATK for **4** seconds.',
-					'While the shield is active, you and your teammates deal **16%** more damage.'
-				],
-				[
-					'Upon using a discharge skill to switch to the current weapon, gain a shield equal to **150%** of ATK for **4** seconds.',
-					'While the shield is active, you and your teammates deal **20%** more damage.'
-				],
-				[
-					'Upon using a discharge skill to switch to the current weapon, gain a shield equal to **180%** of ATK for **4** seconds.',
-					'While the shield is active, you and your teammates deal **24%** more damage.'
-				],
-				[
-					'Upon using a discharge skill to switch to the current weapon, gain a shield equal to **210%** of ATK for **4** seconds.',
-					'While the shield is active, you and your teammates deal **28%** more damage.'
-				]
-			],
+			values: {
+				set2: ['120%', '150%', '180%', '210%'],
+				set4: ['16%', '20%', '24%', '28%']
+			}
 		};
+	},
+	render({ values }) {
+		return this.range(4).map(i => [
+			`Upon using a discharge skill to switch to the current weapon, gain a shield equal to **${values.set2[i]}** of ATK for **4** seconds.`,
+			`While the shield is active, you and your teammates deal **${values.set4[i]}** more damage.`
+		]);
 	}
 };

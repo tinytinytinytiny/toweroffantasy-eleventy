@@ -6,17 +6,10 @@ module.exports = {
 			isChina: false,
 			rarity: 4,
 			sets: [3],
-			chipEffects: [
-				[
-					'Increase damage dealt to grievous targets by **12%**.'
-				],
-				[
-					'Increase damage dealt to grievous targets by **15%**.'
-				],
-				[
-					'Increase damage dealt to grievous targets by **18%**.'
-				]
-			],
+			values: ['12%', '15%', '18%']
 		};
+	},
+	render({ values }) {
+		return values.map(value => [`Increase damage dealt to grievous targets by **${value}**.`]);
 	}
 };

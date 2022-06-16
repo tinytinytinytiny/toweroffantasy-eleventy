@@ -15,6 +15,12 @@ module.exports = {
 						"effect": "When equipped with **2** or more Ice weapons, increase Ice ATK by **20%** and Ice Resistance by **40%**, taking effect in the background."
 					}
 				],
+				shatter: 13.9,
+				charge: 8,
+				materials: [
+					'red',
+					'black'
+				],
 				awakening: [
 					'When Ice Resonance is active, release any weapon skill **5** times in total to clear the cooldown of all weapon skills, and **double** the damage of [Circulation] and [Counterattack] for **25** seconds.',
 					'Increase the current weapon’s base ATK growth by **16%**.',
@@ -22,13 +28,6 @@ module.exports = {
 					'Increase the current weapon’s base HP growth by **32%**.',
 					'Sword Shadow’s [Surge] triggers Phantasia upon hitting a target, shares cooldown with Phantasia trigged by dodging.',
 					'Sword Shadow’s [Surge] increases your ice damage by **20%** for **15** seconds upon hitting a target. Activating Sword Shadow’s block reduces surrounding enemies’ ice damage by **25%** for **12** seconds.'
-				],
-				charge: 8,
-				shatter: 13.9,
-				materials: [
-					'ice',
-					'red',
-					'black'
 				]
 			},
 			mimicEffects: [

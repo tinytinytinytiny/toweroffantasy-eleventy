@@ -9,10 +9,9 @@ module.exports = {
 				name: 'Negating Cube',
 				element: 'fire',
 				resonance: 'support',
-				charge: 13,
 				shatter: 5,
+				charge: 13,
 				materials: [
-					'fire',
 					'green',
 					'blue'
 				],

@@ -14,8 +14,8 @@
 {% block content %}
 	{% for i in range(0, sets.length) %}
 		<h2 id="set-{{ sets[i] }}">{{ sets[i] }}-Set</h2>
-		{{ chipEffects[0][i] | markdown | safe }}
-		{% if chipEffects.length > 1 %}
+		{{ content[0][i] | markdown | safe }}
+		{% if content.length > 1 %}
 			<details>
 				<summary class="chip">Awakening Progression</summary>
 				<div class="big-table wrapper">
@@ -27,7 +27,7 @@
 							</tr>
 						</thead>
 						<tbody>
-							{% for effects in chipEffects %}
+							{% for effects in content %}
 								{% if loop.index > 1 %}
 									<tr>
 										<th class="text-primary whitespace-nowrap" scope="row">

@@ -5,12 +5,10 @@ module.exports = {
 			isNew: false,
 			isChina: false,
 			rarity: 3,
-			sets: [3],
-			chipEffects: [
-				[
-					'Shield breaking efficiency increased by **18%**.'
-				]
-			],
+			sets: [3]
 		};
+	},
+	render() {
+		return 'Shield breaking efficiency increased by **18%**.';
 	}
 };

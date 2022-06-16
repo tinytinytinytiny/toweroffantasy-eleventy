@@ -9,10 +9,9 @@ module.exports = {
 				name: 'Staff of Scars',
 				element: 'electric',
 				resonance: 'support',
-				charge: 10,
 				shatter: 4,
+				charge: 10,
 				materials: [
-					'electric',
 					'green',
 					'blue'
 				],

@@ -12,7 +12,6 @@ module.exports = {
 				charge: 10,
 				shatter: 6,
 				materials: [
-					'physical',
 					'green',
 					'blue'
 				],

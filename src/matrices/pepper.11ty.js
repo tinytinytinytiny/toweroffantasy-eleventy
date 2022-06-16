@@ -6,17 +6,10 @@ module.exports = {
 			isChina: false,
 			rarity: 4,
 			sets: [3],
-			chipEffects: [
-				[
-					'Increase speed of obtaining weapon charge by **10%**.'
-				],
-				[
-					'Increase speed of obtaining weapon charge by **12.5%**.'
-				],
-				[
-					'Increase speed of obtaining weapon charge by **15%**.'
-				]
-			],
+			values: ['10%', '12.5%', '15%']
 		};
+	},
+	render({ values }) {
+		return values.map(value => `Increase speed of obtaining weapon charge by **${value}**.`);
 	}
 };

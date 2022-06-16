@@ -6,24 +6,19 @@ module.exports = {
 			isChina: false,
 			rarity: 5,
 			sets: [2, 4],
-			chipEffects: [
-				[
-					'Increase damage by **13%** when hitting a target in mid-air or initiating an aerial attack. Reset double jump upon hitting the target in mid-air.',
-					'Hitting an enemy with a skill reduces the cooldowns of all weapon skills by **1.5** seconds and increases the damage of discharge skills by **36%** for **15** seconds.'
-				],
-				[
-					'Increase damage by **17%** when hitting a target in mid-air or initiating an aerial attack. Reset double jump upon hitting the target in mid-air.',
-					'Hitting an enemy with a skill reduces the cooldowns of all weapon skills by **2** seconds and increases the damage of discharge skills by **45%** for **15** seconds.'
-				],
-				[
-					'Increase damage by **20%** when hitting a target in mid-air or initiating an aerial attack. Reset double jump upon hitting the target in mid-air.',
-					'Hitting an enemy with a skill reduces the cooldowns of all weapon skills by **2.5** seconds and increases the damage of discharge skills by **54%** for **15** seconds.'
-				],
-				[
-					'Increase damage by **23%** when hitting a target in mid-air or initiating an aerial attack. Reset double jump upon hitting the target in mid-air.',
-					'Hitting an enemy with a skill reduces the cooldowns of all weapon skills by **3** seconds and increases the damage of discharge skills by **63%** for **15** seconds.'
+			values: {
+				set2: ['13%', '17%', '20%', '23%'],
+				set4: [
+					['1.5', '2', '2.5', '3'],
+					['36%', '45%', '54%', '63%']
 				]
-			],
+			}
 		};
+	},
+	render({ values }) {
+		return this.range(4).map(i => [
+			`Increase damage by **${values.set2[i]}** when hitting a target in mid-air or initiating an aerial attack. Reset double jump upon hitting the target in mid-air.`,
+			`Hitting an enemy with a skill reduces the cooldowns of all weapon skills by **${values.set4[0][i]}** seconds and increases the damage of discharge skills by **${values.set4[1][i]}** for **15** seconds.`
+		]);
 	}
 };

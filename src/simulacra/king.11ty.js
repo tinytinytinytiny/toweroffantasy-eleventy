@@ -9,10 +9,9 @@ module.exports = {
 				name: 'Scythe of the Crow',
 				element: 'fire',
 				resonance: 'damage',
-				charge: 5,
 				shatter: 12.5,
+				charge: 5,
 				materials: [
-					'fire',
 					'green',
 					'blue'
 				],

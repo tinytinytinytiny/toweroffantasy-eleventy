@@ -5,12 +5,10 @@ module.exports = {
 			isNew: false,
 			isChina: false,
 			rarity: 3,
-			sets: [3],
-			chipEffects: [
-				[
-					'Damage taken reduced by **6%**.'
-				]
-			],
+			sets: [3]
 		};
+	},
+	render() {
+		return ['Damage taken reduced by **6%**.'];
 	}
 };

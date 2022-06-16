@@ -18,7 +18,6 @@ module.exports = {
 				charge: 8,
 				shatter: 12.5,
 				materials: [
-					'electric',
 					'green',
 					'blue'
 				],

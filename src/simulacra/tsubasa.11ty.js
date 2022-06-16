@@ -9,10 +9,9 @@ module.exports = {
 				name: 'Icewind Arrow',
 				element: 'ice',
 				resonance: 'damage',
-				charge: 11.5,
 				shatter: 4,
+				charge: 11.5,
 				materials: [
-					'ice',
 					'red',
 					'blue'
 				],

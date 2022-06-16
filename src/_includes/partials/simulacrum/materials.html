@@ -16,25 +16,25 @@
 	<h3>Breakthrough Materials</h3>
 	<div class="stack sheet" data-border="none">
 		<div class="sheet box-border reel gap-2xs-xs" data-layer="1">
-			{{ material(weapon.materials[0], 2, 1) }}
+			{{ material(weapon.element, 2, 1) }}
 			{{ progression(4) }}
-			{{ material(weapon.materials[0], 3, 2) }}
+			{{ material(weapon.element, 3, 2) }}
 			{{ progression(5) }}
-			{{ material(weapon.materials[0], 4, 3) }}
+			{{ material(weapon.element, 4, 3) }}
 		</div>
 		<div class="sheet box-border reel gap-2xs-xs" data-layer="1">
-			{{ material(weapon.materials[1], 3, 1) }}
+			{{ material(weapon.materials[0], 3, 1) }}
 			{{ progression(4) }}
-			{{ material(weapon.materials[1], 4, 2) }}
+			{{ material(weapon.materials[0], 4, 2) }}
+			{{ progression(5) }}
+			{{ material(weapon.materials[0], 5, 3) }}
+		</div>
+		<div class="sheet box-border reel gap-2xs-xs" data-layer="1">
+			{{ material(weapon.materials[1], 4, 1) }}
+			{{ progression(4) }}
+			{{ material(weapon.materials[1], 5, 2) }}
 			{{ progression(5) }}
 			{{ material(weapon.materials[1], 5, 3) }}
-		</div>
-		<div class="sheet box-border reel gap-2xs-xs" data-layer="1">
-			{{ material(weapon.materials[2], 4, 1) }}
-			{{ progression(4) }}
-			{{ material(weapon.materials[2], 5, 2) }}
-			{{ progression(5) }}
-			{{ material(weapon.materials[2], 5, 3) }}
 		</div>
 	</div>
 {% endif %}

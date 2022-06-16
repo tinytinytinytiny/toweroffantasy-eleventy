@@ -13,8 +13,6 @@ const groupBy = require('./src/filters/group-by.js');
 const groupByYear = require('./src/filters/group-by-year.js');
 const except = require('./src/filters/except.js');
 
-const cum = require('./src/shortcodes/cum.js');
-
 const htmlMinTransform = require('./src/transforms/html-min-transform.js');
 
 module.exports = (config) => {
@@ -38,9 +36,10 @@ module.exports = (config) => {
 		return md.render(value);
 	});
 
+	config.addShortcode('range', (limit) => [...new Array(limit).keys()]);
 	config.addShortcode('year', () => `${new Date().getFullYear()}`);
-	config.addShortcode('china', () => `<abbr title="China exclusive" class="china-badge">CN</abbr>`);
-	config.addShortcode('cum', cum);
+	config.addShortcode('china', require('./src/shortcodes/china.js'));
+	config.addShortcode('cum', require('./src/shortcodes/cum.js'));
 	config.addPairedShortcode('markdown', (children) => {
 		const content = md.render(children);
 		return content;
