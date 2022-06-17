@@ -5,10 +5,11 @@ module.exports = {
 			isNew: false,
 			isChina: false,
 			rarity: 3,
-			sets: [3]
+			sets: [3],
+			values: ['18%']
 		};
 	},
-	render() {
-		return 'Shield breaking efficiency increased by **18%**.';
+	render({ values }) {
+		return values.map(value => [`Shield breaking efficiency increased by **${value}**.`]);
 	}
 };
