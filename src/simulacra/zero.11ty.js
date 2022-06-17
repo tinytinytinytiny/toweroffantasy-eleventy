@@ -26,56 +26,16 @@ module.exports = {
 			},
 			skills: {
 				normal: [
-					{
-						name: 'Normal Attack',
-						desc: 'While on the ground, manipulate the cube to attack 5 times in a row.  \n*If normal attacks hit targets 6 times, gain 1 cube. Up to 5 cubes can be stored*.',
-						breakdown: [
-							'Deal damage equal to **35.9%** of ATK + **2**.',
-							'Deal damage equal to **29.4%** of ATK + **2**.',
-							'Deal damage equal to **91.5%** of ATK + **5**.',
-							'Deal damage equal to **61.2%** of ATK + **3**.',
-							'Deal damage equal to **62.3%** of ATK + **3** up to 3 times and **launch** the target.'
-						]
-					},
-					{
-						name: 'Omnium Missile',
-						desc: 'While airborne, tap normal attack to activate the energy within the cube, firing up to **5** missiles and dealing total damage equal to **45.6%** of ATK + **2**. Consume up to **250** endurance.  \n*If the Wanderer has any stored cubes, consume all cubes to fire Omnium Missiles at targets to deal damage*.'
-					},
-					{
-						name: 'Energy Overflow',
-						desc: 'While airborne or after jumping once, tap normal attack to trigger Energy Overflow. Upon landing, fire a shockwave that travels forward, dealing up to **18%** of ATK + **1** damage to targets in its path.'
-					},
-					{
-						name: 'Omnium Shock',
-						desc: 'On the third normal attack, hold the normal attack button to trigger Omnium Shock. A pillar of energy launches nearby targets into the air, dealing damage equal to **52.8%** of ATK + **3**. The pillar lasts 5 seconds and deals damage equal to **22%** of ATK + **1** to nearby targets every second.'
-					},
-					{
-						name: 'Energy Sentinel',
-						desc: 'Cubes orbiting the Wanderer deal damage equal to **7.5%** of ATK + **1** to enemies.'
-					},
-					{
-						name: 'Energy Missile',
-						desc: 'When the Wanderer casts Omnium Missiles and Energy Overflow, their orbiting cubes are fired as well, dealing damage equal to **37.3%** of ATK + **2** to the target.'
-					}
+					'normal-attack',
+					'energy-overflow',
+					'omnium-missile',
+					'omnium-shock',
+					'energy-sentinel',
+					'energy-missile'
 				],
-				dodge: [
-					{
-						name: 'Soul Surge',
-						desc: 'Dodge right before getting hit to trigger a Phantasia, which reduces speed of enemies within range and grants hitstun immunity for **0.5** seconds. If the Wanderer has less than **5** cubes, each successful dodge has a **40%** chance to restore 1 dodge attempt. Successful dodges do not interrupt normal attack combos.  \n*Gain a cube for every successful aerial dodge*.'
-					}
-				],
-				skill: [
-					{
-						name: 'Omnium Shield',
-						desc: 'Create shielding for self and nearby allies to block up to **800%** × ATK in damage for **10** seconds, and deal **109.9%** x ATK + **6** damage to nearby targets and **launch** them. Each cube in possession when this skill is used adds **160%** of ATK to max shielding and exhaust the cube. Cooldown: **90** seconds.'
-					}
-				],
-				discharge: [
-					{
-						name: 'Omnium Wave',
-						desc: 'When ***weapon charge is full*** or ***Phantasia*** is triggered, **remove all debuffs from the wielder** and gain 5 cubes upon switching to this weapon, then unleash the **5** cubes along with a Shockwave. This Shockwave deals damage equal to **131.5%** of ATK + **7** to nearby targets, and **launches** them into the air. Each cube also deals damage equal to **37.3%** of ATK + **2**. If allies are in the vicinity, they gain damage immunity for **3** seconds.'
-					}
-				]
+				dodge: ['soul-surge'],
+				skill: ['omnium-shield'],
+				discharge: ['omnium-wave']
 			},
 			mimicEffects: [
 				{

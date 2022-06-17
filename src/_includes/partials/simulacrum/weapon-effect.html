@@ -1,14 +1,18 @@
-<div class="highlight-bold stack copy">
-	<h4 class="text-primary">{{ string.element[weapon.element].effectName }}</h4>
-	{% if 'rarity' + rarity in string.element[weapon.element].description %}
-		{{ string.element[weapon.element].description['rarity' + rarity] | markdown | safe }}
-	{% else %}
-		{{ string.element[weapon.element].description | markdown | safe }}
-	{% endif %}
+<div class="highlight-bold stack with-rule">
+	<div class="stack copy">
+		<h4 class="text-primary">{{ string.element[weapon.element].effectName }}</h4>
+		{% if 'rarity' + rarity in string.element[weapon.element].description %}
+			{{ string.element[weapon.element].description['rarity' + rarity] | markdown | safe }}
+		{% else %}
+			{{ string.element[weapon.element].description | markdown | safe }}
+		{% endif %}
+	</div>
 	{% if weapon.exclusiveEffect %}
 		{% for effect in weapon.exclusiveEffect %}
-			<h4 class="text-primary" data-variant="knockout">{{ effect.name }}</h4>
-			{{ effect.effect | markdown | safe }}
+			<div class="stack copy">
+				<h4 class="text-primary" data-variant="knockout">{{ effect.name }}</h4>
+				{{ effect.effect | markdown | safe }}
+			</div>
 		{% endfor %}
 	{% endif %}
 </div>

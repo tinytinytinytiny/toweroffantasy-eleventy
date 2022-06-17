@@ -33,3 +33,8 @@
 		</tbody>
 	</table>
 {% endblock %}
+
+{% block ending %}
+	{% set collection = 'relics' %}
+	{% include "partials/mini-list.html" %}
+{% endblock %}

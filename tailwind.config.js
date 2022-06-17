@@ -33,9 +33,6 @@ module.exports = {
 		}
 	},
 	safelist: [
-		'bg-primary',
-		'bg-secondary',
-		'bg-tertiary',
 		'text-step-3'
 	],
 	variantOrder: [

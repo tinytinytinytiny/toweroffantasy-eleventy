@@ -26,52 +26,17 @@ module.exports = {
 			},
 			skills: {
 				normal: [
-					{
-						name: 'Dual Fire',
-						desc: 'While on the ground, tap normal attack to attack 5 times in a row.',
-						breakdown: [
-							'Deal total damage equal to **47.1%** of ATK + **2**.',
-							'Deal total damage equal to **35.8%** of ATK + **2**.',
-							'Deal total damage equal to **119.7%** of ATK + **6**.',
-							'Deal total damage equal to **113.1%** of ATK + **6**.',
-							'Deal total damage equal to **154%** of ATK + **8** and **launch** the target.'
-						]
-					},
-					{
-						name: 'Bullet Rain',
-						desc: 'While airborne, tap normal attack to fire continuously at the ground, dealing damage equal to ??% of ATK + ?? each hit. Consumes 150 Endurance.'
-					},
-					{
-						name: 'Energy Burst',
-						desc: 'Hold attack button to maintain constant fire, each hit dealing **23%** × ATK + **1** base damage.'
-					},
-					{
-						name: 'Phantom Kick',
-						desc: 'While airborne, tap and hold normal attack to trigger Phantom Kick. Knock the target down and deal damage equal to **70.5%** of ATK + **4**. Upon landing, deal damage equal to **98.7%** of ATK + **5** to nearby targets and **launch** them.'
-					}
+					'dual-fire',
+					'bullet-rain',
+					'energy-burst',
+					'phantom-kick'
 				],
 				dodge: [
-					{
-						name: 'Dodge',
-						desc: 'Dodge right before getting hit to trigger a Phantasia, reducing the speed of enemies within an area. Become immune to hitstun for **0.5** seconds while dodging.'
-					},
-					{
-						name: 'Rising Lightning Kick',
-						desc: 'Tap normal attack after dodging to **knock targets into the air** and deal damage equal to **122.6%** of ATK + **6**.'
-					}
+					'dodge',
+					'rising-kick'
 				],
-				skill: [
-					{
-						name: 'Electro Field',
-						desc: 'Fire an energy field at the target location, reflecting beams within the barrier. Deal damage equal to **269.8%** of ATK + **14**, and the last hit launches targets **into the air**. **45**-second cooldown.'
-					}
-				],
-				discharge: [
-					{
-						name: 'Domain of Thunder',
-						desc: 'When ***weapon charge is full*** or ***Phantasia*** is triggered, **remove all debuffs from the wielder**, and create a Domain of Thunder at the target location upon switching to this weapon, dealing a total of **238.3%** of ATK + **13** damage over 3 attacks to enemies **within the area** and dispelling their buffs. The domain lasts for **3.5** seconds and deals damage equal to **42.4%** of ATK + **2** to a target every **0.5** seconds.'
-					}
-				]
+				skill: ['electro-field'],
+				discharge: ['thunder-domain']
 			},
 			mimicEffects: [
 				{

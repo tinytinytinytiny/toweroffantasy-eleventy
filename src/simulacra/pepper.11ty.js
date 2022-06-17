@@ -26,67 +26,18 @@ module.exports = {
 			},
 			skills: {
 				normal: [
-					{
-						name: 'Normal Attack',
-						desc: 'While on the ground, swing the staff to attack 5 times in a row.',
-						breakdown: [
-							'Deal damage equal to **25.1%** of ATK + **1**.',
-							'Deal damage equal to **18.8%** of ATK + **1**.',
-							'Deal damage equal to **30.4%** of ATK + **2**.',
-							'Deal damage equal to **41.4%** of ATK + **2**.',
-							'Deal damage equal to **73.2%** of ATK + **4**.'
-						]
-					},
-					{
-						name: 'Soaring Barrage',
-						desc: 'While airborne or after jumping once, tap normal attack to attack 5 times in a row.',
-						breakdown: [
-							'Deal damage equal to **32.5%** of ATK + **2**.',
-							'Deal damage equal to **23.5%** of ATK + **1**.',
-							'Deal damage equal to **25.5%** of ATK + **1**.',
-							'Deal damage equal to **45.6%** of ATK + **2**',
-							'Deal damage equal to **47.7%** of ATK + **3**.'
-						]
-					},
-					{
-						name: 'Moonfall',
-						desc: 'Tap and hold normal attack while airborne to trigger Moonfall. Upon landing, deal damage once every **0.2** seconds, for a total of **57.2%** of ATK + **3** damage.'
-					},
-					{
-						name: 'Focused Assault',
-						desc: 'After the third normal attack, hold the normal attack button to trigger branch attacks, consuming **300** points of endurance.',
-						breakdown: [
-							'Pull in enemies in front of the user, knocking them **into the air** and dealing damage equal to **16.1%** of ATK + **1** every **0.3** seconds (up to **4** times).',
-							'Deal damage equal to **18.6%** of ATK + **1** at the target location and to nearby enemies every **0.3** seconds.'
-						]
-					}
+					'normal-attack',
+					'soaring-barrage',
+					'moonfall',
+					'focused-assault'
 				],
 				dodge: [
-					{
-						name: 'Dodge',
-						desc: 'Dodge right before getting hit to activate a Phantasia, which reduces the speed of enemies within the area. Cooldown: 15 seconds. While dodging, you gain hitstun immunity for **0.5** seconds.'
-					},
-					{
-						name: 'Surge',
-						desc: 'Tap normal attack during the short perfect dodge window (tap an arrow button before dodging) to trigger Surge. Each wave of energy deals damage equal to **22.6%** of ATK + **1** to targets. Grant **75** weapon charge points upon use.'
-					},
-					{
-						name: 'Tesseract',
-						desc: 'Tap normal attack during the short period after dodging to trigger Evasive Blast. Fire an energy orb forward, dealing damage equal to **32.1%** of ATK + **2** to targets in its path every **0.3** seconds (up to 5 times). Grant **75** weapon charge points upon use.'
-					}
+					'dodge',
+					'surge',
+					'tesseract'
 				],
-				skill: [
-					{
-						name: 'Sanctuary',
-						desc: 'Create an energy shield at the Wanderer’s location. Heal allies within the shield for **81.7%** of ATK + **4** every second and reduce their damage taken by **3%** for **10** seconds. **60**-second cooldown.'
-					}
-				],
-				discharge: [
-					{
-						name: 'Swift Deliverance',
-						desc: 'When a ***weapon is fully charged*** or triggers ***Phantasia***, switching to this weapon from another weapon **removes all debuffs from the wielder**, and the staff continues to remove debuffs from the Wanderer and allies, plus healing nearby Wanderers and allies for **79%** × ATK + **4** HP for **7** seconds.'
-					}
-				]
+				skill: ['sanctuary'],
+				discharge: ['swift-deliverance']
 			},
 			mimicEffects: [
 				{

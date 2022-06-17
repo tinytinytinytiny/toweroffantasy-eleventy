@@ -184,12 +184,17 @@ small {
 	font-size: theme('fontSize.step--1');
 }
 
-ul[class] {
+ul[class], ol[class] {
 	padding: 0;
 }
 
 ul[class] > li {
 	list-style: none;
+}
+
+ul:not([class]) > li + li,
+ol:not([class]) > li + li {
+	margin-top: theme('spacing.xs');
 }
 
 summary {

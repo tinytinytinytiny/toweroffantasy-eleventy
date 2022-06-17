@@ -1,0 +1,12 @@
+.mini-list {
+	--gutter: theme('spacing.xs');	
+}
+
+.mini-list li {
+	margin-right: theme('spacing.xs');
+}
+
+.mini-list [data-state="active"] {
+	color: theme('colors.primary');
+	font-weight: bold;
+}

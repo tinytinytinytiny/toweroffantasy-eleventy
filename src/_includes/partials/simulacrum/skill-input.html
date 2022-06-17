@@ -1,0 +1,26 @@
+{% set separator = joiner('+') %}
+<kbd class="cluster">
+	{% for input in skill.input %}
+		{{ separator() | safe }}
+		{% if input === 'Arrow' %}
+			<kbd data-variant="arrow">
+				{% include "icons/arrow-left.svg" %}
+			</kbd>
+			<kbd data-variant="arrow">
+				{% include "icons/arrow-up.svg" %}
+			</kbd>
+			<kbd data-variant="arrow">
+				{% include "icons/arrow-down.svg" %}
+			</kbd>
+			<kbd data-variant="arrow">
+				{% include "icons/arrow-right.svg" %}
+			</kbd>
+		{% elif input.includes('hold:') %}
+			<kbd data-variant="hold">
+				{{ 'Hold ' + input.split(':')[1] }}
+			</kbd>
+		{% else %}
+			<kbd>{{ input }}</kbd>
+		{% endif %}
+	{% endfor %}
+</kbd>

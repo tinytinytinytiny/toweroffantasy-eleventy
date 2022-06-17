@@ -49,6 +49,11 @@
 	{% endfor %}
 {% endblock %}
 
+{% block ending %}
+	{% set collection = 'matrices' %}
+	{% include "partials/mini-list.html" %}
+{% endblock %}
+
 {% block scripts %}
 	<script src="/js/expand-details.js"></script>
- {% endblock %}
+{% endblock %}

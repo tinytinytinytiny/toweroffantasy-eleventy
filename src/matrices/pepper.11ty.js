@@ -10,6 +10,6 @@ module.exports = {
 		};
 	},
 	render({ values }) {
-		return values.map(value => `Increase speed of obtaining weapon charge by **${value}**.`);
+		return values.map(value => [`Increase speed of obtaining weapon charge by **${value}**.`]);
 	}
 };

@@ -26,3 +26,8 @@
 	<h2 id="character-info">Character Info</h2>
 	{% include "partials/simulacrum/character-info.html" %}
 {% endblock %}
+
+{% block ending %}
+	{% set collection = 'simulacra' %}
+	{% include "partials/mini-list.html" %}
+{% endblock %}
