@@ -5,3 +5,12 @@ path = "/damage-calculator/"
 [[edge_functions]]
 function = "calculate-damage"
 path = "/damage-calculator/"
+
+[[headers]]
+	for = "/service-worker.js"
+	[headers.values]
+		Cache-Control = '''
+		max-age=0,
+		no-cache,
+		no-store,
+		must-revalidate'''

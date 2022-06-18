@@ -44,22 +44,10 @@ module.exports = (config) => {
 		const content = md.render(children);
 		return content;
 	});
-	config.addPairedShortcode('aside', (children) => {
-		const content = md.render(children);
-		return `<aside class="sheet stack" data-border="left" data-border-color="secondary">${content}</aside>`
-	});
-	config.addPairedShortcode('bigTable', (children, stretch) => {
-		const content = md.render(children);
-		return `<div class="big-table wrapper" ${(stretch) ? 'data-width="stretch"' : ''}>${content}</div>`;
-	});
-	config.addPairedShortcode('sheet', (children, border = 'top', borderColor = 'primary') => {
-		const content = md.render(children);
-		return `<div class="sheet copy stack" data-border="${border}" data-border-color="${borderColor}">${content}</div>`;
-	});
-	config.addPairedShortcode('details', (children, summary) => {
-		const content = md.render(children);
-		return `<details class="stack copy"><summary class="chip">${summary}</summary>${content}</details>`;
-	});
+	config.addPairedShortcode('aside', require('./src/shortcodes/aside.js'));
+	config.addPairedShortcode('bigTable', require('./src/shortcodes/big-table.js'));
+	config.addPairedShortcode('sheet', require('./src/shortcodes/sheet.js'));
+	config.addPairedShortcode('details', require('./src/shortcodes/details.js'));
 
 	config.addCollection('changelog', (collection) => {
 		return [...collection.getFilteredByGlob('./src/changelog/*.md')].reverse();

@@ -11,15 +11,19 @@
 					{% for item in items | sortBy(['isNew', 'isChina', 'name']) | reverse %}
 						<li>
 							<a
+								class="chip backdrop-filter-none"
 								href="/{{ collection }}/{{ item.fileSlug }}"
 								{% if item.fileSlug === page.fileSlug %}
 									aria-current="page"
-									data-state="active"
 								{% endif %}
-								data-variant="hover"
+								data-variant="hover {{ 'knockout' if item.fileSlug === page.fileSlug }}"
 							>
 								{% if item.data.isChina %}
-									{% china %}
+									{% if item.fileSlug === page.fileSlug %}
+										{% china 'black' %}
+									{% else %}
+										{% china %}
+									{% endif %}
 								{% endif %}
 								{{ item.data.name }}
 							</a>

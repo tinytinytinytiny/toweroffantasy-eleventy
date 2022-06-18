@@ -2,7 +2,7 @@ const cacheName = 'my-cache';
 
 const filesToCache = [
 	'/',
-	'/css/global.css',
+	// '/css/global.css',
 	'/js/main.js',
 	'/assets/images/fixed_btn_cbt_small.png',
 	'/assets/images/art/weila.png',
