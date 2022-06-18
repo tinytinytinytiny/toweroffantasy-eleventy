@@ -1,6 +1,6 @@
 module.exports = {
 	name: 'Normal Attack',
-	input: ['Attack', 'Attack', 'Attack', 'Attack', 'Attack'],
+	input: ['Attack × 5'],
 	desc: 'While on the ground, manipulate the cube to attack 5 times in a row.\n\n*If normal attacks hit targets 6 times, gain 1 cube. Up to 5 cubes can be stored.*',
 	breakdown: [
 		'Deal damage equal to **35.9%** of ATK + **2**.',

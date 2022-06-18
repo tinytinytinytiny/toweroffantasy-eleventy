@@ -18,6 +18,9 @@
 								{% endif %}
 								data-variant="hover"
 							>
+								{% if item.data.isChina %}
+									{% china %}
+								{% endif %}
 								{{ item.data.name }}
 							</a>
 						</li>

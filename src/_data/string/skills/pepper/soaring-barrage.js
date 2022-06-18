@@ -1,6 +1,6 @@
 module.exports = {
 	name: 'Soaring Barrage',
-	input: ['Jump', 'Attack', 'Attack', 'Attack', 'Attack', 'Attack'],
+	input: ['Jump', 'Attack × 5'],
 	desc: 'While airborne or after jumping once, tap normal attack to attack 5 times in a row.',
 	breakdown: [
 		'Deal damage equal to **32.5%** of ATK + **2**.',

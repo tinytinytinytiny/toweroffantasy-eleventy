@@ -11,6 +11,9 @@
 {% set extraClassNames = 'highlight-bold' %}
 
 {% block content %}
+	{% if isChina %}
+		{% include "partials/china-disclaimer.html" %}
+	{% endif %}
 	<h2>Relic Effect</h2>
 	{{ description | markdown | safe }}
 	<h2>Awakening</h2>

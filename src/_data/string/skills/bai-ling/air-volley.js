@@ -1,6 +1,6 @@
 module.exports = {
 	name: 'Air Volley',
-	input: ['Jump', 'Attack', 'Attack', 'Attack', 'Attack'],
+	input: ['Jump', 'Attack × 4'],
 	desc: 'While airborne, tap normal attack to attack 4 times in a row in the air.',
 	breakdown: [
 		'Deal damage equal to **38.8%** of ATK + **2**.',

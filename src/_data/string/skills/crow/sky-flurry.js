@@ -1,6 +1,6 @@
 module.exports = {
 	name: 'Sky Flurry',
-	input: ['Jump', 'Attack', 'Attack', 'Attack', 'Attack'],
+	input: ['Jump', 'Attack × 4'],
 	desc: 'While airborne or after jumping once, tap normal attack to attack 4 times in a row.',
 	breakdown: [
 		['46.8%', '2'],

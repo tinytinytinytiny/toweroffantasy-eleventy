@@ -1,6 +1,6 @@
 module.exports = {
 	name: 'Twin Blades',
-	input: ['Attack', 'Attack', 'Attack', 'Attack', 'Attack'],
+	input: ['Attack × 5'],
 	desc: 'While on the ground, swing the blades to attack 5 times in a row.',
 	breakdown: [
 		['42.9%', '2'],

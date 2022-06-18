@@ -1,6 +1,6 @@
 module.exports = {
 	name: 'Normal Attack',
-	input: ['Attack', 'Attack', 'Attack', 'Attack', 'Attack'],
+	input: ['Attack × 5'],
 	desc: 'While on the ground, swing the staff to attack 5 times in a row.',
 	breakdown: [
 		'Deal damage equal to **25.1%** of ATK + **1**.',

@@ -1,6 +1,6 @@
 module.exports = {
 	name: 'Rising Scythe',
-	input: ['Jump', 'Attack', 'Attack', 'Attack', 'Attack', 'Attack'],
+	input: ['Jump', 'Attack × 5'],
 	desc: 'While airborne or after jumping once, attack 5 times in a row.',
 	breakdown: [
 		'Deal damage equal to **57.6%** of ATK + **3**.',

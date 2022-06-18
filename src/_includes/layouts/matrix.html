@@ -12,6 +12,9 @@
 {% set extraClassNames = 'highlight-bold' %}
 
 {% block content %}
+	{% if isChina %}
+		{% include "partials/china-disclaimer.html" %}
+	{% endif %}
 	{% for i in range(0, sets.length) %}
 		<h2 id="set-{{ sets[i] }}">{{ sets[i] }}-Set</h2>
 		{{ content[0][i] | markdown | safe }}

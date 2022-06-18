@@ -1,6 +1,6 @@
 module.exports = {
 	name: 'Normal Attack',
-	input: ['Attack', 'Attack', 'Attack', 'Attack'],
+	input: ['Attack × 4'],
 	desc: 'While on the ground, swing the hammer to attack 4 times in a row.',
 	breakdown: [
 		[

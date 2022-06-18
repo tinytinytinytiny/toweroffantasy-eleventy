@@ -1,6 +1,6 @@
 module.exports = {
 	name: 'Thrust',
-	input: ['Attack', 'Attack', 'Attack', 'Attack', 'Attack'],
+	input: ['Attack × 5'],
 	desc: 'While on the ground, swing the spear to attack 5 times in a row.',
 	breakdown: [
 		'Deal damage equal to **24.7%** of ATK + **1** and knock the target back a short distance.',

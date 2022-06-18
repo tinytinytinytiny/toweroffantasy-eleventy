@@ -1,6 +1,6 @@
 module.exports = {
 	name: 'Jumping Strike',
-	input: ['Jump', 'Attack', 'Attack', 'Attack', 'Attack'],
+	input: ['Jump', 'Attack × 4'],
 	desc: 'While airborne, tap normal attack to attack 4 times in a row.',
 	breakdown: [
 		'Deal damage equal to **23.2%** of ATK + **1**.',

@@ -9,9 +9,11 @@
 {% endblock %}
 
 {% block content %}
+	{% if isChina %}
+		{% include "partials/china-disclaimer.html" %}
+	{% endif %}
 	<h2 id="weapon">Weapon</h2>
 	{% include "partials/simulacrum/weapon-info.html" %}
-	<h3>Weapon Effect</h3>
 	{% include "partials/simulacrum/weapon-effect.html" %}
 	{% include "partials/simulacrum/awakening.html" %}
 	{% include "partials/simulacrum/materials.html" %}
@@ -30,4 +32,8 @@
 {% block ending %}
 	{% set collection = 'simulacra' %}
 	{% include "partials/mini-list.html" %}
+{% endblock %}
+
+{% block scripts %}
+	<script src="/js/expand-details.js"></script>
 {% endblock %}
