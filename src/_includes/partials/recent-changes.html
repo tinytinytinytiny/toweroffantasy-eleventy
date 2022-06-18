@@ -1,11 +1,13 @@
 <h2>Recent Changes</h2>
-<div class="changelog sheet scroll-box mt-s stack" data-border="none">
-	{% for item in changeLogItems %}
-	<article>
-		<h3>{{ item.date | stringifyDate }}</h3>
-		<p>{{ item.template.frontMatter.content }}</p>
-	</article>
-	{% endfor %}
+<div class="changelog sheet scroll-box mt-s" data-border="none">
+	<div class="stack">
+		{% for item in changeLogItems %}
+		<article>
+			<h3>{{ item.date | stringifyDate }}</h3>
+			<p>{{ item.template.frontMatter.content }}</p>
+		</article>
+		{% endfor %}
+	</div>
 </div>
 <p class="text-right">
 	<a class="button" href="/changelog/">Full Changelog {% include "icons/arrow-right.svg" %}</a>

@@ -11,7 +11,7 @@
 	{% if weapon.exclusiveEffect %}
 		{% for effect in weapon.exclusiveEffect %}
 			<div class="stack copy">
-				<h4 class="text-primary" data-variant="knockout">{{ effect.name }}</h4>
+				<h4 class="text-primary">{{ effect.name }}</h4>
 				{{ effect.effect | markdown | safe }}
 			</div>
 		{% endfor %}

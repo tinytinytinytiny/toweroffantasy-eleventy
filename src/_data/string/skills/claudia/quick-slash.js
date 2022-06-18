@@ -1,5 +1,5 @@
 module.exports = {
-	name: 'Quick slash',
+	name: 'Quick Slash',
 	input: ['Attack × 5'],
 	desc: 'While on the ground, swing the blade to attack 5 times in a row.',
 	breakdown: [

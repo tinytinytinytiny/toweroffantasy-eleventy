@@ -1,4 +1,7 @@
-.stack > * + * {
+.stack {
 	--stack-space: 1em;
+}
+
+.stack > * + * {
 	margin-top: var(--stack-space);
 }
