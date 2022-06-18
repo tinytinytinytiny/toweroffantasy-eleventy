@@ -1,24 +1,25 @@
 kbd {
-	--gutter: theme('spacing.2xs');
+	--gutter: 1ch;
 	font-family: theme('fontFamily.sans');
-	font-weight: bold;
 }
 
 kbd > kbd {
-	@apply shadow-sm;
+	@apply shadow-md;
 	--key-color: theme('colors.base');
 	align-items: center;
 	background-color: var(--key-color);
-	background-image: radial-gradient(var(--key-color), transparent), linear-gradient(0deg, rgba(0, 0, 0, 0.2), transparent);
-	border: 1px solid theme('colors.sheet.0');
-	border-radius: 2px;
-	box-shadow: var(--tw-shadow), inset 0 0 0 1px var(--key-color);
+	background-image: radial-gradient(var(--key-color), transparent), linear-gradient(180deg, rgba(0, 0, 0, 0.2), transparent);
+	border: 0.1em solid theme('colors.sheet.0');
+	border-radius: 0.16em;
+	box-shadow: var(--tw-shadow), inset 0 0.1em 0 var(--key-color), inset 0 -0.12em 0.08em 0.1em rgba(0, 0, 0, 0.3);
 	color: #000;
 	display: inline-flex;
-	font-size: theme('fontSize.step--1');
+	font-size: theme('fontSize.step-0');
+	font-weight: bold;
 	height: 2.2em;
 	justify-content: center;
 	line-height: 1;
+	padding-bottom: 0.12em;
 	padding-left: 0.6em;
 	padding-right: 0.6em;
 }
@@ -28,7 +29,8 @@ kbd svg {
 }
 
 kbd[data-variant="arrow"] {
-	padding: 0;
+	padding-left: 0;
+	padding-right: 0;
 	width: 2.2em;
 }
 

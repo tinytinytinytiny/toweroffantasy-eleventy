@@ -54,5 +54,5 @@
 .copy > summary + h3,
 .copy > summary + h4,
 .copy > summary + p {
-	--stack-space: 1em;
+	--stack-space: 1.32em;
 }

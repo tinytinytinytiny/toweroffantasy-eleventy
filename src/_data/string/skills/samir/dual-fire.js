@@ -1,6 +1,6 @@
 module.exports = {
 	name: 'Dual Fire',
-	input: ['Attack × 5'],
+	input: ['Attack ×5'],
 	desc: 'While on the ground, tap normal attack to attack 5 times in a row.',
 	breakdown: [
 		'Deal total damage equal to **47.1%** of ATK + **2**.',

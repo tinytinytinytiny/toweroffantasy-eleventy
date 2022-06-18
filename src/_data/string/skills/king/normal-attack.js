@@ -1,6 +1,6 @@
 module.exports = {
 	name: 'Normal Attack',
-	input: ['Attack × 5'],
+	input: ['Attack ×5'],
 	desc: 'While on the ground, swing the scythe to launch 5 consecutive attacks.',
 	breakdown: [
 		'Deal damage equal to **51.9%** of ATK + **3** and knock the target back a short distance.',

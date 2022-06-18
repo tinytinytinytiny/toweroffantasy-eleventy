@@ -3,18 +3,18 @@
 </p>
 {% for category, list in skills | entries | reverse %}
 	<details class="stack copy" {% if loop.index > 1 %}data-collapse="always"{% endif %}>
-		<summary class="chip"><h3>{{ string.skillCategories[category] }}</h3></summary>
-		<div class="stack with-rule">
+		<summary class="chip">{{ string.skillCategories[category] }}</summary>
+		<div class="sheet stack mt-0 p-s-m" data-border="none">
 			{% for skillSlug in list %}
-				{% if skillSlug in string.skills[page.fileSlug] %}
-					{% set skill = string.skills[page.fileSlug][skillSlug] %}
-				{% else %}
-					{% set skill = string.skills[skillSlug] %}
-				{% endif %}
-				<div class="stack copy">
-					<h4 class="text-primary">{{ skill.name }}</h4>
+				<div class="sheet stack copy" data-layer="1">
+					{% if skillSlug in string.skills[page.fileSlug] %}
+						{% set skill = string.skills[page.fileSlug][skillSlug] %}
+					{% else %}
+						{% set skill = string.skills[skillSlug] %}
+					{% endif %}
+					<h3>{{ skill.name }}</h3>
 					{% if skill.input %}
-						{% include "partials/simulacrum/skill-input.html" %}					
+						{% include "partials/simulacrum/skill-input.html" %}
 					{% endif %}
 					{{ skill.desc | markdown | safe }}
 					{% if skill.breakdown %}

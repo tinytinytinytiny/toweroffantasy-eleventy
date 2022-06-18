@@ -1,6 +1,6 @@
 module.exports = {
 	name: 'Quickdraw',
-	input: ['Attack × 5'],
+	input: ['Attack ×5'],
 	desc: 'While on the ground, draw the bow repeatedly to attack 5 times.',
 	breakdown: [
 		'Deal damage equal to **33.7%** of ATK + **2**.',

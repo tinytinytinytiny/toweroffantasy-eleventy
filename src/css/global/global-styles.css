@@ -125,6 +125,10 @@ summary:focus {
 	outline-offset: 0.2em;
 }
 
+summary:focus {
+	outline-offset: 0.15em;
+}
+
 aside > * {
 	--stack-space: 1em;
 }
