@@ -2,6 +2,25 @@
 	--stack-space: theme('spacing.m');
 }
 
+.copy > figure,
+.copy > figure + *,
+.copy > hr,
+.copy > hr + * {
+	--stack-space: theme('spacing.xl');
+}
+
+.copy > aside,
+.copy > aside + * {
+	--stack-space: theme('spacing.l');
+}
+
+.copy > summary + h2,
+.copy > summary + h3,
+.copy > summary + h4,
+.copy > summary + p {
+	--stack-space: 1.32em;
+}
+
 .copy > h2 {
 	--stack-space: theme('spacing.2xl');
 }
@@ -36,23 +55,4 @@
 
 .copy > h4 + * {
 	--stack-space: theme('spacing.2xs');
-}
-
-.copy > figure,
-.copy > figure + *,
-.copy > hr,
-.copy > hr + * {
-	--stack-space: theme('spacing.xl');
-}
-
-.copy > aside,
-.copy > aside + * {
-	--stack-space: theme('spacing.l');
-}
-
-.copy > summary + h2,
-.copy > summary + h3,
-.copy > summary + h4,
-.copy > summary + p {
-	--stack-space: 1.32em;
 }

@@ -1,5 +1,5 @@
-{% set separator = joiner('<span class="text-step-1">+</span>') %}
-<kbd class="cluster">
+{% set separator = joiner('+') %}
+<kbd class="cluster mt-2xs" data-size="m">
 	{% for input in skill.input %}
 		{{ separator() | safe }}
 		{% if input === 'Arrow' %}

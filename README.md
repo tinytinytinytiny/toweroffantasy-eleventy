@@ -3,7 +3,8 @@
 this is a ripoff of https://toweroffantasy.info/ by senior developer Zakum
 
 ## Live Website
-https://tinytinytiny.netlify.app/
+https://tinytinytiny.netlify.app/  
+[![Netlify Status](https://api.netlify.com/api/v1/badges/fd2ac69f-23df-453b-a484-a4dfc845f21f/deploy-status)](https://app.netlify.com/sites/tinytinytiny/deploys)
 
 ## Don’t Sue Me I Don’t Get Paid Enough
 

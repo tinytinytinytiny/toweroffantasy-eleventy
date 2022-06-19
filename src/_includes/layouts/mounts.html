@@ -7,7 +7,7 @@
 				<img class="!m-0" src="/assets/images/mount/{{ mount }}.png" alt="" width="308" height="206" loading="{{ 'lazy' if loop.index > 3 else 'auto' }}">
 			</div>
 			<div class="stack copy">
-				<h2 data-appearance="none">{{ items.mounts[mount].name }} {% if items.mounts[mount].isChina %}{% china %}{% endif %}</h2>
+				<h2 id="{{ items.mounts[mount].name | slugify }}" data-appearance="none">{{ items.mounts[mount].name }} {% if items.mounts[mount].isChina %}{% china %}{% endif %}</h2>
 				{{ items.mounts[mount].source | markdown | safe }}
 				{% if items.mounts[mount].materials %}
 					<details>

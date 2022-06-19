@@ -40,6 +40,7 @@ module.exports = (config) => {
 	config.addShortcode('year', () => `${new Date().getFullYear()}`);
 	config.addShortcode('china', require('./src/shortcodes/china.js'));
 	config.addShortcode('cum', require('./src/shortcodes/cum.js'));
+	config.addShortcode('kbd', require('./src/shortcodes/kbd.js'));
 	config.addPairedShortcode('markdown', (children) => {
 		const content = md.render(children);
 		return content;
@@ -62,7 +63,7 @@ module.exports = (config) => {
 		return collection.getFilteredByGlob('./src/relics/*.11ty.js');
 	});
 	config.addCollection('guides', (collection) => {
-		return collection.getFilteredByGlob('./src/guides/*');
+		return [...collection.getFilteredByGlob('./src/guides/*')].reverse();
 	});
 
 	config.addTransform('htmlmin', htmlMinTransform);
