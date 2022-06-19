@@ -1,4 +1,4 @@
-const cacheName = 'my-cache';
+const cacheName = 'my-cache-06192022';
 
 const filesToCache = [
 	'/',
@@ -18,6 +18,7 @@ const filesToCache = [
 self.addEventListener('activate', e => self.clients.claim());
 
 self.addEventListener('install', (e) => {
+	self.skipWaiting();
 	e.waitUntil(
 		caches.open(cacheName)
 		.then(cache => cache.addAll(filesToCache))

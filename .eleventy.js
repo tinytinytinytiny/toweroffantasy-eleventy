@@ -63,7 +63,22 @@ module.exports = (config) => {
 		return collection.getFilteredByGlob('./src/relics/*.11ty.js');
 	});
 	config.addCollection('guides', (collection) => {
-		return [...collection.getFilteredByGlob('./src/guides/*')].reverse();
+		return [...collection.getFilteredByGlob('./src/guides/*')
+			.sort((a, b) => {
+				if (typeof(a.data.displayOrder) === 'undefined' && typeof(b.data.displayOrder) === 'undefined') {
+					return 0;
+				}
+
+				if (typeof(a.data.displayOrder) === 'undefined') {
+					return -1;
+				}
+
+				if (typeof(b.data.displayOrder) === 'undefined') {
+					return 1;
+				}
+
+				return Number(a.data.displayOrder) - Number(b.data.displayOrder);
+			})].reverse();
 	});
 
 	config.addTransform('htmlmin', htmlMinTransform);

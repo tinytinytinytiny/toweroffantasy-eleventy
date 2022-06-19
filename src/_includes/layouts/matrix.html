@@ -1,7 +1,7 @@
 {% extends "layouts/base.html" %}
 
 {% set title = name %}
-{% if rarity > 3 %}
+{% if rarity > 3 and not bgImg %}
 	{% set background = 'art/' + page.fileSlug + '.png' %}
 {% endif %}
 

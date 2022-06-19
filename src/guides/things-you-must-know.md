@@ -2,7 +2,8 @@
 {
 	"title": "Things You MUST Know",
 	"authors": ["Zakum#3080"],
-	"tags": ["gathering"]
+	"tags": ["gathering"],
+	"displayOrder": 1
 }
 ---
 
