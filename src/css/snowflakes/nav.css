@@ -18,7 +18,7 @@
 	background-color: theme('colors.sheet.0');
 }
 
-.nav summary::-webkit-details-marfker,
+.nav summary::-webkit-details-marker,
 .nav summary::marker {
 	display: none;
 }
@@ -48,7 +48,13 @@
 
 .nav__links {
 	--gutter: 1.81rem;
-	--grid-min-item-size: max(15rem, calc(50vw - var(--wrapper-padding) - var(--gutter)));
+	--grid-min-item-size: max(12rem, calc(50vw - var(--wrapper-padding) - var(--gutter)));
+}
+
+@supports (padding: max(0px)) {
+	.nav__links {
+		--grid-min-item-size: max(12rem, calc(50vw - var(--wrapper-padding) - calc((env(safe-area-inset-left) + env(safe-area-inset-right)) / 2) - var(--gutter)));
+	}
 }
 
 .nav__links::before {
