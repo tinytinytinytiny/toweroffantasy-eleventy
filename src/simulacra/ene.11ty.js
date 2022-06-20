@@ -72,27 +72,10 @@ module.exports = {
 					'toys'
 				],
 				items: [
-					['prince-tata-figure', 80],
-					['pepper-figure', 60],
-					['ufo', 60],
-					['fox-figure', 60],
-					['cat-figure', 60],
-					['present', 60],
-					['psp', 60],
-					['pearl', 60],
-					['snowglobe', 60],
-					['chess-set', 30],
-					['diary', 30],
-					['cat-plush', 30],
-					['tata-plush', 30],
-					['spider-figure', 30],
-					['elf-figure', 30],
-					['robot-figure', 30],
-					['bunny-doll', 30],
-					['photo-album', 15],
-					['trading-card', 15],
-					['pinwheel', 15],
-					['plant', 15]
+					[80, ['prince-tata-figure']],
+					[60, ['pepper-figure', 'ufo', 'fox-figure', 'cat-figure', 'present', 'psp', 'pearl', 'snowglobe']],
+					[30, ['chess-set', 'diary', 'cat-plush', 'tata-plush', 'spider-figure', 'elf-figure', 'robot-figure', 'bunny-doll']],
+					[15, ['photo-album', 'trading-card', 'pinwheel', 'plant']]
 				]
 			}
 		};

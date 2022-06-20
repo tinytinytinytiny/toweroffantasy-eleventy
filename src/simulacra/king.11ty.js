@@ -86,24 +86,9 @@ module.exports = {
 					'limited-time-items'
 				],
 				items: [
-					['seal', 60],
-					['gold-coin', 60],
-					['kitchenware', 60],
-					['tata-cards', 60],
-					['fox-figure', 60],
-					['cat-figure', 60],
-					['mia-figure', 60],
-					['tata-figure', 60],
-					['ufo', 60],
-					['psp', 60],
-					['snowglobe', 60],
-					['linye-figure', 60],
-					['necklace', 30],
-					['vial', 30],
-					['photo', 15],
-					['snack-box', 15],
-					['harmonica', 15],
-					['strange-plant', 15]
+					[60, ['seal', 'gold-coin', 'kitchenware', 'tata-cards', 'fox-figure', 'cat-figure', 'mia-figure', 'tata-figure', 'ufo', 'psp', 'snowglobe', 'linye-figure']],
+					[30, ['necklace', 'vial']],
+					[15, ['photo', 'snack-box', 'harmonica', 'strange-plant']]
 				]
 			}
 		};

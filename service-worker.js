@@ -1,4 +1,4 @@
-const cacheName = 'my-cache-06192022';
+const cacheName = 'my-cache-06192022a';
 
 const filesToCache = [
 	'/',
@@ -6,13 +6,13 @@ const filesToCache = [
 	'/js/main.js',
 	'/assets/images/fixed_btn_cbt_small.png',
 	'/assets/images/art/weila.png',
-	'/changelog/',
-	'/simulacra/',
-	'/matrices/',
-	'/relics/',
-	'/food/',
-	'/mounts/',
-	'/guides/'
+	'/changelog/'
+	// '/simulacra/',
+	// '/matrices/',
+	// '/relics/',
+	// '/food/',
+	// '/mounts/',
+	// '/guides/'
 ];
 
 self.addEventListener('activate', e => self.clients.claim());

@@ -71,24 +71,10 @@ module.exports = {
 					'games'
 				],
 				items: [
-					['psp', 80],
-					['tata-cards', 80],
-					['gold-coin', 60],
-					['ufo', 60],
-					['pepper-figure', 60],
-					['cat-figure', 60],
-					['pearl', 60],
-					['chess-set',	30],
-					['suit', 30],
-					['juice-pouch', 30],
-					['diary', 30],
-					['perfume', 30],
-					['tata-figure', 60],
-					['flowers', 15],
-					['snack-box', 15],
-					['trading-card', 15],
-					['harmonica', 15],
-					['scarf', 15]
+					[80, ['psp', 'tata-cards']],
+					[60, ['gold-coin', 'ufo', 'pepper-figure', 'cat-figure', 'pearl', 'tata-figure']],
+					[30, ['chess-set', 'suit', 'juice-pouch', 'diary', 'perfume']],
+					[15, ['flowers', 'snack-box', 'trading-card', 'harmonica', 'scarf']]
 				]
 			}
 		};

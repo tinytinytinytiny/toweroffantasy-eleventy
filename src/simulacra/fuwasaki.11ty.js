@@ -57,10 +57,9 @@ module.exports = {
 			gifts: {
 				categories: ['metalware', 'everyday-items', 'vera'],
 				items: [
-					['prince-tata-figure', 60],
-					['linye-figure', 60],
-					['strange-fragment', 40],
-					['strange-plant', 15]
+					[60, ['prince-tata-figure', 'linye-figure']],
+					[40, ['strange-fragment']],
+					[15, ['strange-plant']]
 				]
 			}
 		};

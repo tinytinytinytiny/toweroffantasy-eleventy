@@ -73,31 +73,10 @@ module.exports = {
 					'rare-items'
 				],
 				items: [
-					// [80, ['snowglobe', 'seal']],
-					// [60, ['mia-figure', 'gold-coin', 'fox-figure', 'cat-figure', 'ufo', 'pepper-figure', 'kitchenware', 'prince-tata-figure', 'linye-figure']],
-					// [30, ['necklace', 'vial', 'spider-figure', 'elf-figure']],
-					// [15, ['photo-album', 'harmonica', 'scarf', 'photo', 'plant', 'strange-plant']]
-					['snowglobe', 80],
-					['seal', 80],
-					['mia-figure', 60],
-					['gold-coin', 60],
-					['fox-figure', 60],
-					['cat-figure', 60],
-					['ufo', 60],
-					['pepper-figure',	60],
-					['kitchenware', 60],
-					['prince-tata-figure', 60],
-					['linye-figure', 60],
-					['necklace', 30],
-					['vial', 30],
-					['spider-figure', 30],
-					['elf-figure', 30],
-					['photo-album', 15],
-					['harmonica', 15],
-					['scarf', 15],
-					['photo', 15],
-					['plant', 15],
-					['strange-plant', 15]
+					[80, ['snowglobe', 'seal']],
+					[60, ['mia-figure', 'gold-coin', 'fox-figure', 'cat-figure', 'ufo', 'pepper-figure', 'kitchenware', 'prince-tata-figure', 'linye-figure']],
+					[30, ['necklace', 'vial', 'spider-figure', 'elf-figure']],
+					[15, ['photo-album', 'harmonica', 'scarf', 'photo', 'plant', 'strange-plant']]
 				]
 			}
 		};

@@ -81,13 +81,10 @@ module.exports = {
 			gifts: {
 				categories: ['metalware'],
 				items: [
-					['kitchenware', 80],
-					['present', 60],
-					['pearl', 60],
-					['bear-figure', 60],
-					['toolbox', 30],
-					['strange-fragment', 30],
-					['dumbbells', 15]
+					[80, ['kitchenware']],
+					[60, ['present', 'pearl', 'bear-figure']],
+					[30, ['toolbox', 'strange-fragment']],
+					[15, ['dumbbells']]
 				]
 			}
 		};

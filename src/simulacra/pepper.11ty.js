@@ -69,27 +69,10 @@ module.exports = {
 					'collectibles'
 				],
 				items: [
-					['pepper-figure', 80],
-					['seal', 60],
-					['tata-cards', 60],
-					['fox-figure', 60],
-					['cat-figure', 60],
-					['gold-coin', 60],
-					['snowglobe',	60],
-					['kitchenware', 60],
-					['prince-tata-figure', 60],
-					['linye-figure', 60],
-					['suit', 30],
-					['juice-pouch', 30],
-					['necklace', 30],
-					['perfume', 30],
-					['spider-figure', 30],
-					['elf-figure', 30],
-					['photo-album', 15],
-					['flowers', 15],
-					['scarf', 15],
-					['plant', 15],
-					['strange-plant', 15]
+					[80, ['pepper-figure']],
+					[60, ['seal', 'tata-cards', 'fox-figure', 'cat-figure', 'gold-coin', 'snowglobe', 'kitchenware', 'prince-tata-figure', 'linye-figure']],
+					[30, ['suit', 'juice-pouch', 'necklace', 'perfume', 'spider-figure', 'elf-figure']],
+					[15, ['photo-album', 'flowers', 'scarf', 'plant', 'strange-plant']]
 				]
 			}
 		};

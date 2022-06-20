@@ -85,23 +85,10 @@ module.exports = {
 					'rare-items'
 				],
 				items: [
-					['tata-plush', 80],
-					['seal', 60],
-					['mia-figure', 80],
-					['tata-cards', 60],
-					['bear-figure', 60],
-					['cat-figure', 60],
-					['ufo', 60],
-					['psp', 60],
-					['gold-coin',	60],
-					['snowglobe', 60],
-					['linye-figure', 60],
-					['vial', 30],
-					['pumpkin-figure', 30],
-					['android-figure', 30],
-					['harmonica', 15],
-					['photo', 15],
-					['snack-box', 15]
+					[80, ['tata-plush']],
+					[60, ['seal', 'mia-figure', 'tata-cards', 'bear-figure', 'cat-figure', 'ufo', 'psp', 'gold-coin', 'snowglobe', 'linye-figure']],
+					[30, ['vial', 'pumpkin-figure', 'android-figure']],
+					[15, ['harmonica', 'photo', 'snack-box']]
 				]
 			}
 		};

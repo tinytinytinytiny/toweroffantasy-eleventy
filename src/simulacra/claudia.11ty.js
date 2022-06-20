@@ -70,26 +70,10 @@ module.exports = {
 					'decorations'
 				],
 				items: [
-					['snowglobe', 80],
-					['pepper-figure', 80],
-					['seal', 60],
-					['tata-cards', 60],
-					['cat-figure', 60],
-					['mia-figure', 60],
-					['prince-tata-figure', 60],
-					['ufo', 60],
-					['suit', 30],
-					['juice-pouch', 30],
-					['vial', 30],
-					['perfume', 30],
-					['spider-figure', 30],
-					['elf-figure', 30],
-					['photo', 15],
-					['photo-album', 15],
-					['scarf', 15],
-					['flowers', 15],
-					['harmonica', 15],
-					['plant', 15]
+					[80, ['snowglobe', 'pepper-figure']],
+					[60, ['seal', 'tata-cards', 'cat-figure', 'mia-figure', 'prince-tata-figure', 'ufo']],
+					[30, ['suit', 'juice-pouch', 'vial', 'perfume', 'spider-figure', 'elf-figure']],
+					[15, ['photo', 'photo-album', 'scarf', 'flowers', 'harmonica', 'plant']]
 				]
 			}
 		};

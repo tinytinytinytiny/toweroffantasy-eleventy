@@ -27,7 +27,11 @@
 }
 
 [data-bg="claudia"] {
-	--background-offset: 350px;	
+	--background-offset: 350px;
+}
+
+[data-bg="cobalt-b"] {
+	--background-offset: 450px;
 }
 
 [data-bg="coco-ritter"] {
@@ -46,6 +50,18 @@
 	--background-offset: 370px;
 }
 
+[data-bg="huma"] {
+	--background-offset: 370px;
+}
+
 [data-bg="pepper"] {
+	--background-offset: 400px;
+}
+
+[data-bg="meryl"] {
+	--background-offset: 370px;
+}
+
+[data-bg="shiro"] {
 	--background-offset: 400px;
 }

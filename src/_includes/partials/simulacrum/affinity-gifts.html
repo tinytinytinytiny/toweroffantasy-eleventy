@@ -6,7 +6,7 @@
 		{% endfor %}
 	</ul>
 	<ul class="cluster gap-2xs">
-		{% for gift, value in gifts.items | sortBy('name', items.gifts, 0) | sortBy([1]) | reverse %}
+		{% for value, giftList in gifts.items %}
 			{% if value >= 60 %}
 				{% set rarity = 4 %}
 			{% elif value >= 30 and value < 60 %}
@@ -14,10 +14,12 @@
 			{% else %}
 				{% set rarity = 2 %}
 			{% endif %}
-			<li class="item-frame" data-rarity="{{ rarity }}" data-size="m">
-				<img src="/assets/images/affinity/{{ gift }}.png" title="{{ items.gifts[gift].name }}" alt="{{ items.gifts[gift].name }}" width="91" height="91" loading="lazy">
-				<span class="item-frame__info" data-align="right">+{{ value }}</span>
-			</li>
+			{% for gift in giftList | sortBy('name', items.gifts) | reverse %}
+				<li class="item-frame" data-rarity="{{ rarity }}" data-size="m">
+					<img src="/assets/images/affinity/{{ gift }}.png" title="{{ items.gifts[gift].name }}" alt="{{ items.gifts[gift].name }}" width="91" height="91" loading="lazy">
+					<span class="item-frame__info" data-align="right">+{{ value }}</span>
+				</li>
+			{% endfor %}
 		{% endfor %}
 	</ul>
 	{% if helpers.isArray(gifts.categories) and 'vera' in gifts.categories %}

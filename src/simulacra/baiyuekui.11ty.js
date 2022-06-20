@@ -58,25 +58,10 @@ module.exports = {
 			gifts: {
 				categories: ['collectibles', 'limited-time-items', 'decorations'],
 				items: [
-					['gold-coin', 80],
-					['cat-figure', 80],
-					['kitchenware', 60],
-					['tata-figure', 60],
-					['tata-cards', 60],
-					['pepper-figure', 60],
-					['snowglobe', 60],
-					['psp', 60],
-					['fox-figure', 60],
-					['seal', 60],
-					['prince-tata-figure', 60],
-					['linye-figure', 60],
-					['necklace', 30],
-					['elf-figure', 30],
-					['spider-figure', 30],
-					['photo-album', 15],
-					['snack-box', 15],
-					['plant', 15],
-					['strange-plant', 15]
+					[80, ['gold-coin', 'cat-figure']],
+					[60, ['kitchenware', 'tata-figure', 'tata-cards', 'pepper-figure', 'snowglobe', 'psp', 'fox-figure', 'seal', 'prince-tata-figure', 'linye-figure']],
+					[30, ['necklace', 'elf-figure', 'spider-figure']],
+					[15, ['photo-album', 'snack-box', 'plant', 'strange-plant']]
 				]
 			}
 		};
