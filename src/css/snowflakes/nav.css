@@ -18,7 +18,7 @@
 	background-color: theme('colors.sheet.0');
 }
 
-.nav summary::-webkit-details-marker,
+.nav summary::-webkit-details-marfker,
 .nav summary::marker {
 	display: none;
 }
@@ -48,6 +48,7 @@
 
 .nav__links {
 	--gutter: 1.81rem;
+	--grid-min-item-size: max(15rem, calc(50vw - var(--wrapper-padding) - var(--gutter)));
 }
 
 .nav__links::before {
@@ -63,7 +64,6 @@
 }
 
 .nav__links > li {
-	--grid-item-min-size: calc(50vw - var(--wrapper-padding) - var(--gutter));
 	line-height: 1;
 }
 
@@ -203,7 +203,7 @@
 }
 
 .nav[data-state="collapsed"] .nav__head {
-	margin-top: var(--stack-space, 1em);
+	margin-top: theme('spacing.m-l');
 }
 
 [data-flex-gap="false"] .nav__links {
@@ -233,7 +233,7 @@
 	display: none;
 }
 
-@media screen and (orientation: landscape) {
+@media screen and (orientation: landscape) and (max-height: 400px) {
 	.nav[data-state="collapsed"] {
 		position: relative;
 	}
