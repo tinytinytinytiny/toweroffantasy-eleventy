@@ -46,6 +46,10 @@
 	--background-offset: 400px;
 }
 
+[data-bg="frigg"] {
+	--background-offset: 370px;
+}
+
 [data-bg="fuwasaki"] {
 	--background-offset: 370px;
 }

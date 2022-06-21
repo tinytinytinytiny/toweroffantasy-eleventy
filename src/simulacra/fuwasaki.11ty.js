@@ -11,8 +11,8 @@ module.exports = {
 				resonance: 'tank',
 				exclusiveEffect: [
 					{
-						"name": "Ice Resonance",
-						"effect": "When equipped with **2** or more Ice weapons, increase Ice ATK by **20%** and Ice Resistance by **40%**, taking effect in the background."
+						name: 'Ice Resonance',
+						effect: 'When equipped with **2** or more Ice weapons, increase Ice ATK by **20%** and Ice Resistance by **40%**, taking effect in the background.'
 					}
 				],
 				shatter: 13.9,

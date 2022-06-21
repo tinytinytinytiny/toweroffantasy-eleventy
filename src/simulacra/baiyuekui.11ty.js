@@ -11,8 +11,8 @@ module.exports = {
 				resonance: 'damage',
 				exclusiveEffect: [
 					{
-						"name": "Bonus Effect",
-						"effect": "When entering combat, trigger War Intent, increasing your final damage by **15%** but accelerating your cellular aging (lose **1%** of your current HP every **5** seconds). The effect disappears when leaving battle or switching weapons. If your HP drops below **50%**, cellular aging stops but the damage boost from War Intent remains (switching weapons causes the effect to disappear)."
+						name: 'Bonus Effect',
+						effect: 'When entering combat, trigger War Intent, increasing your final damage by **15%** but accelerating your cellular aging (lose **1%** of your current HP every **5** seconds). The effect disappears when leaving battle or switching weapons. If your HP drops below **50%**, cellular aging stops but the damage boost from War Intent remains (switching weapons causes the effect to disappear).'
 					}
 				],
 				charge: 8,

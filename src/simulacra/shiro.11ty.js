@@ -24,6 +24,21 @@ module.exports = {
 					'After using **Full Bloom**, grant a 100% crit chance for the next **8** seconds.'
 				]
 			},
+			skills: {
+				normal: [
+					'rapid-throw',
+					'aerial-discharge',
+					'scatter',
+					'air-spin',
+					'sneak-attack'
+				],
+				dodge: [
+					'dodge',
+					'waning-moon'
+				],
+				skill: ['full-bloom'],
+				discharge: ['air-spirit']
+			},
 			mimicEffects: [
 				{
 					affinity: 1200,

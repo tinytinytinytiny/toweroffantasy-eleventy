@@ -24,6 +24,23 @@ module.exports = {
 					'Health Ice Shield with a health value of up to **20%** is obtained when switched to the weapon. The shield provides immunity to control effects; cooldown takes **20** seconds; Ice Shield lasts up to **10** seconds.'
 				]
 			},
+			skills: {
+				normal: [
+					'heavy-cleave',
+					'aerial-strike',
+					'rising-slash',
+					'moonset-slash',
+					'sneak-attack',
+					'whirlwind'
+				],
+				dodge: [
+					'dodge',
+					'devastate',
+					'crescent-slash'
+				],
+				skill: ['blizzard'],
+				discharge: ['frost-barrier']
+			},
 			mimicEffects: [
 				{
 					affinity: 1200,
