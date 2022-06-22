@@ -16,7 +16,7 @@ module.exports = {
 					'blue'
 				],
 				awakening: [
-					'Restore 1 dodge attempt every fifth normal attack or after using **Piercing Shot**.',
+					'Restore 1 dodge attempt every fifth normal attack or after using ***Piercing Shot***.',
 					'Increase the current weapon’s base ATK growth by **10%**.',
 					'Increase headshot damage by **30%**.',
 					'Increase the current weapon’s base ATK growth by **20%**.',

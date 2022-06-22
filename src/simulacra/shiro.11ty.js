@@ -16,12 +16,12 @@ module.exports = {
 					'black'
 				],
 				awakening: [
-					'Increase damage dealt to and all elemental shattering effects on targets within **Full Bloom**’s range by **30%**.',
+					'Increase damage dealt to and all elemental shattering effects on targets within ***Full Bloom***’s range by **30%**.',
 					'Increase the current weapon’s base ATK growth by **16%**.',
 					'Increase shatter by **15%** and reset all weapon skill cooldowns upon shattering the target’s shield. Can only be triggered once every **30** seconds.',
 					'Increase the current weapon’s base HP growth by **32%**.',
 					'Attacking a grievous target extends the duration of grievous by an additional **7** seconds (only take effect once for the same effect).',
-					'After using **Full Bloom**, grant a 100% crit chance for the next **8** seconds.'
+					'After using ***Full Bloom***, grant a 100% crit chance for the next **8** seconds.'
 				]
 			},
 			skills: {

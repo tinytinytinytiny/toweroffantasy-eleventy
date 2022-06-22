@@ -18,7 +18,7 @@ module.exports = {
 				awakening: [
 					'Increase shatter by **15%**. After shattering the target’s shield, increase all teammates’ ATK by **15%** for **30** seconds. This cannot be stacked.',
 					'Increase the current weapon’s base HP growth by **10%**.',
-					'After hitting a target with **Moonchase**, reduce their ATK by **5%** and increase the user’s ATK by **5%** for **15** seconds (effect can be stacked up to **3** times by hitting multiple targets). Effect is doubled to grievous targets.',
+					'After hitting a target with ***Moonchase***, reduce their ATK by **5%** and increase the user’s ATK by **5%** for **15** seconds (effect can be stacked up to **3** times by hitting multiple targets). Effect is doubled to grievous targets.',
 					'Increase the current weapon’s base ATK growth by **20%**.',
 					`Double stun duration from dodge skills.\n\n<abbr title="China exclusive" class="china-badge">CN</abbr> Double stun duration from forward dodge skills.`,
 					'Discharge deals more damage the further it travels, up to **100%** more damage.'
