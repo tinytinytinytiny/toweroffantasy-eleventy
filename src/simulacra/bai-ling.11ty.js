@@ -14,14 +14,6 @@ module.exports = {
 				materials: [
 					'green',
 					'blue'
-				],
-				awakening: [
-					'Restore 1 dodge attempt every fifth normal attack or after using ***Piercing Shot***.',
-					'Increase the current weapon’s base ATK growth by **10%**.',
-					'Increase headshot damage by **30%**.',
-					'Increase the current weapon’s base ATK growth by **20%**.',
-					'Dodge skills inflict grievous on targets for **7** seconds.',
-					'Increase crit rate by **30%** and crit damage by **50%** against grievous targets.'
 				]
 			},
 			skills: {
@@ -38,20 +30,6 @@ module.exports = {
 				skill: ['piercing-shot'],
 				discharge: ['explosive-barrage']
 			},
-			mimicEffects: [
-				{
-					affinity: 200,
-					effect: 'Unlock profile avatar Bai Ling'
-				},
-				{
-					affinity: 1200,
-					effect: 'When Bai Ling puts the Glider or the Wayboard away, increase speed by **8%** for **12** seconds. Cooldown: **60** seconds.'
-				},
-				{
-					affinity: 4000,
-					effect: 'When Bai Ling puts the Glider or the Wayboard away, increase speed by **15%** for **12** seconds. Cooldown: **60** seconds.'
-				}
-			],
 			recChips: [
 				['samir', 2],
 				['claudia', 2],
@@ -79,6 +57,32 @@ module.exports = {
 					[15, ['photo-album', 'harmonica', 'scarf', 'photo', 'plant', 'strange-plant']]
 				]
 			}
+		};
+	},
+	render({ helpers: { getData }, collections: { relics }, string: { skills }, name }) {
+		return {
+			awakening: [
+				`Restore 1 dodge attempt every fifth normal attack or after using ***${skills['bai-ling']['piercing-shot'].name}***.`,
+				'Increase the current weapon’s base ATK growth by **10%**.',
+				'Increase headshot damage by **30%**.',
+				'Increase the current weapon’s base ATK growth by **20%**.',
+				'Dodge skills inflict grievous on targets for **7** seconds.',
+				'Increase crit rate by **30%** and crit damage by **50%** against grievous targets.'
+			],
+			mimicEffects: [
+				{
+					affinity: 200,
+					effect: `Unlock profile avatar ${name}`
+				},
+				{
+					affinity: 1200,
+					effect: `When ${name} puts the ${getData(relics, 'jetpack').name} or the ${getData(relics, 'jetboard').name} away, increase speed by **8%** for **12** seconds. Cooldown: **60** seconds.`
+				},
+				{
+					affinity: 4000,
+					effect: `When ${name} puts the ${getData(relics, 'jetpack').name} or the ${getData(relics, 'jetboard').name} away, increase speed by **15%** for **12** seconds. Cooldown: **60** seconds.`
+				}
+			]
 		};
 	}
 };

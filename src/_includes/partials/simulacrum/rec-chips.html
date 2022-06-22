@@ -5,30 +5,30 @@
 <h3>Recommended Matrices</h3>
 <ul class="reel sheet gap-s !p-s-l !py-xs-s" data-border="none" data-variant="matrix-grid">
 	{% for chip, quantity in recChips %}
-	{% if helpers.findCollection(collections.matrices, chip) %}
-	{% set chipName = helpers.findCollection(collections.matrices, chip).data.name %}
-	{% else %}
-	{% set chipName = chip | capitalize %}
-	{% endif %}
-	<li class="card">
-		<div class="item-frame" data-variant="matrix">
-			<img src="/assets/images/chip/{{ chip }}.png" width="205" height="205" alt="" loading="lazy">
-			{% if helpers.isArray(quantity) %}
-			{% set comma = joiner(', ') %}
-			{% set text = '' %}
-			{% for i in quantity %}
-			{% set text = text + comma() + '×' + i %}
-			{% endfor %}
-			{{ set(text) }}
-			{% else %}
-			{{ set('×' + quantity) }}
-			{% endif %}
-		</div>
-		<div>
-			<a class="card__link inline-block font-bold text-center text-step--1 leading-[1.2] max-w-[15ch]" href="/matrices/{{ chip }}" data-variant="hover">
-				{{ chipName }}<span class="visually-hidden"> {{ quantity }}-set</span>
-			</a>
-		</div>
-	</li>
+		{% if helpers.getData(collections.matrices, chip) %}
+			{% set chipName = helpers.getData(collections.matrices, chip).name %}
+		{% else %}
+			{% set chipName = chip | capitalize %}
+		{% endif %}
+		<li class="card">
+			<div class="item-frame" data-variant="matrix">
+				<img src="/assets/images/chip/{{ chip }}.png" width="205" height="205" alt="" loading="lazy">
+				{% if helpers.isArray(quantity) %}
+					{% set comma = joiner(', ') %}
+					{% set text = '' %}
+					{% for i in quantity %}
+						{% set text = text + comma() + '×' + i %}
+					{% endfor %}
+					{{ set(text) }}
+				{% else %}
+					{{ set('×' + quantity) }}
+				{% endif %}
+			</div>
+			<div>
+				<a class="card__link inline-block font-bold text-center text-step--1 leading-[1.2] max-w-[15ch]" href="/matrices/{{ chip }}" data-variant="hover">
+					{{ chipName }}<span class="visually-hidden"> {{ quantity }}-set</span>
+				</a>
+			</div>
+		</li>
 	{% endfor %}
 </ul>

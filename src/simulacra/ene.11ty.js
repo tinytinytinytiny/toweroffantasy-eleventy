@@ -14,14 +14,6 @@ module.exports = {
 				materials: [
 					'green',
 					'black'
-				],
-				awakening: [
-					'Taunt nearby targets after switching to this weapon, preventing **1** instance of damage in the next **8** seconds and granting hyperbody for the next **8** seconds. Cooldown: **15** seconds.',
-					'Increase the current weapon’s base HP growth by **10%**.',
-					'After taking damage, reduce all damage received by **50%** for the next **6** seconds. Cooldown: **20** seconds.',
-					'Increase the current weapon’s base HP growth by **20%**.',
-					'Normal attacks **stun** targets for **2.5** seconds. Cooldown: **20** seconds.',
-					'Discharge skills deal an additional **10%** damage to targets and increase frost damage by an additional **10%** for **25** seconds.'
 				]
 			},
 			skills: {
@@ -41,16 +33,6 @@ module.exports = {
 				skill: ['outburst'],
 				discharge: ['overwhelming-maul']
 			},
-			mimicEffects: [
-				{
-					affinity: 1200,
-					effect: 'When Ene swims, climbs, or glides, reduce endurance consumption by **12%**.'
-				},
-				{
-					affinity: 4000,
-					effect: 'When Ene swims, climbs, or glides, reduce endurance consumption by **20%**.'
-				}
-			],
 			recChips: [
 				['king', 2],
 				['shiro', 2],
@@ -78,6 +60,28 @@ module.exports = {
 					[15, ['photo-album', 'trading-card', 'pinwheel', 'plant']]
 				]
 			}
+		};
+	},
+	render({ name, string: { element } }) {
+		return {
+			awakening: [
+				'Taunt nearby targets after switching to this weapon, preventing **1** instance of damage in the next **8** seconds and granting hyperbody for the next **8** seconds. Cooldown: **15** seconds.',
+				'Increase the current weapon’s base HP growth by **10%**.',
+				'After taking damage, reduce all damage received by **50%** for the next **6** seconds. Cooldown: **20** seconds.',
+				'Increase the current weapon’s base HP growth by **20%**.',
+				'Normal attacks **stun** targets for **2.5** seconds. Cooldown: **20** seconds.',
+				`Discharge skills deal an additional **10%** damage to targets and increase ${element.ice.name} damage by an additional **10%** for **25** seconds.`
+			],
+			mimicEffects: [
+				{
+					affinity: 1200,
+					effect: `When ${name} swims, climbs, or glides, reduce endurance consumption by **12%**.`
+				},
+				{
+					affinity: 4000,
+					effect: `When ${name} swims, climbs, or glides, reduce endurance consumption by **20%**.`
+				}
+			]
 		};
 	}
 };

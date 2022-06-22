@@ -9,7 +9,7 @@ module.exports = {
 			values: ['12%', '15%', '18%']
 		};
 	},
-	render({ values }) {
-		return values.map(value => [`Increase damage dealt to grievous targets by **${value}**.`]);
+	render({ values, string: { element } }) {
+		return values.map(value => [`Increase damage dealt to ${element.physical.effectName.toLowerCase()} targets by **${value}**.`]);
 	}
 };

@@ -14,14 +14,6 @@ module.exports = {
 				materials: [
 					'green',
 					'blue'
-				],
-				awakening: [
-					'Using a Dodge skill or branch skill while in shield form grants a stack of Strong Shield, which grants **10%** damage reduction for **15** seconds and stacks up to **3** times. Switching to axe form converts all Strong Shield stacks to Sharp Axe stacks, each of which increases damage dealt by **15%** for **15** seconds. Switching to a different weapon cancels this effect.',
-					'Increase the current weapon’s base HP growth by **16%**.',
-					'While in shield form, branch/dodge attacks deal additional damage to targets equal to **4%** of the user’s current HP.',
-					'Increase the current weapon’s base ATK growth by **32%**.',
-					'After switching to a shield axe, immediately grant **30%** damage reduction that diminishes by **10%** every **3** seconds, down to a minimum of **10%**. Switching weapons cancels this effect. Cooldown: **30** seconds.',
-					'Enhance conversion skills.\n\nShield Enhancement: Increase damage dealt by **60%** and expand the radius of the flame zome by **30%**.\n\nAxe Enhancement: For the next **5** seconds after using this ability, turn all damage received into HP (up to a maximum of **15%** of the user’s Max HP).'
 				]
 			},
 			skills: {
@@ -38,16 +30,6 @@ module.exports = {
 				skill: ['fission'],
 				discharge: ['seething-rage']
 			},
-			mimicEffects: [
-				{
-					affinity: 1200,
-					effect: 'Each time Huma receives damage, gain **1** Fortitude mark and gain **1** more Fortitude mark if it is flame damage, up to **1** time per **1** second and **12** stacks in total. Upon using a weapon skill, use all Fortitude marks and gain an HP shield equal to the number of marks × **0.4%** HP for **12** seconds. If Fortitude marks are used when the effect is stacked up to the maximum, then gain an HP shield equal to the number of marks × **0.6%** HP.'
-				},
-				{
-					affinity: 4000,
-					effect: 'Each time Huma receives damage, gain **1** Fortitude mark and gain **1** more Fortitude mark if it is flame damage, up to **1** time per **1** second and **12** stacks in total. Upon using a weapon skill, use all Fortitude marks and gain an HP shield equal to the number of marks × **0.6%** HP for **12** seconds. If Fortitude marks are used when the effect is stacked up to the maximum, then gain an HP shield equal to the number of marks × **0.9%** HP.'
-				}
-			],
 			recChips: [
 				['king', 2],
 				['shiro', 2],
@@ -72,6 +54,28 @@ module.exports = {
 					[15, ['flowers', 'photo-album', 'scarf', 'trading-card', 'plant']]
 				]
 			}
+		};
+	},
+	render({ name }) {
+		return {
+			awakening: [
+				'Using a Dodge skill or branch skill while in shield form grants a stack of Strong Shield, which grants **10%** damage reduction for **15** seconds and stacks up to **3** times. Switching to axe form converts all Strong Shield stacks to Sharp Axe stacks, each of which increases damage dealt by **15%** for **15** seconds. Switching to a different weapon cancels this effect.',
+				'Increase the current weapon’s base HP growth by **16%**.',
+				'While in shield form, branch/dodge attacks deal additional damage to targets equal to **4%** of the user’s current HP.',
+				'Increase the current weapon’s base ATK growth by **32%**.',
+				'After switching to a shield axe, immediately grant **30%** damage reduction that diminishes by **10%** every **3** seconds, down to a minimum of **10%**. Switching weapons cancels this effect. Cooldown: **30** seconds.',
+				'Enhance conversion skills.\n\nShield Enhancement: Increase damage dealt by **60%** and expand the radius of the flame zome by **30%**.\n\nAxe Enhancement: For the next **5** seconds after using this ability, turn all damage received into HP (up to a maximum of **15%** of the user’s Max HP).'
+			],
+			mimicEffects: [
+				{
+					affinity: 1200,
+					effect: `Each time ${name} receives damage, gain **1** Fortitude mark and gain **1** more Fortitude mark if it is flame damage, up to **1** time per **1** second and **12** stacks in total. Upon using a weapon skill, use all Fortitude marks and gain an HP shield equal to the number of marks × **0.4%** HP for **12** seconds. If Fortitude marks are used when the effect is stacked up to the maximum, then gain an HP shield equal to the number of marks × **0.6%** HP.`
+				},
+				{
+					affinity: 4000,
+					effect: `Each time ${name} receives damage, gain **1** Fortitude mark and gain **1** more Fortitude mark if it is flame damage, up to **1** time per **1** second and **12** stacks in total. Upon using a weapon skill, use all Fortitude marks and gain an HP shield equal to the number of marks × **0.6%** HP for **12** seconds. If Fortitude marks are used when the effect is stacked up to the maximum, then gain an HP shield equal to the number of marks × **0.9%** HP.`
+				}
+			]
 		};
 	}
 };

@@ -9,7 +9,7 @@ module.exports = {
 			values: ['6%']
 		};
 	},
-	render({ values }) {
-		return values.map(value => [`Increase damage dealt by flame weapons by **${value}**.`]);
+	render({ values, string: { element } }) {
+		return values.map(value => [`Increase damage dealt by ${element.fire.name} weapons by **${value}**.`]);
 	}
 };

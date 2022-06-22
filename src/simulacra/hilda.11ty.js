@@ -14,14 +14,6 @@ module.exports = {
 				materials: [
 					'red',
 					'blue'
-				],
-				awakening: [
-					'Every successful normal attack increases damage by **1%** for **2** seconds (stack up to **15** times). Increase ammo count to **60**.',
-					'Increase the current weapon’s base ATK growth by **10%**.',
-					'Within **10** seconds of switching to the weapon, increase damage of normal attacks and shatter by **30%**. Cooldown: **25** seconds. Increase ammo to **80**.',
-					'Increase the current weapon’s base ATK growth by **20%**.',
-					'Reduce cooldown of normal attacks while in turret mode to **2** seconds.',
-					'Within **10** seconds upon switching to the weapon, increase damage of normal attacks and shatter by **60%**. Cooldown: **25** seconds.'
 				]
 			},
 			skills: {
@@ -30,16 +22,6 @@ module.exports = {
 				skill: ['turret'],
 				discharge: ['arctic-beam']
 			},
-			mimicEffects: [
-				{
-					affinity: 1200,
-					effect: 'When Hilda uses a vehicle, increase speed by **7%**.'
-				},
-				{
-					affinity: 4000,
-					effect: 'When Hilda uses a vehicle, increase speed by **10%**.'
-				}
-			],
 			recChips: [
 				['samir', 2],
 				['king', 2],
@@ -64,6 +46,28 @@ module.exports = {
 					[15, ['pinwheel', 'snack-box']]
 				]
 			}
+		};
+	},
+	render({ name }) {
+		return {
+			awakening: [
+				'Every successful normal attack increases damage by **1%** for **2** seconds (stack up to **15** times). Increase ammo count to **60**.',
+				'Increase the current weapon’s base ATK growth by **10%**.',
+				'Within **10** seconds of switching to the weapon, increase damage of normal attacks and shatter by **30%**. Cooldown: **25** seconds. Increase ammo to **80**.',
+				'Increase the current weapon’s base ATK growth by **20%**.',
+				'Reduce cooldown of normal attacks while in turret mode to **2** seconds.',
+				'Within **10** seconds upon switching to the weapon, increase damage of normal attacks and shatter by **60%**. Cooldown: **25** seconds.'
+			],
+			mimicEffects: [
+				{
+					affinity: 1200,
+					effect: `When ${name} uses a vehicle, increase speed by **7%**.`
+				},
+				{
+					affinity: 4000,
+					effect: `When ${name} uses a vehicle, increase speed by **10%**.`
+				}
+			]
 		};
 	}
 };

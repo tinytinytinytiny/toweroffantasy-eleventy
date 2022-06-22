@@ -18,10 +18,10 @@ module.exports = {
 			}
 		};
 	},
-	render({ values }) {
+	render({ values, helpers: { getData }, collections: { simulacra } }) {
 		return this.range(4).map(i => [
 			`Increase damage progressively by **${values.set2[0][i]}** upon hitting a target. Stack up to **10** times. Lasts **1.5** seconds.\n\n${this.china()} Each hit increases attack by **1.5%**, up to **${values.set2[1][i]}** stacks, lasting **2** seconds and refreshing with each hit.`,
-				`Increase Dual EM Stars’ electrical explosion damage by **${values.set4[0][i]}** of ATK.\n\n${this.china()} Adds an extra hit to every attack for **${values.set4[1][i]}** damage (can not crit).`
+				`Increase ${getData(simulacra, 'samir').weapon.name}’ electrical explosion damage by **${values.set4[0][i]}** of ATK.\n\n${this.china()} Adds an extra hit to every attack for **${values.set4[1][i]}** damage (can not crit).`
 		]);
 	}
 };

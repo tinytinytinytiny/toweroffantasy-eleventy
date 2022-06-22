@@ -14,14 +14,6 @@ module.exports = {
 				materials: [
 					'red',
 					'black'
-				],
-				awakening: [
-					'Increase shatter by **15%**. After shattering the target’s shield, increase all teammates’ ATK by **15%** for **30** seconds. This cannot be stacked.',
-					'Increase the current weapon’s base HP growth by **10%**.',
-					'After hitting a target with ***Moonchase***, reduce their ATK by **5%** and increase the user’s ATK by **5%** for **15** seconds (effect can be stacked up to **3** times by hitting multiple targets). Effect is doubled to grievous targets.',
-					'Increase the current weapon’s base ATK growth by **20%**.',
-					`Double stun duration from dodge skills.\n\n<abbr title="China exclusive" class="china-badge">CN</abbr> Double stun duration from forward dodge skills.`,
-					'Discharge deals more damage the further it travels, up to **100%** more damage.'
 				]
 			},
 			skills: {
@@ -40,16 +32,6 @@ module.exports = {
 				skill: ['moonchaser'],
 				discharge: ['thunderclap']
 			},
-			mimicEffects: [
-				{
-					affinity: 1200,
-					effect: 'When teamed up with Echo, allies within **10** meters around Echo gain a damage boost of **4%** (excluding Echo).'
-				},
-				{
-					affinity: 4000,
-					effect: 'When teamed up with Echo, allies within **10** meters around Echo gain a damage boost of **6%** (excluding Echo).'
-				}
-			],
 			recChips: [
 				['samir', 2],
 				['king', 2],
@@ -77,6 +59,28 @@ module.exports = {
 					[15, ['flowers', 'snack-box', 'trading-card', 'harmonica', 'scarf']]
 				]
 			}
+		};
+	},
+	render({ name, string: { skills, element } }) {
+		return {
+			awakening: [
+				'Increase shatter by **15%**. After shattering the target’s shield, increase all teammates’ ATK by **15%** for **30** seconds. This cannot be stacked.',
+				'Increase the current weapon’s base HP growth by **10%**.',
+				`After hitting a target with ***${skills.echo.moonchaser.name}***, reduce their ATK by **5%** and increase the user’s ATK by **5%** for **15** seconds (effect can be stacked up to **3** times by hitting multiple targets). Effect is doubled to ${element.physical.effectName.toLowerCase()} targets.`,
+				'Increase the current weapon’s base ATK growth by **20%**.',
+				`Double stun duration from dodge skills.\n\n${this.china()} Double stun duration from forward dodge skills.`,
+				'Discharge deals more damage the further it travels, up to **100%** more damage.'
+			],
+			mimicEffects: [
+				{
+					affinity: 1200,
+					effect: `When teamed up with ${name}, allies within **10** meters around ${name} gain a damage boost of **4%** (excluding ${name}).`
+				},
+				{
+					affinity: 4000,
+					effect: `When teamed up with ${name}, allies within **10** meters around ${name} gain a damage boost of **6%** (excluding ${name}).`
+				}
+			]
 		};
 	}
 };

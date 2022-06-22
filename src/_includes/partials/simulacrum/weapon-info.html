@@ -31,7 +31,7 @@
 			{{ weaponStat(figure, 'Resonance', weapon.resonance | capitalize) }}
 			{# ELEMENT #}
 			{% set figure = icon('ele_' + weapon.element, 'Element: ' + string.element[weapon.element].name) %}
-			{{ weaponStat(figure, 'Element', string.element[weapon.element].name) }}
+			{{ weaponStat(figure, 'Element', string.element[weapon.element].name | capitalize) }}
 			{# SHATTER #}
 			{% set figure %}
 				{% set shatterRating = helpers.getWeaponRating(weapon.shatter, string.weaponRating) %}

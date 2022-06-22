@@ -7,7 +7,7 @@
 		{{ string.element[weapon.element].description | markdown | safe }}
 	{% endif %}
 	{% if weapon.exclusiveEffect %}
-		{% for effect in weapon.exclusiveEffect %}
+		{% for effect in content.wepEffects %}
 			<h4 class="text-primary">{{ effect.name }}</h4>
 			{{ effect.effect | markdown | safe }}
 		{% endfor %}

@@ -14,14 +14,6 @@ module.exports = {
 				materials: [
 					'red',
 					'blue'
-				],
-				awakening: [
-					'After hitting a target with a skill or discharge skill, grant a stack of damage boost, which increases damage dealt by **8%** for **25** seconds (stacks up to **3** times; each successful skill or discharge use can only grant a single stack).',
-					'Increase the current weapon’s base ATK growth by **16%**.',
-					'Hitting a target with a skill or discharge skill applies a stack of War Wounds to the target, increasing incoming physical damage and shatter effects from physical and elemental weapons taken by the target by **10%** for **15** seconds. Stack up to **1** time.',
-					'Increase the current weapon’s base HP growth by **32%**.',
-					'Hitting targets with discharge skills grants skill damage boost, which increases all weapon skill damage by **20%** for **15** seconds (cannot stack).',
-					'Hitting the same target no longer reduces the damage dealt. After using Guren Blade or a discharge skill, applies **1** stack of War Wounds to all targets within 8 meters.'
 				]
 			},
 			skills: {
@@ -39,16 +31,6 @@ module.exports = {
 				skill: ['roam'],
 				discharge: ['unbridled-fury']
 			},
-			mimicEffects: [
-				{
-					affinity: 1200,
-					effect: 'Hide for **1** seconds upon dodging.'
-				},
-				{
-					affinity: 4000,
-					effect: 'Hide for **1.5** seconds upon dodging.'
-				}
-			],
 			recChips: [
 				['claudia', [2, 4]],
 				['samir', 2],
@@ -76,6 +58,28 @@ module.exports = {
 					[15, ['photo', 'photo-album', 'scarf', 'flowers', 'harmonica', 'plant']]
 				]
 			}
+		};
+	},
+	render({ name, weapon }) {
+		return {
+			awakening: [
+				'After hitting a target with a skill or discharge skill, grant a stack of damage boost, which increases damage dealt by **8%** for **25** seconds (stacks up to **3** times; each successful skill or discharge use can only grant a single stack).',
+				'Increase the current weapon’s base ATK growth by **16%**.',
+				'Hitting a target with a skill or discharge skill applies a stack of War Wounds to the target, increasing incoming physical damage and shatter effects from physical and elemental weapons taken by the target by **10%** for **15** seconds. Stack up to **1** time.',
+				'Increase the current weapon’s base HP growth by **32%**.',
+				'Hitting targets with discharge skills grants skill damage boost, which increases all weapon skill damage by **20%** for **15** seconds (cannot stack).',
+				`Hitting the same target no longer reduces the damage dealt. After using ${weapon.name} or a discharge skill, applies **1** stack of War Wounds to all targets within 8 meters.`
+			],
+			mimicEffects: [
+				{
+					affinity: 1200,
+					effect: 'Hide for **1** seconds upon dodging.'
+				},
+				{
+					affinity: 4000,
+					effect: 'Hide for **1.5** seconds upon dodging.'
+				}
+			]
 		};
 	}
 };

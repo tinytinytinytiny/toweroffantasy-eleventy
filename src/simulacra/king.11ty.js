@@ -14,14 +14,6 @@ module.exports = {
 				materials: [
 					'green',
 					'blue'
-				],
-				awakening: [
-					'Increase shatter by **15%**. After shattering the target’s shield, deal damage equal to **120%** of ATK to the target every second for **15** seconds.',
-					'Increase the current weapon’s base HP growth by **16%**.',
-					'Increase damage dealt by **6%** for each enemy within **6** meters, up to a maximum of **30%**.',
-					'Increase the current weapon’s base ATK growth by **32%**.',
-					'Increase damage dealt against HP shields or shielded enemies by **100%**.',
-					'Increase damage dealt by **10%** for each enemy slain for **30** seconds (stack up to **3** times).'
 				]
 			},
 			skills: {
@@ -40,32 +32,6 @@ module.exports = {
 				skill: ['mortal-coil'],
 				discharge: ['flaming-scythe']
 			},
-			mimicEffects: [
-				{
-					affinity: 200,
-					effect: 'Unlock profile avatar KING'
-				},
-				{
-					affinity: 600,
-					effect: 'Unlock communication [Trading Fiction]'
-				},
-				{
-					affinity: 1200,
-					effect: 'Every **7** enemies killed by KING restores HP equal to **8%** of Max HP.'
-				},
-				{
-					affinity: 2000,
-					effect: 'Unlock communication [Peer-to-peer Contract]'
-				},
-				{
-					affinity: 3000,
-					effect: 'Unlock communication [Betting]'
-				},
-				{
-					affinity: 4000,
-					effect: 'Every **5** enemies killed by KING restores HP equal to **10%** of Max HP.'
-				}
-			],
 			recChips: [
 				['king', 2],
 				['shiro', 2],
@@ -91,6 +57,44 @@ module.exports = {
 					[15, ['photo', 'snack-box', 'harmonica', 'strange-plant']]
 				]
 			}
+		};
+	},
+	render({ name }) {
+		return {
+			awakening: [
+				'Increase shatter by **15%**. After shattering the target’s shield, deal damage equal to **120%** of ATK to the target every second for **15** seconds.',
+				'Increase the current weapon’s base HP growth by **16%**.',
+				'Increase damage dealt by **6%** for each enemy within **6** meters, up to a maximum of **30%**.',
+				'Increase the current weapon’s base ATK growth by **32%**.',
+				'Increase damage dealt against HP shields or shielded enemies by **100%**.',
+				'Increase damage dealt by **10%** for each enemy slain for **30** seconds (stack up to **3** times).'
+			],
+			mimicEffects: [
+				{
+					affinity: 200,
+					effect: `Unlock profile avatar ${name}`
+				},
+				{
+					affinity: 600,
+					effect: 'Unlock communication [Trading Fiction]'
+				},
+				{
+					affinity: 1200,
+					effect: `Every **7** enemies killed by ${name} restores HP equal to **8%** of Max HP.`
+				},
+				{
+					affinity: 2000,
+					effect: 'Unlock communication [Peer-to-peer Contract]'
+				},
+				{
+					affinity: 3000,
+					effect: 'Unlock communication [Betting]'
+				},
+				{
+					affinity: 4000,
+					effect: `Every **5** enemies killed by ${name} restores HP equal to **10%** of Max HP.`
+				}
+			]
 		};
 	}
 };

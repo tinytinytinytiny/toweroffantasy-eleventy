@@ -14,14 +14,6 @@ module.exports = {
 				materials: [
 					'green',
 					'blue'
-				],
-				awakening: [
-					'Heal all teammates within **10** meters for **100%** of ATK after using a Dodge skill.',
-					'Increase the current weapon’s base HP growth by **10%**.',
-					'Normal attacks also fire two missiles, each dealing damage equal to **5%** of ATK to the target and restoring **5** weapon charge points.',
-					'Increase the current weapon’s base HP growth by **20%**.',
-					'Increase speed of obtaining weapon charge by **20%** (not applicable to missile attacks).',
-					'Grant all teammates within range of the skill **60%** damage reduction and immunity to crowd control effects.'
 				]
 			},
 			skills: {
@@ -39,16 +31,6 @@ module.exports = {
 				skill: ['sanctuary'],
 				discharge: ['swift-deliverance']
 			},
-			mimicEffects: [
-				{
-					affinity: 1200,
-					effect: 'When Pepper spends satiety to restore HP, increase restoration effect by **100%**.'
-				},
-				{
-					affinity: 4000,
-					effect: 'When Pepper spends satiety to restore HP, increase restoration effect by **200%**.'
-				}
-			],
 			recChips: [
 				['coco-ritter', [2, 4]],
 				['pepper', 4],
@@ -75,6 +57,28 @@ module.exports = {
 					[15, ['photo-album', 'flowers', 'scarf', 'plant', 'strange-plant']]
 				]
 			}
+		};
+	},
+	render({ name }) {
+		return {
+			awakening: [
+				'Heal all teammates within **10** meters for **100%** of ATK after using a Dodge skill.',
+				'Increase the current weapon’s base HP growth by **10%**.',
+				'Normal attacks also fire two missiles, each dealing damage equal to **5%** of ATK to the target and restoring **5** weapon charge points.',
+				'Increase the current weapon’s base HP growth by **20%**.',
+				'Increase speed of obtaining weapon charge by **20%** (not applicable to missile attacks).',
+				'Grant all teammates within range of the skill **60%** damage reduction and immunity to crowd control effects.'
+			],
+			mimicEffects: [
+				{
+					affinity: 1200,
+					effect: `When ${name} spends satiety to restore HP, increase restoration effect by **100%**.`
+				},
+				{
+					affinity: 4000,
+					effect: `When ${name} spends satiety to restore HP, increase restoration effect by **200%**.`
+				}
+			]
 		};
 	}
 };

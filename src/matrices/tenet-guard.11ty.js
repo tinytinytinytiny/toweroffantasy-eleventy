@@ -9,7 +9,7 @@ module.exports = {
 			values: ['6%']
 		};
 	},
-	render({ values }) {
-		return values.map(value => [`Increase damage dealt by volt weapons by **${value}**.`]);
+	render({ values, string: { element } }) {
+		return values.map(value => [`Increase damage dealt by ${element.electric.name} weapons by **${value}**.`]);
 	}
 };
