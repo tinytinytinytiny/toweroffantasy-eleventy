@@ -8,7 +8,7 @@
 				</h3>
 				{% set items = items | reverse %}
 				<ul class="mini-list cluster">
-					{% for item in items | sortBy(['isNew', 'isChina', 'name']) | reverse %}
+					{% for item in items | sortBy('name') | reverse | sortBy(['isNew', 'isChina']) | reverse %}
 						<li>
 							<a
 								class="chip backdrop-filter-none"

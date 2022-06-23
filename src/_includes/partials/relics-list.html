@@ -1,5 +1,5 @@
 <ul class="auto-grid max-w-none" data-variant="card-list">
-	{% for item in items | sortBy(['isNew', 'isChina', 'name']) | reverse %}
+	{% for item in items | sortBy('name') | reverse | sortBy(['isNew', 'isChina']) | reverse %}
 		<li class="sheet card stack box-border p-s" data-border="none">
 			<div class="item-frame">
 				<img class="drop-shadow-xl" src="/assets/images/gadget/{{ item.fileSlug }}.png" alt="" width="205" height="205" loading="lazy">

@@ -1,5 +1,4 @@
 module.exports = (list, categories, data, index) => {
-
 	return list.sort((a, b) => {
 		let result = 0;
 
@@ -28,7 +27,7 @@ module.exports = (list, categories, data, index) => {
 			}
 
 			if (typeof(first) === 'string' && typeof(second) === 'string') {
-				result = -1 * first.localeCompare(second, 'en', { sensitivity: 'base' });
+				result = first.localeCompare(second, 'en', { sensitivity: 'base' });
 			} else {
 				result = first - second;
 			}
