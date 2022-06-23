@@ -2,8 +2,8 @@
 	<img src="/assets/images/food/{{ food.image }}"	alt="" width="96" height="96" {% if loop.index > 4 %}loading="lazy"{% endif %}>
 	<span class="item-frame__info text-step-0 tracking-tighter" aria-hidden="true">
 		{% for i in range(0, food.stars) %}
-		<span class="inline-block -rotate-12">★</span>
+			<span class="inline-block -rotate-12">★</span>
 		{% endfor %}
 	</span>
 </div>
-<span class="inline-block font-bold">{{ food.name }}</span>
+<span class="inline-block font-bold align-middle max-w-[15ch]">{{ food.name }}</span>

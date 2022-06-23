@@ -16,7 +16,7 @@
 			</thead>
 			<tbody>
 				{% for food in items.food | sortBy(['rarity', 'stars', 'name']) %}
-					<tr class="align-middle" id="{{ food.name | slugify }}">
+					<tr id="{{ food.name | slugify }}">
 						<th scope="row">
 							{% include "partials/food/recipe.html" %}
 						</th>
