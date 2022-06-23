@@ -16,7 +16,7 @@
 		{% include "partials/china-disclaimer.html" %}
 	{% endif %}
 	{% for i in range(0, sets.length) %}
-		<h2 id="set-{{ sets[i] }}">{{ sets[i] }}-Set</h2>
+		<h2 id="set-{{ sets[i] }}">{{ sets[i] }}-Piece Set</h2>
 		{{ content[0][i] | markdown | safe }}
 		{% if content.length > 1 %}
 			<details>
@@ -26,7 +26,7 @@
 						<thead>
 							<tr>
 								<th scope="col">Stars</th>
-								<th scope="col">{{ sets[i] }}-set Bonus</th>
+								<th scope="col">{{ sets[i] }}-Piece Set Bonus</th>
 							</tr>
 						</thead>
 						<tbody>

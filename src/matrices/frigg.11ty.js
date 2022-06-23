@@ -1,7 +1,8 @@
 module.exports = {
 	data() {
 		return {
-			name: 'Frigg',
+			name: 'Freyja',
+			permalink: '/matrices/freyja/',
 			isNew: false,
 			isChina: true,
 			rarity: 5,

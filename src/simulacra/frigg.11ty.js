@@ -1,7 +1,8 @@
 module.exports = {
 	data() {
 		return {
-			name: 'Frigg',
+			name: 'Freyja',
+			permalink: '/simulacra/freyja/',
 			isNew: false,
 			isChina: true,
 			rarity: 5,
@@ -45,7 +46,7 @@ module.exports = {
 			wepEffects: [
 				{
 					name: 'Bonus Effect',
-					effect: `After using the Weapon Skill **Fimbulwinter**, a large ice field will be placed at your position, lasting  **25** seconds. Inside the ice field, dodges will not be consumed while using Frigg’s weapon, and gain the effect Frozen Domain I: when using ${element.ice.name} weapons, increase ${element.ice.name} ATK by **15%** and Shatter by **25%**.`
+					effect: `After using the Weapon Skill **Fimbulwinter**, a large ice field will be placed at your position, lasting  **25** seconds. Inside the ice field, dodges will not be consumed while using ${name}’s weapon, and gain the effect Frozen Domain I: when using ${element.ice.name} weapons, increase ${element.ice.name} ATK by **15%** and Shatter by **25%**.`
 				}
 			],
 			awakening: [

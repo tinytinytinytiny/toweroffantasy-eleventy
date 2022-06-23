@@ -98,9 +98,9 @@ There is a strategy where you use Zero’s Discharge skill for invincibility wit
 
 ### Raid 2
 #### **Up to 8-player dungeon** that rewards **Arc Core armor piece & Raid Shop currency**
-Fight Frigg in one dimension and Valkyrie in another dimension. These bosses have to be killed within 30 seconds of each other to clear, otherwise they will reset to full HP.
+Fight Freyja in one dimension and Valkyrie in another dimension. These bosses have to be killed within 30 seconds of each other to clear, otherwise they will reset to full HP.
 
-As Valkyrie is the more dangerous option, it’s recommended to have all 8 players bring Frigg down to about 50% HP on the last HP bar, then leave one person to kite her while the other 7 kill Valkyrie. Frigg can easily be kited at a range where she will chase you around the map but cannot attack you.
+As Valkyrie is the more dangerous option, it’s recommended to have all 8 players bring Freyja down to about 50% HP on the last HP bar, then leave one person to kite her while the other 7 kill Valkyrie. Freyja can easily be kited at a range where she will chase you around the map but cannot attack you.
 
 ### Raid 3
 #### **Up to 8-player dungeon** that rewards **Arc Core armor piece & Raid Shop currency**

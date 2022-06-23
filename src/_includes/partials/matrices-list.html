@@ -15,7 +15,7 @@
 						{% china %}
 					{% endif %}
 				</div>
-				<a class="text-white/90" href="/matrices/{{ item.fileSlug }}" data-variant="hover">
+				<a class="text-white/90" href="{{ item.data.permalink | default('/matrices/' + item.fileSlug + '/') }}" data-variant="hover">
 					{{ item.data.name }}
 				</a>
 			</div>

@@ -14,7 +14,11 @@
 	"fire": {
 		"name": "flame",
 		"effectName": "Flame",
-		"description": "Fully charged weapons will set the target on fire for **8** seconds with the next attack, causing ongoing damage of **58.00%** of ATK every second. Ignited targets receive **50%** efficacy from healing."
+		"description": "Fully charged weapons will set the target on fire for **8** seconds with the next attack, causing ongoing damage of **58.00%** of ATK every second. Ignited targets receive **50%** efficacy from healing.",
+		"resonance": {
+			"name": "Flame Resonance",
+			"description": "When equipped with **2** or more flame weapons, increase flame ATK by **20%** and flame resistance by **40%**, taking effect in the background."
+		}
 	},
 	"ice": {
 		"name": "frost",
