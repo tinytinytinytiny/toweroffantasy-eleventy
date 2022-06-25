@@ -2,8 +2,6 @@ module.exports = {
 	data() {
 		return {
 			name: 'Drone',
-			isNew: false,
-			isChina: false,
 			rarity: 5
 		};
 	},

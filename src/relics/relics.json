@@ -1,3 +1,5 @@
 {
-	"layout": "layouts/relic.html"
+	"layout": "layouts/relic.html",
+	"isNew": false,
+	"isChina": false
 }

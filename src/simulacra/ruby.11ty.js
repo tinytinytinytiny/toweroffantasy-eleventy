@@ -1,10 +1,12 @@
 module.exports = {
 	data() {
 		return {
-			name: 'Ruby',
-			isNew: false,
 			isChina: true,
-			rarity: 5,
+			eleventyComputed: {
+				character: (data) => data.characters[data.page.fileSlug],
+				name: (data) => data.character.name,
+				rarity: (data) => data.character.rarity
+			},
 			weapon: {
 				name: 'Sparky',
 				element: 'fire',

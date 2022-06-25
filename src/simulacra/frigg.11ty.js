@@ -1,10 +1,13 @@
 module.exports = {
 	data() {
 		return {
-			name: 'Freyja',
-			permalink: '/simulacra/freyja/',
-			isNew: false,
 			isChina: true,
+			eleventyComputed: {
+				character: (data) => data.characters[data.page.fileSlug],
+				name: (data) => data.character.name,
+				rarity: (data) => data.character.rarity,
+			},
+			permalink: '/simulacra/freyja/',
 			rarity: 5,
 			weapon: {
 				name: 'Balmung',

@@ -5,8 +5,8 @@
 <h3>Recommended Matrices</h3>
 <ul class="reel sheet gap-s !p-s-l !py-xs-s" data-border="none" data-variant="matrix-grid">
 	{% for chip, quantity in recChips %}
-		{% if helpers.getData(collections.matrices, chip) %}
-			{% set chipName = helpers.getData(collections.matrices, chip).name %}
+		{% if getData(collections.matrices, chip) %}
+			{% set chipName = getData(collections.matrices, chip).name %}
 		{% else %}
 			{% set chipName = chip | capitalize %}
 		{% endif %}

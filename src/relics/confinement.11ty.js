@@ -2,8 +2,6 @@ module.exports = {
 	data() {
 		return {
 			name: 'Confinement',
-			isNew: false,
-			isChina: false,
 			rarity: 5
 		};
 	},

@@ -2,12 +2,10 @@ module.exports = {
 	data() {
 		return {
 			name: 'Couant',
-			isNew: false,
-			isChina: false,
 			rarity: 4
 		};
 	},
-	render({ helpers: { getData }, collections: { relics }, string: { element } }) {
+	render({ getData, collections: { relics }, string: { element } }) {
 		return {
 			description: `Summon a droid and generate a shield for **5** seconds. The shield disappears after **5** seconds or after being struck once. When it disappears, it knocks back nearby enemies, dealing damage equal to **100%** of ATK + **50**. If broken within **1** second of being created, the shield will stun enemies for **2** seconds. Cooldown: **30** seconds.\n\nShares cooldown with [${getData(relics, 'couant-2').name}](/relics/couant-2/).`,
 			awakening: [

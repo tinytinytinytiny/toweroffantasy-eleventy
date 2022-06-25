@@ -2,8 +2,6 @@ module.exports = {
 	data() {
 		return {
 			name: 'Spacetime Rift',
-			isNew: false,
-			isChina: false,
 			rarity: 5
 		};
 	},

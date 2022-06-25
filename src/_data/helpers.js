@@ -12,9 +12,6 @@ module.exports = {
 
 		return response;
   },
-	getData(collection, fileSlug) {
-		return collection.find(i => i.fileSlug === fileSlug).data;
-	},
 	getWeaponRating(value, data) {
 		return data.find(i => value > i.threshold );
 	},

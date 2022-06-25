@@ -2,8 +2,6 @@ module.exports = {
 	data() {
 		return {
 			name: 'Lava Bomb',
-			isNew: false,
-			isChina: false,
 			rarity: 4
 		};
 	},

@@ -2,8 +2,6 @@ module.exports = {
 	data() {
 		return {
 			name: 'Missile Barrage',
-			isNew: false,
-			isChina: false,
 			rarity: 4
 		};
 	},

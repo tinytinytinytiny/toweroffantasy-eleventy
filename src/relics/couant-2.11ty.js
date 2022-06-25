@@ -2,7 +2,6 @@ module.exports = {
 	data() {
 		return {
 			name: 'Couant 2',
-			isNew: false,
 			isChina: true,
 			rarity: 5
 		};

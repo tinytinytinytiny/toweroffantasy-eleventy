@@ -2,8 +2,6 @@ module.exports = {
 	data() {
 		return {
 			name: 'Hologram Projector',
-			isNew: false,
-			isChina: false,
 			rarity: 5
 		};
 	},

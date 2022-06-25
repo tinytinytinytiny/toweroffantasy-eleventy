@@ -92,16 +92,16 @@ Each Constellation (Lv 40, Lv 50, Lv 60 version) of Wormhole has 24 stages. Once
 ## Raids
 ### Raid 1
 #### **Up to 8-player dungeon** that rewards **Arc Core armor piece & Raid Shop currency**
-Fight against Apophis in a room. There is no shield to break, just damage the boss without dying—it hits hard and can easily one-shot top geared players. Use the Omnium Handcannon relic to consistently block Apophis’ spirit bomb attack.
+Fight against {{ characters.apophis.name }} in a room. There is no shield to break, just damage the boss without dying—it hits hard and can easily one-shot top geared players. Use the Omnium Handcannon relic to consistently block {{ characters.apophis.name }}’ spirit bomb attack.
 
-There is a strategy where you use Zero’s Discharge skill for invincibility with Couant’s 5th awakening and Barbarossa matrices to damage reflect the spirit bomb, but it requires you to stay alive and wait in the dungeon for 15 minutes for Apophis to enrage (thus doing more damage). The attack’s damage was nerfed so you can’t one shot the boss with this.
+There is a strategy where you use {{ characters.zero.name }}’s Discharge skill for invincibility with {{ getData(collections.relics, 'couant').name }}’s 5th awakening and {{ characters.barbarossa.name }} matrices to damage reflect the spirit bomb, but it requires you to stay alive and wait in the dungeon for 15 minutes for {{ characters.apophis.name }} to enrage (thus doing more damage). The attack’s damage was nerfed so you can’t one shot the boss with this.
 
 ### Raid 2
 #### **Up to 8-player dungeon** that rewards **Arc Core armor piece & Raid Shop currency**
-Fight Freyja in one dimension and Valkyrie in another dimension. These bosses have to be killed within 30 seconds of each other to clear, otherwise they will reset to full HP.
+Fight {{ characters.frigg.name }} in one dimension and Valkyrie in another dimension. These bosses have to be killed within 30 seconds of each other to clear, otherwise they will reset to full HP.
 
-As Valkyrie is the more dangerous option, it’s recommended to have all 8 players bring Freyja down to about 50% HP on the last HP bar, then leave one person to kite her while the other 7 kill Valkyrie. Freyja can easily be kited at a range where she will chase you around the map but cannot attack you.
+As Valkyrie is the more dangerous option, it’s recommended to have all 8 players bring {{ characters.frigg.name }} down to about 50% HP on the last HP bar, then leave one person to kite her while the other 7 kill Valkyrie. {{ characters.frigg.name }} can easily be kited at a range where she will chase you around the map but cannot attack you.
 
 ### Raid 3
 #### **Up to 8-player dungeon** that rewards **Arc Core armor piece & Raid Shop currency**
-Defeat both copies of Nemesis—red and yellow. The two bosses will heal each other if they are near each other, thus the recommended strategy is to rotate around the left side of the map and have one person use a bow charged shot to pull one boss into the left outer ring of the map. When successfully separated, the two bosses are relatively easy to defeat on their own. Killing the first boss will respawn any dead players.
+Defeat both copies of {{ characters.nemesis.name }}—red and yellow. The two bosses will heal each other if they are near each other, thus the recommended strategy is to rotate around the left side of the map and have one person use a bow charged shot to pull one boss into the left outer ring of the map. When successfully separated, the two bosses are relatively easy to defeat on their own. Killing the first boss will respawn any dead players.

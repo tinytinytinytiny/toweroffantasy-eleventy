@@ -2,8 +2,6 @@ module.exports = {
 	data() {
 		return {
 			name: 'Cybernetic Arm',
-			isNew: false,
-			isChina: false,
 			rarity: 4
 		};
 	},

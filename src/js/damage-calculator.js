@@ -110,10 +110,12 @@ function groupDropdowns({ fieldset, group = 'options', selector } = {}) {
 		if (group === 'optgroup') {
 			siblingDropdowns.forEach((siblingDropdown) => {
 				const optgroup = dropdown.querySelector(selector || 'optgroup');
+				const optgroupChildren = optgroup.querySelectorAll('option');
 
 				if (optgroupValues.has(stripNumber(siblingDropdown.value))) {
 					optgroup.setAttribute('hidden', '');
 					optgroup.setAttribute('disabled', '');
+					optgroupChildren.querySelectorAll
 				} else {
 					if (!selections.filter(i => optgroupValues.has(i)).length) {
 						optgroup.getAttribute('hidden');

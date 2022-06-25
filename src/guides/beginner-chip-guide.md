@@ -18,45 +18,47 @@ In addition, R chips only have a *4p (4-set) effect*, while SR have a *3p (3-set
 {% macro matrix(name) %}
 <h3 class="card block">
 	<div class="item-frame mb-2xs" data-variant="matrix">
-		<img src="/assets/images/chip/{{ name | slugify }}.png" alt="" width="205" height="205">
+		<img src="/assets/images/chip/{{ name }}.png" alt="" width="205" height="205">
 	</div>
-	<a href="/matrices/{{ name | slugify }}/" data-variant="hover">{{ name }}</a>
+	<a href="{{ getCollection(collections.matrices, name).url }}" data-variant="hover">
+		{{ getData(collections.matrices, name).name }}
+	</a>
 </h3>
 {% endmacro %}
 
 ## DPS Chips
-{{ matrix('Crow') }}
+{{ matrix('crow') }}
 #### 2p: **Targets under 60% HP take 33%+ more crit damage**
 Crow 2p is great for DPS, as optimally you want to build for crit and will have no trouble hitting crits consistently. He provides a strong crit damage buff with an easy condition to maintain as its reliant on enemy hp.
 
 His 4p, however, is bleed which generally isn’t good. Bleed effects are dot per sec, and don’t scale with attack buffs so it ends up being better to buff attack directly, especially when u can deal dmg multiple times in a second.
 
-{{ matrix('Samir') }}
+{{ matrix('samir') }}
 #### 2p: **1.5% damage up, 10+ stacks**
 Samir 2p is bound to be a top DPS chip set with it’s unconditional damage increase, since you cant go wrong with it.
 
 Samir 4p isn’t considered worth using despite the additional damage. Her 4p adds a 10%+ damage additional hit, however it only applies to the target (meaning the enemy targeted, meaning 1 additional attack). While it may be good for bosses, there are options like Crow 2p that would provide universal benefits regardless of the content (bosses vs mobs).
 
 ## Shield Breaker Chips
-{{ matrix('Shiro') }}
+{{ matrix('shiro') }}
 #### 2p: **Targets >50% HP take 15%+ damage/shield break**
 Shiro has a strong damage and shield break buff, that is effortless to maintain, granted you lose its effects when targets drop below 50%. It’s great for shield break weapons because it boosts their utility, often giving the edge you need to prevent bosses from triggering their ults.
 
 Her 4p however falls off because a 20%+ damage boost upon entering combat is not enough to outweigh a universal damage boost, especially when you consider set up time, and content where fights last over 40 seconds.
 
-{{ matrix('KING') }}
+{{ matrix('king') }}
 #### 2p: **4%+ damage based on shield value reduced, 3 stack**
 King 2p is strong for shield break weapons as well, because it boosts damage based on target shield value which comes naturally in combat.
 
 King 4p however is life steal based on attack. This effect is irrelevant because attack in comparison to hp is practically nothing, so it doesn’t even heal for much, and even then it requires 3+ enemies.
 
 ## Support Chips
-{{ matrix('Coco Ritter') }}
+{{ matrix('coco-ritter') }}
 #### 2p: **8%+ heal boost**
 #### 4p: **10%+ attack buff**
 Coco is a great support chip for both 2p and 4p as it does exactly what you want as a support. It increases the amount of heals you provide from 2p, as well as buffing party attack damage with the 4p.
 
-{{ matrix('Zero') }}
+{{ matrix('zero') }}
 #### 2p: **120%+ shield based on attack**
 #### 4p: **16%+ damage boost**
 Zero is a decent support chip as well. He grants a minor party shield, which might save a life as small as the shield is.
@@ -64,17 +66,17 @@ Zero is a decent support chip as well. He grants a minor party shield, which mig
 The 4p however improves upon this effect by increasing party damage of members with the shield. As a support, boosting party offensive capabilities is very valuable.
 
 ## Utility Chips
-{{ matrix('Claudia') }}
+{{ matrix('claudia') }}
 #### 2p: **Refreshes jumps upon aerial damage, 13%+ aerial damage**
 Claudia 2p is niche as it only improves aerial combat. However, it’s very strong and makes aerial combat much more fluid with the ability to refresh jumps mid-air. It enables weapons like Crow and Samir to push beyond their limits and even provides a sense of safety with better aerial mobility.
 
 Her 4p however is even more niche, as such it isn’t typically worth running. Her 4p reduces skill cd, however not by a significant amount, but the 36%+ combo damage it grants is quite good.
 
-{{ matrix('Pepper') }}
+{{ matrix('pepper') }}
 #### 3p: **10%+ Weapon recharge rate**
 Weapon recharge is great to have because it boosts the rate at which you can use your switch skills. It boosts offensive capabilities, and is often a great filler set since it’s an SR set. It’s great to have on side weapons that don’t provide the majority of your damage, by increasing uptime on your main weapon.
 
-{{ matrix('Barbarossa') }}
+{{ matrix('barbarossa') }}
 #### 3p: **50%+ Reflect Damage, 20%+ damage**
 Barbarossa is niche because reflect damage has to meet a few conditions before being worth using. After all, is there any point in reflecting 100k damage when you can do that much with ease from strictly going DPS?
 

@@ -1,0 +1,105 @@
+{
+	"apophis": {
+		"name": "Apophis"
+	},
+	"barbarossa": {
+		"name": "Barbarossa"
+	},
+	"frost-bot": {
+		"name": "Frost Bot"
+	},
+	"robarg": {
+		"name": "Robarg"
+	},
+	"sobek": {
+		"name": "Sobek"
+	},
+	"bai-ling": {
+		"name": "Bai Ling",
+		"rarity": 4
+	},
+	"baiyuekui": {
+		"name": "Baiyuekui",
+		"rarity": 5
+	},
+	"claudia": {
+		"name": "Claudia",
+		"rarity": 5
+	},
+	"cobalt-b": {
+		"name": "Cobalt-B",
+		"rarity": 5
+	},
+	"coco-ritter": {
+		"name": "Coco Ritter",
+		"rarity": 5
+	},
+	"crow": {
+		"name": "Crow",
+		"rarity": 5
+	},
+	"echo": {
+		"name": "Echo",
+		"rarity": 4
+	},
+	"ene": {
+		"name": "Ene",
+		"rarity": 4
+	},
+	"frigg": {
+		"name": "Freyja",
+		"rarity": 5
+	},
+	"fuwasaki": {
+		"name": "Saki Fuwa",
+		"rarity": 5
+	},
+	"hilda": {
+		"name": "Hilda",
+		"rarity": 4
+	},
+	"huma": {
+		"name": "Huma",
+		"rarity": 5
+	},
+	"king": {
+		"name": "KING",
+		"rarity": 5
+	},
+	"marc": {
+		"name": "Marc",
+		"rarity": 5
+	},
+	"meryl": {
+		"name": "Meryl",
+		"rarity": 5
+	},
+	"nemesis": {
+		"name": "Nemesis",
+		"rarity": 5
+	},
+	"pepper": {
+		"name": "Pepper",
+		"rarity": 4
+	},
+	"ruby": {
+		"name": "Ruby",
+		"rarity": 5
+	},
+	"samir": {
+		"name": "Samir",
+		"rarity": 5
+	},
+	"shiro": {
+		"name": "Shiro",
+		"rarity": 5
+	},
+	"tsubasa": {
+		"name": "Tsubasa",
+		"rarity": 5
+	},
+	"zero": {
+		"name": "Zero",
+		"rarity": 5
+	}
+}

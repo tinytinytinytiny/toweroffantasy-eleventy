@@ -2,8 +2,6 @@ module.exports = {
 	data() {
 		return {
 			name: 'Jetboard',
-			isNew: false,
-			isChina: false,
 			rarity: 4
 		};
 	},

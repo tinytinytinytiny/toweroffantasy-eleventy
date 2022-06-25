@@ -1,10 +1,11 @@
 module.exports = {
 	data() {
 		return {
-			name: 'Bai Ling',
-			isNew: false,
-			isChina: false,
-			rarity: 4,
+			eleventyComputed: {
+				character: (data) => data.characters[data.page.fileSlug],
+				name: (data) => data.character.name,
+				rarity: (data) => data.character.rarity
+			},
 			weapon: {
 				name: 'Nightingale’s Feather',
 				element: 'physical',
@@ -59,10 +60,10 @@ module.exports = {
 			}
 		};
 	},
-	render({ helpers: { getData }, collections: { relics }, string: { skills }, name }) {
+	render({ getData, collections: { relics }, string: { skills }, name, page }) {
 		return {
 			awakening: [
-				`Restore 1 dodge attempt every fifth normal attack or after using ***${skills['bai-ling']['piercing-shot'].name}***.`,
+				`Restore 1 dodge attempt every fifth normal attack or after using ***${skills[page.fileSlug]['piercing-shot'].name}***.`,
 				'Increase the current weapon’s base ATK growth by **10%**.',
 				'Increase headshot damage by **30%**.',
 				'Increase the current weapon’s base ATK growth by **20%**.',

@@ -2,8 +2,6 @@ module.exports = {
 	data() {
 		return {
 			name: 'Strange Cube',
-			isNew: false,
-			isChina: false,
 			rarity: 4
 		};
 	},

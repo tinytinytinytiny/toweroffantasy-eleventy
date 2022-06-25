@@ -1,10 +1,13 @@
 module.exports = {
 	data() {
 		return {
-			name: 'Saki Fuwa',
 			isNew: true,
 			isChina: true,
-			rarity: 5,
+			eleventyComputed: {
+				character: (data) => data.characters[data.page.fileSlug],
+				name: (data) => data.character.name,
+				rarity: (data) => data.character.rarity
+			},
 			weapon: {
 				name: 'Ryusen Toshin',
 				element: 'ice',

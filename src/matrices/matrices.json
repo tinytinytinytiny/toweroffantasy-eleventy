@@ -1,4 +1,6 @@
 {
 	"layout": "layouts/matrix.html",
-	"background": "art/fuwasaki.png"
+	"background": "art/fuwasaki.png",
+	"isNew": false,
+	"isChina": false
 }

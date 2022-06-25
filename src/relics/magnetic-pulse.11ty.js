@@ -2,8 +2,6 @@ module.exports = {
 	data() {
 		return {
 			name: 'Magnetic Pulse',
-			isNew: false,
-			isChina: false,
 			rarity: 4
 		};
 	},

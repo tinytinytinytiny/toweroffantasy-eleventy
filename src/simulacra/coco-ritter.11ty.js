@@ -1,10 +1,11 @@
 module.exports = {
 	data() {
 		return {
-			name: 'Coco Ritter',
-			isNew: false,
-			isChina: false,
-			rarity: 5,
+			eleventyComputed: {
+				character: (data) => data.characters[data.page.fileSlug],
+				name: (data) => data.character.name,
+				rarity: (data) => data.character.rarity
+			},
 			weapon: {
 				name: 'Absolute Zero',
 				element: 'ice',
@@ -59,12 +60,12 @@ module.exports = {
 			}
 		};
 	},
-	render({ name, string: { skills } }) {
+	render({ name, string: { skills }, page }) {
 		return {
 			awakening: [
 				'After dodging, summon a healing bee that follows the user and heals the ally with the lowest percentage of HP within **15** meters. Heal for **25%** of ATK and restore **50** weapon charge points each time and last for **25** seconds. Cooldown: **25** seconds.',
 				'Increase the current weapon’s base HP growth by **16%**.',
-				`Use ***${skills['coco-ritter'].sanctuary.name}*** or discharge skills to remove debuffs from targets, can be used while being affect by control effects. Increase shatter and damage dealt for all teammates within range by **20%**, and grant them immunity to control effects and shatter.`,
+				`Use ***${skills[page.fileSlug].sanctuary.name}*** or discharge skills to remove debuffs from targets, can be used while being affect by control effects. Increase shatter and damage dealt for all teammates within range by **20%**, and grant them immunity to control effects and shatter.`,
 				'Increase the current weapon’s base HP growth by **32%**.',
 				'Increase healing effect by **15%**, plus an additional **20%** when healing targets with less than **60%** HP.',
 				'Whenever a healing bee is summoned or disappears from battle, heal all allies for **100%** of the user’s ATK. All allies within **6** meters of the healing bee also gain **10%** damage boost (cannot stack).'

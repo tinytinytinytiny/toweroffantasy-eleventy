@@ -9,7 +9,7 @@
 			<span>Tower of Fantasy Index</span>
 		</a>
 		<ul class="nav__links flex-grid">
-			{% for item in navigation.pages %}
+			{% for item in site.navigation.pages %}
 			<li>
 				<a
 					href="{{ item.url }}"
@@ -22,7 +22,7 @@
 			{% endfor %}
 		</ul>
 		<ul class="nav__links flex-grid text-secondary">
-			{% for item in navigation.socials -%}
+			{% for item in site.navigation.socials -%}
 			<li>
 				<a href="{{ item.url }}" {% if item.external %}target="_blank"{% endif %}>
 					<span>{{ item.text }}</span>

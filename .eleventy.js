@@ -23,6 +23,9 @@ module.exports = (config) => {
 	config.addPassthroughCopy('./src/assets/');
 	config.addPassthroughCopy('./src/js/');
 
+	config.addGlobalData('getCollection', () => (collection, fileSlug) => collection.find(i => i.fileSlug === fileSlug));
+	config.addGlobalData('getData', () => (collection, fileSlug) => collection.find(i => i.fileSlug === fileSlug).data);
+
 	config.addFilter('limitTo', limitTo);
 	config.addFilter('stringifyDate', stringifyDate);
 	config.addFilter('sortBy', sortBy);

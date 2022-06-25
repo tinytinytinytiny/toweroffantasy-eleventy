@@ -1,3 +1,5 @@
 {
-	"layout": "layouts/simulacrum.html"
+	"layout": "layouts/simulacrum.html",
+	"isNew": false,
+	"isChina": false
 }

@@ -2,8 +2,6 @@ module.exports = {
 	data() {
 		return {
 			name: 'Omnium Handcannon',
-			isNew: false,
-			isChina: false,
 			rarity: 4
 		};
 	},

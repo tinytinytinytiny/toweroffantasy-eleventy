@@ -1,10 +1,11 @@
 module.exports = {
 	data() {
 		return {
-			name: 'Tsubasa',
-			isNew: false,
-			isChina: false,
-			rarity: 5,
+			eleventyComputed: {
+				character: (data) => data.characters[data.page.fileSlug],
+				name: (data) => data.character.name,
+				rarity: (data) => data.character.rarity
+			},
 			weapon: {
 				name: 'Icewind Arrow',
 				element: 'ice',
@@ -59,12 +60,12 @@ module.exports = {
 			}
 		};
 	},
-	render({ name, string: { skills } }) {
+	render({ name, string: { skills }, page }) {
 		return {
 			awakening: [
 				'Grant a stack of Sharp Arrow each time the arrow fired by a Dodge attack hits a target. Each stack increases damage by **8%** for **15** seconds. Stack up to **3**.',
 				'Increase the current weapon’s base ATK growth by **16%**.',
-				`Launching a Dodge attack fires **3** ${skills.tsubasa['charged-arrow'].name}s.`,
+				`Launching a Dodge attack fires **3** ${skills[page.fileSlug]['charged-arrow'].name}s.`,
 				'Increase the current weapon’s base ATK growth by **32%**.',
 				'Double duration of Arrow Rain and slow targets by **25%**.',
 				`Sharp Arrow stacks up to **5** times. Hitting a target with ${skills.tsubasa['charged-arrow'].name} immediately grants **3** stacks, headshots grant **5** stacks.`

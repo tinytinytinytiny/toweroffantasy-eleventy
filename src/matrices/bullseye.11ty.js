@@ -2,8 +2,6 @@ module.exports = {
 	data() {
 		return {
 			name: 'Bullseye',
-			isNew: false,
-			isChina: false,
 			rarity: 3,
 			sets: [3],
 			values: ['6%']

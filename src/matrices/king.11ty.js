@@ -1,10 +1,11 @@
 module.exports = {
 	data() {
 		return {
-			name: 'KING',
-			isNew: false,
-			isChina: false,
-			rarity: 5,
+			eleventyComputed: {
+				character: (data) => data.characters[data.page.fileSlug],
+				name: (data) => data.character.name,
+				rarity: (data) => data.character.rarity
+			},
 			sets: [2, 4],
 			values: {
 				set2: [

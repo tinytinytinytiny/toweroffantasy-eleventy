@@ -2,8 +2,6 @@ module.exports = {
 	data() {
 		return {
 			name: 'Hovering Cannon',
-			isNew: false,
-			isChina: false,
 			rarity: 4
 		};
 	},

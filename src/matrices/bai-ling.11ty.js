@@ -1,10 +1,11 @@
 module.exports = {
 	data() {
 		return {
-			name: 'Bai Ling',
-			isNew: false,
-			isChina: false,
-			rarity: 4,
+			eleventyComputed: {
+				character: (data) => data.characters[data.page.fileSlug],
+				name: (data) => data.character.name,
+				rarity: (data) => data.character.rarity
+			},
 			sets: [3],
 			values: ['12%', '15%', '18%']
 		};

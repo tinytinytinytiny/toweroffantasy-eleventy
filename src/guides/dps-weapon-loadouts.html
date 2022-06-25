@@ -7,10 +7,10 @@
 ---
 
 {% macro weapon(name) %}
-{% set data = helpers.getData(collections.simulacra, name) %}
+{% set data = getData(collections.simulacra, name) %}
 <div class="card">
 	<img src="/assets/images/wep/{{ name }}.png" alt="{{ data.name }}’s weapon" width="128" height="128" loading="lazy">
-	<a href="{{ data.permalink | default('/simulacra/' + name + '/') }}" class="font-bold inline-block" data-variant="hover"><span>{{ data.name }}</span></a>
+	<a href="{{ getCollection(collections.simulacra, name).url }}" class="font-bold inline-block" data-variant="hover"><span>{{ data.name }}</span></a>
 </div>
 {% endmacro %}
 

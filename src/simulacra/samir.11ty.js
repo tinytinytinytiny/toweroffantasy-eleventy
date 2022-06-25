@@ -1,10 +1,11 @@
 module.exports = {
 	data() {
 		return {
-			name: 'Samir',
-			isNew: false,
-			isChina: false,
-			rarity: 5,
+			eleventyComputed: {
+				character: (data) => data.characters[data.page.fileSlug],
+				name: (data) => data.character.name,
+				rarity: (data) => data.character.rarity
+			},
 			weapon: {
 				name: 'Dual EM Stars',
 				element: 'electric',
@@ -57,14 +58,14 @@ module.exports = {
 			}
 		};
 	},
-	render({ name, string: { skills } }) {
+	render({ name, string: { skills }, page }) {
 		return {
 			awakening: [
 				'Trigger an electrical explosion on the target after landing a critical hit, dealing additional damage equal to **30%** of ATK to the target and nearby enemies. Cooldown: **0.5** seconds.',
 				'Increase the current weapon’s base ATK growth by **16%**.',
 				'Increase crit rate to electrified targets by **40%**. Electrical explosions extend the duration of electrified effects by **0.5** seconds, up to a maximum of **5** seconds.',
 				'Increase the current weapon’s base ATK growth by **32%**.',
-				`Double the duration of ${skills.samir['electro-field'].name} and pull targets into the center of the attack.`,
+				`Double the duration of ${skills[page.fileSlug]['electro-field'].name} and pull targets into the center of the attack.`,
 				'Triggering an electrical explosion reduces skill cooldowns by 1 second.'
 			],
 			mimicEffects: [

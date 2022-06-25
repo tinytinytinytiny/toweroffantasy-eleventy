@@ -2,8 +2,6 @@ module.exports = {
 	data() {
 		return {
 			name: 'Type V Armor',
-			isNew: false,
-			isChina: false,
 			rarity: 5
 		};
 	},

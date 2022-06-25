@@ -2,8 +2,6 @@ module.exports = {
 	data() {
 		return {
 			name: 'Jetpack',
-			isNew: false,
-			isChina: false,
 			rarity: 4
 		};
 	},

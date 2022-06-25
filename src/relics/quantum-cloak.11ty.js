@@ -2,8 +2,6 @@ module.exports = {
 	data() {
 		return {
 			name: 'Quantum Cloak',
-			isNew: false,
-			isChina: false,
 			rarity: 4
 		};
 	},

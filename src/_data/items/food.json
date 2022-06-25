@@ -878,5 +878,68 @@
 			["firmmeat", 1],
 			["fireear", 3]
 		]
+	},
+	{
+		"name": "Braised Meat",
+		"image": "braisedpork.png",
+		"rarity": 4,
+		"stars": 2,
+		"effects": [
+			"Recovers **20** satiety",
+			"**Frost Resistance +15%**",
+			"**Frost Resistsance +675**",
+			"Duration **1200** sec"
+		],
+		"ingredients": [
+			["fattymeat", 1]
+		]
+	},
+	{
+		"name": "Juicy BLT",
+		"image": "juicymeatsandwich.png",
+		"rarity": 4,
+		"stars": 2,
+		"effects": [
+			"Recovers **20** satiety",
+			"**Flame Resistance +15%**",
+			"**Flame Resistsance +675**",
+			"Duration **1200** sec"
+		],
+		"ingredients": [
+			["fattymeat", 1],
+			["redwheat", 2],
+			["egg", 2]
+		]
+	},
+	{
+		"name": "Salmon Sashimi",
+		"image": "salmonsashimi.png",
+		"rarity": 4,
+		"stars": 2,
+		"effects": [
+			"Recovers **20** satiety",
+			"**Frost Damage +2%**",
+			"**Frost Damage +150**",
+			"Duration **1200** sec"
+		],
+		"ingredients": [
+			["salmon", 1]
+		]
+	},
+	{
+		"name": "Snail Baked Rice",
+		"image": "snailbakedrice.png",
+		"rarity": 4,
+		"stars": 2,
+		"effects": [
+			"Recovers **20** satiety",
+			"**Physical Resistance +15%**",
+			"**Physical Resistsance +675**",
+			"Duration **1200** sec"
+		],
+		"ingredients": [
+			["snail", 1],
+			["rice", 2]
+		]
 	}
 ]

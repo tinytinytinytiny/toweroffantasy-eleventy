@@ -1,10 +1,10 @@
 module.exports = {
 	data() {
 		return {
-			name: 'Robarg',
+			eleventyComputed: {
+				name: (data) => data.characters[data.page.fileSlug].name
+			},
 			bgImg: 'none',
-			isNew: false,
-			isChina: false,
 			rarity: 4,
 			sets: [3],
 			values: ['45%', '56%', '67.5%']

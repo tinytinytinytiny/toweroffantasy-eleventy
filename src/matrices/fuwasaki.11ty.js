@@ -1,10 +1,13 @@
 module.exports = {
 	data() {
 		return {
-			name: 'Saki Fuwa',
 			isNew: true,
 			isChina: true,
-			rarity: 5,
+			eleventyComputed: {
+				character: (data) => data.characters[data.page.fileSlug],
+				name: (data) => data.character.name,
+				rarity: (data) => data.character.rarity
+			},
 			sets: [2, 4],
 			values: {
 				set2: ['60%', '100%', '150%', '220%'],

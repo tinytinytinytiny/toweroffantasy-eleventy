@@ -2,8 +2,6 @@ module.exports = {
 	data() {
 		return {
 			name: 'Omnium Shield',
-			isNew: false,
-			isChina: false,
 			rarity: 5
 		};
 	},
