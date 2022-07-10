@@ -3,7 +3,7 @@
 {% endmacro %}
 
 <h3>Recommended Matrices</h3>
-<ul class="reel sheet gap-s !p-s-l !py-xs-s" data-border="none" data-variant="matrix-grid">
+<ul class="reel sheet box-border gap-s !p-s-l !py-xs-s" data-border="none" data-variant="matrix-grid">
 	{% for chip, quantity in recChips %}
 		{% if getData(collections.matrices, chip) %}
 			{% set chipName = getData(collections.matrices, chip).name %}
