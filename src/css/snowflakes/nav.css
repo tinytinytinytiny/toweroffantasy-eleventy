@@ -1,5 +1,6 @@
 .nav {
 	--region-space: theme('spacing.m-l');
+	--sidebar-target-width: clamp(15rem, 25vw, 20rem);
 	--wrapper-padding: theme('spacing.m-l');
 	background-color: theme('colors.sheet.0');
 }
