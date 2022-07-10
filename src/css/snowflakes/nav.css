@@ -160,6 +160,10 @@
 	top: 0;
 }
 
+.nav[data-state="expanded"] summary {
+	display: none;
+}
+
 .nav[data-state="expanded"] .nav__head {
 	margin-top: 0;
 }
