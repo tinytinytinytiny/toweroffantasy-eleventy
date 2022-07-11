@@ -4,7 +4,7 @@
 	font-size: theme('fontSize.step--1');
 	font-weight: normal;
 	letter-spacing: 0.035em;
-	line-height: 1.1;
+	line-height: 1.2;
 }
 
 .infobite > :last-child {
