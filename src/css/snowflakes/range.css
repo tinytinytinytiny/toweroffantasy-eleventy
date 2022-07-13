@@ -101,7 +101,7 @@ input[type="range"][list] {
 input[type="range"] + datalist {
 	-webkit-appearance: none;
 	appearance: none;
-	display: flex;
+	display: flex !important;
 	font-size: theme('fontSize.step--1');
 	justify-content: space-between;
 	width: 100%;

@@ -7,7 +7,9 @@
 	{% include "partials/damage-calculator/result.html" %}
 	<form action="{{ page.url }}#result" method="post" class="stack max-w-none wrapper p-0" id="damage-calculator" data-wrapper="wide">
 		<fieldset class="sheet stack box-border" data-layer="2">
-			<legend class="text-step-3 uppercase font-fancy text-bold tracking-wide">Main Multipliers</legend>
+			<legend>
+				<h2 data-appearance="none">Main Multipliers</h2>
+			</legend>
 			<div class="clear-both" role="presentation"></div>
 			<div class="auto-grid mt-m gap-m-l">
 				{% include "partials/damage-calculator/critical-rate.html" %}
@@ -19,7 +21,9 @@
 			{% include "partials/damage-calculator/matrices.html" %}
 		</fieldset>
 		<fieldset class="sheet stack box-border" data-layer="2">
-			<legend class="text-step-3 uppercase font-fancy text-bold tracking-wide">Extra Options</legend>
+			<legend>
+				<h2 data-appearance="none">Extra Options</h2>
+			</legend>
 			<div class="clear-both" role="presentation"></div>
 			<div class="flex-grid mt-m gap-m-l">
 				<div class="stack">

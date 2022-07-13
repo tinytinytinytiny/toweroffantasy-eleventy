@@ -1,8 +1,8 @@
 .wrapper {
 	--wrapper-max-width: 46rem;
-  padding-left: var(--wrapper-padding, theme('spacing.m-xl'));
-  padding-right: var(--wrapper-padding, theme('spacing.m-xl'));
-  position: relative;
+	padding-left: var(--wrapper-padding, theme('spacing.m-xl'));
+	padding-right: var(--wrapper-padding, theme('spacing.m-xl'));
+	position: relative;
 }
 
 .wrapper > * {

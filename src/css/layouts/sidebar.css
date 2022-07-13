@@ -10,9 +10,9 @@
 }
 
 .sidebar > :last-child {
-  flex-basis: 0;
   flex-grow: 999;
-  min-width: var(--sidebar-content-min-width, 50%);
+	max-width: 100%;
+  width: var(--sidebar-content-min-width, 50%);
 }
 
 .sidebar[data-direction="rtl"] {

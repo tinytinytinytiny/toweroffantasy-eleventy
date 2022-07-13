@@ -46,48 +46,49 @@ The main source of materials is killing creatures on your Artificial Island, inc
 <img class="inline-block" src="/assets/images/guides/Home{{ item }}.png" alt="{{ item }}" width="42" height="42">
 {%- endmacro %}
 
-<div class="big-table wrapper">
-	<table>
-		<thead>
-			<tr>
-				<th>Resource</th>
-				<th>Animals</th>
-				<th>Mobs (Elites Included)</th>
-				<th>World Bosses</th>
-			</tr>
-		</thead>
-		<tbody>
-			<tr>
-				<th class="whitespace-nowrap w-max">{{ resource('Shell') }}</th>
-				<td>7–10 per kill</td>
-				<td></td>
-				<td></td>
-			</tr>
-			<tr>
-				<th class="whitespace-nowrap w-max">{{ resource('Pumpkin') }} {{ resource('Ore') }}</th>
-				<td></td>
-				<td>1638–1744</td>
-				<td></td>
-			</tr>
-			<tr>
-				<th class="whitespace-nowrap w-max">{{ resource('FishBones') }} {{ resource('Meat') }}</th>
-				<td></td>
-				<td>1606–1674</td>
-				<td></td>
-			</tr>
-			<tr>
-				<th class="whitespace-nowrap w-max">{{ resource('Rattan') }} {{ resource('Twigs') }}</th>
-				<td></td>
-				<td></td>
-				<td>284–288</td>
-			</tr>
-		</tbody>
-	</table>
-</div>
+{% bigTable %}
+<table>
+	<thead>
+		<tr>
+			<th>Resource</th>
+			<th>Animals</th>
+			<th>Mobs</th>
+			<th>World Bosses</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<th class="whitespace-nowrap w-max">{{ resource('Shell') }}</th>
+			<td>7–10 per kill</td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<th class="whitespace-nowrap w-max">{{ resource('Pumpkin') }} {{ resource('Ore') }}</th>
+			<td></td>
+			<td>1638–1744</td>
+			<td></td>
+		</tr>
+		<tr>
+			<th class="whitespace-nowrap w-max">{{ resource('FishBones') }} {{ resource('Meat') }}</th>
+			<td></td>
+			<td>1606–1674</td>
+			<td></td>
+		</tr>
+		<tr>
+			<th class="whitespace-nowrap w-max">{{ resource('Rattan') }} {{ resource('Twigs') }}</th>
+			<td></td>
+			<td></td>
+			<td>284–288</td>
+		</tr>
+	</tbody>
+</table>
+{% endbigTable %}
 
 ### Building Levels
 Resources will accumulate for up to 24 hours, after which they must be collected.
 
+{% bigTable %}
 | Level | Resources per Hour | Max Resources (24 hr) |
 |-------|--------------------|-----------------------|
 | 1     | 4                  | 96                    |
@@ -99,3 +100,4 @@ Resources will accumulate for up to 24 hours, after which they must be collected
 | 7     | 21                 | 504                   |
 | 8     | 23                 | 552                   |
 | 9     | 25                 | 600                   |
+{% endbigTable %}

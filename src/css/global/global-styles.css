@@ -27,8 +27,7 @@ body {
 }
 
 main {
-	--sidebar-content-min-width: 60%;
-	--sidebar-content-min-width: min(50rem, 100%);
+	--sidebar-content-min-width: 50rem;
 }
 
 main:focus {

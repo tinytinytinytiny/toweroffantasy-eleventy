@@ -1,6 +1,5 @@
 .big-table, .wrapper > .big-table {
 	--wrapper-padding: 0;
-	max-width: none;
 	overflow-x: auto;
 }
 
@@ -8,8 +7,16 @@
 	max-width: none;
 }
 
+.big-table[data-width="stretch"] {
+	max-width: none;
+}
+
 .big-table[data-width="stretch"] > table {
 	width: 100%;
+}
+
+.big-table > table p {
+	min-width: 23ch;
 }
 
 summary + .big-table {
