@@ -1,6 +1,18 @@
-{% macro material(material, rarity, index = 1) %}
+{% macro materials() %}
+	<div class="sheet reel gap-2xs-xs p-s-m stack-space-xs" data-layer="1">
+		{{ caller() }}
+	</div>
+{% endmacro %}
+
+{% macro material(material, rarity = 1, index = 1) %}
 	<div class="item-frame grow" data-size="m" data-rarity="{{ rarity }}">
-		<img src="/assets/images/mat/{{ material }}{{ index }}.png" alt="{{ material }} {{ index }}" width="91" height="91" loading="lazy">
+		<img
+			src="/assets/images/mat/{{ material }}{{ index }}.png"
+			alt="Tier {{ index }} {{ string.element[material].name | default(material) }} upgrade material"
+			width="91"
+			height="91"
+			loading="lazy"
+		>
 	</div>
 {% endmacro %}
 
@@ -13,28 +25,22 @@
 {% endmacro %}
 
 {% if weapon.materials %}
-	<h3>Breakthrough Materials</h3>
-	<div class="stack sheet box-border" data-border="none">
-		<div class="sheet reel gap-2xs-xs" data-layer="1">
-			{{ material(weapon.element, 2, 1) }}
-			{{ progression(4) }}
-			{{ material(weapon.element, 3, 2) }}
-			{{ progression(5) }}
-			{{ material(weapon.element, 4, 3) }}
-		</div>
-		<div class="sheet reel gap-2xs-xs" data-layer="1">
-			{{ material(weapon.materials[0], 3, 1) }}
-			{{ progression(4) }}
-			{{ material(weapon.materials[0], 4, 2) }}
-			{{ progression(5) }}
-			{{ material(weapon.materials[0], 5, 3) }}
-		</div>
-		<div class="sheet reel gap-2xs-xs" data-layer="1">
-			{{ material(weapon.materials[1], 4, 1) }}
-			{{ progression(4) }}
-			{{ material(weapon.materials[1], 5, 2) }}
-			{{ progression(5) }}
-			{{ material(weapon.materials[1], 5, 3) }}
-		</div>
+	<h3>Upgrade Materials</h3>
+	<div class="stack sheet box-border p-s-m" data-border="none">
+		{% call materials() %}
+			{{ material(weapon.element, rarity = 2, index = 1) }}
+			{{ material(weapon.element, rarity = 3, index = 2) }}
+			{{ material(weapon.element, rarity = 4, index = 3) }}
+		{% endcall %}
+		{% call materials() %}
+			{{ material(weapon.materials[0], rarity = 3, index = 1) }}
+			{{ material(weapon.materials[0], rarity = 4, index = 2) }}
+			{{ material(weapon.materials[0], rarity = 5, index = 3) }}
+		{% endcall %}
+		{% call materials() %}
+			{{ material(weapon.materials[1], rarity = 4, index = 1) }}
+			{{ material(weapon.materials[1], rarity = 5, index = 2) }}
+			{{ material(weapon.materials[1], rarity = 5, index = 3) }}
+		{% endcall %}
 	</div>
 {% endif %}

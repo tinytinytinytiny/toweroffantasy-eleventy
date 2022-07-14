@@ -1,7 +1,7 @@
 <p>
 	Data reflects unleveled weapons.
 </p>
-{% for category, list in skills | entries | reverse %}
+{% for category, list in skills | entries %}
 	<details class="stack copy" {% if loop.index > 1 %}data-collapse="always"{% endif %}>
 		<summary class="chip">{{ string.skillCategories[category] }}</summary>
 		<div class="sheet stack mt-0 p-s-m" data-border="none">

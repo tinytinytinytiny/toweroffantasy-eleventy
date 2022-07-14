@@ -1,18 +1,18 @@
-const cacheName = 'my-cache-07122022';
+const cacheName = 'my-cache-07142022';
 
 const filesToCache = [
 	'/',
 	// '/css/global.css',
 	'/js/main.js',
 	'/assets/images/fixed_btn_cbt_small.png',
-	'/assets/images/art/weila.png',
+	// '/assets/images/art/weila.png',
 	'/changelog/'
-	// '/simulacra/',
-	// '/matrices/',
-	// '/relics/',
-	// '/food/',
-	// '/mounts/',
-	// '/guides/'
+	'/simulacra/',
+	'/matrices/',
+	'/relics/',
+	'/food/',
+	'/mounts/',
+	'/guides/'
 ];
 
 self.addEventListener('activate', e => self.clients.claim());

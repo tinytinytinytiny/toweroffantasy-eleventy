@@ -1,0 +1,19 @@
+.reel[tabindex]:focus-visible {
+	border: 0;
+	outline: 0.1em solid theme('colors.primary');
+	z-index: 1;
+}
+
+.reel[data-draggable] {
+	cursor: grab;
+}
+
+.reel[data-state="pressed"] {
+	cursor: grabbing;
+}
+
+.reel[data-state="dragging"],
+.reel[data-state="dragging"] * {
+	cursor: grabbing;
+	user-select: none;
+}

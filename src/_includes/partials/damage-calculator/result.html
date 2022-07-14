@@ -3,10 +3,10 @@
 <section class="max-w-none stack !stack-space-xs" aria-label="Result">
 	{% set result = eleventy.edge.cookies.totalDmg | default(100, true) %}
 	{% set footnote = eleventy.edge.cookies.totalDmgFootnote | default('', true) | urldecode %}
-	<output name="result" for="damage-calculator" class="sheet block font-fancy text-step-8 p-s-m" id="result" data-layer="0">
+	<output name="result" for="damage-calculator" class="sheet block font-fancy text-step-7 p-s-m" id="result" data-layer="0">
 		<span class="block leading-[0.88] text-primary" id="damage-output">{{ result + '%' }}</span>
 		{% if footnote %}
-			<span class="block uppercase text-step-1 tracking-wide" id="damage-footnote">{{ footnote }}</span>
+			<span class="block uppercase text-step-1 tracking-wide leading-none" id="damage-footnote">{{ footnote }}</span>
 		{% endif %}
 	</output>
 	<p>
