@@ -6,14 +6,15 @@ const md = require('markdown-it')({
 	typographer: true
 }).disable('code');
 
-const limitTo = require('./src/filters/limit-to.js');
-const stringifyDate = require('./src/filters/stringify-date.js');
-const sortBy = require('./src/filters/sort-by.js');
-const groupBy = require('./src/filters/group-by.js');
-const groupByYear = require('./src/filters/group-by-year.js');
-const except = require('./src/filters/except.js');
+const limitTo = require('./src/_11ty/filters/limit-to.js');
+const stringifyDate = require('./src/_11ty/filters/stringify-date.js');
+const sortBy = require('./src/_11ty/filters/sort-by.js');
+const sortByDisplayOrder = require('./src/_11ty/filters/sort-by-display-order.js');
+const groupBy = require('./src/_11ty/filters/group-by.js');
+const groupByYear = require('./src/_11ty/filters/group-by-year.js');
+const except = require('./src/_11ty/filters/except.js');
 
-const htmlMinTransform = require('./src/transforms/html-min-transform.js');
+const htmlMinTransform = require('./src/_11ty/transforms/html-min-transform.js');
 
 module.exports = (config) => {
 	config.addPlugin(EleventyEdgePlugin);
@@ -29,6 +30,7 @@ module.exports = (config) => {
 	config.addFilter('limitTo', limitTo);
 	config.addFilter('stringifyDate', stringifyDate);
 	config.addFilter('sortBy', sortBy);
+	config.addFilter('sortByDisplayOrder', sortByDisplayOrder);
 	config.addFilter('groupBy', groupBy);
 	config.addFilter('groupByYear', groupByYear);
 	config.addFilter('except', except);
@@ -41,17 +43,18 @@ module.exports = (config) => {
 
 	config.addShortcode('range', (limit) => [...new Array(limit).keys()]);
 	config.addShortcode('year', () => `${new Date().getFullYear()}`);
-	config.addShortcode('china', require('./src/shortcodes/china.js'));
-	config.addShortcode('cum', require('./src/shortcodes/cum.js'));
-	config.addShortcode('kbd', require('./src/shortcodes/kbd.js'));
+	config.addShortcode('china', require('./src/_11ty/shortcodes/china.js'));
+	config.addShortcode('cum', require('./src/_11ty/shortcodes/cum.js'));
+	config.addShortcode('kbd', require('./src/_11ty/shortcodes/kbd.js'));
 	config.addPairedShortcode('markdown', (children) => {
 		const content = md.render(children);
 		return content;
 	});
-	config.addPairedShortcode('aside', require('./src/shortcodes/aside.js'));
-	config.addPairedShortcode('bigTable', require('./src/shortcodes/big-table.js'));
-	config.addPairedShortcode('sheet', require('./src/shortcodes/sheet.js'));
-	config.addPairedShortcode('details', require('./src/shortcodes/details.js'));
+	config.addPairedShortcode('aside', require('./src/_11ty/shortcodes/aside.js'));
+	config.addPairedShortcode('bigTable', require('./src/_11ty/shortcodes/big-table.js'));
+	config.addPairedShortcode('sheet', require('./src/_11ty/shortcodes/sheet.js'));
+	config.addPairedShortcode('details', require('./src/_11ty/shortcodes/details.js'));
+	config.addPairedShortcode('detailsSheet', require('./src/_11ty/shortcodes/details-sheet.js'));
 
 	config.addCollection('changelog', (collection) => {
 		return [...collection.getFilteredByGlob('./src/changelog/*.md')].reverse();
@@ -66,22 +69,7 @@ module.exports = (config) => {
 		return collection.getFilteredByGlob('./src/relics/*.11ty.js');
 	});
 	config.addCollection('guides', (collection) => {
-		return [...collection.getFilteredByGlob('./src/guides/*')
-			.sort((a, b) => {
-				if (typeof(a.data.displayOrder) === 'undefined' && typeof(b.data.displayOrder) === 'undefined') {
-					return 0;
-				}
-
-				if (typeof(a.data.displayOrder) === 'undefined') {
-					return -1;
-				}
-
-				if (typeof(b.data.displayOrder) === 'undefined') {
-					return 1;
-				}
-
-				return Number(a.data.displayOrder) - Number(b.data.displayOrder);
-			})].reverse();
+		return [...collection.getFilteredByGlob('./src/guides/*')].reverse();
 	});
 
 	config.addTransform('htmlmin', htmlMinTransform);

@@ -3,7 +3,7 @@
 {% endmacro %}
 
 <h3>Recommended Matrices</h3>
-<ul class="reel sheet box-border gap-s mb-0 !p-s-l !py-s" data-border="none" data-variant="matrix-grid" tabindex="0">
+<ul class="reel sheet box-border gap-s mb-0 !p-s-l !py-s" tabindex="0">
 	{% for chip, quantity in recChips %}
 		{% if getData(collections.matrices, chip) %}
 			{% set chipName = getData(collections.matrices, chip).name %}
@@ -25,14 +25,14 @@
 				{% endif %}
 			</div>
 			<div>
-				<a class="card__link inline-block font-bold text-center text-step--1 leading-[1.2] max-w-[15ch]" href="/matrices/{{ chip }}" data-variant="hover">
+				<a class="card__link inline-block font-bold text-center text-step--1 leading-[1.2] max-w-[15ch]" href="/matrices/{{ chip }}" data-underline="on-hover">
 					{{ chipName }}<span class="visually-hidden"> {{ quantity }}-set</span>
 				</a>
 			</div>
 		</li>
 	{% endfor %}
 </ul>
-<div class="reel-instructions sheet box-border mt-0 px-s py-xs" data-border="none" data-layer="3">
+<div class="reel-instructions sheet box-border mt-0 px-s py-xs"   data-layer="3">
 	{% include "icons/arrow-left.svg" %}
 	<span class="reel-instructions__label">Scroll for more</span>
 	{% include "icons/arrow-right.svg" %}

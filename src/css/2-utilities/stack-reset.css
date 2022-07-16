@@ -1,0 +1,7 @@
+.stack-reset {
+	--stack-space: var(--__default-stack-space);
+}
+
+.\!stack-reset {
+	--stack-space: var(--__default-stack-space) !important;
+}

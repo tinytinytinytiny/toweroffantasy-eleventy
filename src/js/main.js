@@ -68,6 +68,15 @@ if (!isSupportsFlexGap()) {
 
 if (document.querySelectorAll('.reel').length) {
 	document.querySelectorAll('.reel').forEach((reel) => enableDragScroll(reel));
+
+	if (document.querySelectorAll('.reel-instructions').length) {
+		document.querySelectorAll('.reel-instructions').forEach((reelInstruction) => {
+			const siblingReel = reelInstruction.previousSibling;
+			if (siblingReel.scrollWidth > siblingReel.offsetWidth) {
+				reelInstruction.setAttribute('data-state', 'visible');
+			}
+		});
+	}
 }
 
 function isSupportsFlexGap() {
@@ -94,11 +103,11 @@ function enableDragScroll(el) {
 	if (el.querySelectorAll('*').length) {
 		el.querySelectorAll('*').forEach(child => child.setAttribute('draggable', false));
 	}
-	
+
 	const pos = { left: 0, x: 0 };
 	let dragTimeout;
 	let dragged = false;
-	
+
 	el.setAttribute('data-draggable', true);
 	el.addEventListener('click', (event) => {
 		if (dragged) event.preventDefault();
@@ -114,7 +123,7 @@ function enableDragScroll(el) {
 
 			pos.left = el.scrollLeft;
 			pos.x = event.clientX;
-	
+
 			document.addEventListener('mousemove', handleMouseMove);
 			document.addEventListener('mouseup', handleMouseUp);
 		}
@@ -134,7 +143,7 @@ function enableDragScroll(el) {
 	function handleMouseUp(event) {
 		document.removeEventListener('mousemove', handleMouseMove);
 		document.removeEventListener('mouseup', handleMouseUp);
-		
+
 		el.getAttribute('data-state');
 		el.removeAttribute('data-state');
 	}

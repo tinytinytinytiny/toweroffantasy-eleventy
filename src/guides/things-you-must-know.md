@@ -1,6 +1,6 @@
 ---
 {
-	"title": "Things You MUST Know",
+	"title": "15 Things You MUST Know",
 	"authors": ["Zakum#3080"],
 	"tags": ["gathering"],
 	"displayOrder": 1
@@ -16,11 +16,17 @@ Vidya comin soon. Maybe. For now just a text guide.
 	</video>
 </figure>
 
-**Climb walls while consuming nearly 0 endurance** by simply performing the following combo: *Let go + Double jump + Grab on*  
-On PC, the default inputs are {% kbd 'Ctrl', 'Space', 'Space', 'W' %}.
+{% detailsSheet 'Climb walls while consuming nearly 0 endurance', 'open' %}
+**Let go + Double jump + Grab on**  
+{% kbd 'Ctrl', 'Space', 'Space', 'W' %}
+{% enddetailsSheet %}
 
-**To climb pass ledges that block you from climbing vertically**, do: *Backdash + Jump + Forward dash*  
-On PC, it’s {% kbd 'Right Click', 'Space', 'Right Click' %}. Advanced users can use Samir’s weapon’s Aerial hold attack to gain even more height; after the jump, hold Left Click until you kick upwards and quickly Right Click at the peak of the kick before heading downwards.
+{% detailsSheet 'Climb past ledges that block you from climbing vertically', 'open' %}
+**Backdash + Jump + Forward dash**  
+{% kbd 'Right Click', 'Space', 'Right Click' %}
+{% enddetailsSheet %}
+
+Advanced users can use Samir’s weapon’s Aerial hold attack to gain even more height; after the jump, hold Left Click until you kick upwards and quickly Right Click at the peak of the kick before heading downwards.
 
 ## 2. Jetpack Dash
 <figure class="max-w-full">
@@ -32,11 +38,15 @@ On PC, it’s {% kbd 'Right Click', 'Space', 'Right Click' %}. Advanced users ca
 While gliding with your jetpack, perform a dodge to gain distance forward. At the end of the dash distance, reactivate your jetpack. Repeating this process with your dashes will allow you to gain considerable distance while gliding.
 
 ## 3. Party Teleport
+{% aside %}
+Party teleport will bypass the cooldown on swapping lines.
+{% endaside %}
+
 On the right side of the screen click the flag icon to open the party member list. Clicking the third button (icon of two people) will teleport you to the location and line (channel) of the party leader. If you are the party leader, the teleport button is replaced with a summon button which sends party members a request to come to you.
 
-**Use this to form parties to teleport to world bosses. Once you are at the boss, leave the party so that more people can quickly join.**
+**Use this to form parties to teleport to world bosses.**
 
-It’s recommended that party leaders enable the option to auto-accept party join requests, accessible by clicking the flag icon a second time. **PARTY TELEPORT WILL BYPASS THE COOLDOWN ON SWAPPING LINES**.
+It’s recommended that party leaders enable the option to auto-accept party join requests, accessible by clicking the flag icon a second time.
 
 ## 4. Free Colossus Arms (SSR Relic)
 <figure class="embed max-w-full">
@@ -45,9 +55,19 @@ It’s recommended that party leaders enable the option to auto-accept party joi
 
 The free SSR relic [Colossus Arms](/relics/colossus-arms/) can be obtained on Day 1 from the Navia Ecological Park hidden quest line. You can also obtain the [Omnium Beast VII](/mounts/#omnium-beast-vii) and [Voyager](/mounts/#voyager) mounts.
 
-## 6. Relic and Weapon Sets
-You can create 3 relic sets that you can swap with the {% kbd 'G' %} key (on PC). You can't swap sets while in combat, but who says you can't swap before combat? Relics like Spacetime Rift, Drone, Couant, Magnetic Storm, Hovering Cannon, Type V Armor (for the explosion after ejecting), and Missile Barrage can be useful even when activated just before an enemy spawns, such as in Bygone Phantasm or Frontier Clash. Make use of this to maximize your DPS.
+## 5. Hidden Free Pity
+Your **30th gold nucleus** pull will guarantee an SSR weapon. If you wish to reroll until you get the perfect first pull, aim for this number.
 
+## 6. Relic and Weapon Sets
+You can create 3 relic sets that you can swap with the {% kbd 'G' %} key (on PC).
+
+{% aside %}
+You can't swap sets during combat, but who says you can't swap *before combat*?
+{% endaside %}
+
+Relics like Spacetime Rift, Drone, Couant, Magnetic Storm, Hovering Cannon, Type V Armor (for the explosion after ejecting), and Missile Barrage can be useful even when activated just before an enemy spawns, such as in Bygone Phantasm or Frontier Clash. Make use of this to maximize your DPS.
+
+### Weapon Sets
 Weapon sets can also be made, but there's no shortcut to swap them (on PC press {% kbd 'N' %} to quickly open the menu). You can swap while out of combat to quickly heal up (i.e. between waves in Frontier Clash or before a dungeon boss) or if you need to switch weapons. Matrices cannot be changed inside dungeon instances.
 
 ## 7. Exploring with the full world map

@@ -10,12 +10,12 @@
 {% set data = getData(collections.simulacra, name) %}
 <div class="card">
 	<img src="/assets/images/wep/{{ name }}.png" alt="{{ data.name }}’s weapon" width="128" height="128" loading="lazy">
-	<a href="{{ getCollection(collections.simulacra, name).url }}" class="font-bold inline-block" data-variant="hover"><span>{{ data.name }}</span></a>
+	<a href="{{ getCollection(collections.simulacra, name).url }}" class="font-bold inline-block" data-underline="on-hover"><span>{{ data.name }}</span></a>
 </div>
 {% endmacro %}
 
 {% macro section(name) %}
-<article class="profile sheet box-border p-s-m" data-border="none" data-ratio="1-8">
+<article class="profile sheet box-border p-s-m"   data-ratio="1-8">
 	{{ weapon(name) }}
 	<div class="stack">
 		{{ caller() }}
@@ -226,12 +226,12 @@
 
 <h2>Strongest Setups</h2>
 <h3 class="chip block text-step-0" data-variant="knockout" data-color="primary">6★, Maxed Chips</h3>
-<div class="sheet box-border mt-0 stack p-s-m" data-border="none">
+<div class="sheet box-border mt-0 stack p-s-m"  >
 	{{ weaponList(['baiyuekui', 'marc', 'nemesis']) }}
 	{{ weaponList(['baiyuekui', 'claudia', 'nemesis']) }}
 	{{ weaponList(['ruby', 'cobalt-b', 'marc']) }}
 </div>
 <h3 class="chip block text-step-0" data-variant="knockout" data-color="primary">Without Limited Weapons</h3>
-<div class="sheet box-border mt-0 stack p-s-m" data-border="none">
+<div class="sheet box-border mt-0 stack p-s-m"  >
 	{{ weaponList(['king', 'samir', 'tsubasa']) }}
 </div>

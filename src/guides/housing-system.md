@@ -14,8 +14,8 @@ Accept the quest in the “Event/Reward Box” menu on the top of your screen. Y
 </figure>
 
 {% aside -%}
-<div class="profile" data-ratio="1-999">
-<div><img class="rounded-full" src="/assets/images/guides/developer-log.jpg" alt="Developer Log" width="80" height="80"></div>
+<div class="profile">
+<div><img class="rounded-full drop-shadow-lg" src="/assets/images/guides/developer-log.jpg" alt="Developer Log" width="80" height="80"></div>
 <div class="stack">
 {% markdown -%}
 Developer Logs are marked on the map with this icon.

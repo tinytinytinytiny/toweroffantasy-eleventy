@@ -1,0 +1,12 @@
+.skill-summary {
+	--gutter: 0;
+	width: 100%;
+}
+
+.skill-summary > :first-child {
+	margin-right: 2em;
+}
+
+.skill-summary kbd {
+	line-height: revert;
+}

@@ -26,7 +26,7 @@
 
 {% if weapon.materials %}
 	<h3>Upgrade Materials</h3>
-	<div class="stack sheet box-border p-s-m" data-border="none">
+	<div class="stack sheet box-border p-s-m"  >
 		{% call materials() %}
 			{{ material(weapon.element, rarity = 2, index = 1) }}
 			{{ material(weapon.element, rarity = 3, index = 2) }}

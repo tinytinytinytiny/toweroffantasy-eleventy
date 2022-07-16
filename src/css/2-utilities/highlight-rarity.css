@@ -1,0 +1,25 @@
+.highlight-rarity {
+	color: var(--rarity-color);
+	display: inline-block;
+	font-family: theme('fontFamily.fancy');
+}
+
+.highlight-rarity[data-rarity="1"] {
+	--rarity-color: theme('colors.rarity.1.text');
+}
+
+.highlight-rarity[data-rarity="2"] {
+	--rarity-color: theme('colors.rarity.2.text');
+}
+
+.highlight-rarity[data-rarity="3"] {
+	--rarity-color: theme('colors.rarity.3.text');
+}
+
+.highlight-rarity[data-rarity="4"] {
+	--rarity-color: theme('colors.rarity.4.text');
+}
+
+.highlight-rarity[data-rarity="5"] {
+	--rarity-color: theme('colors.rarity.5.text');
+}

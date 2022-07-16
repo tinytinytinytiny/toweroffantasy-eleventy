@@ -1,0 +1,14 @@
+.reel[tabindex]:focus-visible {
+	border: 0;
+	outline: 0.1em solid theme('colors.primary');
+	z-index: 1;
+}
+
+.reel[data-state="dragging"],
+.reel[data-state="dragging"] * {
+	user-select: none;
+}
+
+.reel-instructions[data-state="visible"] {
+	display: flex;
+}

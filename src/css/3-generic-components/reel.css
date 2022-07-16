@@ -1,0 +1,26 @@
+.reel {
+	align-items: center;
+	display: flex;
+	flex-flow: row nowrap;
+	gap: var(--gutter, theme('spacing.s-l'));
+	justify-content: flex-start;
+	overflow-x: auto;
+}
+
+.reel-instructions {
+	@apply tracking-wide;
+	align-items: center;
+	color: theme('colors.primary');
+	display: none;
+	flex-wrap: nowrap;
+	font-family: theme('fontFamily.fancy');
+	font-size: theme('fontSize.step--1');
+	justify-content: center;
+	text-transform: uppercase;
+}
+
+.reel-instructions__label {
+	line-height: 1;
+	margin: 0 1em;
+	text-align: center;
+}

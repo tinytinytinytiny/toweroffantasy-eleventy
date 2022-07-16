@@ -1,0 +1,66 @@
+.weapon {
+	--image-width: 128px;
+	z-index: 1;
+}
+
+.weapon-info .grid {
+	--grid-column-count: 2;
+	--grid-min-item-size: 9rem;
+	--gutter: theme('spacing.xs');
+}
+
+.weapon-stat {
+	display: flex;
+	align-items: center;
+	gap: theme('spacing.2xs');
+}
+
+.weapon-stat img {
+	display: inline-block;
+}
+
+.weapon-info__rating {
+	background-image: linear-gradient(-45deg, transparent 15%, var(--rarity-color) 15%);
+	border-radius: 2px;
+	display: inline-block;
+	font-size: 1.35rem;
+	font-style: italic;
+	height: 31px;
+	line-height: 31px;
+	padding: 0;
+	position: relative;
+	text-align: center;
+	vertical-align: middle;
+	width: 34px;
+}
+
+.weapon-info__rating > * {
+	position: relative;
+	z-index: 1;
+}
+
+.weapon-info__rating::before {
+	content: '';
+	background-image: linear-gradient(-45deg, transparent 15%, rgba(0, 0, 0, 0.85) 15%);
+	position: absolute;
+	top: 1px;
+	right: 1px;
+	bottom: 1px;
+	left: 1px;
+}
+
+[data-element="electric"] {
+	--border-color: theme('colors.element.electric');
+}
+
+[data-element="fire"] {
+	--border-color: theme('colors.element.fire');
+}
+
+[data-element="ice"] {
+	--border-color: theme('colors.element.ice');
+}
+
+[data-element="physical"] {
+	--border-color: theme('colors.element.physical');
+}

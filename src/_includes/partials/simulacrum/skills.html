@@ -2,30 +2,32 @@
 	Data reflects unleveled weapons.
 </p>
 {% for category, list in skills | entries %}
-	<details class="stack copy" {% if loop.index > 1 %}data-collapse="always"{% endif %}>
-		<summary class="chip">{{ string.skillCategories[category] }}</summary>
-		<div class="sheet stack mt-0 p-s-m" data-border="none">
-			{% for skillSlug in list %}
-				<div class="sheet stack copy" data-layer="1">
-					{% if skillSlug in string.skills[page.fileSlug] %}
-						{% set skill = string.skills[page.fileSlug][skillSlug] %}
-					{% else %}
-						{% set skill = string.skills[skillSlug] %}
-					{% endif %}
-					<h3>{{ skill.name }}</h3>
+	<h3>{{ string.skillCategories[category] }}</h3>
+	{% for skillSlug in list %}
+		{% if skillSlug in string.skills[page.fileSlug] %}
+			{% set skill = string.skills[page.fileSlug][skillSlug] %}
+		{% else %}
+			{% set skill = string.skills[skillSlug] %}
+		{% endif %}
+		<details>
+			<summary class="chip">
+				<div class="skill-summary spread">
+					<h4>{{ skill.name }}</h4>
 					{% if skill.input %}
 						{% include "partials/simulacrum/skill-input.html" %}
 					{% endif %}
-					{{ skill.desc | markdown | safe }}
-					{% if skill.breakdown %}
-						<ol>
-							{% for attack in skill.breakdown %}
-								<li>{{ attack | markdown | safe }}</li>
-							{% endfor %}
-						</ol>
-					{% endif %}
 				</div>
-			{% endfor %}
-		</div>
-	</details>
+			</summary>
+			<div class="sheet stack copy">
+				{{ skill.desc | markdown | safe }}
+				{% if skill.breakdown %}
+					<ol>
+						{% for attack in skill.breakdown %}
+							<li>{{ attack | markdown | safe }}</li>
+						{% endfor %}
+					</ol>
+				{% endif %}
+			</div>
+		</details>
+	{% endfor %}
 {% endfor %}

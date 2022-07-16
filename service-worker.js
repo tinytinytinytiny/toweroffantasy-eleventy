@@ -1,12 +1,12 @@
-const cacheName = 'my-cache-07142022';
+const cacheName = 'my-cache';
 
 const filesToCache = [
 	'/',
-	// '/css/global.css',
+	'/css/global.css',
 	'/js/main.js',
 	'/assets/images/fixed_btn_cbt_small.png',
-	// '/assets/images/art/weila.png',
-	'/changelog/'
+	'/assets/images/art/weila.png',
+	'/changelog/',
 	'/simulacra/',
 	'/matrices/',
 	'/relics/',
@@ -27,7 +27,6 @@ self.addEventListener('install', (e) => {
 
 self.addEventListener('fetch', (e) => {
 	e.respondWith(
-		caches.match(e.request)
-		.then(response => (response) ? response : fetch(e.request))
+		caches.match(e.request).then(response => (response) ? response : fetch(e.request))
 	);
 });

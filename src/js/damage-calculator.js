@@ -17,7 +17,7 @@ groupDropdowns({
 groupDropdowns({
 	fieldset: document.getElementById('weapon-buffs'),
 	group: 'options',
-	selector: '[label="Awakening Buffs"] option'
+	selector: '[label="Advancement Buffs"] option'
 });
 
 groupDropdowns({

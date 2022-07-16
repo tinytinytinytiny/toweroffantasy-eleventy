@@ -1,5 +1,5 @@
 {% edge %}
-<fieldset id="weapon-buffs" class="sheet stack p-s-m" data-layer="3" data-border="none">
+<fieldset id="weapon-buffs" class="sheet stack p-s-m" data-layer="3"  >
 	<legend class="text-step-1 font-bold text-bold">Weapon Buffs</legend>
 	<div class="clear-both" role="presentation"></div>
 	<div class="flex-grid mt-xs gap-m-l">
@@ -9,7 +9,7 @@
 				<select id="wep{{ loop.index }}" name="wep{{ loop.index }}" class="w-full">
 					<option value="">None</option>
 					{% if loop.index === 1 %}
-						<optgroup label="Awakening Buffs">
+						<optgroup label="Advancement Buffs">
 							<option value="claudia1" {{ 'selected' if eleventy.edge.cookies.wep1 == 'claudia1' }}>Claudia&nbsp;1★</option>
 							<option value="tsubasa1" {{ 'selected' if eleventy.edge.cookies.wep1 == 'tsubasa1' }}>Tsubasa&nbsp;1★</option>
 							<option value="tsubasa6" {{ 'selected' if eleventy.edge.cookies.wep1 == 'tsubasa6' }}>Tsubasa&nbsp;6★</option>
@@ -20,7 +20,7 @@
 							<option value="frigg" {{ 'selected' if eleventy.edge.cookies.wep1 == 'frigg' }}>Freyja</option>
 						</optgroup>
 					{% elif loop.index === 2 %}
-						<optgroup label="Awakening Buffs">
+						<optgroup label="Advancement Buffs">
 							<option value="claudia1" {{ 'selected' if eleventy.edge.cookies.wep2 == 'claudia1' }}>Claudia&nbsp;1★</option>
 							<option value="tsubasa1" {{ 'selected' if eleventy.edge.cookies.wep2 == 'tsubasa1' }}>Tsubasa&nbsp;1★</option>
 							<option value="tsubasa6" {{ 'selected' if eleventy.edge.cookies.wep2 == 'tsubasa6' }}>Tsubasa&nbsp;6★</option>
@@ -31,7 +31,7 @@
 							<option value="frigg" {{ 'selected' if eleventy.edge.cookies.wep2 == 'frigg' }}>Freyja</option>
 						</optgroup>
 					{% elif loop.index === 3 %}
-						<optgroup label="Awakening Buffs">
+						<optgroup label="Advancement Buffs">
 							<option value="claudia1" {{ 'selected' if eleventy.edge.cookies.wep3 == 'claudia1' }}>Claudia&nbsp;1★</option>
 							<option value="tsubasa1" {{ 'selected' if eleventy.edge.cookies.wep3 == 'tsubasa1' }}>Tsubasa&nbsp;1★</option>
 							<option value="tsubasa6" {{ 'selected' if eleventy.edge.cookies.wep3 == 'tsubasa6' }}>Tsubasa&nbsp;6★</option>

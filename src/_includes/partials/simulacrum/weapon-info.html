@@ -19,7 +19,7 @@
 	</div>
 {% endmacro %}
 
-<article class="weapon profile sheet" data-ratio="1-2" data-element="{{ weapon.element }}">
+<article class="weapon profile sheet" data-ratio="1-2" data-element="{{ weapon.element }}" data-border="top">
 	<div>
 		<img class="drop-shadow-[0_0.8em_1em_rgba(0,0,0,0.3)]" src="/assets/images/wep/{{ page.fileSlug }}.png" alt="{{ name }}’s weapon" width="128" height="128">
 	</div>
@@ -35,7 +35,7 @@
 			{# SHATTER #}
 			{% set figure %}
 				{% set shatterRating = helpers.getWeaponRating(weapon.shatter, string.weaponRating) %}
-				<div class="highlight-rarity" data-rarity="{{ shatterRating.rarityColor }}" data-variant="weapon-rank">
+				<div class="highlight-rarity weapon-info__rating" data-rarity="{{ shatterRating.rarityColor }}">
 					<span>{{ shatterRating.rank | upper }}</span>
 				</div>
 			{% endset %}
@@ -43,7 +43,7 @@
 			{# CHARGE #}
 			{% set figure %}
 				{% set chargeRating = helpers.getWeaponRating(weapon.charge, string.weaponRating) %}
-				<div class="highlight-rarity" data-rarity="{{ chargeRating.rarityColor }}" data-variant="weapon-rank">
+				<div class="highlight-rarity weapon-info__rating" data-rarity="{{ chargeRating.rarityColor }}">
 					<span>{{ chargeRating.rank | upper }}</span>
 				</div>
 			{% endset %}

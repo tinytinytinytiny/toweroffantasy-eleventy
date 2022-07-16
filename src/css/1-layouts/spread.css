@@ -1,0 +1,7 @@
+.spread {
+	align-items: center;
+	display: flex;
+	flex-flow: row wrap;
+	gap: var(--gutter, theme('spacing.s-l'));
+	justify-content: space-between;
+}

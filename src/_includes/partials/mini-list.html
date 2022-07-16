@@ -12,11 +12,12 @@
 						<li>
 							<a
 								class="chip backdrop-filter-none"
-								href="/{{ collection }}/{{ item.fileSlug }}"
-								{% if item.fileSlug === page.fileSlug %}
+								href="{{ item.url }}"
+								{% if item.url === page.url %}
 									aria-current="page"
+									data-variant="knockout"
 								{% endif %}
-								data-variant="hover {{ 'knockout' if item.fileSlug === page.fileSlug }}"
+								data-underline="on-hover"
 							>
 								{% if item.data.isChina %}
 									{% if item.fileSlug === page.fileSlug %}

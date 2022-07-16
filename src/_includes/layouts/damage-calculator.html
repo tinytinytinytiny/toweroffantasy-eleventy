@@ -6,7 +6,7 @@
 	<!-- htmlmin:ignore -->
 	{% include "partials/damage-calculator/result.html" %}
 	<form action="{{ page.url }}#result" method="post" class="stack max-w-none wrapper p-0" id="damage-calculator" data-wrapper="wide">
-		<fieldset class="sheet stack box-border" data-layer="2">
+		<fieldset class="sheet stack box-border" data-border="top" data-layer="2">
 			<legend>
 				<h2 data-appearance="none">Main Multipliers</h2>
 			</legend>
@@ -20,7 +20,7 @@
 			{% include "partials/damage-calculator/weapon-buffs.html" %}
 			{% include "partials/damage-calculator/matrices.html" %}
 		</fieldset>
-		<fieldset class="sheet stack box-border" data-layer="2">
+		<fieldset class="sheet stack box-border" data-border="top" data-layer="2">
 			<legend>
 				<h2 data-appearance="none">Extra Options</h2>
 			</legend>

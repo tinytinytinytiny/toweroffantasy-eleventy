@@ -1,9 +1,11 @@
-@import-glob "global/*.css";
+@import-glob "reset.css";
 
-@import-glob "layouts/*.css";
-@import-glob "options/*.css";
-@import-glob "snowflakes/*.css";
-@import-glob "variants/*.css";
+@import-glob "0-*/*.css";
+@import-glob "1-*/*.css";
+@import-glob "2-*/*.css";
+@import-glob "3-*/*.css";
+@import-glob "4-*/*.css";
+@import-glob "5-*/*.css";
 
 @tailwind base;
 @tailwind components;

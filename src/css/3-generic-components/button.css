@@ -1,0 +1,54 @@
+button, .button {
+	--__default-button-color: theme('colors.primary');
+	align-items: center;
+	background-color: var(--button-color, var(--__default-button-color));
+	border: 0;
+	display: inline-flex;
+	color: theme('colors.sheet.0');
+	cursor: pointer;
+	font-weight: bold;
+	gap: 1ch;
+	justify-content: center;
+	line-height: 1;
+	padding: 0.8em 1em;
+	text-decoration: none;
+	text-transform: uppercase;
+	user-select: none;
+}
+
+button[data-variant~="full-width"],
+.button[data-variant~="full-width"] {
+	display: block;
+	width: var(--wrapper-max-width);
+}
+
+button[data-variant~="ghost"],
+.button[data-variant~="ghost"] {
+	background: none;
+	box-shadow: inset 0 0 0 0.15em var(--button-color, var(--__default-button-color));
+	color: var(--button-color, var(--__default-button-color));
+}
+
+button[data-color="secondary"],
+.button[data-color="secondary"] {
+	--button-color: theme('colors.secondary');
+}
+
+button[data-color="tertiary"],
+.button[data-color="tertiary"] {
+	--button-color: theme('colors.tertiary');
+}
+
+button[data-color="secondary"][data-variant~="ghost"],
+.button[data-color="secondary"][data-variant~="ghost"] {
+	color: theme('colors.base');
+}
+
+button > svg,
+button > .icon,
+.button > svg,
+.button > .icon {
+	flex-shrink: 0;
+	height: 1.15em;
+	width: auto;
+}

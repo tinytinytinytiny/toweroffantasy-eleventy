@@ -1,0 +1,52 @@
+.sheet-wrapper {
+	--wrapper-padding: 0;
+	max-width: none;
+}
+
+.sheet {
+	@apply shadow-xl;
+	--border-color: theme('colors.primary');
+	background-color: theme('colors.sheet.2');
+	box-sizing: content-box;
+	padding: theme('spacing.s-l');
+	position: relative;
+}
+
+.sheet[data-layer="0"] {
+	@apply bg-sheet-0/80 shadow-inner;
+	border: none;
+}
+
+.sheet[data-layer="0"]::before {
+	content: none;
+}
+
+.sheet[data-layer="1"] {
+	@apply shadow-inner;
+	background-color: theme('colors.sheet.1');
+	border: none;
+}
+
+.sheet[data-layer="3"] {
+	background-color: theme('colors.sheet.3');
+}
+
+.sheet[data-border-color="text"] {
+	--border-color: currentColor;
+}
+
+.sheet[data-border-color="secondary"] {
+	--border-color: theme('colors.secondary');
+}
+
+.sheet[data-border-color="tertiary"] {
+	--border-color: theme('colors.tertiary');
+}
+
+.sheet[data-border="top"] {
+	border-top: 0.3em solid var(--border-color);
+}
+
+.sheet[data-border="left"] {
+	border-left: 0.3em solid var(--border-color);
+}

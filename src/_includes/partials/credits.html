@@ -3,7 +3,7 @@
 	{% for entry in site.credits %}
 	<div class="stack copy">
 		<h3 class="text-primary">{{ entry.title }}</h3>
-		<ul class="auto-grid mb-0">
+		<ul class="auto-grid gap-xs mb-0">
 			{% for contributor in entry.contributors %}
 			<li>
 				<span>{{ contributor.split('#')[0] }}</span><span class="text-base/60 tracking-[0.03em]">{{ '#' + contributor.split('#')[1] }}</span>

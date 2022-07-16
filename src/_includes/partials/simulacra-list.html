@@ -1,6 +1,6 @@
-<ul class="auto-grid max-w-none" data-variant="card-list">
+<ul class="card-list auto-grid max-w-none">
 	{% for item in items | sortBy('name') | reverse | sortBy(['isNew', 'isChina']) | reverse %}
-		<li class="sheet card stack box-border p-s" data-border="none">
+		<li class="sheet card stack box-border p-s"  >
 			<div class="relative">
 				<img class="shadow-xl rounded-full bg-sheet-3" src="/assets/images/avatar/{{ item.fileSlug }}.png" alt="" width="88" height="88" loading="lazy">
 				{% if item.data.isNew %}
@@ -15,7 +15,7 @@
 						{% china %}
 					{% endif %}
 				</div>
-				<a class="text-white/90" href="{{ item.url }}" data-variant="hover">
+				<a class="text-white/90" href="{{ item.url }}" data-underline="on-hover">
 					{{ item.data.name }}
 				</a>
 				<div class="text-center text-step-0 leading-none stack-space-2xs">
