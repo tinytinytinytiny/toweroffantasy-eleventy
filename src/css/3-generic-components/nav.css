@@ -24,6 +24,10 @@
 	display: none;
 }
 
+.nav summary::before {
+	content: none;
+}
+
 .nav a {
 	text-decoration: none;
 }

@@ -31,6 +31,11 @@ ol[role='list'] {
   list-style: none;
 }
 
+ul, ol {
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
 /* Prevent zooming when orientation changes on some iOS devices */
 html {
   text-size-adjust: none;

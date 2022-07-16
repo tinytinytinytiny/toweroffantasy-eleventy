@@ -6,6 +6,8 @@ const filesToCache = [
 	'/js/main.js',
 	'/assets/images/fixed_btn_cbt_small.png',
 	'/assets/images/art/weila.png',
+	'/assets/icons/nav-arrow-down.svg',
+	'/assets/icons/nav-arrow-right.svg',
 	'/changelog/',
 	'/simulacra/',
 	'/matrices/',
