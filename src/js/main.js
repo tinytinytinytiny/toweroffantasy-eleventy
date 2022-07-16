@@ -137,6 +137,10 @@ function enableDragScroll(el) {
 
 			const dx = event.clientX - pos.x;
 			el.scrollLeft = pos.left - dx;
+
+			if (Math.abs(dx) > 5) {
+				dragged = true;
+			}
 		}
 	}
 
