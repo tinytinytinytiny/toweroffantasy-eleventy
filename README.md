@@ -6,6 +6,13 @@ this is a ripoff of https://toweroffantasy.info/ by senior developer Zakum
 https://tinytinytiny.netlify.app/  
 [![Netlify Status](https://api.netlify.com/api/v1/badges/fd2ac69f-23df-453b-a484-a4dfc845f21f/deploy-status)](https://app.netlify.com/sites/tinytinytiny/deploys)
 
+> ### Important
+> clear cached service worker data to see changes
+>
+> on chrome, go to **DevTools** > **Application** > **Storage** > **Clear site data**
+>
+> ![Chrome DevTools with the Application tab active. The button labeled "Clear site data" is circled.](/docs/cleardata-chrome.png)
+
 ## Don’t Sue Me I Don’t Get Paid Enough
 
 Copyright (c) 2022

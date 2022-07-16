@@ -11,6 +11,7 @@ aside {
 	font-weight: bold;
 	line-height: 1.45;
 	padding: theme('spacing.s-l') theme('spacing.m-l') theme('spacing.s-l') theme('spacing.s-l');
+	transform: translate3d(0, 0, 0);
 }
 
 aside > :focus {
