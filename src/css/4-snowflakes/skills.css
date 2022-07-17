@@ -1,10 +1,10 @@
 .skill-summary {
-	--gutter: 0;
+	--gutter: 0.1em;
 	width: 100%;
 }
 
 .skill-summary > :first-child {
-	margin-right: 2em;
+	flex-basis: 15em;
 }
 
 .skill-summary kbd {

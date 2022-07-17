@@ -13,6 +13,7 @@ if ('serviceWorker' in navigator) {
 if ('ResizeObserver' in window) {
 	const nav = document.querySelector('.nav');
 	const details = document.querySelector('details');
+	const scrollbarWidth = getScrollbarWidth();
 
 	if (nav.offsetWidth > window.innerWidth * 0.9) {
 		forceCloseMenu();
@@ -43,10 +44,18 @@ if ('ResizeObserver' in window) {
 	resizeObserver.observe(nav);
 
 	function handleWidthChange(width) {
-		if (width < window.innerWidth * 0.9) {
-			openMenu();
+		if ('matchMedia' in window) {
+			if (window.matchMedia(`(max-width: ${width + scrollbarWidth}px)`).matches) {
+				forceCloseMenu();
+			} else {
+				openMenu();
+			}
 		} else {
-			forceCloseMenu();
+			if (width < document.body.clientWidth) {
+				openMenu();
+			} else {
+				forceCloseMenu();
+			}
 		}
 	}
 
@@ -77,6 +86,27 @@ if (document.querySelectorAll('.reel').length) {
 			}
 		});
 	}
+}
+
+function getScrollbarWidth() {
+	// Creating invisible container
+	const outer = document.createElement('div');
+	outer.style.visibility = 'hidden';
+	outer.style.overflow = 'scroll'; // forcing scrollbar to appear
+	outer.style.msOverflowStyle = 'scrollbar'; // needed for WinJS apps
+	document.body.appendChild(outer);
+
+	// Creating inner element and placing it in the container
+	const inner = document.createElement('div');
+	outer.appendChild(inner);
+
+	// Calculating difference between container's full width and the child width
+	const scrollbarWidth = (outer.offsetWidth - inner.offsetWidth);
+
+	// Removing temporary elements from the DOM
+	outer.parentNode.removeChild(outer);
+
+	return scrollbarWidth;
 }
 
 function isSupportsFlexGap() {
