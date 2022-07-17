@@ -80,21 +80,21 @@ The Perfect World Games client is the official version, with three other redistr
 <small>Note: We don't provide guides for registering through *QQ, WeChat, or Weibo* as they specifically require a Chinese phone number. These services act as login authentication layers, just like how you can sign up for things using your Google and Facebook accounts.</small>
 
 {% macro onboarding() %}
-<div class="sheet box-border stack copy p-s-m">
+<div class="sheet box-border stack p-s-m">
 <h3>Getting Started</h3>
 {{ caller() }}
 </div>
 {% endmacro %}
 
 {% macro requirements() %}
-<div class="sheet box-border stack copy p-s-m" data-layer="1">
+<div class="sheet box-border stack p-s-m" data-layer="1">
 <h4>Requirements</h4>
 {% markdown %}{{ caller() }}{% endmarkdown %}
 </div>
 {% endmacro %}
 
 {% macro servers() %}
-<div class="sheet box-border stack copy p-s-m" data-layer="1">
+<div class="sheet box-border stack p-s-m" data-layer="1">
 <h4>Recommended Servers</h4>
 {% markdown %}{{ caller() }}{% endmarkdown %}
 </div>
