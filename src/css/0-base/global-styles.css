@@ -26,6 +26,24 @@ body {
 	letter-spacing: 0.015em;
 }
 
+#site {
+	margin-left: auto;
+	margin-right: auto;
+	max-width: 120rem;
+}
+
+@media screen and (min-width: 120rem) {
+	#site {
+		gap: theme('spacing.l-2xl');
+	}
+}
+
+@media screen and (max-width: 80rem) {
+	#site {
+		gap: 0px;
+	}
+}
+
 main {
 	--sidebar-content-min-width: 50rem;
 }
@@ -50,19 +68,12 @@ summary:focus {
 	outline-offset: 0.2em;
 }
 
-hr {
-	border: none;
-	border-top: 1px solid;
-	color: theme('colors.divider');
-	margin: 1em 0;
-	margin: var(--stack-space, 1em) 0;
+ul[class], ol[class] {
+	padding: 0;
 }
 
-figcaption {
-	@apply tracking-wide;
-	color: theme('colors.accent');
-	font-size: theme('fontSize.step--1');
-	margin-top: 1em;
+ul[class] > li {
+	list-style: none;
 }
 
 fieldset {
@@ -86,12 +97,4 @@ legend + .clear-both + *:not([class*="mt"]) {
 
 label {
 	display: block;
-}
-
-ul[class], ol[class] {
-	padding: 0;
-}
-
-ul[class] > li {
-	list-style: none;
 }

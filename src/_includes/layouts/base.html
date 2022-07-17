@@ -22,7 +22,7 @@
 			{% set bgSlug = '' %}
 		{% endif %}
 		<div class="site-bg" data-bg="{{ bgSlug }}" data-category="{{ bgCategory }}" role="presentation" style="background-image: {{ bgImg }};"></div>
-		<div class="sidebar max-w-[120rem] ml-auto mr-auto" data-variant="center-content">
+		<div id="site" class="sidebar" data-variant="center-content">
 			{% include "partials/sidebar.html" %}
 			<main class="stack" tabindex="-1" id="main-content">
 				{% block header %}
