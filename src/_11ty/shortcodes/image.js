@@ -15,10 +15,10 @@ module.exports = async (src, alt, className, attributes = '') => {
 
 	let data = metadata.png[metadata.png.length - 1];
 
-	return `<picture>
+	return `<picture ${(className && className.length) ? `class="${className}"` : ''} ${attributes}>
 		${Object.values(metadata).map(imageFormat => {
 			return `<source type="${imageFormat[0].sourceType}" srcset="${imageFormat.map(entry => entry.url)}">`;
 		}).join("\n")}
-		<img ${(className && className.length) ? `class="${className}"` : ''} src="${data.url}" width="${data.width}" height="${data.height}" alt="${alt}" ${attributes} decoding="async">
+		<img src="${data.url}" width="${data.width}" height="${data.height}" alt="${alt}" decoding="async">
 	</picture>`;
 };

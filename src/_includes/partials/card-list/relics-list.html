@@ -1,8 +1,8 @@
 <ul class="card-list auto-grid max-w-none">
 	{% for item in items | sortBy('name') | reverse | sortBy(['isNew', 'isChina']) | reverse %}
 		<li class="sheet card stack box-border p-s"  >
-			<div class="item-frame" data-variant="matrix" data-size="m">
-				<img class="drop-shadow-xl" src="/assets/images/chip/{{ item.fileSlug }}.png" alt="" width="205" height="205" loading="lazy">
+			<div class="item-frame">
+				{% image 'src/assets/images/gadget/' + item.fileSlug + '.png', '', 'drop-shadow-xl' %}
 				{% if item.data.isNew %}
 					<span class="new-badge absolute bottom-0 inset-x-1/4" aria-hidden="true">
 						New

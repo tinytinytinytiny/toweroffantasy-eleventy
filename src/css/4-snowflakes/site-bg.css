@@ -5,15 +5,13 @@
 	--position: var(--position-x) var(--position-y);
 	height: 100vh;
 	height: max(100%, 100vh);
-	object-fit: none;
-	object-position: var(--position);
 	overscroll-behavior: none;
 	position: fixed;
 	width: 100vw;
 	z-index: -1;
 }
 
-img.site-bg {
+.site-bg img {
 	display: none;
 }
 
@@ -23,8 +21,13 @@ img.site-bg {
 }
 
 @supports (object-fit: none) {
-	img.site-bg {
+	.site-bg img {
 		display: block;
+		height: 100%;
+		object-fit: none;
+		object-position: var(--position);
+		position: relative;
+		width: 100%;
 	}
 
 	.site-bg.legacy {

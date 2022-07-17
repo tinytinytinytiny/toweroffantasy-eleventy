@@ -1,10 +1,10 @@
 {% extends "layouts/base.html" %}
 
 {% block content %}
-	{% for mount in mounts %}
+	{% asyncEach mount in mounts %}
 		<article class="sheet profile max-w-none"  >
 			<div>
-				<img class="!m-0" src="/assets/images/mount/{{ mount }}.png" alt="" width="308" height="206" loading="{{ 'lazy' if loop.index > 3 else 'auto' }}">
+				{% image 'src/assets/images/mount/' + mount + '.png', '' %}
 			</div>
 			<div class="stack copy">
 				<h2 id="{{ items.mounts[mount].name | slugify }}" data-appearance="none">{{ items.mounts[mount].name }} {% if items.mounts[mount].isChina %}{% china %}{% endif %}</h2>
@@ -23,7 +23,7 @@
 				{% endif %}
 			</div>
 		</article>
-	{% endfor %}
+	{% endeach %}
 {% endblock %}
 
 {% block extras %}

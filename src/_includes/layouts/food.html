@@ -15,7 +15,7 @@
 				</tr>
 			</thead>
 			<tbody>
-				{% for food in items.food | sortBy(['rarity', 'stars', 'name']) %}
+				{% asyncEach food in items.food | sortBy(['rarity', 'stars', 'name']) %}
 					<tr id="{{ food.name | slugify }}">
 						<th scope="row">
 							{% include "partials/food/recipe.html" %}
@@ -33,7 +33,7 @@
 							{% include "partials/food/ingredients.html" %}
 						</td>
 					</tr>
-				{% endfor %}
+				{% endeach %}
 			</tbody>
 		</table>
 	</article>

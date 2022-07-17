@@ -1,11 +1,11 @@
 {% extends "layouts/base.html" %}
 
 {% block content %}
-	{% for rarity, items in collections[collection] | sortBy('rarity') | groupBy('rarity') | reverse %}
+	{% asyncEach rarity, items in collections[collection] | sortBy('rarity') | groupBy('rarity') | reverse %}
 		<h2 class="px-0">
 			<span class="highlight-rarity italic" data-rarity="{{ rarity }}">{{ string.rarity[rarity - 1] }}</span><span> {{ title }}</span>
 		</h2>
 		{% set items = items | reverse %}
-		{% include "partials/" + collection + "-list.html" %}
-	{% endfor %}
+		{% include "partials/card-list/" + collection + "-list.html" %}
+	{% endeach %}
 {% endblock %}

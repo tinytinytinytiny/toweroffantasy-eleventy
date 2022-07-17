@@ -12,7 +12,6 @@
 
 .item-frame > img {
 	min-width: 128px;
-	height: auto;
 }
 
 .item-frame[data-size="m"] {
@@ -22,6 +21,7 @@
 	width: 78px;
 }
 
+.item-frame[data-size="m"] > picture,
 .item-frame[data-size="m"] > img {
 	min-width: 91px;
 }
@@ -33,6 +33,7 @@
 	width: 40px;
 }
 
+.item-frame[data-size="s"] > picture,
 .item-frame[data-size="s"] > img {
 	min-width: 48px;
 }

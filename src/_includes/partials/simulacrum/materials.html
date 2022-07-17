@@ -16,14 +16,6 @@
 	</div>
 {% endmacro %}
 
-{% macro progression(quantity) %}
-	<div class="flex flex-nowrap items-center justify-center gap-3xs-2xs text-center">
-		{% include "icons/arrow-right.svg" %}
-		<span class="font-bold">×{{ quantity }}</span>
-		{% include "icons/arrow-right.svg" %}
-	</div>
-{% endmacro %}
-
 {% if weapon.materials %}
 	<h3>Upgrade Materials</h3>
 	<div class="stack sheet box-border p-s-m"  >

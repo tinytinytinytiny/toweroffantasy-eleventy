@@ -9,14 +9,14 @@
 	--gutter: theme('spacing.xs');
 }
 
+.weapon-img {
+	filter: drop-shadow(0 0.8em 1em rgba(0, 0, 0, 0.3));
+}
+
 .weapon-stat {
 	display: flex;
 	align-items: center;
 	gap: theme('spacing.2xs');
-}
-
-.weapon-stat img {
-	display: inline-block;
 }
 
 .weapon-info__rating {

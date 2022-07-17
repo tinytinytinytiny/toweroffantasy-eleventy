@@ -9,7 +9,7 @@
 		</p>
 	</div>
 	<div class="item-frame" data-variant="matrix">
-		<img src="/assets/images/chip/{{ page.fileSlug }}.png" alt="" width="205" height="205">
+		{% image 'src/assets/images/chip/' + page.fileSlug + '.png', '' %}
 	</div>
 </div>
 {% endblock %}

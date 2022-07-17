@@ -11,7 +11,7 @@
 	flex-grow: var(--image-proportional-size, 0);
 }
 
-.profile > :first-child > img {
+.profile > :first-child img {
 	flex: none;
 	height: auto;
 	margin-left: auto;

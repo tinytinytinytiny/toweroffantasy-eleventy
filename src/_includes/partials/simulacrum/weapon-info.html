@@ -1,17 +1,6 @@
-{% macro icon(src, alt, title) %}
-	<img
-		src="/assets/images/icon/{{ src }}.png"
-		alt=""
-		title="{{ title }}"
-		class="inline-block"
-		width="34"
-		height="31"
-	>
-{% endmacro %}
-
-{% macro weaponStat(figure, statTitle, statValue) %}
+{% macro weaponStat(statTitle, statValue) %}
 	<div class="weapon-stat">
-		{{ figure | safe }}
+		{{ caller() }}
 		<div class="infobite">
 			<h4>{{ statTitle }}</h4>
 			<p>{{ statValue }}</p>
@@ -21,33 +10,37 @@
 
 <article class="weapon profile sheet" data-ratio="1-2" data-element="{{ weapon.element }}" data-border="top">
 	<div>
-		<img class="drop-shadow-[0_0.8em_1em_rgba(0,0,0,0.3)]" src="/assets/images/wep/{{ page.fileSlug }}.png" alt="{{ name }}’s weapon" width="128" height="128">
+		<img class="weapon-img" src="/assets/images/wep/{{ page.fileSlug }}.png" alt="{{ name }}’s weapon" width="128" height="128">
 	</div>
 	<div class="weapon-info stack">
 		<h3 class="weapon-info__title">{{ weapon.name }}</h3>
 		<div class="grid">
-			{# RESONANCE #}
-			{% set figure = icon('reso_' + weapon.resonance, 'Resonance: ' + weapon.resonance | capitalize) %}
-			{{ weaponStat(figure, 'Resonance', weapon.resonance | capitalize) }}
-			{# ELEMENT #}
-			{% set figure = icon('ele_' + weapon.element, 'Element: ' + string.element[weapon.element].name) %}
-			{{ weaponStat(figure, 'Element', string.element[weapon.element].name | capitalize) }}
-			{# SHATTER #}
-			{% set figure %}
+			<div class="weapon-stat">
+				{% image 'src/assets/images/icon/reso_' + weapon.resonance + '.png', '', 'inline-block' %}
+				<div class="infobite">
+					<h4>Resonance</h4>
+					<p>{{ weapon.resonance | capitalize }}</p>
+				</div>
+			</div>
+			<div class="weapon-stat">
+				{% image 'src/assets/images/icon/ele_' + weapon.element + '.png', '', 'inline-block' %}
+				<div class="infobite">
+					<h4>Resonance</h4>
+					<p>{{ weapon.element | capitalize }}</p>
+				</div>
+			</div>
+			{% call weaponStat('Shatter', weapon.shatter.toFixed(2)) %}
 				{% set shatterRating = helpers.getWeaponRating(weapon.shatter, string.weaponRating) %}
 				<div class="highlight-rarity weapon-info__rating" data-rarity="{{ shatterRating.rarityColor }}">
 					<span>{{ shatterRating.rank | upper }}</span>
 				</div>
-			{% endset %}
-			{{ weaponStat(figure, 'Shatter', weapon.shatter.toFixed(2)) }}
-			{# CHARGE #}
-			{% set figure %}
+			{% endcall %}
+			{% call weaponStat('Charge', weapon.charge.toFixed(2)) %}
 				{% set chargeRating = helpers.getWeaponRating(weapon.charge, string.weaponRating) %}
 				<div class="highlight-rarity weapon-info__rating" data-rarity="{{ chargeRating.rarityColor }}">
 					<span>{{ chargeRating.rank | upper }}</span>
 				</div>
-			{% endset %}
-			{{ weaponStat(figure, 'Charge', weapon.charge.toFixed(2)) }}
+			{% endcall %}
 		</div>
 	</div>
 </article>
