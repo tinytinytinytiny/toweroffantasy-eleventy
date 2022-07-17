@@ -17,11 +17,12 @@
 		{% if background %}
 			{% set bgImg = "url('/assets/images/" + background + "')" %}
 			{% set bgSlug = background.split('.')[0].split('/') | last %}
-		{% else %}
-			{% set bgImg = 'none' %}
-			{% set bgSlug = '' %}
+			{% set bgAttributes -%}
+				data-bg="{{ bgSlug }}" data-category="{{ bgCategory }}"
+			{%- endset %}
+			{% image 'src/assets/images/' + background, '', 'site-bg', bgAttributes %}
+			<div class="site-bg legacy" {{ bgAttributes | safe }} role="presentation" style="background-image: {{ bgImg }};"></div>
 		{% endif %}
-		<div class="site-bg" data-bg="{{ bgSlug }}" data-category="{{ bgCategory }}" role="presentation" style="background-image: {{ bgImg }};"></div>
 		<div id="site" class="sidebar" data-variant="center-content">
 			{% include "partials/sidebar.html" %}
 			<main class="stack" tabindex="-1" id="main-content">

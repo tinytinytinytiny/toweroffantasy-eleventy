@@ -41,6 +41,8 @@ module.exports = (config) => {
 		return md.render(value);
 	});
 
+	config.addNunjucksAsyncShortcode('image', require('./src/_11ty/shortcodes/image.js'));
+	config.addLiquidShortcode('image', require('./src/_11ty/shortcodes/image.js'));
 	config.addShortcode('range', (limit) => [...new Array(limit).keys()]);
 	config.addShortcode('year', () => `${new Date().getFullYear()}`);
 	config.addShortcode('china', require('./src/_11ty/shortcodes/china.js'));

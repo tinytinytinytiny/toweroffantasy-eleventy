@@ -6,13 +6,14 @@
     "start": "set NODE_ENV=development && concurrently \"npm run serve\" \"npm run css -- --watch\" \"npm run js\"",
     "serve": "npx eleventy --serve",
     "css": "postcss src/css/global.css -o _site/css/global.css",
-		"js": "uglifyjs src/js/main.js -c -m -o _site/js/main.min.js && uglifyjs src/js/damage-calculator.js -c -m -o _site/js/damage-calculator.min.js",
+    "js": "uglifyjs src/js/main.js -c -m -o _site/js/main.min.js && uglifyjs src/js/damage-calculator.js -c -m -o _site/js/damage-calculator.min.js",
     "production": "NODE_ENV=production npx @11ty/eleventy && NODE_ENV=production npm run css && npm run js"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "@11ty/eleventy": "^2.0.0-canary.11",
+    "@11ty/eleventy-img": "^2.0.1",
     "concurrently": "^6.5.1",
     "cssnano": "^5.1.7",
     "html-minifier": "^4.0.0",

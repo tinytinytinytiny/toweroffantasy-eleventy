@@ -1,12 +1,33 @@
 .site-bg {
-	background-position: calc(100% + var(--background-offset, 300px) - 5vw) top;
-	background-position-x: min(calc(100% + var(--background-offset, 300px) - 5vw), calc(50% + 60rem));
-	background-repeat: no-repeat;
-	display: block;
+	--position-x: calc(100% + var(--background-offset, 300px) - 5vw);
+	--position-x: min(calc(100% + var(--background-offset, 300px) - 5vw), calc(50% + 60rem));
+	--position-y: top;
+	--position: var(--position-x) var(--position-y);
 	height: 100vh;
 	height: max(100%, 100vh);
+	object-fit: none;
+	object-position: var(--position);
 	overscroll-behavior: none;
 	position: fixed;
 	width: 100vw;
 	z-index: -1;
+}
+
+img.site-bg {
+	display: none;
+}
+
+.site-bg.legacy {
+	background-position: var(--position);
+	background-repeat: no-repeat;
+}
+
+@supports (object-fit: none) {
+	img.site-bg {
+		display: block;
+	}
+
+	.site-bg.legacy {
+		display: none;
+	}
 }

@@ -4,22 +4,22 @@
 
 [data-bg="weila"] {
 	--background-offset: 500px;
-	background-position-y: max(0px, calc(100vh - 1024px));
+	--position-y: max(0px, calc(100vh - 1024px));
 }
 
 [data-bg="huodong_meishi_guo"] {
 	--background-offset: 5vw;
-	background-position-y: bottom;
-	background-position-y: max(0px, calc(100vh - 342px));
+	--position-y: bottom;
+	--position-y: max(0px, calc(100vh - 342px));
 }
 
 [data-bg="claudia2"] {
-	background-position-y: center;
+	--position-y: center;
 }
 
 [data-bg="baiyuekui+marc"] {
 	--background-offset: 500px;
-	background-position-y: clamp(-140px, calc(100vh - 1386px), 0px);
+	--position-y: clamp(-140px, calc(100vh - 1386px), 0px);
 }
 
 [data-bg="baiyuekui"] {
