@@ -258,7 +258,7 @@
 	}
 }
 
-@media screen and (min-width: 56rem) {
+@media screen and (min-width: 75rem) {
 	.nav summary {
 		display: none;
 	}

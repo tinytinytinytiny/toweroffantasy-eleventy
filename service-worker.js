@@ -3,7 +3,7 @@ const cacheName = 'my-cache';
 const filesToCache = [
 	'/',
 	'/css/global.css',
-	'/js/main.js',
+	'/js/main.min.js',
 	'/assets/images/fixed_btn_cbt_small.png',
 	'/assets/images/art/weila.png',
 	'/assets/icons/nav-arrow-down.svg',
