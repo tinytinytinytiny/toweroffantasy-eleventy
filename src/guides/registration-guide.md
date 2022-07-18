@@ -45,8 +45,10 @@ The Perfect World Games client is the official version, with three other redistr
 <figure>
 	<table>
 		<thead>
-			<th scope="col">Client</th>
-			<th scope="col">Supported Platforms</th>
+			<tr>
+				<th scope="col">Client</th>
+				<th scope="col">Supported Platforms</th>
+			</tr>
 		</thead>
 		<tbody>
 			<tr>

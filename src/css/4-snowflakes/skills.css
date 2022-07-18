@@ -4,7 +4,11 @@
 }
 
 .skill-summary > :first-child {
+	@apply leading-snug;
+	display: block;
 	flex-basis: 15em;
+	flex-grow: 1;
+	margin-right: 2em;
 }
 
 .skill-summary kbd {

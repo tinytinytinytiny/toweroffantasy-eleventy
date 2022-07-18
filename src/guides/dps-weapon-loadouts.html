@@ -6,236 +6,278 @@
 }
 ---
 
-{% macro weapon(name) %}
-{% set data = getData(collections.simulacra, name) %}
-<div class="card">
-	<img src="/assets/images/wep/{{ name }}.png" alt="{{ data.name }}’s weapon" width="128" height="128" loading="lazy">
-	<a href="{{ getCollection(collections.simulacra, name).url }}" class="font-bold inline-block" data-underline="on-hover"><span>{{ data.name }}</span></a>
-</div>
+{% macro weapon(name, tag) %}
+	{% set data = getData(collections.simulacra, name) %}
+	{% set contents %}
+		<img src="/assets/images/wep/{{ name }}.png" alt="{{ data.name }}’s weapon" width="128" height="128" loading="lazy">
+		<span class="block leading-normal text-step-0">
+			<a href="{{ getCollection(collections.simulacra, name).url }}" class="font-bold inline-block" data-underline="on-hover">{{ data.name }}</a>
+		</span>
+	{% endset %}
+	{% if tag === 'header' %}
+		<h3 class="card">
+			{{ contents | safe }}
+		</h3>
+	{% else %}
+		<div class="card">
+			{{ contents | safe }}
+		</div>
+	{% endif %}
 {% endmacro %}
 
 {% macro section(name) %}
-<article class="profile sheet box-border p-s-m"   data-ratio="1-8">
-	{{ weapon(name) }}
-	<div class="stack">
+<div class="profile sheet box-border p-s-m items-start gap-m-l" data-ratio="1-8">
+	{{ weapon(name, 'header') }}
+	<div class="stack copy">
 		{{ caller() }}
 	</div>
-</article>
+</div>
+{% endmacro %}
+
+{% macro pros() %}
+	<h4 class="text-step--1 font-fancy tracking-wider uppercase leading-none text-accent">Pros</h4>
+	<ul class="pros sheet !p-s" data-layer="1" role="list">
+		{{ caller() }}
+	</ul>
+{% endmacro %}
+
+{% macro cons() %}
+	<h4 class="text-step--1 font-fancy tracking-wider uppercase leading-none text-accent">Cons</h4>
+	<ul class="cons sheet !p-s" data-layer="1" role="list">
+		{{ caller() }}
+	</ul>
 {% endmacro %}
 
 <h2>Shield Breaker</h2>
 <p>
 	Deal the highest damage to shields. Necessary as most bosses and minibosses have shields that significantly reduce damage taken. Bosses will also use powerful attacks if their shield is not broken in time. These weapons tend to unlock a crucial shield break effect at 1★ or 3★.
 </p>
-{% call section('baiyuekui') %}
-	<ul class="pros" role="list" aria-label="Pros">
-		<li>Insanely high damage with skills and dash attacks, instant burst on shieldbreak (3★)</li>
-		<li>i-frames on active skill</li>
-		<li>Can be paired with 2 support weapons</li>
-	</ul>
-{% endcall %}
-{% call section('ruby') %}
-	<ul class="pros" role="list" aria-label="Pros">
-		<li>Very high damage numbers, can be used as Main DPS</li>
-		<li>Detonates burn effects, synergize with fire weapons</li>
-		<li>Can permastun elite mobs and be effective at long range</li>
-	</ul>
-	<ul class="cons" role="list" aria-label="Cons">
-		<li>Not as efficient as other shieldbreakers til 5★</li>
-	</ul>
-{% endcall %}
-{% call section('king') %}
-	<ul class="pros" role="list" aria-label="Pros">
-		<li>High DoT on shieldbreak</li>
-		<li>Area burst with skills</li>
-	</ul>
-	<ul class="cons" role="list" aria-label="Cons">
-		<li>Easily interrupted when casting and basic attacking</li>
-	</ul>
-{% endcall %}
-{% call section('meryl') %}
-	<ul class="pros" role="list" aria-label="Pros">
-		<li>Highest shieldbreak efficiency, self-heal on shieldbreak (1★)</li>
-		<li>Immune to interrupts</li>
-	</ul>
-	<ul class="cons" role="list" aria-label="Cons">
-		<li>No shieldbreak damage</li>
-		<li>Clunky switch skill</li>
-	</ul>
-{% endcall %}
-{% call section('shiro') %}
-	<ul class="pros" role="list" aria-label="Pros">
-		<li>High burst with active skill + 3 dash attacks</li>
-		<li>3★ resets CDs on shieldbreak, benefits other weapons</li>
-	</ul>
-	<ul class="cons" role="list" aria-label="Cons">
-		<li>Skill has small range, useless if enemies are mobile</li>
-		<li>Switch skill is terrible</li>
-	</ul>
-{% endcall %}
-{% call section('huma') %}
-	<ul class="pros" role="list" aria-label="Pros">
-		<li>Decent shieldbreaking efficiency</li>
-		<li>Relatively high energy charge</li>
-	</ul>
-	<ul class="cons" role="list" aria-label="Cons">
-		<li>No shieldbreak effect</li>
-	</ul>
-{% endcall %}
+<div>
+	<details class="stack">
+		<summary class="chip">Recommended Shield Breakers</summary>
+		{% call section('baiyuekui') %}
+			{% call pros() %}
+				<li role="listitem">Insanely high damage with skills and dash attacks, instant burst on shieldbreak (3★)</li>
+				<li role="listitem">i-frames on active skill</li>
+				<li role="listitem">Can be paired with 2 support weapons</li>
+			{% endcall %}
+		{% endcall %}
+		{% call section('ruby') %}
+			{% call pros() %}
+				<li role="listitem">Very high damage numbers, can be used as Main DPS</li>
+				<li role="listitem">Detonates burn effects, synergize with fire weapons</li>
+				<li role="listitem">Can permastun elite mobs and be effective at long range</li>
+			{% endcall %}
+			{% call cons() %}
+				<li role="listitem">Not as efficient as other shieldbreakers til 5★</li>
+			{% endcall %}
+		{% endcall %}
+		{% call section('king') %}
+			{% call pros() %}
+				<li role="listitem">High DoT on shieldbreak</li>
+				<li role="listitem">Area burst with skills</li>
+			{% endcall %}
+			{% call cons() %}
+				<li role="listitem">Easily interrupted when casting and basic attacking</li>
+			{% endcall %}
+		{% endcall %}
+		{% call section('meryl') %}
+			{% call pros() %}
+				<li role="listitem">Highest shieldbreak efficiency, self-heal on shieldbreak (1★)</li>
+				<li role="listitem">Immune to interrupts</li>
+			{% endcall %}
+			{% call cons() %}
+				<li role="listitem">No shieldbreak damage</li>
+				<li role="listitem">Clunky switch skill</li>
+			{% endcall %}
+		{% endcall %}
+		{% call section('shiro') %}
+			{% call pros() %}
+				<li role="listitem">High burst with active skill + 3 dash attacks</li>
+				<li role="listitem">3★ resets CDs on shieldbreak, benefits other weapons</li>
+			{% endcall %}
+			{% call cons() %}
+				<li role="listitem">Skill has small range, useless if enemies are mobile</li>
+				<li role="listitem">Switch skill is terrible</li>
+			{% endcall %}
+		{% endcall %}
+		{% call section('huma') %}
+			{% call pros() %}
+				<li role="listitem">Decent shieldbreaking efficiency</li>
+				<li role="listitem">Relatively high energy charge</li>
+			{% endcall %}
+			{% call cons() %}
+				<li role="listitem">No shieldbreak effect</li>
+			{% endcall %}
+		{% endcall %}
+	</details>
+</div>
 <h2>Main DPS</h2>
 <p>
 	Highest standing DPS to unshielded targets; the weapon you want to be on most of the time. These weapons tend to have low damage to shields and average charge rate.
 </p>
-{% call section('cobalt-b') %}
-	<ul class="pros" role="list" aria-label="Pros">
-		<li>Applies multiple high damage burn effects</li>
-		<li>Very high damage active skill</li>
-	</ul>
-	<ul class="cons" role="list" aria-label="Cons">
-		<li>Reliant on 2 set Cobalt chips to apply 3rd burn</li>
-		<li>Reliant on 6★ to reduce skill cooldown</li>
-	</ul>
-{% endcall %}
-{% call section('samir') %}
-	<ul class="pros" role="list" aria-label="Pros">
-		<li>Fast hits, good DPS and charge rate</li>
-		<li>Safe AoE air attack</li>
-	</ul>
-	<ul class="cons" role="list" aria-label="Cons">
-		<li>Final hit of ground basic attack is terrible</li>
-		<li>Bad long range attack, ineffective anti-air</li>
-	</ul>
-{% endcall %}
-{% call section('crow') %}
-	<ul class="pros" role="list" aria-label="Pros">
-		<li>Backstabs, execute, built-in crit buffs</li>
-		<li>Air attack has very high DPS potential</li>
-	</ul>
-	<ul class="cons" role="list" aria-label="Cons">
-		<li>Very difficult to use, requires 2pc Claudia chips</li>
-		<li>Weak at low ★s</li>
-	</ul>
-{% endcall %}
-	{% call section('frigg') %}
-	<ul class="pros" role="list" aria-label="Pros">
-		<li>Ice field allows free dash attacks and buffs other ice weapons</li>
-		<li>Large AOE attacks</li>
-		<li>i-frames on active skill</li>
-	</ul>
-	<ul class="cons" role="list" aria-label="Cons">
-		<li>Slow attacks, reliant on staying in ice field</li>
-	</ul>
-{% endcall %}
-{% call section('tsubasa') %}
-	<ul class="pros" role="list" aria-label="Pros">
-		<li>High charge rate</li>
-		<li>Good dash attack and arrow rain damage</li>
-		<li>i-frames on active skill</li>
-	</ul>
-	<ul class="cons" role="list" aria-label="Cons">
-		<li>Basic attacks are weak and blocked by other players</li>
-	</ul>
-{% endcall %}
-{% call section('ene') %}
-	<ul class="pros" role="list" aria-label="Pros">
-		<li>Good DPS for SR</li>
-		<li>Provides good CC and CC immunity</li>
-		<li>Active skill allows dash attack spam</li>
-	</ul>
-	<ul class="cons" role="list" aria-label="Cons">
-		<li>Slow attacks</li>
-	</ul>
-{% endcall %}
+<div>
+	<details class="stack">
+		<summary class="chip">Recommended Main DPS</summary>
+		{% call section('cobalt-b') %}
+			{% call pros() %}
+				<li role="listitem">Applies multiple high damage burn effects</li>
+				<li role="listitem">Very high damage active skill</li>
+			{% endcall %}
+			{% call cons() %}
+				<li role="listitem">Reliant on 2 set Cobalt chips to apply 3rd burn</li>
+				<li role="listitem">Reliant on 6★ to reduce skill cooldown</li>
+			{% endcall %}
+		{% endcall %}
+		{% call section('samir') %}
+			{% call pros() %}
+				<li role="listitem">Fast hits, good DPS and charge rate</li>
+				<li role="listitem">Safe AoE air attack</li>
+			{% endcall %}
+			{% call cons() %}
+				<li role="listitem">Final hit of ground basic attack is terrible</li>
+				<li role="listitem">Bad long range attack, ineffective anti-air</li>
+			{% endcall %}
+		{% endcall %}
+		{% call section('crow') %}
+			{% call pros() %}
+				<li role="listitem">Backstabs, execute, built-in crit buffs</li>
+				<li role="listitem">Air attack has very high DPS potential</li>
+			{% endcall %}
+			{% call cons() %}
+				<li role="listitem">Very difficult to use, requires 2pc Claudia chips</li>
+				<li role="listitem">Weak at low ★s</li>
+			{% endcall %}
+		{% endcall %}
+			{% call section('frigg') %}
+			{% call pros() %}
+				<li role="listitem">Ice field allows free dash attacks and buffs other ice weapons</li>
+				<li role="listitem">Large AOE attacks</li>
+				<li role="listitem">i-frames on active skill</li>
+			{% endcall %}
+			{% call cons() %}
+				<li role="listitem">Slow attacks, reliant on staying in ice field</li>
+			{% endcall %}
+		{% endcall %}
+		{% call section('tsubasa') %}
+			{% call pros() %}
+				<li role="listitem">High charge rate</li>
+				<li role="listitem">Good dash attack and arrow rain damage</li>
+				<li role="listitem">i-frames on active skill</li>
+			{% endcall %}
+			{% call cons() %}
+				<li role="listitem">Basic attacks are weak and blocked by other players</li>
+			{% endcall %}
+		{% endcall %}
+		{% call section('ene') %}
+			{% call pros() %}
+				<li role="listitem">Good DPS for SR</li>
+				<li role="listitem">Provides good CC and CC immunity</li>
+				<li role="listitem">Active skill allows dash attack spam</li>
+			{% endcall %}
+			{% call cons() %}
+				<li role="listitem">Slow attacks</li>
+			{% endcall %}
+		{% endcall %}
+	</details>
+</div>
 <h2>Support DPS</h2>
 <p>
 	Increase your overall DPS through damage buffs and other means. These weapons are best used as “quickswap” weapon, by rotating frequently to throw out their burst and refresh their buffs.
 </p>
-{% call section('marc') %}
-	<ul class="pros" role="list" aria-label="Pros">
-		<li>35% all damage buff (3★) & CC immunity buff (6★)</li>
-		<li>High charge rate</li>
-	</ul>
-	<ul class="cons" role="list" aria-label="Cons">
-		<li>No useful buffs before 3★, takes damage for allies</li>
-	</ul>
-{% endcall %}
-{% call section('nemesis') %}
-	<ul class="pros" role="list" aria-label="Pros">
-		<li>20%/40%(5★)/50%(6★) electric attack buff</li>
-		<li>Heals while doing good passive dps (3★+)</li>
-	</ul>
-	<ul class="cons" role="list" aria-label="Cons">
-		<li>Only supports electric weapons</li>
-	</ul>
-{% endcall %}
-{% call section('tsubasa') %}
-	<ul class="pros" role="list" aria-label="Pros">
-		<li>Highest charge rate against grouped enemies</li>
-		<li>24% (1★)/40% (6★) all damage buff</li>
-	</ul>
-	<ul class="cons" role="list" aria-label="Cons">
-		<li>Reliant on dash attacks to apply buff until 6★</li>
-	</ul>
-{% endcall %}
-{% call section('claudia') %}
-	<ul class="pros" role="list" aria-label="Pros">
-		<li>24% all damage buff (1★), 10% (3★)/20% (6★) phys damage increase, 20% skill damage buff (5★)</li>
-		<li>High charge rate</li>
-	</ul>
-	<ul class="cons" role="list" aria-label="Cons">
-		<li>Vulnerable during skill</li>
-		<li>No main physical DPS to support</li>
-	</ul>
-{% endcall %}
-{% call section('shiro') %}
-	<ul class="pros" role="list" aria-label="Pros">
-		<li>1★ greatly increases team burst damage and shieldbreak during active skill</li>
-		<li>3★ resets cooldowns on shieldbreak, benefitting other weapons</li>
-	</ul>
-	<ul class="cons" role="list" aria-label="Cons">
-		<li>Reliant on active skill</li>
-	</ul>
-{% endcall%}
-{% call section('bai-ling') %}
-	<ul class="pros" role="list" aria-label="Pros">
-		<li>Applies wounded debuff on dash attacks (increase all damage to target by 20%)</li>
-		<li>Useful in group raid if you don't have good DPS options yourself</li>
-	</ul>
-{% endcall %}
+<div>
+	<details class="stack">
+		<summary class="chip">Recommended Support DPS</summary>
+		{% call section('marc') %}
+			{% call pros() %}
+				<li role="listitem">35% all damage buff (3★) & CC immunity buff (6★)</li>
+				<li role="listitem">High charge rate</li>
+			{% endcall %}
+			{% call cons() %}
+				<li role="listitem">No useful buffs before 3★, takes damage for allies</li>
+			{% endcall %}
+		{% endcall %}
+		{% call section('nemesis') %}
+			{% call pros() %}
+				<li role="listitem">20%/40%(5★)/50%(6★) electric attack buff</li>
+				<li role="listitem">Heals while doing good passive dps (3★+)</li>
+			{% endcall %}
+			{% call cons() %}
+				<li role="listitem">Only supports electric weapons</li>
+			{% endcall %}
+		{% endcall %}
+		{% call section('tsubasa') %}
+			{% call pros() %}
+				<li role="listitem">Highest charge rate against grouped enemies</li>
+				<li role="listitem">24% (1★)/40% (6★) all damage buff</li>
+			{% endcall %}
+			{% call cons() %}
+				<li role="listitem">Reliant on dash attacks to apply buff until 6★</li>
+			{% endcall %}
+		{% endcall %}
+		{% call section('claudia') %}
+			{% call pros() %}
+				<li role="listitem">24% all damage buff (1★), 10% (3★)/20% (6★) phys damage increase, 20% skill damage buff (5★)</li>
+				<li role="listitem">High charge rate</li>
+			{% endcall %}
+			{% call cons() %}
+				<li role="listitem">Vulnerable during skill</li>
+				<li role="listitem">No main physical DPS to support</li>
+			{% endcall %}
+		{% endcall %}
+		{% call section('shiro') %}
+			{% call pros() %}
+				<li role="listitem">1★ greatly increases team burst damage and shieldbreak during active skill</li>
+				<li role="listitem">3★ resets cooldowns on shieldbreak, benefitting other weapons</li>
+			{% endcall %}
+			{% call cons() %}
+				<li role="listitem">Reliant on active skill</li>
+			{% endcall %}
+		{% endcall %}
+		{% call section('bai-ling') %}
+			{% call pros() %}
+				<li role="listitem">Applies wounded debuff on dash attacks (increase all damage to target by 20%)</li>
+				<li role="listitem">Useful in group raid if you don't have good DPS options yourself</li>
+			{% endcall %}
+		{% endcall %}
+	</details>
+</div>
 
 {% macro weaponList(list) %}
-<div class="sheet box-border p-s" data-layer="1">
-	<ul class="cluster m-0 justify-center">
-		{% for item in list %}
-			<li>
-				{{ weapon(item) }}
-				<p class="text-center text-accent text-step--1 tracking-wide">
-					{% if loop.index === 1 %}
-						Shield Breaker
-					{% elif loop.index === 2 %}
-						Main DPS
-					{% elif loop.index === 3 %}
-						Support
-					{% endif %}
-				</p>
-			</li>
-		{% endfor %}
-	</ul>
-</div>
+<li class="sheet cluster justify-center box-border p-s" data-layer="1">
+	{% for item in list %}
+		<div>
+			{{ weapon(item) }}
+			<small class="text-center text-accent leading-none">
+				{% if loop.index === 1 %}
+					<span class="visually-hidden">as </span>Shield Breaker
+				{% elif loop.index === 2 %}
+					<span class="visually-hidden">as </span>Main DPS
+				{% elif loop.index === 3 %}
+					<span class="visually-hidden">as </span>Support
+				{% endif %}
+			</small>
+		</div>
+	{% endfor %}
+</li>
 {% endmacro %}
 
 <h2>Strongest Setups</h2>
 <details>
-	<summary class="chip">6★, Maxed Chips</summary>
-	<div class="sheet box-border stack p-s-m">
+	<summary class="chip">With 6★ and Maxed Matrices</summary>
+	<ul class="sheet box-border stack !p-s-m">
 		{{ weaponList(['baiyuekui', 'marc', 'nemesis']) }}
 		{{ weaponList(['baiyuekui', 'claudia', 'nemesis']) }}
 		{{ weaponList(['ruby', 'cobalt-b', 'marc']) }}
-	</div>
+	</ul>
 </details>
 <details>
 	<summary class="chip">Without Limited Weapons</summary>
-	<div class="sheet box-border stack p-s-m">
+	<ul class="sheet box-border stack !p-s-m">
 		{{ weaponList(['king', 'samir', 'tsubasa']) }}
-	</div>
+	</ul>
 </details>
+
+{% block scripts %}
+<script src="/js/expand-details.js"></script>
+{% endblock %}

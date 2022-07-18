@@ -7,14 +7,20 @@
 	font-family: theme('fontFamily.fancy');
 	font-size: theme('fontSize.step--1');
 	line-height: 1;
-	letter-spacing: 0.05em;
 	margin-right: 0.3ch;
 	padding: 0.2em 0.36em;
-	text-decoration: none;
-	text-shadow: 0 0 0.5em rgba(0, 0, 0, 0.6);
 	vertical-align: middle;
 }
 
 .china-badge[data-variant="black"] {
 	background-image: linear-gradient(-45deg, transparent 15%, theme('colors.sheet.0') 15%);
+}
+
+.china-badge abbr {
+	text-decoration: none;
+}
+
+.china-badge > :first-child {
+	letter-spacing: 0.05em;
+	text-shadow: 0 0 0.5em rgba(0, 0, 0, 0.6);
 }

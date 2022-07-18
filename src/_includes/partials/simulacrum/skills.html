@@ -11,12 +11,15 @@
 		{% endif %}
 		<details>
 			<summary class="chip">
-				<div class="skill-summary spread">
-					<h4>{{ skill.name }}</h4>
+				<span class="skill-summary spread">
+					<span>
+						{{ skill.name }}
+						<br class="visually-hidden">
+					</span>
 					{% if skill.input %}
 						{% include "partials/simulacrum/skill-input.html" %}
 					{% endif %}
-				</div>
+				</span>
 			</summary>
 			<div class="sheet stack copy">
 				{{ skill.desc | markdown | safe }}
