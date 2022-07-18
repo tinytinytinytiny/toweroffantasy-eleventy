@@ -93,6 +93,10 @@ strong > a {
 
 small {
 	display: block;
+}
+
+small, .small {
+	@apply tracking-wide;
 	font-size: theme('fontSize.step--1');
 }
 

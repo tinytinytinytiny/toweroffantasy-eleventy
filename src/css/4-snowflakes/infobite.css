@@ -1,9 +1,12 @@
+.infobite {
+	@apply tracking-wide;
+}
+
 .infobite > :first-child {
 	color: theme('colors.accent');
 	font-family: theme('fontFamily.sans');
 	font-size: theme('fontSize.step--1');
 	font-weight: normal;
-	letter-spacing: 0.035em;
 	line-height: 1.15;
 }
 
@@ -11,7 +14,6 @@
 	color: theme('colors.bold');
 	display: block;
 	font-family: theme('fontFamily.fancy');
-	letter-spacing: 0.025em;
 	line-height: 1.1;
 	text-transform: uppercase;
 }

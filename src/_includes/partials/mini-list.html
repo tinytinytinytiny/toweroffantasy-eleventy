@@ -1,4 +1,4 @@
-<section class="ending region wrapper copy stack" data-wrapper="site" aria-label="Ending">
+<nav class="ending region wrapper copy stack" data-wrapper="site">
 	<h2>Other {{ collection | capitalize }}</h2>
 	<div class="stack with-rule">
 		{% for rarity, items in collections[collection] | sortBy('rarity') | groupBy('rarity') | reverse %}
@@ -34,4 +34,4 @@
 			</div>
 		{% endfor %}
 	</div>
-</section>
+</nav>

@@ -11,9 +11,9 @@
 {% block ending %}
 	{% set guideList = helpers.getSiblingContent(collections.guides, page) %}
 	{% if guideList | length %}
-		<section class="ending copy region stack wrapper" aria-label="Ending" data-wrapper="site">
+		<nav class="ending copy region stack wrapper" data-wrapper="site">
 			<h2>More Guides</h2>
 			{% include "partials/guide-list.html" %}
-		</section>
+		</nav>
 	{% endif %}
 {% endblock %}

@@ -6,7 +6,7 @@
 }
 ---
 
-{% macro weapon(name, tag) %}
+{% macro weapon(name, tag, isPresentation) %}
 	{% set data = getData(collections.simulacra, name) %}
 	{% set contents %}
 		<img src="/assets/images/wep/{{ name }}.png" alt="{{ data.name }}’s weapon" width="128" height="128" loading="lazy">
@@ -19,7 +19,7 @@
 			{{ contents | safe }}
 		</h3>
 	{% else %}
-		<div class="card">
+		<div class="card" {{ 'aria-hidden="true"' | safe if isPresentation }}>
 			{{ contents | safe }}
 		</div>
 	{% endif %}
@@ -53,7 +53,7 @@
 	Deal the highest damage to shields. Necessary as most bosses and minibosses have shields that significantly reduce damage taken. Bosses will also use powerful attacks if their shield is not broken in time. These weapons tend to unlock a crucial shield break effect at 1★ or 3★.
 </p>
 <div>
-	<details class="stack">
+	<details class="stack" data-collapse="always">
 		<summary class="chip">Recommended Shield Breakers</summary>
 		{% call section('baiyuekui') %}
 			{% call pros() %}
@@ -117,7 +117,7 @@
 	Highest standing DPS to unshielded targets; the weapon you want to be on most of the time. These weapons tend to have low damage to shields and average charge rate.
 </p>
 <div>
-	<details class="stack">
+	<details class="stack" data-collapse="always">
 		<summary class="chip">Recommended Main DPS</summary>
 		{% call section('cobalt-b') %}
 			{% call pros() %}
@@ -145,7 +145,7 @@
 				<li role="listitem">Air attack has very high DPS potential</li>
 			{% endcall %}
 			{% call cons() %}
-				<li role="listitem">Very difficult to use, requires 2pc Claudia chips</li>
+				<li role="listitem">Very difficult to use, requires 2-piece Claudia matrix set</li>
 				<li role="listitem">Weak at low ★s</li>
 			{% endcall %}
 		{% endcall %}
@@ -186,11 +186,11 @@
 	Increase your overall DPS through damage buffs and other means. These weapons are best used as “quickswap” weapon, by rotating frequently to throw out their burst and refresh their buffs.
 </p>
 <div>
-	<details class="stack">
+	<details class="stack" data-collapse="always">
 		<summary class="chip">Recommended Support DPS</summary>
 		{% call section('marc') %}
 			{% call pros() %}
-				<li role="listitem">35% all damage buff (3★) & CC immunity buff (6★)</li>
+				<li role="listitem">35% all damage buff (3★) and CC immunity buff (6★)</li>
 				<li role="listitem">High charge rate</li>
 			{% endcall %}
 			{% call cons() %}
@@ -247,17 +247,18 @@
 {% set desc -%}A weapon loadout composed of {{ getData(collections.simulacra, list[0]).name }}, {{ getData(collections.simulacra, list[1]).name }}, and {{ getData(collections.simulacra, list[2]).name }}{%- endset %}
 <li class="sheet cluster justify-center box-border p-s" data-layer="1" aria-description="{{ desc }}">
 	{% for item in list %}
+		{% set itemName = getData(collections.simulacra, item).name %}
 		<div>
-			{{ weapon(item) }}
-			<small class="text-center text-accent leading-none">
+			{{ weapon(item, isPresentation = true) }}
+			<p class="small text-center text-accent leading-none">
 				{% if loop.index === 1 %}
-					<span class="visually-hidden">as </span>Shield Breaker
+					<span class="visually-hidden">{{ itemName }} as </span><span>Shield Breaker</span>
 				{% elif loop.index === 2 %}
-					<span class="visually-hidden">as </span>Main DPS
+					<span class="visually-hidden">{{ itemName }} as </span><span>Main DPS</span>
 				{% elif loop.index === 3 %}
-					<span class="visually-hidden">as </span>Support
+					<span class="visually-hidden">{{ itemName }} as </span><span>Support</span>
 				{% endif %}
-			</small>
+			</p>
 		</div>
 	{% endfor %}
 </li>
@@ -265,7 +266,7 @@
 
 <h2>Strongest Setups</h2>
 <details>
-	<summary class="chip">With 6★ and Maxed Matrices</summary>
+	<summary class="chip">Setups With 6★ and Maxed Matrices</summary>
 	<ul class="sheet box-border stack !p-s-m">
 		{{ weaponList(['baiyuekui', 'marc', 'nemesis']) }}
 		{{ weaponList(['baiyuekui', 'claudia', 'nemesis']) }}
@@ -273,7 +274,7 @@
 	</ul>
 </details>
 <details>
-	<summary class="chip">Without Limited Weapons</summary>
+	<summary class="chip">Setups Without Limited Weapons</summary>
 	<ul class="sheet box-border stack !p-s-m">
 		{{ weaponList(['king', 'samir', 'tsubasa']) }}
 	</ul>

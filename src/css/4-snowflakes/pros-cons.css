@@ -1,5 +1,6 @@
 .pros > li, .cons > li {
-	background-position: 0 0.25em;
+	@apply leading-normal;
+	background-position: 0 0.2em;
 	background-repeat: no-repeat;
 	background-size: 1em;
 	padding-left: 1.6em;
@@ -12,4 +13,9 @@
 .cons > li {
 	/* @apply text-base/70; */
 	background-image: url('/assets/icons/minus-circled-outline.svg');
+}
+
+.copy > .pros > li + li,
+.copy > .cons > li + li{
+	margin-top: theme('spacing.2xs');
 }
