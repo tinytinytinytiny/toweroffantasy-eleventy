@@ -244,9 +244,7 @@
 </div>
 
 {% macro weaponList(list) %}
-{% set desc -%}
-A weapon loadout composed of {{ getData(collections.simulacra, list[0]).name }}, {{ getData(collections.simulacra, list[1]).name }}, and {{ getData(collections.simulacra, list[2]).name }}
-{%- endset %}
+{% set desc -%}A weapon loadout composed of {{ getData(collections.simulacra, list[0]).name }}, {{ getData(collections.simulacra, list[1]).name }}, and {{ getData(collections.simulacra, list[2]).name }}{%- endset %}
 <li class="sheet cluster justify-center box-border p-s" data-layer="1" aria-description="{{ desc }}">
 	{% for item in list %}
 		<div>
