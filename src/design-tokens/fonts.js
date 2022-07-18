@@ -1,5 +1,5 @@
 module.exports = {
-	sans: ['\'Archivo\'', 'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial', 'sans-serif'],
-	fancy: ['\'Chakra Petch\'', 'sans-serif'],
+	sans: ['\'Archivo\'', '-apple-system', 'sans-serif'],
+	fancy: ['\'Chakra Petch\'', '-apple-system', 'sans-serif'],
 	mono: ['monospace']
 };
