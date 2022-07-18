@@ -244,7 +244,10 @@
 </div>
 
 {% macro weaponList(list) %}
-<li class="sheet cluster justify-center box-border p-s" data-layer="1">
+{% set desc -%}
+A weapon loadout composed of {{ list[0] }}, {{ list[1] }}, and {{ list[2] }}
+{%- endset %}
+<li class="sheet cluster justify-center box-border p-s" data-layer="1" aria-description="{{ desc }}">
 	{% for item in list %}
 		<div>
 			{{ weapon(item) }}
