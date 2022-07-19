@@ -24,6 +24,7 @@ body {
 	font-family: theme('fontFamily.sans');
 	font-size: theme('fontSize.step-0');
 	letter-spacing: 0.015em;
+	line-height: 1.55;
 }
 
 #site {
@@ -66,6 +67,10 @@ summary:focus {
 	box-shadow: none;
 	outline: 0.12em solid theme('colors.primary');
 	outline-offset: 0.2em;
+}
+
+template {
+	display: none;
 }
 
 ul[class], ol[class] {

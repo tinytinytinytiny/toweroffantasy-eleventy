@@ -4,7 +4,7 @@
 	display: flex;
 	flex-flow: column;
 	justify-content: flex-end;
-	min-height: 280px;
+/* 	min-height: 280px; */
 	position: relative;
 	text-shadow: 0 0 0.1em theme('colors.sheet.0'),
 		0 0 0.2em theme('colors.sheet.0'),
@@ -35,6 +35,12 @@
 	display: flex;
 	flex-flow: column-reverse nowrap;
 	gap: var(--stack-space, 1em);
+}
+
+@media screen and (orientation: landscape) and (max-height: 400px) {
+	.page-header__inner .item-frame {
+		display: none !important;
+	}
 }
 
 .page-header h1 {

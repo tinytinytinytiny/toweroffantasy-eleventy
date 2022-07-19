@@ -6,7 +6,7 @@
 }
 ---
 
-{% macro weapon(name, tag, isPresentation) %}
+{% macro weapon(name, tag) %}
 	{% set data = getData(collections.simulacra, name) %}
 	{% set contents %}
 		<img src="/assets/images/wep/{{ name }}.png" alt="{{ data.name }}’s weapon" width="128" height="128" loading="lazy">
@@ -19,7 +19,7 @@
 			{{ contents | safe }}
 		</h3>
 	{% else %}
-		<div class="card" {{ 'aria-hidden="true"' | safe if isPresentation }}>
+		<div class="card">
 			{{ contents | safe }}
 		</div>
 	{% endif %}
@@ -247,18 +247,17 @@
 {% set desc -%}A weapon loadout composed of {{ getData(collections.simulacra, list[0]).name }}, {{ getData(collections.simulacra, list[1]).name }}, and {{ getData(collections.simulacra, list[2]).name }}{%- endset %}
 <li class="sheet cluster justify-center box-border p-s" data-layer="1" aria-description="{{ desc }}">
 	{% for item in list %}
-		{% set itemName = getData(collections.simulacra, item).name %}
-		<div>
-			{{ weapon(item, isPresentation = true) }}
-			<p class="small text-center text-accent leading-none">
+		<div class="flex flex-col-reverse flex-nowrap items-center">
+			<h3 class="small font-normal text-center text-accent leading-none">
 				{% if loop.index === 1 %}
-					<span class="visually-hidden">{{ itemName }} as </span><span>Shield Breaker</span>
+					Shield Breaker
 				{% elif loop.index === 2 %}
-					<span class="visually-hidden">{{ itemName }} as </span><span>Main DPS</span>
+					Main DPS
 				{% elif loop.index === 3 %}
-					<span class="visually-hidden">{{ itemName }} as </span><span>Support</span>
+					Support
 				{% endif %}
-			</p>
+			</h3>
+			{{ weapon(item) }}
 		</div>
 	{% endfor %}
 </li>
