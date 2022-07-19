@@ -3,7 +3,9 @@ summary + table {
 }
 
 table {
+	@apply leading-normal;
 	border-spacing: 0;
+	font-size: clamp(1rem, calc(0.8em + 0.5vw), 1em);
 	overflow-x: auto;
 	text-align: left;
 }
@@ -30,8 +32,8 @@ thead th {
 	@apply bg-sheet-0/80;
 	border-top-color: theme('colors.glare');
 	color: theme('colors.bold');
-	font-size: theme('fontSize.step--1');
-	letter-spacing: 0.075em;
+	font-size: clamp(theme('fontSize.step--2'), calc(theme('fontSize.step--2') + 0.34vw), theme('fontSize.step--1'));
+	letter-spacing: 0.07em;
 	line-height: 1.25;
 	text-transform: uppercase;
 	vertical-align: bottom;
