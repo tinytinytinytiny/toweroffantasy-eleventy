@@ -15,6 +15,7 @@ html, body {
 }
 
 html {
+	color-scheme: dark;
 	scroll-padding-top: 2em;
 }
 

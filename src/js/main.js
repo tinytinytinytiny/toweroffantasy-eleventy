@@ -28,7 +28,7 @@ if ('serviceWorker' in navigator) {
 	if ('ResizeObserver' in window) {
 		const scrollbarWidth = getScrollbarWidth();
 
-		if (nav.offsetWidth > window.innerWidth * 0.9) {
+		if (nav.offsetWidth >= document.body.clientWidth) {
 			forceCloseMenu();
 		} else {
 			openMenu();

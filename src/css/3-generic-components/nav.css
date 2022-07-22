@@ -96,6 +96,7 @@
 }
 
 .nav__links a {
+	-webkit-touch-callout: none;
 	color: inherit;
 	display: block;
 	padding-right: 1em;
@@ -163,22 +164,23 @@
 	background: transparent;
 }
 
-.nav[data-state="expanded"],
 .nav[data-state="collapsed"] {
 	background: transparent;
 }
 
-.nav[data-state="expanded"] .nav__widget,
-.nav[data-state="collapsed"] .nav__widget {
-	max-height: 100vh;
-	overflow-y: auto;
-}
-
 .nav[data-state="expanded"] .nav__widget[open],
 .nav[data-state="collapsed"] .nav__widget[open] {
-	height: 100vh;
-	max-height: -webkit-fill-available;
+	max-height: 100vh;
+	max-height: 100dvh;
+	overflow-y: auto;
 	overscroll-behavior: contain;
+}
+
+@supports (-webkit-touch-callout: none) and (not (height: 100dvh)) {
+	.nav[data-state="expanded"] .nav__widget[open],
+	.nav[data-state="collapsed"] .nav__widget[open] {
+		max-height: -webkit-fill-available;
+	}
 }
 
 .nav[data-state="expanded"] .nav__widget {

@@ -5,9 +5,11 @@
 	--position: var(--position-x) var(--position-y);
 	height: 100vh;
 	height: max(100%, 100vh);
+	height: 100lvh;
 	overscroll-behavior: none;
 	position: fixed;
 	width: 100vw;
+	width: 100lvw;
 	z-index: -1;
 }
 
