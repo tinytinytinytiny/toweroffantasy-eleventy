@@ -48,5 +48,7 @@
 }
 
 .page-header .chip {
+	-webkit-backdrop-filter: blur(10px);
+	backdrop-filter: blur(10px);
 	text-shadow: none;
 }

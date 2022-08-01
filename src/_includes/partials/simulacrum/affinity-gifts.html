@@ -16,7 +16,10 @@
 			{% endif %}
 			{% for gift in giftList | sortBy('name', items.gifts) %}
 				<li class="item-frame" data-rarity="{{ rarity }}" data-size="m">
-					<img src="/assets/images/affinity/{{ gift }}.png" title="{{ items.gifts[gift].name }}" alt="{{ items.gifts[gift].name }}" width="91" height="91" loading="lazy">
+					{% set picAttributes -%}
+						title="{{ items.gifts[gift].name }}"
+					{%- endset %}
+					{% image 'src/assets/images/affinity/' + gift + '.png', items.gifts[gift].name, '', picAttributes, 'lazy' %}
 					<span class="item-frame__info" data-align="right">+{{ value }}</span>
 				</li>
 			{% endfor %}

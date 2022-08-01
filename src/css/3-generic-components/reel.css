@@ -4,7 +4,7 @@
 	flex-flow: row nowrap;
 	gap: var(--gutter, theme('spacing.s-l'));
 	justify-content: flex-start;
-	overflow-x: auto;
+	overflow: auto visible;
 }
 
 .reel-instructions {

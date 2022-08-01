@@ -8,12 +8,12 @@
 	</div>
 {% endmacro %}
 
-<article class="weapon profile sheet" data-ratio="1-2" data-element="{{ weapon.element }}" data-border="top">
-	<div>
-		<img class="weapon-img" src="/assets/images/wep/{{ page.fileSlug }}.png" alt="{{ name }}’s weapon" width="128" height="128">
-	</div>
-	<div class="weapon-info stack">
-		<h3 class="weapon-info__title">{{ weapon.name }}</h3>
+<article class="weapon profile sheet" data-element="{{ weapon.element }}" data-ratio="1-2" data-border="top">
+	<h3>
+		{% image 'src/assets/images/wep/' + page.fileSlug + '.png', name + '’s weapon' %}
+		<span class="weapon-info__title">{{ weapon.name }}</span>
+	</h3>
+	<div class="weapon-info stack with-rule sheet py-s-m" data-layer="1">
 		<div class="grid">
 			<div class="weapon-stat">
 				{% image 'src/assets/images/icon/reso_' + weapon.resonance + '.png', '', 'inline-block' %}
@@ -25,8 +25,8 @@
 			<div class="weapon-stat">
 				{% image 'src/assets/images/icon/ele_' + weapon.element + '.png', '', 'inline-block' %}
 				<div class="infobite">
-					<h4>Resonance</h4>
-					<p>{{ weapon.element | capitalize }}</p>
+					<h4>Element</h4>
+					<p>{{ string.element[weapon.element].name | capitalize }}</p>
 				</div>
 			</div>
 			{% call weaponStat('Shatter', weapon.shatter.toFixed(2)) %}
@@ -41,6 +41,9 @@
 					<span>{{ chargeRating.rank | upper }}</span>
 				</div>
 			{% endcall %}
+		</div>
+		<div>
+			{% include "partials/simulacrum/materials.html" %}
 		</div>
 	</div>
 </article>

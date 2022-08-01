@@ -16,23 +16,17 @@
 	</div>
 {% endmacro %}
 
-{% if weapon.materials %}
-	<h3>Upgrade Materials</h3>
-	<div class="stack sheet box-border p-s-m"  >
-		{% call materials() %}
-			{{ material(weapon.element, rarity = 2, index = 1) }}
-			{{ material(weapon.element, rarity = 3, index = 2) }}
-			{{ material(weapon.element, rarity = 4, index = 3) }}
-		{% endcall %}
-		{% call materials() %}
-			{{ material(weapon.materials[0], rarity = 3, index = 1) }}
-			{{ material(weapon.materials[0], rarity = 4, index = 2) }}
-			{{ material(weapon.materials[0], rarity = 5, index = 3) }}
-		{% endcall %}
-		{% call materials() %}
-			{{ material(weapon.materials[1], rarity = 4, index = 1) }}
-			{{ material(weapon.materials[1], rarity = 5, index = 2) }}
-			{{ material(weapon.materials[1], rarity = 5, index = 3) }}
-		{% endcall %}
+<div class="stack copy">
+	<h4>Upgrade Materials</h4>
+	<div class="cluster gap-2xs">
+		<div class="item-frame" data-size="s" data-rarity="1">
+			{% image 'src/assets/images/mat/' + weapon.element + '1.png', string.element[weapon.element].name | capitalize + ' upgrade material' %}
+		</div>
+		{% for material in weapon.materials %}
+			<span>+</span>
+			<div class="item-frame" data-size="s" data-rarity="1">
+				{% image 'src/assets/images/mat/' + material + '1.png', material | capitalize + ' upgrade material' %}
+			</div>
+		{% endfor %}
 	</div>
-{% endif %}
+</div>

@@ -1,8 +1,7 @@
 .chip {
-	@apply bg-accent/14 shadow-md;
-	-webkit-backdrop-filter: blur(10px);
-	backdrop-filter: blur(10px);
-	box-shadow: var(--tw-shadow), inset 0 0 0 1px theme('colors.glare');
+	@apply bg-accent/14 shadow-md ring-1 ring-glare ring-inset;
+/* 	-webkit-backdrop-filter: blur(10px);
+	backdrop-filter: blur(10px); */
 	color: theme('colors.bold');
 	display: inline-block;
 	font-weight: bold;
@@ -21,10 +20,10 @@ summary.chip:hover {
 	@apply bg-accent/20;
 }
 
-.sheet .chip {
+/* .sheet .chip {
 	-webkit-backdrop-filter: none;
 	backdrop-filter: none;
-}
+} */
 
 input[type="checkbox"] + .chip,
 input[type="radio"] + .chip {
@@ -44,8 +43,8 @@ details[open] > .chip {
 }
 
 input:checked + .chip {
-	-webkit-backdrop-filter: none;
-	backdrop-filter: none;
+/* 	-webkit-backdrop-filter: none;
+	backdrop-filter: none; */
 	background-color: theme('colors.bold');
 	box-shadow: var(--tw-shadow), inset 0 0 0 1px theme('colors.base');
 	color: theme('colors.sheet.0');

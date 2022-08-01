@@ -20,6 +20,14 @@
 	--wrapper-max-width: 100%;
 }
 
+.wrapper[data-flush="left"] > * {
+	margin-left: 0;
+}
+
+.wrapper[data-flush="left"] > h2 {
+	padding-left: 0;
+}
+
 @supports (padding: max(0px)) {
 	.wrapper[data-wrapper="site"] {
 		--wrapper-max-width: var(--__default-wrapper-max-width);

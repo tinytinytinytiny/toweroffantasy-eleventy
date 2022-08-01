@@ -1,22 +1,23 @@
-<article class="has-h3 stack copy max-w-none">
-	<h3>Full Damage Formula</h3>
-	<p class="sheet font-mono p-s text-step--1" data-layer="0">
-		(<var class="text-tertiary">ActionMultiplier</var> × <var class="text-tertiary">BaseAttack</var> + <var class="text-tertiary">ExtraDamage</var>) × <var class="text-tertiary">CritDmg</var> × (0.95~1.05) × <var class="text-tertiary">AnyOtherMultipliers</var>
-	</p>
-</article>
-<section class="stack copy has-h3 ml-0" aria-label="Important Notes">
-	<h3>Important</h3>
+<h2>Notes</h2>
+<p>
+	This calculator only covers <strong>damage</strong> multipliers; it <strong>does not include attack</strong> multipliers. This is done to produce a percentage total rather a number total. Your true damage is also influenced by other things like attack multipliers and DoT.
+</p>
+<aside class="stack">
 	<p>
-		This calculator only covers <strong>damage</strong> multipliers; it <strong>does not include attack</strong> multipliers. This is done to produce a percentage total rather a number total. Your true damage is also influenced by other things like attack multipliers and DoT.
-	</p>
-	<h3>Other Notes</h3>
-	<p>
-		Effects that activate “when entering combat” are <em>not included</em>. Zero’s 4 set not included because it only lasts 4 seconds. {{ characters.claudia.name }}’s 4 set not included because it’s only for combo skills.<br>
-		{{ characters.crow.name }} & {{ characters.shiro.name }}’s chip sets are calculated assuming you will fight an enemy from 100% HP to 0%.<br>
-		KING’s 2 set can be stacked by activating it on different weapons.
+		Additional buffs should be multiplied together and inputted in <em>Any other multipliers</em>.
 	</p>
 	<p>
-		Additional buffs should be multiplied together and inputted in <em>Any other multipliers</em>.<br>
-		Ex: To calculate two buffs, 30% and 15%, do 1.30 × 1.15 to get 1.495. Then input 49.5% to get your result.
+		<small>Ex: To calculate two buffs, 30% and 15%, do 1.30 × 1.15 to get 1.495. Then input 49.5% to get your result.</small>
 	</p>
-</section>
+</aside>
+<h3>Full Damage Formula</h3>
+<p class="sheet font-mono p-s text-step--1 max-w-full" data-layer="0">
+	(<var class="text-tertiary">ActionMultiplier</var> × <var class="text-tertiary">BaseAttack</var> + <var class="text-tertiary">ExtraDamage</var>) × <var class="text-tertiary">CritDmg</var> × (0.95~1.05) × <var class="text-tertiary">AnyOtherMultipliers</var>
+</p>
+<h3>Caveats</h3>
+<ul>
+	<li>Effects that activate “when entering combat” are not included.</li>
+	<li>{{ characters.zero.name }}’s 4-set and {{ characters.claudia.name }}’s 4-set matrix effects are not included.</li>
+	<li>{{ characters.crow.name }} and {{ characters.shiro.name }}’s matrix sets are calculated assuming you will fight an enemy from 100% HP to 0%.</li>
+	<li>{{ characters.king.name }}’s 2 set can be stacked by activating it on different weapons.</li>
+</ul>

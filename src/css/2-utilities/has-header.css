@@ -1,4 +1,4 @@
-.stack > * + .has-h2 {
+/* .stack > * + .has-h2 {
 	margin-top: theme('fontSize.step-3');
 }
 
@@ -18,10 +18,15 @@
 	margin-top: theme('spacing.l');
 }
 
-.copy > .has-h2 + *, .copy > .has-h3 + * {
-	--stack-space: 1em;
+.copy > .has-h2 + *:not([class*="mt-"]) {
+	margin-top: 1em;
 }
 
-.copy > .has-h4 + * {
-	--stack-space: theme('spacing.2xs');
+.copy > .has-h3 + *:not([class*="mt-"]) {
+	margin-top: theme('spacing.xs');
 }
+
+.copy > .has-h4 + *:not([class*="mt-"]) {
+	margin-top: theme('spacing.2xs');
+}
+ */
