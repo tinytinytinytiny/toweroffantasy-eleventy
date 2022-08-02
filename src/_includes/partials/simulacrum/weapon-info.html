@@ -14,34 +14,34 @@
 			{% image 'src/assets/images/wep/' + page.fileSlug + '.png', name + '’s weapon', 'weapon-img' %}
 			<span class="weapon-info__title">{{ weapon.name }}</span>
 		</h3>
-		<div class="weapon-info stack with-rule sheet py-s-m" data-layer="1">
-			<div class="flex-grid">
-				<div class="stack stack-space-xs">
+		<div class="weapon-info stack with-rule sheet p-s-m" data-layer="1">
+			<div class="weapon-stats cluster">
+				<div class="weapon-stats cluster">
 					<div class="weapon-stat">
-						{% image 'src/assets/images/icon/reso_' + weapon.resonance + '.png', '', 'inline-block' %}
+						{% image 'src/assets/images/icon/reso_' + weapon.resonance + '.png', '', 'weapon-info__icon' %}
 						<div class="infobite">
 							<h4>Resonance</h4>
 							<p>{{ weapon.resonance | capitalize }}</p>
 						</div>
 					</div>
 					<div class="weapon-stat">
-						{% image 'src/assets/images/icon/ele_' + weapon.element + '.png', '', 'inline-block' %}
+						{% image 'src/assets/images/icon/ele_' + weapon.element + '.png', '', 'weapon-info__icon' %}
 						<div class="infobite">
 							<h4>Element</h4>
 							<p>{{ string.element[weapon.element].name | capitalize }}</p>
 						</div>
 					</div>
 				</div>
-				<div class="stack stack-space-xs">
+				<div class="weapon-stats cluster">
 					{% call weaponStat('Shatter', weapon.shatter.toFixed(2)) %}
 						{% set shatterRating = helpers.getWeaponRating(weapon.shatter, string.weaponRating) %}
-						<div class="highlight-rarity weapon-info__rating" data-rarity="{{ shatterRating.rarityColor }}">
+						<div class="highlight-rarity weapon-info__rating weapon-info__icon" data-rarity="{{ shatterRating.rarityColor }}">
 							<span>{{ shatterRating.rank | upper }}</span>
 						</div>
 						{% endcall %}
 					{% call weaponStat('Charge', weapon.charge.toFixed(2)) %}
 						{% set chargeRating = helpers.getWeaponRating(weapon.charge, string.weaponRating) %}
-						<div class="highlight-rarity weapon-info__rating" data-rarity="{{ chargeRating.rarityColor }}">
+						<div class="highlight-rarity weapon-info__rating weapon-info__icon" data-rarity="{{ chargeRating.rarityColor }}">
 							<span>{{ chargeRating.rank | upper }}</span>
 						</div>
 					{% endcall %}

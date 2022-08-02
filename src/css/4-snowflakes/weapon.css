@@ -17,9 +17,8 @@
 	margin-top: -68px;
 }
 
-.weapon-info .flex-grid {
-	--grid-min-item-size: auto;
-	--gutter: theme('spacing.xs');
+.weapon-stats {
+	--gutter: 0.8rem;
 }
 
 .weapon-img {
@@ -27,10 +26,7 @@
 }
 
 .weapon-stat {
-	display: flex;
-	align-items: center;
-	gap: theme('spacing.2xs');
-	margin-right: theme('spacing.xs');
+	margin-right: theme('spacing.xs-m');
 }
 
 .weapon-info__title {
@@ -39,10 +35,15 @@
 	margin-top: theme('spacing.s');
 }
 
+.weapon-info__icon {
+	display: inline-block;
+	margin-right: 10px;
+	vertical-align: middle;
+}
+
 .weapon-info__rating {
 	background-image: linear-gradient(-45deg, transparent 15%, var(--rarity-color) 15%);
 	border-radius: 2px;
-	display: inline-block;
 	font-size: 1.35rem;
 	font-style: italic;
 	height: 31px;
@@ -50,7 +51,6 @@
 	padding: 0;
 	position: relative;
 	text-align: center;
-	vertical-align: middle;
 	width: 34px;
 }
 
@@ -67,6 +67,11 @@
 	right: 1px;
 	bottom: 1px;
 	left: 1px;
+}
+
+.weapon-stat .infobite {
+	display: inline-block;
+	vertical-align: middle;
 }
 
 [data-element="electric"] > .sheet {
