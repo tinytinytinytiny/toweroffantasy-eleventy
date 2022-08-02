@@ -6,6 +6,7 @@ aside {
 	);
 	border-left: 0.3em solid theme('colors.secondary');
 	box-sizing: content-box;
+	color: theme('colors.bold');
 	font-weight: bold;
 	line-height: 1.5;
 	padding: theme('spacing.s-l') theme('spacing.m-l') theme('spacing.s-l') theme('spacing.s-l');

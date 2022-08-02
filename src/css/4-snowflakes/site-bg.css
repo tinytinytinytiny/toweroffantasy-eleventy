@@ -1,6 +1,6 @@
 .site-bg {
 	--position-x: calc(100% + var(--background-offset, 300px) - 5vw);
-	--position-x: min(calc(100% + var(--background-offset, 300px) - 5vw), calc(50% + 60rem));
+	--position-x: min(calc(100% + var(--background-offset, 300px) - 5vw), calc(50% + 50rem));
 	--position-y: top;
 	--position: var(--position-x) var(--position-y);
 	height: 100vh;

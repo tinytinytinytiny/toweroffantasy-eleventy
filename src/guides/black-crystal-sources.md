@@ -1,6 +1,7 @@
 ---
 {
 	"title": "Black Crystal Sources",
+	"date": "git Last Modified",
 	"authors": ["Unconsidered#5010"],
 	"tags": ["gathering"]
 }

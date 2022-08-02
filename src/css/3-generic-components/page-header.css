@@ -4,27 +4,7 @@
 	display: flex;
 	flex-flow: column;
 	justify-content: flex-end;
-/* 	min-height: 280px; */
 	position: relative;
-	text-shadow: 0 0 0.1em theme('colors.sheet.0'),
-		0 0 0.2em theme('colors.sheet.0'),
-		0 0 0.4em theme('colors.sheet.0'),
-		0 0 0.6em theme('colors.sheet.0'),
-		0 0 1em theme('colors.sheet.0'),
-		0 0 3em theme('colors.sheet.0'),
-		0 0 5em theme('colors.sheet.0');
-}
-
-.page-header::before {
-	background-image: linear-gradient(90deg, theme('colors.sheet.0') 20%, transparent);
-	content: '';
-	position: absolute;
-	top: -20rem;
-	right: 0;
-	bottom: 0;
-	left: 0;
-	mix-blend-mode: darken;
-	z-index: -1;
 }
 
 .page-header__inner {
@@ -45,10 +25,4 @@
 
 .page-header h1 {
 	line-height: 0.92;
-}
-
-.page-header .chip {
-	-webkit-backdrop-filter: blur(10px);
-	backdrop-filter: blur(10px);
-	text-shadow: none;
 }

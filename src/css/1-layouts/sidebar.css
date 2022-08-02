@@ -1,11 +1,13 @@
 .sidebar {
+	--__default-sidebar-target-width: 20rem;
+	--__default-sidebar-content-min-width: 50%;
 	display: flex;
 	flex-wrap: wrap;
 	gap: var(--gutter, theme('spacing.s-l'));
 }
 
 .sidebar > :first-child {
-	flex-basis: var(--sidebar-target-width, 20rem);
+	flex-basis: var(--sidebar-target-width, var(--__default-sidebar-target-width));
 	flex-grow: 1;
 }
 
@@ -17,7 +19,7 @@
 
 .sidebar[data-variant~="center-content"]::after {
 	content: '';
-	flex-basis: var(--sidebar-target-width, 20rem);
+	flex-basis: var(--sidebar-target-width, var(--__default-sidebar-target-width));
 	flex-grow: 1;
 }
 

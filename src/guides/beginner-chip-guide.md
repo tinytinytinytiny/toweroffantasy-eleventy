@@ -1,6 +1,7 @@
 ---
 {
 	"title": "Beginner Chip Guide",
+	"date": "git Last Modified",
 	"tags": ["gear"],
 	"authors": ["Stitch#8913"]
 }

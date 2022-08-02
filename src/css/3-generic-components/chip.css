@@ -1,5 +1,5 @@
 .chip {
-	@apply bg-accent/14 shadow-md ring-1 ring-glare ring-inset;
+	@apply bg-accent/20 shadow-md ring-1 ring-glare ring-inset;
 /* 	-webkit-backdrop-filter: blur(10px);
 	backdrop-filter: blur(10px); */
 	color: theme('colors.bold');
@@ -17,7 +17,7 @@ a.chip, a.chip:hover {
 a.chip:hover,
 input + .chip:hover,
 summary.chip:hover {
-	@apply bg-accent/20;
+	@apply bg-accent/25;
 }
 
 /* .sheet .chip {

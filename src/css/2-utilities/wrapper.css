@@ -13,7 +13,7 @@
 }
 
 .wrapper > h2:not([data-appearance="none"]) {
-	max-width: none;
+	max-width: 100%;
 }
 
 .wrapper[data-wrapper="wide"] {

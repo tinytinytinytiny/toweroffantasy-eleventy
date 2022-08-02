@@ -2,9 +2,9 @@
 
 {% block content %}
 	{% asyncEach mount in mounts %}
-		<article class="sheet profile max-w-none"  >
+		<article class="sheet profile max-w-full">
 			<div>
-				{% image 'src/assets/images/mount/' + mount + '.png', '' %}
+				{% image 'src/assets/images/mount/' + mount + '.png', '', '', '', 'lazy' %}
 			</div>
 			<div class="stack copy">
 				<h2 id="{{ items.mounts[mount].name | slugify }}" data-appearance="none">{{ items.mounts[mount].name }} {% if items.mounts[mount].isChina %}{% china %}{% endif %}</h2>
@@ -13,11 +13,11 @@
 					<details>
 						<summary class="chip">Materials ({{ items.mounts[mount].materials }})</summary>
 						<ul class="sheet !p-s reel gap-2xs m-0" data-layer="3"  >
-							{% for i in range(0, items.mounts[mount].materials) %}
+							{% asyncEach i in range(0, items.mounts[mount].materials) %}
 							<li class="item-frame" data-size="m" data-rarity="{{ '3' if loop.index === 1 else '1' }}">
-								<img src="/assets/images/mount/{{ mount }}-{{ loop.index }}.png" alt="" width="128" height="128">
+								{% image 'src/assets/images/mount/' + mount + '-' + loop.index + '.png', '', '', '', 'lazy' %}
 							</li>
-							{% endfor %}
+							{% endeach %}
 						</ul>
 					</details>
 				{% endif %}

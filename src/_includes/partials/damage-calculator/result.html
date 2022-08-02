@@ -1,6 +1,6 @@
 {% edge %}
 {% if eleventy.edge.cookies.totalDmg %}
-<section class="max-w-none stack !stack-space-xs" aria-label="Result">
+<section class="max-w-full stack !stack-space-xs" aria-label="Result">
 	{% set result = eleventy.edge.cookies.totalDmg | default(100, true) %}
 	{% set footnote = eleventy.edge.cookies.totalDmgFootnote | default('', true) | urldecode %}
 	<output name="result" for="damage-calculator" class="sheet block font-fancy text-step-7 p-s-m" id="result" data-layer="0">

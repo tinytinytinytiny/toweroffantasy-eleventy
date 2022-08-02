@@ -1,5 +1,5 @@
 <div class="item-frame mr-xs-s my-2xs" data-rarity="{{ food.rarity }}" data-size="m">
-	{% image 'src/assets/images/food/' + food.image, '' %}
+	{% image 'src/assets/images/food/' + food.image, '', '', '', 'lazy' %}
 	<span class="item-frame__info text-step-0 tracking-tighter" aria-hidden="true">
 		{% for i in range(0, food.stars) %}
 			<span class="inline-block -rotate-12">★</span>

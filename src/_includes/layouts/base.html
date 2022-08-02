@@ -14,15 +14,7 @@
   </head>
   <body>
 		{% include "partials/skip-link.html" %}
-		{% if background %}
-			{% set bgImg = "url('/assets/images/" + background + "')" %}
-			{% set bgSlug = background.split('.')[0].split('/') | last %}
-			{% set bgAttributes -%}
-				data-bg="{{ bgSlug }}" data-category="{{ bgCategory }}"
-			{%- endset %}
-			{% image 'src/assets/images/' + background, '', 'site-bg', bgAttributes %}
-			<div class="site-bg legacy" {{ bgAttributes | safe }} role="presentation" style="background-image: {{ bgImg }};"></div>
-		{% endif %}
+		{% include "partials/site-bg.html" %}
 		<div id="site" class="sidebar" data-variant="center-content">
 			{% include "partials/nav/sidebar.html" %}
 			<main class="stack" tabindex="-1" id="main-content">

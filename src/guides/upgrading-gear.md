@@ -1,6 +1,7 @@
 ---
 {
 	"title": "Upgrading Gear",
+	"date": "git Last Modified",
 	"authors": ["Zakum#3080"],
 	"tags": ["gear"]
 }

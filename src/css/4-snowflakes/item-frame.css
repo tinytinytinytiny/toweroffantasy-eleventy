@@ -100,7 +100,6 @@
 	left: 0.1em;
 	right: 0.1em;
 	color: #fff;
-	content: attr(data-quantity);
 	font-family: theme('fontFamily.fancy');
 	line-height: 1;
 	position: absolute;
@@ -112,9 +111,7 @@
      0 1px 0 theme('colors.sheet.0'),
     -1px 1px 0 theme('colors.sheet.0'),
     -1px 0 0 theme('colors.sheet.0'),
-		0 0 0.1em rgba(0, 0, 0, 0.6),
-		0 0 0.2em rgba(0, 0, 0, 0.6),
-		0 0 0.25em rgba(0, 0, 0, 0.6);
+		0 0 0.3rem rgba(0, 0, 0, 0.6);
 }
 
 .item-frame__info[data-align="center"] {

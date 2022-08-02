@@ -1,6 +1,7 @@
 ---
 {
 	"title": "15 Things You MUST Know",
+	"date": "git Last Modified",
 	"authors": ["Zakum#3080"],
 	"tags": ["gathering"],
 	"displayOrder": 1

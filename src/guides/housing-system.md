@@ -1,6 +1,7 @@
 ---
 {
 	"title": "Housing System",
+	"date": "git Last Modified",
 	"authors": ["Pyrosu#6969"],
 	"tags": ["gathering"]
 }
@@ -9,7 +10,7 @@
 ## Getting Started
 Accept the quest in the “Event/Reward Box” menu on the top of your screen. You need to collect 10× Developer Logs from Artificial Island to unlock the Housing menu, which will let you travel to your Home Island.
 
-<figure class="max-w-none">
+<figure class="max-w-full">
 <img src="/assets/images/guides/developer-logs.jpg" alt="Map of Artificial Island showing locations for Developer Logs" width="1366" height="768">
 </figure>
 
@@ -37,7 +38,7 @@ The main source of materials is killing creatures on your Artificial Island, inc
 * Different creatures will drop different materials, but world bosses drop a large amount of all resources at once.
 * By upgrading buildings (except for the Development Center), you will increase the number of your workers and, accordingly, the amount of resources they extract.
 
-<figure class="max-w-none">
+<figure class="max-w-full">
 	<img src="/assets/images/guides/housing-map.jpg" alt="Map showing areas in which to obtain housing resources" width="1112" height="1328">
 </figure>
 

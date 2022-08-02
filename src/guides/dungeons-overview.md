@@ -1,6 +1,7 @@
 ---
 {
 	"title": "Dungeons Overview",
+	"date": "git Last Modified",
 	"authors": ["Unconsidered#5010", "Zakum#3080"],
 	"tags": ["gathering"]
 }
@@ -11,7 +12,7 @@
 #### **Up to 4-player dungeon** that rewards **Armor and Matrices**
 4-player co-op dungeon with 8 difficulties that unlock as you level up, with the rewards increasing each time. Clear all the enemies within the timer to unlock 3 chests (30 vitality each) and a free bonus chest after defeating the boss. See image below for daily entry limits and rewards.
 
-<figure class="max-w-none">
+<figure class="max-w-full">
 	<img src="/assets/images/guides/JOINTOP.jpg" alt="Joint Operation schedule and rewards" width="1428" height="872">
 </figure>
 

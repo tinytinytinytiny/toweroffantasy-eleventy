@@ -1,4 +1,4 @@
-<ul class="card-list auto-grid max-w-none">
+<ul class="card-list auto-grid max-w-full">
 	{% for item in items | sortBy('name') | reverse | sortBy(['isNew', 'isChina']) | reverse %}
 		<li class="sheet card stack box-border p-s"  >
 			<div class="item-frame">

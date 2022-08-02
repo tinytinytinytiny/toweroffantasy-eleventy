@@ -26,9 +26,7 @@ module.exports = {
 		padding: ({ theme }) => theme('spacing'),
 		extend: {
 			opacity: {
-				'12': '.12',
-				'14': '.14',
-				'15': '.15'
+				'25': '.25'
 			}
 		}
 	},

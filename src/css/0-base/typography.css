@@ -62,12 +62,14 @@ h4 {
 }
 
 a {
-	color: inherit;
-	text-decoration-thickness: 0.14em;
+	color: theme('colors.secondary');
+	text-decoration-thickness: 0.12em;
 	text-decoration-color: theme('colors.secondary');
+	text-underline-position: from-font;
 }
 
 a[data-underline="on-hover"] {
+	color: inherit;
 	text-decoration: none;
 }
 

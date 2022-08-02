@@ -164,6 +164,8 @@
 	background: transparent;
 }
 
+.nav[data-state="expanded"],
+.nav[data-state="expanded"] .nav__widget[open],
 .nav[data-state="collapsed"] {
 	background: transparent;
 }

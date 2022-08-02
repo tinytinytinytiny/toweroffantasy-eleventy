@@ -11,7 +11,7 @@
 					{% for item in items | sortBy('name') | reverse | sortBy(['isNew', 'isChina']) | reverse %}
 						<li>
 							<a
-								class="chip backdrop-filter-none"
+								class="chip"
 								href="{{ item.url }}"
 								{% if item.url === page.url %}
 									aria-current="page"

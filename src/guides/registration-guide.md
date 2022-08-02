@@ -1,6 +1,7 @@
 ---
 {
 	"title": "Registration Guide",
+	"date": "git Last Modified",
 	"authors": ["Pyrosu#6969", "Zakum#3080", "TheKingOppaiDragon / 👑킹젖가슴드래곤👑#5969"],
 	"tags": ["technical", "china"],
 	"articleData": {
