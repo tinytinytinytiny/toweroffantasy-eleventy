@@ -64,6 +64,10 @@ img {
 	flex: none;
 }
 
+picture {
+	flex: none;
+}
+
 a:focus,
 button:focus,
 summary:focus {

@@ -1,29 +1,42 @@
 .weapon {
-	--content-min-width: 15rem;
-	--image-width: 128px;
-	align-items: flex-start;
+	position: relative;
 	z-index: 1;
 }
 
-.weapon-info .grid {
-	--grid-column-count: 2;
-	--grid-min-item-size: 9rem;
+.weapon.wrapper {
+	--wrapper-padding: 0;
+	max-width: 100%;
+}
+
+.weapon > .sheet {
+	margin-top: 68px;
+	padding-top: 0;
+}
+
+.weapon-header {
+	margin-top: -68px;
+}
+
+.weapon-info .flex-grid {
+	--grid-min-item-size: auto;
 	--gutter: theme('spacing.xs');
 }
 
 .weapon-img {
-	filter: drop-shadow(0 0.8em 1em rgba(0, 0, 0, 0.3));
+	filter: drop-shadow(0 1rem 1.2rem rgba(0, 0, 0, 0.3));
 }
 
 .weapon-stat {
 	display: flex;
 	align-items: center;
 	gap: theme('spacing.2xs');
+	margin-right: theme('spacing.xs');
 }
 
 .weapon-info__title {
 	display: block;
-	text-align: center;
+	font-size: theme('fontSize.step-2');
+	margin-top: theme('spacing.s');
 }
 
 .weapon-info__rating {
@@ -56,18 +69,18 @@
 	left: 1px;
 }
 
-[data-element="electric"] {
+[data-element="electric"] > .sheet {
 	--border-color: theme('colors.element.electric');
 }
 
-[data-element="fire"] {
+[data-element="fire"] > .sheet {
 	--border-color: theme('colors.element.fire');
 }
 
-[data-element="ice"] {
+[data-element="ice"] > .sheet {
 	--border-color: theme('colors.element.ice');
 }
 
-[data-element="physical"] {
+[data-element="physical"] > .sheet {
 	--border-color: theme('colors.element.physical');
 }
