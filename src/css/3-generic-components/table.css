@@ -17,7 +17,7 @@ th {
 
 th, td {
 	border-top: 1px solid theme('colors.divider');
-	padding: theme('spacing.xs') theme('spacing.s-l');
+	padding: theme('spacing.xs') theme('spacing.s-m');
 }
 
 tr > :first-child {
