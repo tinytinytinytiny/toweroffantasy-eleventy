@@ -23,6 +23,7 @@
 
 .weapon-img {
 	filter: drop-shadow(0 1rem 1.2rem rgba(0, 0, 0, 0.3));
+	z-index: 1;
 }
 
 .weapon-stat {
