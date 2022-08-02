@@ -63,9 +63,13 @@ h4 {
 
 a {
 	color: theme('colors.secondary');
-	text-decoration-thickness: 0.12em;
+	text-decoration-thickness: 1px;
 	text-decoration-color: theme('colors.secondary');
 	text-underline-position: from-font;
+}
+
+a:hover {
+	text-decoration-thickness: 2px;
 }
 
 a[data-underline="on-hover"] {
@@ -74,7 +78,7 @@ a[data-underline="on-hover"] {
 }
 
 a[data-underline="on-hover"]:hover {
-	text-decoration: underline theme('colors.secondary') 0.14em;
+	text-decoration: underline theme('colors.secondary') 2px;
 }
 
 strong {
