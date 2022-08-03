@@ -5,14 +5,7 @@ const filesToCache = [
 	'/css/global.css',
 	'/js/main.min.js',
 	'/assets/icons/nav-arrow-down.svg',
-	'/assets/icons/nav-arrow-right.svg',
-	'/changelog/',
-	'/simulacra/',
-	'/matrices/',
-	'/relics/',
-	'/food/',
-	'/mounts/',
-	'/guides/'
+	'/assets/icons/nav-arrow-right.svg'
 ];
 
 self.addEventListener('activate', e => self.clients.claim());

@@ -24,7 +24,7 @@ body {
 	color: theme('colors.base');
 	font-family: theme('fontFamily.sans');
 	font-size: theme('fontSize.step-0');
-	letter-spacing: 0.025em;
+	letter-spacing: 0.02em;
 	line-height: 1.55;
 }
 
