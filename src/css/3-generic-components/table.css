@@ -11,27 +11,26 @@ table {
 }
 
 th {
+	color: theme('colors.bold' / 90%);
 	font-family: theme('fontFamily.fancy');
-	letter-spacing: normal;
 }
 
 th, td {
 	border-top: 1px solid theme('colors.divider');
-	padding: theme('spacing.xs') theme('spacing.s-m');
+	padding: theme('spacing.2xs-xs') theme('spacing.s-m');
 }
 
 tr > :first-child {
-	padding-left: theme('spacing.xs-s');
+	padding-left: theme('spacing.2xs-xs');
 }
 
 tr > :last-child {
-	padding-right: theme('spacing.xs-s');
+	padding-right: theme('spacing.2xs-xs');
 }
 
 thead th {
 	@apply bg-sheet-0/80;
 	border-top-color: theme('colors.glare');
-	color: theme('colors.bold');
 	font-size: clamp(theme('fontSize.step--2'), calc(theme('fontSize.step--2') + 0.34vw), theme('fontSize.step--1'));
 	letter-spacing: 0.07em;
 	line-height: 1.25;

@@ -7,12 +7,12 @@
 }
 ---
 
-{% macro weapon(name, tag) %}
+{% macro weapon(name, tag, anchorVariant) %}
 	{% set data = getData(collections.simulacra, name) %}
 	{% set contents %}
 		<img src="/assets/images/wep/{{ name }}.png" alt="{{ data.name }}’s weapon" width="128" height="128" loading="lazy">
 		<span class="block leading-normal text-step-0">
-			<a href="{{ getCollection(collections.simulacra, name).url }}" class="font-bold inline-block" data-underline="on-hover">{{ data.name }}</a>
+			<a href="{{ getCollection(collections.simulacra, name).url }}" class="font-bold text-bold inline-block" {% if anchorVariant === 'hover' %}data-underline="on-hover"{% endif %}>{{ data.name }}</a>
 		</span>
 	{% endset %}
 	{% if tag === 'header' %}
@@ -258,7 +258,7 @@
 					Support
 				{% endif %}
 			</h3>
-			{{ weapon(item) }}
+			{{ weapon(item, '', 'hover') }}
 		</div>
 	{% endfor %}
 </li>

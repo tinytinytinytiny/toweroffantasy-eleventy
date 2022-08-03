@@ -53,27 +53,27 @@ The Perfect World Games client is the official version, with three other redistr
 		</thead>
 		<tbody>
 			<tr>
-				<th scope="row">
-					<a href="#{{ 'Perfect World Games' | slugify }}" data-underline="on-hover">Perfect World Games</a>
-				</th>
+				<td>
+					<a class="font-bold text-bold/90" href="#{{ 'Perfect World Games' | slugify }}">Perfect World Games</a>
+				</td>
 				<td>{{ platforms(['pc', 'android', 'ios'], 's') }}</td>
 			</tr>
 			<tr>
-				<th scope="row">
-					<a href="#{{ 'bilibili' | slugify }}" data-underline="on-hover">bilibili</a>
-				</th>
+				<td>
+					<a class="font-bold text-bold/90" href="#{{ 'bilibili' | slugify }}">bilibili</a>
+				</td>
 				<td>{{ platforms(['android'], 's') }}</td>
 			</tr>
 			<tr>
-				<th scope="row">
-					<a href="#{{ 'Huawei' | slugify }}" data-underline="on-hover">Huawei</a>
-				</th>
+				<td>
+					<a class="font-bold text-bold/90" href="#{{ 'Huawei' | slugify }}">Huawei</a>
+				</td>
 				<td>{{ platforms(['android'], 's') }}</td>
 			</tr>
 			<tr>
-				<th scope="row">
-					<a href="#{{ 'QooApp (9game)' | slugify }}" data-underline="on-hover">QooApp (9game)</a>
-				</th>
+				<td>
+					<a class="font-bold text-bold/90" href="#{{ 'QooApp (9game)' | slugify }}">QooApp (9game)</a>
+				</td>
 				<td>{{ platforms(['android'], 's') }}</td>
 			</tr>
 		</tbody>

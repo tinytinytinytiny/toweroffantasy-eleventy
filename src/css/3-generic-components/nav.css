@@ -50,8 +50,8 @@
 }
 
 .nav__head {
-	@apply text-white/90;
 	align-items: center;
+	color: theme('colors.bold');
 	display: flex;
 	font-family: theme('fontFamily.fancy');
 	font-size: theme('fontSize.step-1');
@@ -119,7 +119,7 @@
 	right: 0;
 	bottom: calc(var(--gutter) * -1 / 2);
 	display: block;
-	left: calc(-1 * theme('spacing.m-l'));
+	left: calc(-1 * var(--wrapper-padding));
 	opacity: 0;
 	position: absolute;
 }
@@ -141,7 +141,7 @@
 .nav__links a:focus::before {
 	background-image: linear-gradient(90deg,
 		theme('colors.bold'),
-		theme('colors.base')
+		theme('colors.bold' / 85%)
 	);
 	opacity: 1;
 }
@@ -152,7 +152,7 @@
 }
 
 .nav__links a[data-state="active"]::before {
-	border-left: 0.31em solid theme('colors.primary');
+	border-left: 0.3em solid theme('colors.primary');
 	opacity: 1;
 }
 

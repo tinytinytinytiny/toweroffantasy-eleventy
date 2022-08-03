@@ -2,7 +2,7 @@
 	@apply bg-accent/20 shadow-md ring-1 ring-glare ring-inset;
 /* 	-webkit-backdrop-filter: blur(10px);
 	backdrop-filter: blur(10px); */
-	color: theme('colors.bold');
+	color: theme('colors.bold' / 90%);
 	display: inline-block;
 	font-weight: bold;
 	line-height: 1;
@@ -55,10 +55,10 @@ input:checked + .chip > * {
 }
 
 .chip[data-variant~="knockout"] {
-	-webkit-backdrop-filter: none;
-	backdrop-filter: none;
-	background-color: theme('colors.bold');
-	box-shadow: var(--tw-shadow), inset 0 0 0 1px theme('colors.base');
+	@apply ring-bold;
+	/* -webkit-backdrop-filter: none;
+	backdrop-filter: none; */
+	background-color: theme('colors.bold' / 96%);
 	color: theme('colors.sheet.0');
 	letter-spacing: normal;
 }
@@ -69,11 +69,6 @@ a.chip[data-variant~="knockout"]:hover {
 
 a.chip[data-variant~="knockout"]:focus {
 	background-color: #fff;
-}
-
-.chip[data-variant~="knockout"][data-color="primary"] {
-	background-color: theme('colors.primary');
-	box-shadow: var(--tw-shadow);
 }
 
 .chip[data-variant~="underline"] {

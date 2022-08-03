@@ -1,6 +1,5 @@
 .changelog {
-	@apply text-base/80;
-	background-color: theme('colors.sheet.2');
+	color: theme('colors.base' / 90%);
 	font-family: theme('fontFamily.mono');
 	font-size: theme('fontSize.step--1');
 	letter-spacing: normal;
@@ -12,7 +11,8 @@
 }
 
 .changelog h3 {
-	@apply bg-black/20 text-white/90;
+	background-color: rgba(0, 0, 0, 0.2);
+	color: theme('colors.bold');
 	display: inline;
 	font-family: inherit;
 	font-size: inherit;

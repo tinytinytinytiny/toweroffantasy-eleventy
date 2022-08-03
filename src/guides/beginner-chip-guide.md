@@ -21,7 +21,7 @@ In addition, R chips only have a *4p (4-set) effect*, while SR have a *3p (3-set
 	<div class="item-frame mb-2xs" data-variant="matrix">
 		<img src="/assets/images/chip/{{ name }}.png" alt="" width="205" height="205">
 	</div>
-	<a href="{{ getCollection(collections.matrices, name).url }}" data-underline="on-hover">
+	<a class="text-bold" href="{{ getCollection(collections.matrices, name).url }}">
 		{{ getData(collections.matrices, name).name }}
 	</a>
 </h3>
