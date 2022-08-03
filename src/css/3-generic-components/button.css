@@ -16,6 +16,12 @@ button, .button {
 	user-select: none;
 }
 
+button:focus, .button:focus {
+	border: 0;
+	outline: 0.2rem solid theme('colors.bold');
+	outline-offset: 0.15em;
+}
+
 button[data-variant~="full-width"],
 .button[data-variant~="full-width"] {
 	display: block;
@@ -24,8 +30,8 @@ button[data-variant~="full-width"],
 
 button[data-variant~="ghost"],
 .button[data-variant~="ghost"] {
-	background: none;
-	box-shadow: inset 0 0 0 0.15em var(--button-color, var(--__default-button-color));
+	background-color: theme('colors.glare');
+	box-shadow: inset 0 0 0 1px var(--button-color, var(--__default-button-color));
 	color: var(--button-color, var(--__default-button-color));
 }
 
@@ -41,7 +47,7 @@ button[data-color="tertiary"],
 
 button[data-color="secondary"][data-variant~="ghost"],
 .button[data-color="secondary"][data-variant~="ghost"] {
-	color: theme('colors.base');
+	color: theme('colors.bold');
 }
 
 button > svg,

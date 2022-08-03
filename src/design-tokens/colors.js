@@ -6,12 +6,12 @@ module.exports = {
 	primary: '#FFD082',
 	'primary-glare': '#FFDFA1',
 	'primary-dim': '#DBA75F',
-	secondary: '#2bcae8',
-	'secondary-glare': '#5DE5F1',
-	'secondary-dim': '#1F9FC7',
-	tertiary: '#f36b6b',
-	'tertiary-glare': '#F7988F',
-	'tertiary-dim': '#D04E59',
+	secondary: '#6aeafb',
+	'secondary-glare': '#8ff8fc',
+	'secondary-dim': '#4dbcd7',
+	tertiary: '#ff6c6c',
+	'tertiary-glare': '#ff9a90',
+	'tertiary-dim': '#db4e5b',
 
 	// Background
 	backdrop: '#11121e',
@@ -30,7 +30,7 @@ module.exports = {
 	// Semantic
 	divider: 'rgba(197, 200, 231, 0.2)',
 	glare: 'rgba(197, 200, 231, 0.05)',
-	success: '#2bcae8',
+	success: '#82f0ff',
 	error: '#f36b6b',
 
 	// Rarity

@@ -2,7 +2,13 @@
 <div class="stack">
 	<ul class="cluster gap-xs">
 		{% for cat in gifts.categories %}
-		<li class="chip" data-variant="underline" style="color: {{ string.giftCategories[cat].color }}">{{ string.giftCategories[cat].name }}</li>
+			<li
+				class="chip"
+				data-variant="underline"
+				style="color: rgb({{ string.giftCategories[cat].color }}); background-color: rgba({{ string.giftCategories[cat].color }}, 0.16);"
+			>
+				{{ string.giftCategories[cat].name }}
+			</li>
 		{% endfor %}
 	</ul>
 	<ul class="cluster gap-2xs">

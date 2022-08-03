@@ -69,7 +69,6 @@ picture {
 }
 
 a:focus,
-button:focus,
 summary:focus {
 	border: 0;
 	box-shadow: none;

@@ -28,7 +28,7 @@ module.exports = {
 	render({ values, footnote, string: { skills } }) {
 		return this.range(4).map(i => [
 			`If HP is less than **30%** after being attacked, gain a shield equal to **${values.set2[0][i]}** of Max HP for **10** seconds. Cooldown: **120** seconds.\n\n${this.china()} If HP is less than **30%** after being attacked, gain a shield equal to **${values.set2[1][i]}** of Max HP for **10** seconds. Cooldown: **90** seconds.`,
-			`Increase ${skills.meryl.whirlwind.name}’s damage by **${values.set4[0][i]}** and restore HP equal to **${values.set4[1][i]}** of the damage dealt while Whirlwind is active. The maximum HP restored every **0.5** seconds cannot exceed **${values.set4[2][i]}** of ATK.\n\n${this.china()} Converts **${values.set4[3][i]}* of damage dealth during shield to health, restores no more than **${values.set4[4][i]}** of attack power every 0.5 seconds.`
+			`Increase ${skills.meryl.whirlwind.name}’s damage by **${values.set4[0][i]}** and restore HP equal to **${values.set4[1][i]}** of the damage dealt while Whirlwind is active. The maximum HP restored every **0.5** seconds cannot exceed **${values.set4[2][i]}** of ATK.\n\n${this.china()} Converts **${values.set4[3][i]}** of damage dealth during shield to health, restores no more than **${values.set4[4][i]}** of attack power every 0.5 seconds.`
 		]);
 	}
 };

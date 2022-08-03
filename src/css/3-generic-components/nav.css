@@ -20,9 +20,7 @@
 }
 
 .button.nav__toggle {
-	@apply bg-sheet-0/60;
-	-webkit-backdrop-filter: blur(10px);
-	backdrop-filter: blur(10px);
+	@apply bg-sheet-0/90;
 	list-style: none;
 }
 
@@ -106,10 +104,11 @@
 .nav__links a:focus,
 .nav__links a:focus-within {
 	border: 0;
+	box-shadow: none;
 	color: theme('colors.sheet.0');
 	font-weight: bold;
+	letter-spacing: normal;
 	outline: 0;
-	box-shadow: none;
 }
 
 .nav__links a::before,
