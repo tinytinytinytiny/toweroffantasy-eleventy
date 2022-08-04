@@ -32,3 +32,10 @@
 	{% set collection = 'simulacra' %}
 	{% include "partials/mini-list.html" %}
 {% endblock %}
+
+{% block scripts %}
+	{% set js %}
+		{% include "scripts/reel.js" %}
+	{% endset %}
+	<script>{{ js | jsmin | safe }}</script>
+{% endblock %}

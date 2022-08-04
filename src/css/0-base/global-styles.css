@@ -35,6 +35,7 @@ body {
 		theme('colors.sheet.0 / 65%') calc(var(--sidebar-content-min-width, var(--__default-sidebar-content-min-width)) + var(--sidebar-target-width, var(--__default-sidebar-target-width))),
 		transparent 120rem
 	);
+	contain: content;
 	min-height: inherit;
 	margin-left: auto;
 	margin-right: auto;

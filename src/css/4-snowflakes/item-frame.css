@@ -39,7 +39,6 @@
 }
 
 .item-frame[data-rarity] {
-	@apply shadow-lg;
 	--rarity-base-color: theme('colors.rarity.1.base');
 	--rarity-base-rgb-values: theme('colors.rarity.1.baseRGB');
 	--rarity-backdrop-color: theme('colors.rarity.1.backdrop');
@@ -60,6 +59,7 @@
 	background-position: center, center var(--frame-border-width);
 	background-repeat: no-repeat;
 	border: calc(var(--frame-border-width) / 2) solid var(--rarity-base-color);
+	contain: layout paint;
 	outline: 1px solid rgba(0, 0, 0, 0.5);
 }
 
@@ -85,14 +85,6 @@
 	--rarity-base-color: theme('colors.rarity.5.base');
 	--rarity-base-rgb-values: theme('colors.rarity.5.baseRGB');
 	--rarity-backdrop-color: theme('colors.rarity.5.backdrop');
-}
-
-.item-frame[data-rarity][data-size="m"] {
-	@apply shadow-md;
-}
-
-.item-frame[data-rarity][data-size="s"] {
-	@apply shadow;
 }
 
 .item-frame__info {

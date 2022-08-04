@@ -58,5 +58,8 @@
 {% endblock %}
 
 {% block scripts %}
-	<script src="/js/expand-details.js"></script>
+	{% set js %}
+		{% include "scripts/expand-details.js" %}
+	{% endset %}
+	<script>{{ js | jsmin | safe }}</script>
 {% endblock %}

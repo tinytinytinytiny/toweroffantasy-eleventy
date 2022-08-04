@@ -3,7 +3,7 @@
 	--__default-sidebar-content-min-width: 50%;
 	display: flex;
 	flex-wrap: wrap;
-	gap: var(--gutter, theme('spacing.s-l'));
+	gap: theme('spacing.s-l');
 }
 
 .sidebar > :first-child {

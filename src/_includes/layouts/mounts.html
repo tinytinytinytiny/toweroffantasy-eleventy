@@ -26,6 +26,10 @@
 	{% endeach %}
 {% endblock %}
 
-{% block extras %}
-	<script src="/js/expand-details.js"></script>
+{% block scripts %}
+	{% set js %}
+		{% include "scripts/expand-details.js" %}
+		{% include "scripts/reel.js" %}
+	{% endset %}
+	<script>{{ js | jsmin | safe }}</script>
 {% endblock %}

@@ -63,15 +63,6 @@ summary.chip {
 	display: flex;
 }
 
-summary h2, summary h3, summary h4 {
-	display: inline-block;
-	font-size: theme('fontSize.step-0');
-}
-
-/* summary.chip {
-	border-left: 0.3em solid theme('colors.accent');
-} */
-
 summary.chip::-webkit-details-marker,
 summary.chip::marker {
 	content: none;
@@ -81,7 +72,3 @@ summary.chip::marker {
 summary.chip + .sheet {
 	margin-top: 0;
 }
-
-/* summary.chip + .sheet:not([data-border]) {
-	border-left: 0.2em solid theme('colors.divider');
-} */

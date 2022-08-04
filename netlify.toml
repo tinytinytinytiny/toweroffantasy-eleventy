@@ -14,3 +14,8 @@ path = "/damage-calculator/"
 		no-cache,
 		no-store,
 		must-revalidate'''
+
+[[headers]]
+	for = "/*"
+	[headers.values]
+		Content-Security-Policy = "script-src 'self' 'unsafe-inline';"

@@ -30,6 +30,10 @@
 			</main>
 		</div>
 		{% block extras %}{% endblock %}
+		{% set js %}
+			{% include "scripts/nav.js" %}
+		{% endset %}
+		<script>{{ js | jsmin | safe }}</script>
 		<script src="/js/main.min.js"></script>
 		{% block scripts %}{% endblock %}
   </body>

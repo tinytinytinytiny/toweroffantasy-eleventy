@@ -1,5 +1,3 @@
-'use strict';
-
 if ('querySelectorAll' in document && 'matchMedia' in window) {
 	const mq = window.matchMedia('(min-height: 700px) and (min-width: 1024px)');
 

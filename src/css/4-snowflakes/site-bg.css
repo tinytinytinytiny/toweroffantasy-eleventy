@@ -3,6 +3,7 @@
 	--position-x: min(calc(100% + var(--background-offset, 300px) - 5vw), calc(50% + 50rem));
 	--position-y: top;
 	--position: var(--position-x) var(--position-y);
+	contain: strict;
 	height: 100vh;
 	height: max(100%, 100vh);
 	height: 100lvh;

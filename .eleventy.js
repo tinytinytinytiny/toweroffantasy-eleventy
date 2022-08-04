@@ -1,4 +1,5 @@
 const { EleventyEdgePlugin } = require('@11ty/eleventy');
+const { minify } = require('terser');
 
 const md = require('markdown-it')({
 	html: true,
@@ -39,6 +40,16 @@ module.exports = (config) => {
 	config.addFilter('values', obj => Object.values(obj));
 	config.addFilter('markdown', (value) => {
 		return md.render(value);
+	});
+	config.addNunjucksAsyncFilter('jsmin', async function (code, callback) {
+		try {
+		  const minified = await minify(code);
+		  callback(null, minified.code);
+		} catch (err) {
+		  console.error('Terser error: ', err);
+		  // Fail gracefully.
+		  callback(null, code);
+		}
 	});
 
 	config.addNunjucksAsyncShortcode('image', require('./src/_11ty/shortcodes/image.js'));
