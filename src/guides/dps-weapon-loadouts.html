@@ -37,14 +37,14 @@
 
 {% macro pros() %}
 	<h4 class="text-step--1 font-fancy tracking-wider uppercase leading-none text-accent">Pros</h4>
-	<ul class="pros sheet !p-s" data-layer="1" role="list">
+	<ul class="pros padded sheet p-s" data-layer="1" role="list">
 		{{ caller() }}
 	</ul>
 {% endmacro %}
 
 {% macro cons() %}
 	<h4 class="text-step--1 font-fancy tracking-wider uppercase leading-none text-accent">Cons</h4>
-	<ul class="cons sheet !p-s" data-layer="1" role="list">
+	<ul class="cons sheet padded p-s" data-layer="1" role="list">
 		{{ caller() }}
 	</ul>
 {% endmacro %}
@@ -267,7 +267,7 @@
 <h2>Strongest Setups</h2>
 <details>
 	<summary class="chip">Setups With 6★ and Maxed Matrices</summary>
-	<ul class="sheet box-border stack !p-s-m">
+	<ul class="sheet box-border stack padded p-s-m">
 		{{ weaponList(['baiyuekui', 'marc', 'nemesis']) }}
 		{{ weaponList(['baiyuekui', 'claudia', 'nemesis']) }}
 		{{ weaponList(['ruby', 'cobalt-b', 'marc']) }}
@@ -275,7 +275,7 @@
 </details>
 <details>
 	<summary class="chip">Setups Without Limited Weapons</summary>
-	<ul class="sheet box-border stack !p-s-m">
+	<ul class="sheet box-border stack padded p-s-m">
 		{{ weaponList(['king', 'samir', 'tsubasa']) }}
 	</ul>
 </details>

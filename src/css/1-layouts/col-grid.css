@@ -1,4 +1,4 @@
-.grid {
+.col-grid {
 	--grid-column-count: 4;
 	--gap-count: calc(var(--grid-column-count) - 1);
 	--total-gap-width: calc(var(--gap-count) * var(--gutter));
@@ -10,10 +10,10 @@
 	grid-template-columns: repeat(auto-fill, minmax(max(var(--grid-min-item-size), var(--grid-max-item-size)), 1fr));
 }
 
-.grid[data-columns="2"] {
+.col-grid[data-columns="2"] {
 	--grid-column-count: 2;
 }
 
-.grid[data-columns="3"] {
+.col-grid[data-columns="3"] {
 	--grid-column-count: 3;
 }

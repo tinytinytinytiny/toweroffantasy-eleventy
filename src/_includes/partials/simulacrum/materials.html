@@ -1,21 +1,3 @@
-{% macro materials() %}
-	<div class="sheet reel gap-2xs-xs p-s-m stack-space-xs" data-layer="1">
-		{{ caller() }}
-	</div>
-{% endmacro %}
-
-{% macro material(material, rarity = 1, index = 1) %}
-	<div class="item-frame grow" data-size="m" data-rarity="{{ rarity }}">
-		<img
-			src="/assets/images/mat/{{ material }}{{ index }}.png"
-			alt="Tier {{ index }} {{ string.element[material].name | default(material) }} upgrade material"
-			width="91"
-			height="91"
-			loading="lazy"
-		>
-	</div>
-{% endmacro %}
-
 <div class="stack copy">
 	<h4>Upgrade Materials</h4>
 	<div class="cluster gap-2xs">

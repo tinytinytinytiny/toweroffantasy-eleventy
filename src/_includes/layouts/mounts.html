@@ -12,11 +12,11 @@
 				{% if items.mounts[mount].materials %}
 					<details>
 						<summary class="chip">Materials ({{ items.mounts[mount].materials }})</summary>
-						<ul class="sheet !p-s reel gap-2xs m-0" data-layer="3"  >
+						<ul class="sheet padded p-s reel gap-2xs m-0" data-layer="3">
 							{% asyncEach i in range(0, items.mounts[mount].materials) %}
-							<li class="item-frame" data-size="m" data-rarity="{{ '3' if loop.index === 1 else '1' }}">
-								{% image 'src/assets/images/mount/' + mount + '-' + loop.index + '.png', '', '', '', 'lazy' %}
-							</li>
+								<li class="item-frame" data-size="m" data-rarity="{{ '3' if loop.index === 1 else '1' }}">
+									{% image 'src/assets/images/mount/' + mount + '-' + loop.index + '.png', '', '', '', 'lazy' %}
+								</li>
 							{% endeach %}
 						</ul>
 					</details>

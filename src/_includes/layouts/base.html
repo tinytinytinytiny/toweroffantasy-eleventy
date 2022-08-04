@@ -17,12 +17,11 @@
 		{% include "partials/site-bg.html" %}
 		<div id="site" class="sidebar" data-variant="center-content">
 			{% include "partials/nav/sidebar.html" %}
-			<main class="stack" tabindex="-1" id="main-content">
+			<main tabindex="-1" id="main-content">
 				{% block header %}
 					{% include "partials/headers/standard.html" %}
 				{% endblock %}
-				{% set isCopy = true %}
-				<div class="{{ 'copy' if isCopy }} bg-sheet-1 mt-0 region stack wrapper {{ extraClassNames }}" data-wrapper="site">
+				<div class="{{ 'copy' if isCopy | default(true) }} bg-sheet-1 region stack wrapper mt-0 {{ extraClassNames }}" data-wrapper="site">
 					{% block content %}{% endblock %}
 				</div>
 				{% block ending %}{% endblock %}

@@ -1,4 +1,4 @@
-/* .switcher {
+.switcher {
 	--switch-threshold: 46rem;
 	--switch-gap: theme('spacing.s-l');
 	display: flex;
@@ -10,7 +10,3 @@
 	flex-grow: 1;
 	flex-basis: calc((var(--switch-threshold) - 100%) * 999);
 }
-
-.max-w-none.switcher {
-	--switch-threshold: 60rem;
-} */

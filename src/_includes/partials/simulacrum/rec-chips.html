@@ -3,7 +3,7 @@
 {% endmacro %}
 
 <h3>Recommended Matrices</h3>
-<ul class="reel sheet box-border gap-s !p-s-l !py-s" tabindex="0">
+<ul class="reel sheet box-border gap-s padded p-s-l py-s">
 	{% asyncEach chip, quantity in recChips %}
 		{% if getData(collections.matrices, chip) %}
 			{% set chipName = getData(collections.matrices, chip).name %}
@@ -12,7 +12,7 @@
 		{% endif %}
 		<li class="card">
 			<div class="item-frame" data-variant="matrix">
-				{% image 'src/assets/images/chip/' + chip + '.png', '' %}
+				{% image 'src/assets/images/chip/' + chip + '.png', '', '', '', 'lazy' %}
 				{% if helpers.isArray(quantity) %}
 					{% set comma = joiner(', ') %}
 					{% set text = '' %}

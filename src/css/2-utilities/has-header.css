@@ -1,4 +1,4 @@
-/* .stack > * + .has-h2 {
+.stack > * + .has-h2 {
 	margin-top: theme('fontSize.step-3');
 }
 
@@ -29,4 +29,3 @@
 .copy > .has-h4 + *:not([class*="mt-"]) {
 	margin-top: theme('spacing.2xs');
 }
- */

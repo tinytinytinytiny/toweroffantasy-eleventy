@@ -1,4 +1,4 @@
-<nav class="ending region wrapper copy stack" data-wrapper="site">
+<nav class="bg-sheet-1 region wrapper copy stack" data-wrapper="site">
 	<h2>Other {{ collection | capitalize }}</h2>
 	<div class="stack with-rule">
 		{% for rarity, items in collections[collection] | sortBy('rarity') | groupBy('rarity') | reverse %}
@@ -7,7 +7,7 @@
 					<span class="highlight-rarity italic" data-rarity="{{ rarity }}">{{ string.rarity[rarity - 1] }}</span><span> {{ collection | capitalize }}</span>
 				</h3>
 				{% set items = items | reverse %}
-				<ul class="mini-list cluster">
+				<ul class="cluster gap-xs">
 					{% for item in items | sortBy('name') | reverse | sortBy(['isNew', 'isChina']) | reverse %}
 						<li>
 							<a

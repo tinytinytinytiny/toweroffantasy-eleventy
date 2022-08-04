@@ -22,11 +22,11 @@ button:focus, .button:focus {
 	outline-offset: 0.15em;
 }
 
-/* button[data-variant~="full-width"],
+button[data-variant~="full-width"],
 .button[data-variant~="full-width"] {
 	display: block;
 	width: var(--wrapper-max-width);
-} */
+}
 
 button[data-variant~="ghost"],
 .button[data-variant~="ghost"] {
@@ -40,10 +40,10 @@ button[data-color="secondary"],
 	--button-color: theme('colors.secondary');
 }
 
-/* button[data-color="tertiary"],
+button[data-color="tertiary"],
 .button[data-color="tertiary"] {
 	--button-color: theme('colors.tertiary');
-} */
+}
 
 button[data-color="secondary"][data-variant~="ghost"],
 .button[data-color="secondary"][data-variant~="ghost"] {

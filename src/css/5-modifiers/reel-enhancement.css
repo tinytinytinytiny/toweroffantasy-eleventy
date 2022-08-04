@@ -4,9 +4,17 @@
 	z-index: 1;
 }
 
+.reel[data-draggable] *:focus:not(:focus-visible) {
+	outline: none;
+}
+
 .reel[data-state="dragging"],
 .reel[data-state="dragging"] * {
 	user-select: none;
+}
+
+.reel[data-state="dragging"] a:hover {
+	text-decoration: none;
 }
 
 .reel-instructions[data-state="visible"] {

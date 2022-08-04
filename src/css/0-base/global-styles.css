@@ -60,6 +60,10 @@ main:focus {
 	box-shadow: none;
 }
 
+main > * + * {
+	margin-top: theme('spacing.m-xl');
+}
+
 img {
 	height: auto;
 	flex: none;
@@ -69,10 +73,8 @@ picture {
 	flex: none;
 }
 
-a:focus,
-summary:focus {
+a:focus, summary:focus {
 	border: 0;
-	box-shadow: none;
 	outline: 0.12em solid theme('colors.primary');
 	outline-offset: 0.2em;
 }
@@ -81,7 +83,8 @@ template {
 	display: none;
 }
 
-ul[class], ol[class] {
+ul[class]:not(.padded),
+ol[class]:not(.padded) {
 	padding: 0;
 }
 

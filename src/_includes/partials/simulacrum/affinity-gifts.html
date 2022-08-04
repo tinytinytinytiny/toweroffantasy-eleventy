@@ -11,7 +11,7 @@
 			</li>
 		{% endfor %}
 	</ul>
-	<ul class="cluster gap-2xs">
+	<ul class="item-grid gap-2xs" data-size="m">
 		{% for value, giftList in gifts.items %}
 			{% if value >= 60 %}
 				{% set rarity = 4 %}

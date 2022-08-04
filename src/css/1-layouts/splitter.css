@@ -1,4 +1,4 @@
-/* .splitter {
+.splitter {
 	align-items: center;
 	display: flex;
 	flex-flow: row wrap;
@@ -9,4 +9,4 @@
 .splitter > * {
 	flex-basis: var(--splitter-min-item-size, 25rem);
 	flex-grow: 1;
-} */
+}
