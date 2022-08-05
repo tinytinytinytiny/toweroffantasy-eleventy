@@ -1,4 +1,5 @@
 .site-footer {
+	margin-top: theme('spacing.m-xl');
 	padding-top: var(--wrapper-padding);
 	padding-bottom: theme('spacing.xl-2xl');
 }

@@ -10,7 +10,17 @@
 	width: 108px;
 }
 
-.item-frame > img {
+.item-frame__inner {
+	align-items: center;
+	display: flex;
+	justify-content: center;
+	height: 100%;
+	width: 100%;
+	overflow: hidden;
+	overflow: clip;
+}
+
+.item-frame img {
 	min-width: 128px;
 }
 
@@ -21,8 +31,8 @@
 	width: 78px;
 }
 
-.item-frame[data-size="m"] > picture,
-.item-frame[data-size="m"] > img {
+.item-frame[data-size="m"] picture,
+.item-frame[data-size="m"] img {
 	min-width: 91px;
 }
 
@@ -33,8 +43,8 @@
 	width: 40px;
 }
 
-.item-frame[data-size="s"] > picture,
-.item-frame[data-size="s"] > img {
+.item-frame[data-size="s"] picture,
+.item-frame[data-size="s"] img {
 	min-width: 48px;
 }
 

@@ -28,7 +28,7 @@ function enableDragScroll(el) {
 	document.addEventListener('mousedown', handleMouseDown);
 
 	function handleMouseDown(event) {
-		if (hasAncestor(event.target, el)) {
+		if (event.target === el || hasAncestor(event.target, el)) {
 			clearTimeout(dragTimeout);
 			dragged = false;
 
@@ -43,7 +43,7 @@ function enableDragScroll(el) {
 	}
 
 	function handleMouseMove(event) {
-		if (hasAncestor(event.target, el)) {
+		if (event.target === el || hasAncestor(event.target, el)) {
 			dragTimeout = setTimeout(() => { dragged = true; }, 100);
 
 			el.setAttribute('data-state', 'dragging');

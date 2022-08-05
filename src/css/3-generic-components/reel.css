@@ -1,10 +1,16 @@
 .reel {
-	align-items: center;
-	display: flex;
-	flex-flow: row nowrap;
-	gap: var(--gutter, theme('spacing.s-l'));
-	justify-content: flex-start;
 	overflow-x: auto;
+	white-space: nowrap;
+}
+
+.reel:focus-visible {
+	border: 0;
+	outline: 0.1em solid theme('colors.primary');
+	z-index: 1;
+}
+
+.reel > * + * {
+	margin-left: var(--gutter, theme('spacing.s'));
 }
 
 .reel-instructions {

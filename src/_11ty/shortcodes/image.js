@@ -1,6 +1,6 @@
 const Image = require('@11ty/eleventy-img');
 
-module.exports = async (src, alt, className, attributes = '', loading) => {
+module.exports = async (src, alt = '', className, attributes = '', loading) => {
 	if (alt === undefined) {
 		// You bet we throw an error on missing alt (alt="" works okay)
 		throw new Error(`Missing \`alt\` on myImage from: ${src}`);
@@ -8,7 +8,7 @@ module.exports = async (src, alt, className, attributes = '', loading) => {
 
 	let metadata = await Image(src, {
 		widths: [null],
-		formats: ['webp', 'png'],
+		formats: ['avif', 'webp', 'png'],
 		urlPath: '/assets/images/',
 		outputDir: './_site/assets/images/'
 	});

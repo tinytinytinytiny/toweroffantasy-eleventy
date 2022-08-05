@@ -18,10 +18,11 @@ In addition, R chips only have a *4p (4-set) effect*, while SR have a *3p (3-set
 
 {% macro matrix(name) %}
 <h3 class="card block">
-	<div class="item-frame mb-2xs" data-variant="matrix">
+	<div class="item-frame" data-variant="matrix">
 		<img src="/assets/images/chip/{{ name }}.png" alt="" width="205" height="205">
 	</div>
-	<a class="text-bold" href="{{ getCollection(collections.matrices, name).url }}">
+	<br>
+	<a class="text-bold text-step-2" href="{{ getCollection(collections.matrices, name).url }}">
 		{{ getData(collections.matrices, name).name }}
 	</a>
 </h3>

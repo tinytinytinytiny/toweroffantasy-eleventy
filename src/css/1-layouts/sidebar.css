@@ -17,12 +17,6 @@
 	width: var(--sidebar-content-min-width, 50%);
 }
 
-.sidebar[data-variant~="center-content"]::after {
-	content: '';
-	flex-basis: var(--sidebar-target-width, var(--__default-sidebar-target-width));
-	flex-grow: 1;
-}
-
 .sidebar[data-direction="rtl"] {
 	flex-direction: row-reverse;
 }

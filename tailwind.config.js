@@ -122,9 +122,9 @@ module.exports = {
 					property: '--stack-space'
 				},
 				{
-					key: 'colors',
-					prefix: 'spot-color',
-					property: '--spot-color'
+					key: 'spacing',
+					prefix: 'gutter',
+					property: '--gutter'
 				}
 			];
 

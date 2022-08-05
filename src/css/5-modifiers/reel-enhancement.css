@@ -1,11 +1,10 @@
-.reel[tabindex]:focus-visible {
-	border: 0;
-	outline: 0.1em solid theme('colors.primary');
-	z-index: 1;
-}
-
 .reel[data-draggable] *:focus:not(:focus-visible) {
 	outline: none;
+}
+
+.reel[data-state="pressed"],
+.reel[data-state="dragging"] {
+	will-change: scroll-position;
 }
 
 .reel[data-state="dragging"],
