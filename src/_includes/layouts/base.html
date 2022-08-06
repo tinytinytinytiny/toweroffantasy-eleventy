@@ -12,9 +12,9 @@
   <body>
 		{% include "partials/skip-link.html" %}
 		{% include "partials/site-bg.html" %}
-		<div id="site" class="sidebar">
+		<div id="site" class="sidebar items-start gap-0 mx-auto">
 			{% include "partials/nav/sidebar.html" %}
-			<div>
+			<div class="site-content center-children">
 				<main tabindex="-1" id="main-content">
 					{% block header %}
 						{% include "partials/headers/standard.html" %}

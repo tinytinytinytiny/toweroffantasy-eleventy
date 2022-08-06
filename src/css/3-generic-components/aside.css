@@ -5,9 +5,10 @@ aside {
 		transparent calc(100% - 1em)
 	);
 	border-left: 0.3em solid theme('colors.secondary');
-	box-sizing: content-box;
 	color: theme('colors.bold');
 	font-weight: bold;
 	line-height: 1.5;
-	padding: theme('spacing.s-l') theme('spacing.m-l') theme('spacing.s-l') theme('spacing.s-l');
+	margin-left: calc(-1 * var(--wrapper-padding));
+	max-width: 56rem;
+	padding: theme('spacing.s-l') theme('spacing.m-l') theme('spacing.s-l') calc(var(--wrapper-padding) - 0.3em);
 }

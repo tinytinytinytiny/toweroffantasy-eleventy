@@ -19,8 +19,8 @@ module.exports = {
 	// Background
 	backdrop: '#090a16',
 	sheet: {
-		0: 'rgb(14, 16, 28)',
-		1: 'rgba(25, 27, 39, 0.95)',
+		0: 'rgb(13, 15, 28)',
+		1: 'rgba(25, 27, 39, 0.9)',
 		2: 'rgba(42, 44, 60, 0.95)',
 		3: 'rgba(59, 61, 81, 0.95)'
 	},
@@ -31,7 +31,7 @@ module.exports = {
 	accent: '#c5c8e7',
 
 	// Semantic
-	divider: 'rgba(197, 200, 231, 0.2)',
+	divider: 'rgba(197, 200, 231, 0.25)',
 	glare: 'rgba(197, 200, 231, 0.05)',
 	success: '#82f0ff',
 	error: '#f36b6b',

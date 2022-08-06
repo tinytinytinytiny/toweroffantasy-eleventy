@@ -1,8 +1,8 @@
 <ul class="card-list auto-grid max-w-full">
 	{% for item in items | sortBy('name') | reverse | sortBy(['isNew', 'isChina']) | reverse %}
-		<li class="sheet card stack box-border p-s">
+		<li class="sheet card stack p-s">
 			<div class="relative">
-				{% image 'src/assets/images/avatar/' + item.fileSlug + '.png', '', 'shadow-xl rounded-full bg-sheet-3' %}
+				{% image 'src/assets/images/avatar/' + item.fileSlug + '.png', '', 'shadow-xl rounded-full bg-sheet-3', '', 'lazy' %}
 				{% if item.data.isNew %}
 					<span class="new-badge absolute bottom-[-7px] inset-x-1/4" aria-hidden="true">
 						New

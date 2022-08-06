@@ -6,5 +6,5 @@ const md = require('markdown-it')({
 
 module.exports = (children, summary, attr = '') => {
 	const content = md.render(children);
-	return `<details class="stack copy" ${attr}><summary class="chip">${summary}</summary><div class="sheet box-border stack copy p-s-m"  >${content}</div></details>`;
+	return `<details class="stack copy" ${attr}><summary class="chip">${summary}</summary><div class="sheet stack copy p-s-m"  >${content}</div></details>`;
 };

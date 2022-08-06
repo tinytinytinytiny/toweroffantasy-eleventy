@@ -8,13 +8,13 @@
 	</div>
 {% endmacro %}
 
-<article class="weapon wrapper p-0 max-w-full" data-element="{{ weapon.element }}">
-	<div class="sheet stack" data-border="top">
+<article class="weapon" data-element="{{ weapon.element }}">
+	<div class="sheet stack p-s" data-border="top">
 		<h3 class="weapon-header">
 			{% image 'src/assets/images/wep/' + page.fileSlug + '.png', name + '’s weapon', 'weapon-img' %}
 			<span class="weapon-info__title">{{ weapon.name }}</span>
 		</h3>
-		<div class="weapon-info stack with-rule sheet p-s-m" data-layer="1">
+		<div class="weapon-info stack with-rule sheet p-s" data-layer="1">
 			<div class="weapon-stats cluster">
 				<div class="weapon-stats cluster">
 					<div class="mr-xs-m">

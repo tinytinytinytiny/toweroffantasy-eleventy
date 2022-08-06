@@ -1,17 +1,17 @@
 button, .button {
 	@apply shadow-md;
 	--__default-button-color: theme('colors.primary');
-	--__default-button-shade-color: theme('colors.primary-shade' / 85%);
+	/* --__default-button-shade-color: theme('colors.primary-shade' / 85%); */
 	--__default-button-hover-color: theme('colors.primary-glare');
 	--__default-button-pressed-color: theme('colors.bold');
 	align-items: center;
 	background-color: var(--button-color, var(--__default-button-color));
-	background-image: linear-gradient(0deg,
+	/* background-image: linear-gradient(0deg,
 		var(--button-shade-color, var(--__default-button-shade-color)),
 		var(--button-shade-color, var(--__default-button-shade-color)) 3px,
 		rgba(255, 255, 255, 0.2) 3px,
 		transparent 6px
-	);
+	); */
 	border: 0;
 	display: inline-flex;
 	color: theme('colors.sheet.0');
@@ -32,12 +32,12 @@ button:hover, .button:hover {
 
 button:active, .button:active {
 	background-color: var(--button-pressed-color, var(--__default-button-pressed-color));
-	background-image: linear-gradient(0deg,
+	/* background-image: linear-gradient(0deg,
 		rgba(0, 0, 0, 0.2),
 		rgba(0, 0, 0, 0.2) 1px,
 		rgba(255, 255, 255, 0.25) 1px,
 		transparent 4px
-	);
+	); */
 }
 
 button:focus, .button:focus {
@@ -63,14 +63,14 @@ button[data-variant~="ghost"],
 button[data-color="secondary"],
 .button[data-color="secondary"] {
 	--button-color: theme('colors.secondary');
-	--button-shade-color: theme('colors.secondary-shade' / 85%);
+	/* --button-shade-color: theme('colors.secondary-shade' / 85%); */
 	--button-hover-color: theme('colors.secondary-glare');
 }
 
 button[data-color="tertiary"],
 .button[data-color="tertiary"] {
 	--button-color: theme('colors.tertiary');
-	--button-shade-color: theme('colors.tertiary-shade' / 85%);
+	/* --button-shade-color: theme('colors.tertiary-shade' / 85%); */
 	--button-hover-color: theme('colors.tertiary-glare');
 }
 

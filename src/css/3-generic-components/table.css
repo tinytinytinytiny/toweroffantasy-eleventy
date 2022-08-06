@@ -6,18 +6,17 @@ table {
 	@apply leading-normal;
 	border-spacing: 0;
 	font-size: clamp(1rem, calc(0.8em + 0.5vw), 1em);
-	overflow-x: auto;
 	text-align: left;
 }
 
 th {
 	color: theme('colors.bold' / 90%);
 	font-family: theme('fontFamily.fancy');
+	padding: theme('spacing.xs') theme('spacing.s-m');
 }
 
 th, td {
 	border-top: 1px solid theme('colors.divider');
-	padding: theme('spacing.2xs-xs') theme('spacing.s-m');
 }
 
 tr > :first-child {
@@ -26,6 +25,15 @@ tr > :first-child {
 
 tr > :last-child {
 	padding-right: theme('spacing.2xs-xs');
+}
+
+td {
+	padding: theme('spacing.2xs') theme('spacing.s-m');
+}
+
+[data-padding="loose"] td {
+	padding-top: theme('spacing.2xs-xs');
+	padding-bottom: theme('spacing.2xs-xs');
 }
 
 thead th {
@@ -50,48 +58,21 @@ thead.visually-hidden + tbody > tr:first-child > td {
 	border-top: none;
 }
 
-/* tbody > tr:last-child > th,
-tbody > tr:last-child > td {
-	padding-bottom: 0;
-} */
-
 [data-head-color="transparent"] thead th {
 	background-color: inherit;
 }
 
-/* tbody tr:nth-of-type(2n) > td,
-tbody tr:nth-of-type(2n) > th {
-	@apply bg-sheet-0/80;
-}
-
-tbody tr:nth-of-type(2n+1) > td,
-tbody tr:nth-of-type(2n+1) > th {
-	background-color: theme('colors.sheet.1');
-} */
-
-.wrapper table {
+/* .wrapper table {
 	min-width: var(--wrapper-max-width, 46rem);
 	min-width: min(100%, var(--wrapper-max-width, 46rem));
-}
+} */
 
-details table {
+details table,
+.copy > summary ~ table,
+.copy > summary ~ .big-table > table {
 	min-width: 100%;
 }
 
 .overflow-x-auto > table p {
 	min-width: 23ch;
 }
-
-/* [data-stripe="even"] thead th {
-	background-color: theme('colors.sheet.1');
-}
-
-[data-stripe="even"] tbody tr:nth-of-type(2n) > td,
-[data-stripe="even"] tbody tr:nth-of-type(2n) > th {
-	background-color: theme('colors.sheet.1');
-}
-
-[data-stripe="even"] tbody tr:nth-of-type(2n+1) > td,
-[data-stripe="even"] tbody tr:nth-of-type(2n+1) > th {
-	@apply bg-sheet-0/80;
-} */

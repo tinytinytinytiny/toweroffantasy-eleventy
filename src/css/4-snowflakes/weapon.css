@@ -1,6 +1,8 @@
 .weapon > .sheet {
 	margin-top: 68px;
 	padding-top: 0;
+	position: sticky;
+	top: 92px;
 }
 
 .weapon-header {

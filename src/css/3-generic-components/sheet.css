@@ -7,7 +7,6 @@
 	@apply shadow-xl;
 	--border-color: theme('colors.primary');
 	background-color: theme('colors.sheet.2');
-	box-sizing: content-box;
 	padding: theme('spacing.s-l');
 	position: relative;
 }

@@ -20,6 +20,12 @@
 	overflow: clip;
 }
 
+.item-frame picture {
+	align-items: center;
+	display: flex;
+	justify-content: center;
+}
+
 .item-frame img {
 	min-width: 128px;
 }

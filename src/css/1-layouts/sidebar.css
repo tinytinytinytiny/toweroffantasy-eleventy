@@ -1,20 +1,20 @@
 .sidebar {
-	--__default-sidebar-target-width: 20rem;
-	--__default-sidebar-content-min-width: 50%;
+	--sidebar-target-width: 20rem;
+	--sidebar-content-min-width: 50%;
 	display: flex;
 	flex-wrap: wrap;
 	gap: theme('spacing.s-l');
 }
 
 .sidebar > :first-child {
-	flex-basis: var(--sidebar-target-width, var(--__default-sidebar-target-width));
+	flex-basis: var(--sidebar-target-width);
 	flex-grow: 1;
 }
 
 .sidebar > :last-child {
 	flex-grow: 999;
 	max-width: 100%;
-	width: var(--sidebar-content-min-width, 50%);
+	width: var(--sidebar-content-min-width);
 }
 
 .sidebar[data-direction="rtl"] {

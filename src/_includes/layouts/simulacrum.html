@@ -13,17 +13,14 @@
 		{% include "partials/china-disclaimer.html" %}
 	{% endif %}
 	<h2 id="weapon">Weapon</h2>
-	{% include "partials/simulacrum/weapon-info.html" %}
-	{% include "partials/simulacrum/weapon-effect.html" %}
-	{% include "partials/simulacrum/awakening.html" %}
+	{% include "partials/simulacrum/weapon/base.html" %}
 	{% include "partials/simulacrum/rec-chips.html" %}
 	{% if skills %}
 		<h2 id="skills">Weapon Skills</h2>
 		{% include "partials/simulacrum/skills.html" %}
 	{% endif %}
 	<h2 id="awakening">Awakening</h2>
-	{% include "partials/simulacrum/affinity-effects.html" %}
-	{% include "partials/simulacrum/affinity-gifts.html" %}
+	{% include "partials/simulacrum/affinity/base.html" %}
 	<h2 id="character-info">Character Info</h2>
 	{% include "partials/simulacrum/character-info.html" %}
 {% endblock %}

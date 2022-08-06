@@ -7,7 +7,7 @@
   gap: var(--gutter, theme('spacing.s'));
 }
 
-/* .auto-grid[data-rows='masonry'] {
+.auto-grid[data-rows='masonry'] {
   grid-template-rows: masonry;
   align-items: start;
 }
@@ -15,4 +15,4 @@
 .auto-grid[data-layout='50-50'] {
   --grid-placement: auto-fit;
   --grid-min-item-size: clamp(12rem, 50vw, 25rem);
-} */
+}

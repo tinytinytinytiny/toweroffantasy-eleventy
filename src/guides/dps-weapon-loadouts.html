@@ -27,7 +27,7 @@
 {% endmacro %}
 
 {% macro section(name) %}
-<article class="profile sheet box-border p-s-m items-start" data-ratio="1-8">
+<article class="profile sheet p-s-m items-start" data-ratio="1-8">
 	{{ weapon(name, 'header') }}
 	<div class="stack copy">
 		{{ caller() }}
@@ -246,7 +246,7 @@
 
 {% macro weaponList(list) %}
 {% set desc -%}A weapon loadout composed of {{ getData(collections.simulacra, list[0]).name }}, {{ getData(collections.simulacra, list[1]).name }}, and {{ getData(collections.simulacra, list[2]).name }}{%- endset %}
-<li class="sheet cluster justify-center box-border p-s" data-layer="1" aria-description="{{ desc }}">
+<li class="sheet cluster justify-center p-s" data-layer="1" aria-description="{{ desc }}">
 	{% for item in list %}
 		<div class="flex flex-col-reverse flex-nowrap items-center">
 			<h3 class="small font-normal text-center text-accent leading-none">
@@ -267,7 +267,7 @@
 <h2>Strongest Setups</h2>
 <details>
 	<summary class="chip">Setups With 6★ and Maxed Matrices</summary>
-	<ul class="sheet box-border stack padded p-s-m">
+	<ul class="sheet stack padded p-s-m">
 		{{ weaponList(['baiyuekui', 'marc', 'nemesis']) }}
 		{{ weaponList(['baiyuekui', 'claudia', 'nemesis']) }}
 		{{ weaponList(['ruby', 'cobalt-b', 'marc']) }}
@@ -275,7 +275,7 @@
 </details>
 <details>
 	<summary class="chip">Setups Without Limited Weapons</summary>
-	<ul class="sheet box-border stack padded p-s-m">
+	<ul class="sheet stack padded p-s-m">
 		{{ weaponList(['king', 'samir', 'tsubasa']) }}
 	</ul>
 </details>

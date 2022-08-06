@@ -27,6 +27,15 @@ module.exports = {
 		extend: {
 			opacity: {
 				'25': '.25'
+			},
+			maxWidth: {
+				copy: '46rem'
+			},
+			minWidth: {
+				copy: '46rem'
+			},
+			width: {
+				copy: '46rem'
 			}
 		}
 	},

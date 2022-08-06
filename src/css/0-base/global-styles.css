@@ -35,15 +35,12 @@ body {
 
 #site {
 	--sidebar-content-min-width: 50rem;
-	align-items: flex-start;
 	background-image: linear-gradient(90deg,
 		theme('colors.sheet.0 / 95%'),
 		theme('colors.sheet.0 / 65%') 70rem,
 		transparent 120rem
 	);
 	min-height: inherit;
-	margin-left: auto;
-	margin-right: auto;
 	max-width: 120rem;
 }
 
@@ -53,16 +50,8 @@ body {
 	flex-grow: 1;
 }
 
-@media screen and (min-width: 120rem) {
-	#site {
-		gap: theme('spacing.l-2xl');
-	}
-}
-
-@media screen and (max-width: 80rem) {
-	#site {
-		gap: 0px;
-	}
+.site-content > * {
+	max-width: 72rem;
 }
 
 main:focus {
@@ -88,15 +77,6 @@ a:focus, summary:focus {
 	border: 0;
 	outline: 0.12em solid theme('colors.primary');
 	outline-offset: 0.2em;
-}
-
-ul[class]:not(.padded),
-ol[class]:not(.padded) {
-	padding: 0;
-}
-
-ul[class] > li {
-	list-style: none;
 }
 
 fieldset {

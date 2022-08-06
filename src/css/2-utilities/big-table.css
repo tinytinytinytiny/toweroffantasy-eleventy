@@ -7,13 +7,13 @@
 	max-width: none;
 }
 
-.big-table[data-width="stretch"] {
+/* .big-table[data-width="stretch"] {
 	max-width: 100%;
 }
 
 .big-table[data-width="stretch"] > table {
 	width: 100%;
-}
+} */
 
 .big-table > table p {
 	min-width: 23ch;

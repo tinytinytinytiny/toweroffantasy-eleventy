@@ -12,5 +12,7 @@
 }
 
 .character-info[data-china="true"] img {
+	height: auto;
+	width: 464px;
 	filter: none;
 }

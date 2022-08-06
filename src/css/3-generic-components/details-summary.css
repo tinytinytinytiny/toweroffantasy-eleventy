@@ -1,3 +1,7 @@
+details {
+	@apply max-w-copy;
+}
+
 summary {
 	align-items: center;
 	cursor: pointer;

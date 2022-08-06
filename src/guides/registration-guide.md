@@ -83,21 +83,21 @@ The Perfect World Games client is the official version, with three other redistr
 <small>Note: We don't provide guides for registering through *QQ, WeChat, or Weibo* as they specifically require a Chinese phone number. These services act as login authentication layers, just like how you can sign up for things using your Google and Facebook accounts.</small>
 
 {% macro onboarding() %}
-<div class="sheet box-border stack p-s-m">
+<div class="sheet stack p-s-m">
 <h3>Getting Started</h3>
 {{ caller() }}
 </div>
 {% endmacro %}
 
 {% macro requirements() %}
-<div class="sheet box-border stack p-s-m" data-layer="1">
+<div class="sheet stack p-s-m" data-layer="1">
 <h4>Requirements</h4>
 {% markdown %}{{ caller() }}{% endmarkdown %}
 </div>
 {% endmacro %}
 
 {% macro servers() %}
-<div class="sheet box-border stack p-s-m" data-layer="1">
+<div class="sheet stack p-s-m" data-layer="1">
 <h4>Recommended Servers</h4>
 {% markdown %}{{ caller() }}{% endmarkdown %}
 </div>
@@ -149,7 +149,7 @@ Visit [Bilibili’s website](https://www.bilibili.com/) and follow [this video](
 Email Bilibili customer support ([gamehelp@bilibili.com](mailto:gamehelp@bilibili.com)) to verify your foreign ID/Passport & Realname.
 
 <figure class="sheet-wrapper wrapper">
-{% sheet %}
+<div class="sheet p-s-m stack copy" data-border="top">
 {% macro mono(text) %}
 <span class="text-accent font-mono text-step--1">{{ text }}</span>
 {% endmacro %}
@@ -173,7 +173,7 @@ Email Bilibili customer support ([gamehelp@bilibili.com](mailto:gamehelp@bilibil
 9. 申请人本人手持证件照片：{{ mono('(attach photo of yourself holding the ID)') }}
 {% endmarkdown %}
 </div>
-{% endsheet %}
+</div>
 <figcaption>Account verificaiton email template. There should be 3 photos in total: your id/passport front, back, and photo of yourself holding your id/passport.</figcaption>
 </figure>
 

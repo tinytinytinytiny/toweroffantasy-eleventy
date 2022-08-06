@@ -1,3 +1,7 @@
+.pros, .cons {
+	@apply max-w-copy;
+}
+
 .pros > li, .cons > li {
 	@apply leading-normal;
 	background-position: 0 0.2em;

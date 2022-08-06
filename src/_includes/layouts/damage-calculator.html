@@ -6,7 +6,7 @@
 	<!-- htmlmin:ignore -->
 	{% include "partials/damage-calculator/result.html" %}
 	<form action="{{ page.url }}#result" method="post" class="stack max-w-full wrapper p-0" id="damage-calculator" data-wrapper="wide">
-		<fieldset class="sheet stack box-border" data-border="top" data-layer="2">
+		<fieldset class="sheet stack" data-border="top" data-layer="2">
 			<legend>
 				<h2 data-appearance="none">Main Multipliers</h2>
 			</legend>
@@ -20,7 +20,7 @@
 			{% include "partials/damage-calculator/weapon-buffs.html" %}
 			{% include "partials/damage-calculator/matrices.html" %}
 		</fieldset>
-		<fieldset class="sheet stack box-border" data-border="top" data-layer="2">
+		<fieldset class="sheet stack" data-border="top" data-layer="2">
 			<legend>
 				<h2 data-appearance="none">Extra Options</h2>
 			</legend>
@@ -37,13 +37,13 @@
 				</div>
 			</div>
 		</fieldset>
-		<button class="block mt-l text-step-1" type="submit">Calculate Damage</button>
+		<button class="block mx-auto mt-l text-step-1" type="submit">Calculate Damage</button>
 	</form>
 	<!-- htmlmin:ignore -->
 {% endblock %}
 
 {% block ending %}
-	<section class="bg-sheet-1 stack copy wrapper region" data-wrapper="site" data-flush="left" aria-label="Important Notes">
+	<section class="bg-sheet-1 stack copy wrapper region" data-wrapper="site" aria-label="Important Notes">
 		{% include "partials/damage-calculator/notes.html" %}
 	</section>
 {% endblock %}

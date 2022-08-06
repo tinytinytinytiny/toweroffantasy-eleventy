@@ -3,7 +3,7 @@
 {% endmacro %}
 
 <h3>Recommended Matrices</h3>
-<ul class="reel sheet box-border padded px-s-l py-s">
+<ul class="reel sheet padded px-s-l py-s">
 	{% for chip, quantity in recChips %}
 		{% if getData(collections.matrices, chip) %}
 			{% set chipName = getData(collections.matrices, chip).name %}
@@ -34,7 +34,7 @@
 		</li>
 	{% endfor %}
 </ul>
-<div class="reel-instructions sheet box-border mt-0 px-s py-xs" data-layer="3">
+<div class="reel-instructions sheet mt-0 px-s py-xs" data-layer="3">
 	{% include "icons/arrow-left.svg" %}
 	<span class="reel-instructions__label">Scroll for more</span>
 	{% include "icons/arrow-right.svg" %}
