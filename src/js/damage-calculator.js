@@ -1,5 +1,3 @@
-'use strict';
-
 document.getElementById('damage-calculator').addEventListener('change', (e) => {
 	if (e.target.hasAttribute('min') && Number(e.target.value) < Number(e.target.getAttribute('min'))) {
 		e.target.value = e.target.getAttribute('min');

@@ -1,4 +1,3 @@
 {
-	"layout": "layouts/guide.html",
-	"background": "art/claudia2.png"
+	"layout": "layouts/guide.html"
 }

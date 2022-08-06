@@ -1,17 +1,6 @@
-(function handleNav() {
-	var nav = document.getElementsByClassName('nav')[0];
-	var navContentsTemplate = document.getElementById('nav-contents');
-	var details = ('content' in navContentsTemplate) ?
-		navContentsTemplate.content.firstElementChild.cloneNode(true) :
-		navContentsTemplate.getElementsByTagName('details')[0].cloneNode(true);
-
-	details.style.opacity = '0';
-
-	while (nav.childNodes.length) {
-		nav.removeChild(nav.childNodes[0]);
-	}
-
-	nav.appendChild(details);
+if ('querySelector' in document) {
+	const nav = document.querySelector('.nav');
+	const details = document.querySelector('.nav__widget');
 
 	if ('ResizeObserver' in window) {
 		const scrollbarWidth = getScrollbarWidth();
@@ -61,19 +50,21 @@
 		}
 
 		function forceCloseMenu() {
-			details.getAttribute('open');
-			details.removeAttribute('open');
+			if (details.hasAttribute('open')) {
+				details.getAttribute('open');
+				details.removeAttribute('open');
+			}
 			nav.setAttribute('data-state', 'collapsed');
 		}
 
 		function openMenu() {
-			details.setAttribute('open', '');
-			nav.setAttribute('data-state', 'expanded');
+			if (nav.getAttribute('data-state') !== 'expanded') {
+				nav.setAttribute('data-state', 'expanded');
+				details.setAttribute('open', '');
+			}
 		}
 	}
-
-	details.style.opacity = '';
-})();
+}
 
 function getScrollbarWidth() {
 	// Creating invisible container

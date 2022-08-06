@@ -10,7 +10,7 @@ h1 {
 	text-transform: uppercase;
 }
 
-@media screen and (min-width: 500px) {
+@media screen and (min-width: 32rem) {
 	h1 {
 		font-stretch: 108%;
 	}

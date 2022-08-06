@@ -1,4 +1,12 @@
 {
+	"bg-1": {
+		"--position": "100% 0",
+		"opacity": "0.8"
+	},
+	"bg-2": {
+		"--position": "100% 0",
+		"opacity": "0.75"
+	},
 	"weila": {
 		"--background-offset": "500px",
 		"--position-x": "min(calc(100% + var(--background-offset, 300px) - 5vw),calc(50% + 60rem))",

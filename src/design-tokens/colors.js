@@ -6,17 +6,20 @@ module.exports = {
 	primary: '#FFD082',
 	'primary-glare': '#FFDFA1',
 	'primary-dim': '#DBA75F',
+	'primary-shade': '#B78241',
 	secondary: '#6aeafb',
 	'secondary-glare': '#8ff8fc',
 	'secondary-dim': '#4dbcd7',
+	'secondary-shade': '#3591B4',
 	tertiary: '#ff6c6c',
 	'tertiary-glare': '#ff9a90',
 	'tertiary-dim': '#db4e5b',
+	'tertiary-shade': '#B7364C',
 
 	// Background
-	backdrop: '#11121e',
+	backdrop: '#090a16',
 	sheet: {
-		0: 'rgb(18, 20, 32)',
+		0: 'rgb(14, 16, 28)',
 		1: 'rgba(25, 27, 39, 0.95)',
 		2: 'rgba(42, 44, 60, 0.95)',
 		3: 'rgba(59, 61, 81, 0.95)'

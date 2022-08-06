@@ -1,11 +1,34 @@
 <nav class="nav" aria-label="Primary">
-	<div class="flex flex-nowrap">
-		<noscript>{% include "partials/nav/nav-contents.html" %}</noscript>
-		<div class="nav__heightsetter region stack wrapper" role="presentation">
-			<div class="text-step--1 button">
-				<svg width="1" height="24" viewBox="0 0 1 24" xmlns="http://www.w3.org/2000/svg"></svg>
-			</div>
-		</div>
-	</div>
-	<template id="nav-contents">{% include "partials/nav/nav-contents.html" %}</template>
+	<details class="nav__widget region stack wrapper" data-wrapper="wide">
+		<summary class="nav__toggle text-step--1 button" data-variant="ghost">
+			{% include "icons/menu.svg" %}
+			<span>Menu</span>
+		</summary>
+		<a href="/" class="nav__head" aria-label="{{ site.name }} - home">
+			{% image 'src/assets/images/avatar/tata.png', '' %}
+			<span>Tower of Fantasy Index</span>
+		</a>
+		<ul class="nav__links flex-grid">
+			{% for item in site.navigation.pages %}
+			<li>
+				<a
+					href="{{ item.url }}"
+					{{ helpers.getLinkActiveState(item.url, page.url) | safe }}
+					{% if item.external %}target="_blank"{% endif %}
+				>
+					<span>{{ item.text }}</span>
+				</a>
+			</li>
+			{% endfor %}
+		</ul>
+		<ul class="nav__links flex-grid text-secondary">
+			{% for item in site.navigation.socials -%}
+			<li>
+				<a href="{{ item.url }}" {% if item.external %}target="_blank"{% endif %}>
+					<span>{{ item.text }}</span>
+				</a>
+			</li>
+			{%- endfor %}
+		</ul>
+	</details>
 </nav>

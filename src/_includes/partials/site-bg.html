@@ -1,20 +1,23 @@
 {% if background %}
 	{% set bgImg = "url('/assets/images/" + background + "')" %}
-
-	{% set bgSlug = background.split('.')[0].split('/') | last %}
-
-	{% set bgStyles -%}
-		{% if bgSlug in site.bg -%}
-			{% for property, value in site.bg[bgSlug] | entries -%}
-				{{ property }}: {{ value }};
-			{%- endfor %}
-		{%- endif %}
-	{%- endset %}
-
-	{% set bgAttributes -%}
-		data-bg="{{ bgSlug }}" data-category="{{ bgCategory }}"
-	{%- endset %}
-
-	{% image 'src/assets/images/' + background, '', 'site-bg', bgAttributes + ' style="' + bgStyles + '"' %}
-	<div class="site-bg legacy" {{ bgAttributes | safe }} role="presentation" style="background-image: {{ bgImg }}; {{ bgStyles }}"></div>
+{% else %}
+	{% set background = 'bg/bg-1.png' %}
+	{% set bgImg = "url('/assets/images/bg/bg-1.png')" %}
 {% endif %}
+
+{% set bgSlug = background.split('.')[0].split('/') | last %}
+
+{% set bgStyles -%}
+	{% if bgSlug in site.bg -%}
+		{% for property, value in site.bg[bgSlug] | entries -%}
+			{{ property }}: {{ value }};
+		{%- endfor %}
+	{%- endif %}
+{%- endset %}
+
+{% set bgAttributes -%}
+	data-bg="{{ bgSlug }}" data-category="{{ bgCategory }}"
+{%- endset %}
+
+{% image 'src/assets/images/' + background, '', 'site-bg', bgAttributes + ' style="' + bgStyles + '"' %}
+<div class="site-bg legacy" {{ bgAttributes | safe }} role="presentation" style="background-image: {{ bgImg }}; {{ bgStyles }}"></div>

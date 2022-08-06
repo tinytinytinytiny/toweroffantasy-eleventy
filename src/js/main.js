@@ -1,5 +1,3 @@
-'use strict';
-
 if ('serviceWorker' in navigator) {
 	let registration;
 
@@ -10,11 +8,15 @@ if ('serviceWorker' in navigator) {
 	registerServiceWorker();
 }
 
-if (!isSupportsFlexGap()) {
+if (!supportsFlexGap()) {
 	document.documentElement.setAttribute('data-flex-gap', 'false');
 }
 
-function isSupportsFlexGap() {
+function supportsFlexGap() {
+	if ('localStorage' in window && localStorage.getItem('supportsFlexGap')) {
+		return Boolean(localStorage.getItem('supportsFlexGap'));
+	}
+
 	// create flex container with row-gap set
 	var flex = document.createElement('div');
 	flex.style.display = 'flex';
@@ -30,6 +32,10 @@ function isSupportsFlexGap() {
 	document.body.appendChild(flex);
 	var isSupported = flex.scrollHeight === 1; // flex container should be 1px high from the row-gap
 	flex.parentNode.removeChild(flex);
+
+	if ('localStorage' in window) {
+		localStorage.setItem('supportsFlexGap', isSupported);
+	}
 
 	return isSupported;
 }

@@ -17,7 +17,7 @@
 	gap: var(--stack-space, 1em);
 }
 
-@media screen and (orientation: landscape) and (max-height: 400px) {
+@media screen and (orientation: landscape) and (max-height: 25rem) {
 	.page-header__inner .item-frame {
 		display: none !important;
 	}
