@@ -9,6 +9,7 @@
 	height: 100lvh;
 	overscroll-behavior: none;
 	position: fixed;
+	user-select: none;
 	width: 100vw;
 	width: 100lvw;
 	z-index: -1;

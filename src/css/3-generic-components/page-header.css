@@ -14,7 +14,7 @@
 .page-header__inner[data-page="item"] {
 	display: flex;
 	flex-flow: column-reverse nowrap;
-	gap: var(--stack-space, 1em);
+	gap: 1em;
 }
 
 @media screen and (orientation: landscape) and (max-height: 25rem) {

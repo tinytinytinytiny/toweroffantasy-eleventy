@@ -9,6 +9,11 @@
 	color: theme('colors.accent');
 }
 
+::selection {
+	background-color: theme('colors.bold');
+	color: theme('colors.sheet.0')
+}
+
 html, body {
 	overflow-x: -moz-hidden-unscrollable;
 	overflow-x: clip;
