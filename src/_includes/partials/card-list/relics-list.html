@@ -1,24 +1,8 @@
-<ul class="card-list auto-grid max-w-full">
-	{% for item in items | sortBy('name') | reverse | sortBy(['isNew', 'isChina']) | reverse %}
-		<li class="sheet card stack p-s"  >
-			<div class="item-frame">
-				{% image 'src/assets/images/gadget/' + item.fileSlug + '.png', '', 'drop-shadow-xl', '', 'lazy' %}
-				{% if item.data.isNew %}
-					<span class="new-badge absolute bottom-0 inset-x-1/4" aria-hidden="true">
-						New
-					</span>
-				{% endif %}
-			</div>
-			<div class="font-bold text-center stack">
-				<div class="absolute top-3xs left-3xs leading-none">
-					{% if item.data.isChina %}
-						{% china %}
-					{% endif %}
-				</div>
-				<a class="text-bold/90" href="{{ item.url }}" data-underline="on-hover">
-					{{ item.data.name }}
-				</a>
-			</div>
-		</li>
-	{% endfor %}
-</ul>
+{% extends "partials/card-list/base.html" %}
+
+{% block cardImage %}
+<div class="item-frame">
+	{% image 'src/assets/images/gadget/' + item.fileSlug + '.png', '', 'drop-shadow-xl', '', 'lazy' %}
+	{% if item.data.isNew %}{{ new(0) }}{% endif %}
+</div>
+{% endblock %}

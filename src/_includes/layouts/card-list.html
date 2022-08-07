@@ -2,7 +2,7 @@
 
 {% block content %}
 	{% asyncEach rarity, items in collections[collection] | sortBy('rarity') | groupBy('rarity') | reverse %}
-		<h2 class="px-0">
+		<h2>
 			<span class="highlight-rarity italic" data-rarity="{{ rarity }}">{{ string.rarity[rarity - 1] }}</span><span> {{ title }}</span>
 		</h2>
 		{% set items = items | reverse %}

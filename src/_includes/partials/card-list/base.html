@@ -1,0 +1,20 @@
+{% from "macros/badges.html" import new %}
+
+<ul class="card-list auto-grid">
+	{% asyncEach item in items | sortBy('name') | reverse | sortBy(['isNew', 'isChina']) | reverse %}
+		<li class="sheet card stack p-s">
+			{% block cardImage %}{% endblock %}
+			<div class="font-bold text-center stack">
+				{% if item.data.isChina %}
+					<div class="absolute top-3xs left-3xs leading-none">
+						{% china %}
+					</div>
+				{% endif %}
+				<a class="text-bold/90" href="{{ item.url }}" data-underline="on-hover">
+					{{ item.data.name }}
+				</a>
+				{% block extraInformation %}{% endblock %}
+			</div>
+		</li>
+	{% endeach %}
+</ul>

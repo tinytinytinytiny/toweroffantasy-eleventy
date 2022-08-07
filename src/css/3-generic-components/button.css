@@ -47,6 +47,7 @@ button:focus, .button:focus {
 	outline-offset: 0.2em;
 }
 
+/* purgecss ignore */
 button > svg,
 button > .icon,
 .button > svg,

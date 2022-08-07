@@ -1,0 +1,11 @@
+{% macro new(offset) %}
+<span class="new-badge absolute inset-x-1/4" aria-hidden="true" style="bottom: {{ offset }}">
+	New
+</span>
+{% endmacro %}
+
+{% macro china() %}
+<div class="absolute top-3xs left-3xs leading-none">
+	{% china %}
+</div>
+{% endmacro %}

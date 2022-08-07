@@ -11,7 +11,7 @@
 	{% elif featuredTags %}
 		{% for tag in featuredTags %}
 			<h2>{{ tag | capitalize }} Guides</h2>
-			{% set guideList = helpers.getFilteredByTag(collections.guides, tag) | sortByDisplayOrder | limitTo(5) %}
+			{% set guideList = helpers.getFilteredByTag(collections.guides, tag) | sortByDisplayOrder %}
 			{% include "partials/guide-list.html" %}
 		{% endfor %}
 	{% endif %}
