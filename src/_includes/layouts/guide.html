@@ -9,7 +9,7 @@
 {% endblock %}
 
 {% block ending %}
-	{% set guideList = helpers.getSiblingContent(collections.guides, page) %}
+	{% set guideList = helpers.getSiblingContent(collections.guides, page, 4) %}
 	{% if guideList | length %}
 		<nav class="bg-sheet-1/90 shadow-xl copy region stack wrapper" data-wrapper="site">
 			<h2>More Guides</h2>

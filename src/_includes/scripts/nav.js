@@ -67,6 +67,12 @@ if ('querySelector' in document) {
 }
 
 function getScrollbarWidth() {
+	const supportsLocalStorage = ('localStorage' in window);
+
+	if (supportsLocalStorage && localStorage.getItem('scrollbarWidth')) {
+		return localStorage.getItem('scrollbarWidth');
+	}
+
 	// Creating invisible container
 	const outer = document.createElement('div');
 	outer.style.visibility = 'hidden';
@@ -83,6 +89,10 @@ function getScrollbarWidth() {
 
 	// Removing temporary elements from the DOM
 	outer.parentNode.removeChild(outer);
+
+	if (supportsLocalStorage) {
+		localStorage.setItem('scrollbarWidth', scrollbarWidth);
+	}
 
 	return scrollbarWidth;
 }

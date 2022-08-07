@@ -1,6 +1,6 @@
 {% from "macros/badges.html" import new %}
 
-<ul class="card-list auto-grid">
+<ul class="card-list auto-grid gap-xs">
 	{% asyncEach item in items | sortBy('name') | reverse | sortBy(['isNew', 'isChina']) | reverse %}
 		<li class="sheet card stack p-s">
 			{% block cardImage %}{% endblock %}

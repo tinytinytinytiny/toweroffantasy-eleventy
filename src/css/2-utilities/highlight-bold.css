@@ -1,5 +1,11 @@
 .highlight-bold b, .highlight-bold strong {
-	color: theme('colors.secondary');
+	color: theme('colors.secondary-dim');
+}
+
+@media (hover: hover) {
+	.highlight-bold :hover > b, .highlight-bold :hover > strong {
+		color: theme('colors.secondary');
+	}
 }
 
 .highlight-bold strong > em,

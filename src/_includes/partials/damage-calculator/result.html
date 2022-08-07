@@ -1,15 +1,15 @@
 {% edge %}
 {% if eleventy.edge.cookies.totalDmg %}
-<section class="max-w-full stack !stack-space-xs" aria-label="Result">
+<section class="max-w-full aria-label="Result">
 	{% set result = eleventy.edge.cookies.totalDmg | default(100, true) %}
 	{% set footnote = eleventy.edge.cookies.totalDmgFootnote | default('', true) | urldecode %}
 	<output name="result" for="damage-calculator" class="sheet block font-fancy text-step-7 p-s-m" id="result" data-layer="0">
-		<span class="block leading-[0.88] text-primary" id="damage-output">{{ result + '%' }}</span>
+		<span class="block text-primary" id="damage-output" style="line-height: 0.88;">{{ result + '%' }}</span>
 		{% if footnote %}
 			<span class="block uppercase text-bold/90 text-step-1 tracking-wide leading-none" id="damage-footnote">{{ footnote }}</span>
 		{% endif %}
 	</output>
-	<p>
+	<p class="mt-xs">
 		<small class="text-base/60">Message Zakum#3080 on Discord if the font size needs to be bigger.</small>
 	</p>
 </section>
