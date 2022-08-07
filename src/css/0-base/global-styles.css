@@ -73,6 +73,13 @@ picture {
 	flex: none;
 }
 
+figure:not([data-border="none"]) > img,
+figure:not([data-border="none"]) > video,
+figure:not([data-border="none"]) > iframe {
+	@apply shadow-lg shadow-primary/10;
+	box-shadow: 0 0 0 1px theme('colors.primary' / 70%), var(--tw-shadow);
+}
+
 a:focus, summary:focus {
 	border: 0;
 	outline: 0.12em solid theme('colors.primary');

@@ -120,9 +120,21 @@ hr {
 
 figcaption {
 	@apply tracking-wide;
-	color: theme('colors.accent');
 	font-size: theme('fontSize.step--1');
 	margin-top: 1em;
+}
+
+.sheet + figcaption {
+	color: theme('colors.accent');
+}
+
+picture + figcaption,
+img + figcaption {
+	color: theme('colors.primary');
+}
+
+figure[data-border="none"] figcaption {
+	color: inherit;
 }
 
 p {

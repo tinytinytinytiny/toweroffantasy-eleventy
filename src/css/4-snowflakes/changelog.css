@@ -1,5 +1,4 @@
 .changelog {
-	color: theme('colors.base' / 90%);
 	font-family: theme('fontFamily.mono');
 	font-size: theme('fontSize.step--1');
 	letter-spacing: normal;
