@@ -8,7 +8,7 @@ module.exports = {
 				'./src/*.{html,js,njk,md}',
 				'./src/**/*.{html,js,njk,md}'
 			],
-			defaultExtractor: (content) => content.match(/[A-Za-z0-9-_:/\!\[\]]+/g) || [],
+			defaultExtractor: (content) => content.match(/([[A-Za-z0-9-_:\/\!\[\]]+\.?[\d]?[A-Za-z0-9-_:\/\!\[\]]?)+/g) || [],
 			variables: true
 		}),
 		require('cssnano')
