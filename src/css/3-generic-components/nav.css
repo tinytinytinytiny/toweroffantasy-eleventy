@@ -4,6 +4,7 @@
 	--wrapper-padding: theme('spacing.m-l');
 	container-type: inline-size;
 	container-name: nav;
+	position: -webkit-sticky;
 	position: sticky;
 	top: 0;
 	z-index: 10;
@@ -214,6 +215,7 @@
 }
 
 .nav[data-state="collapsed"] .nav__toggle {
+	position: -webkit-sticky;
 	position: sticky;
 	top: 0;
 	z-index: 5;

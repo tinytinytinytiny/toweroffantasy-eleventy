@@ -1,6 +1,7 @@
 .skip-link {
-	position: absolute;
+	background-color: theme('colors.sheet.0' / 50%);
 	font-size: theme('fontSize.step-1');
+	position: absolute;
 	top: 0;
   left: 50%;
   transform: translateX(-50%);

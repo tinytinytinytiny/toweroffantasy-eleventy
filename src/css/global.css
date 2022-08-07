@@ -1,5 +1,3 @@
-@import-glob "reset.css";
-
 @import-glob "0-*/*.css";
 @import-glob "1-*/*.css";
 @import-glob "2-*/*.css";

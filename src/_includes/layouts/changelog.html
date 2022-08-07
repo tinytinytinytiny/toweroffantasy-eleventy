@@ -4,7 +4,7 @@
 	<article id="changes-list" class="copy stack">
 		{% for year, yearChanges in changelog | groupByYear %}
 			<h2 data-appearance="none">{{ year }}</h2>
-			<div class="changelog sheet stack p-s-m" data-border="top">
+			<div class="changelog sheet stack p-s-m" data-border="top" tabindex="0">
 				{% for item in yearChanges %}
 					<article>
 						<h3>{{ item.date | stringifyDate }}</h3>

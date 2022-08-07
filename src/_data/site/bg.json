@@ -1,10 +1,8 @@
 {
 	"bg-1": {
-		"--position": "100% 0",
-		"opacity": "0.8"
+		"opacity": "0.9"
 	},
 	"bg-2": {
-		"--position": "100% 0",
 		"opacity": "0.75"
 	},
 	"weila": {

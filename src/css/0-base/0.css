@@ -38,8 +38,8 @@ ul, ol {
 
 /* Prevent zooming when orientation changes on some iOS devices */
 html {
+	-webkit-text-size-adjust: none;
   text-size-adjust: none;
-  -webkit-text-size-adjust: none;
 }
 
 /* Set core root defaults */

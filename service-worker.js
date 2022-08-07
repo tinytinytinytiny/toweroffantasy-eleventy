@@ -3,6 +3,7 @@ const cacheName = 'my-cache';
 const filesToCache = [
 	// '/css/global.css',
 	// '/js/main.js',
+	'/css/fonts.css',
 	'/assets/fonts/Archivo.woff2',
 	'/assets/fonts/Archivo-Italic.woff2',
 	'/assets/fonts/Archivo-Bold.woff2',

@@ -9,6 +9,7 @@
 
 .reel[data-state="dragging"],
 .reel[data-state="dragging"] * {
+	-webkit-user-select: none;
 	user-select: none;
 }
 

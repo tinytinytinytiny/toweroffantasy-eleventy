@@ -6,6 +6,7 @@
 		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
 		{% include "partials/meta-info.html" %}
 
+		<link rel="stylesheet" href="/css/fonts.css">
 		<link rel="stylesheet" href="/css/global.css">
 		<link rel="icon" href="/assets/images/avatar/tata.png">
   </head>
@@ -19,7 +20,7 @@
 					{% block header %}
 						{% include "partials/headers/standard.html" %}
 					{% endblock %}
-					<div class="{{ 'copy' if isCopy | default(true) }} bg-sheet-1 region stack wrapper mt-0 {{ extraClassNames }}" data-wrapper="site">
+					<div class="{{ 'copy' if isCopy | default(true) }} bg-sheet-1/90 shadow-xl region stack wrapper mt-0 {{ extraClassNames }}" data-wrapper="site">
 						{% block content %}{% endblock %}
 					</div>
 					{% block ending %}{% endblock %}

@@ -28,6 +28,7 @@ summary.chip:hover {
 input[type="checkbox"] + .chip,
 input[type="radio"] + .chip {
 	cursor: pointer;
+	-webkit-user-select: none;
 	user-select: none;
 }
 
