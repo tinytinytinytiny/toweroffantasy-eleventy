@@ -16,6 +16,10 @@
 	}
 }
 
+.nav__widget {
+	max-width: none;
+}
+
 .nav__widget > *:last-child {
 	padding-bottom: 1rem !important;
 }

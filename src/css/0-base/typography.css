@@ -61,7 +61,7 @@ h3 {
 }
 
 h4 {
-	@apply leading-snug max-w-content;
+	@apply leading-snug max-w-copy;
 	color: theme('colors.bold');
 	font-weight: bold;
 }
