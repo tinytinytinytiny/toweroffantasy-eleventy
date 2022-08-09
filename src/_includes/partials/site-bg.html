@@ -20,4 +20,4 @@
 {%- endset %}
 
 {% image 'src/assets/images/' + background, '', 'site-bg', bgAttributes + ' style="' + bgStyles + '"' %}
-<div class="site-bg legacy" {{ bgAttributes | safe }} role="presentation" style="background-image: {{ bgImg }}; {{ bgStyles }}"></div>
+<div class="site-bg legacy" {{ bgAttributes | safe }} role="presentation" style="--background-image: {{ bgImg }}; {{ bgStyles }}"></div>

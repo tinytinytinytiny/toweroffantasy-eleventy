@@ -19,6 +19,7 @@
 }
 
 .site-bg.legacy {
+	background-image: var(--background-image);
 	background-position: var(--position);
 	background-repeat: no-repeat;
 }
@@ -34,6 +35,7 @@
 	}
 
 	.site-bg.legacy {
+		background-image: none;
 		display: none;
 	}
 }
