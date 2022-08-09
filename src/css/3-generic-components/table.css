@@ -6,6 +6,7 @@ table {
 	@apply leading-normal;
 	border-spacing: 0;
 	font-size: clamp(1rem, calc(0.8em + 0.5vw), 1em);
+	min-width: min(100%, theme('width.copy'));
 	text-align: left;
 }
 

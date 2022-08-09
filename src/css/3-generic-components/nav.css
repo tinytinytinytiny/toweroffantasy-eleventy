@@ -46,7 +46,7 @@
 	content: none;
 }
 
-.nav__heightsetter,
+/* .nav__heightsetter,
 .nav__heightsetter > * {
 	overflow: hidden;
 	opacity: 0;
@@ -54,7 +54,7 @@
 	padding-right: 0;
 	width: 1px;
 	visibility: hidden;
-}
+} */
 
 .nav a {
 	text-decoration: none;
@@ -81,12 +81,12 @@
 
 .nav__links {
 	--gutter: 1.81rem;
-	--grid-min-item-size: max(12rem, calc(50vw - var(--wrapper-padding) - var(--gutter)));
+	--grid-min-item-size: max(12rem, calc(48vw - var(--wrapper-padding) - var(--gutter)));
 }
 
 @supports (padding: max(0px)) {
 	.nav__links {
-		--grid-min-item-size: max(12rem, calc(50vw - var(--wrapper-padding) - calc((env(safe-area-inset-left) + env(safe-area-inset-right)) / 2) - var(--gutter)));
+		--grid-min-item-size: max(12rem, calc(48vw - var(--wrapper-padding) - calc((env(safe-area-inset-left) + env(safe-area-inset-right)) / 2) - var(--gutter)));
 	}
 }
 
@@ -172,9 +172,7 @@
 	position: relative;
 }
 
-.nav[data-state="expanded"],
-.nav[data-state="expanded"] .nav__widget[open],
-.nav[data-state="collapsed"] {
+.nav[data-state="expanded"] .nav__widget[open] {
 	background: transparent;
 }
 
@@ -185,24 +183,24 @@
 	}
 }
 
-.nav[data-state="collapsed"] .nav__widget {
-	position: relative;
-}
-
 .nav[data-state="collapsed"] .nav__widget[open] {
 	@apply shadow-2xl;
 }
 
 .nav[data-state="collapsed"] .nav__widget[open]::before {
-	@apply bg-sheet-0/60;
 	-webkit-backdrop-filter: blur(10px);
 	backdrop-filter: blur(10px);
+	background-color: theme('colors.sheet.2' / 80%);
 	content: '';
 	display: block;
 	height: 100vh;
 	height: 100lvh;
 	width: 100vw;
 	width: 100lvw;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
 	position: fixed;
 	overscroll-behavior: none;
 	z-index: -1;
@@ -256,8 +254,9 @@
 	display: none;
 }
 
-@media screen and (orientation: landscape) and (max-height: 25rem) {
-	.nav[data-state="collapsed"] {
+@media screen and (max-height: 25rem) {
+	.nav[data-state="collapsed"]:not([data-open="true"]),
+	.nav[data-state="collapsed"] .nav__toggle {
 		position: relative;
 	}
 

@@ -1,9 +1,16 @@
-if ('querySelector' in document) {
-	const nav = document.querySelector('.nav');
-	const details = document.querySelector('.nav__widget');
-
+(function () {
 	if ('ResizeObserver' in window) {
+		const nav = document.getElementsByClassName('nav')[0];
+		const details = document.getElementsByClassName('nav__widget')[0];
 		const scrollbarWidth = getScrollbarWidth();
+
+		details.addEventListener('toggle', (event) => {
+			if (details.hasAttribute('open')) {
+				nav.setAttribute('data-open', 'true');
+			} else {
+				nav.setAttribute('data-open', 'false');
+			}
+		});
 
 		if (nav.offsetWidth >= document.body.clientWidth) {
 			forceCloseMenu();
@@ -50,10 +57,8 @@ if ('querySelector' in document) {
 		}
 
 		function forceCloseMenu() {
-			if (details.hasAttribute('open')) {
-				details.getAttribute('open');
-				details.removeAttribute('open');
-			}
+			details.getAttribute('open');
+			details.removeAttribute('open');
 			nav.setAttribute('data-state', 'collapsed');
 		}
 
@@ -64,13 +69,11 @@ if ('querySelector' in document) {
 			}
 		}
 	}
-}
+})();
 
 function getScrollbarWidth() {
-	const supportsLocalStorage = ('localStorage' in window);
-
-	if (supportsLocalStorage && localStorage.getItem('scrollbarWidth')) {
-		return localStorage.getItem('scrollbarWidth');
+	if (supportsSessionStorage && sessionStorage.getItem('scrollbarWidth')) {
+		return Number(sessionStorage.getItem('scrollbarWidth'));
 	}
 
 	// Creating invisible container
@@ -90,8 +93,8 @@ function getScrollbarWidth() {
 	// Removing temporary elements from the DOM
 	outer.parentNode.removeChild(outer);
 
-	if (supportsLocalStorage) {
-		localStorage.setItem('scrollbarWidth', scrollbarWidth);
+	if (supportsSessionStorage) {
+		sessionStorage.setItem('scrollbarWidth', scrollbarWidth);
 	}
 
 	return scrollbarWidth;

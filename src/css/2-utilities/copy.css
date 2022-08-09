@@ -69,9 +69,3 @@
 .copy > ol:not([class]) > li + li {
 	margin-top: theme('spacing.2xs');
 }
-
-.copy > table,
-.copy > .big-table > table,
-.copy > figure > table {
-	@apply min-w-copy;
-}

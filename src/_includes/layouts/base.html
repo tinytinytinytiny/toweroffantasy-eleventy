@@ -29,11 +29,17 @@
 			</div>
 		</div>
 		{% block extras %}{% endblock %}
-		{% set js %}
+		{% set webStorageDetectionScript %}
+			{% include "scripts/web-storage-detection.js" %}
+		{% endset %}
+		{% set navScript %}
 			{% include "scripts/nav.js" %}
 		{% endset %}
+		<script>
+			{{ webStorageDetectionScript | jsmin | safe }}
+		</script>
 		<script src="/js/main.js"></script>
-		<script>{{ js | jsmin | safe }}</script>
+		<script>{{ navScript | jsmin | safe }}</script>
 		{% block scripts %}{% endblock %}
   </body>
 </html>

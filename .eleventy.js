@@ -23,7 +23,6 @@ module.exports = (config) => {
 	config.addPassthroughCopy('_redirects');
 	config.addPassthroughCopy('service-worker.js');
 	config.addPassthroughCopy('./src/assets/');
-	config.addPassthroughCopy('./src/js/');
 
 	config.addGlobalData('getCollection', () => (collection, fileSlug) => collection.find(i => i.fileSlug === fileSlug));
 	config.addGlobalData('getData', () => (collection, fileSlug) => collection.find(i => i.fileSlug === fileSlug).data);
