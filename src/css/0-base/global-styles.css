@@ -74,6 +74,7 @@ picture {
 }
 
 figure:not([data-border="none"]) > img,
+figure:not([data-border="none"]) > picture,
 figure:not([data-border="none"]) > video,
 figure:not([data-border="none"]) > iframe {
 	@apply shadow-lg shadow-primary/10;

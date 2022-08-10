@@ -13,11 +13,11 @@ Armor improves your combat effectiveness through passive stat increases, and can
 Each piece of armor has fixed stats, which increase through **Enhancement**, and random stats, which increase through **Fusion**.
 
 <figure data-border="none">
-{% for armor in ['helmet', 'shoulder', 'arm', 'top', 'gloves', 'belt', 'bottom', 'shoes'] -%}
+{% asyncEach armor in ['helmet', 'shoulder', 'arm', 'top', 'gloves', 'belt', 'bottom', 'shoes'] -%}
 	<div class="item-frame">
-		<img src="/assets/images/armor/{{ armor }}.png" alt="{{ armor | capitalize }}" width="128" height="128">
+		{% image 'src/assets/images/armor/' + armor + '.png', armor | capitalize %}
 	</div>
-{%- endfor %}
+{%- endeach %}
 </figure>
 
 ### Enhancement
@@ -25,13 +25,13 @@ Enhancement will add a + sign on your armor, increasing the fixed stats of that 
 
 <figure data-border="none">
 	<div class="item-frame">
-		<img src="/assets/images/mat/armor1.png" alt="Enhancement module" width="128" height="128">
+		{% image 'src/assets/images/mat/armor1.png', 'Enhancement module' %}
 	</div>
 	<div class="item-frame">
-		<img src="/assets/images/coin/gold.png" alt="Gold coin" width="128" height="128">
+		{% image 'src/assets/images/coin/gold.png', 'Gold coin' %}
 	</div>
 	<div class="item-frame">
-		<img src="/assets/images/mat/armor2.png" alt="Enhancement module" width="128" height="128">
+		{% image 'src/assets/images/mat/armor2.png', 'Enhancement module' %}
 	</div>
 </figure>
 
@@ -43,11 +43,11 @@ You will need Enhancement Modules and Gold, and breakthrough levels require Supe
 Fusion will add stars on your armor, increasing one random stat per star. The rarity of your armor will determine how many stars it can have, and how much EXP is required to level it up.
 
 <figure data-border="none">
-{% for i in range(1, 4) -%}
+{% asyncEach i in range(1, 4) -%}
 	<div class="item-frame">
-		<img src="/assets/images/mat/exp{{ i }}.png" alt="EXP crystal" width="128" height="128">
+		{% image 'src/assets/images/mat/exp' + i + '.png', 'EXP crystal' %}
 	</div>
-{%- endfor %}
+{%- endeach %}
 </figure>
 
 You will need EXP crystals, which can be obtained from breaking the large crystal veins in the overworld and through various shops. You can also use armor copies of the same piece (i.e. feed pants into pants) or dismantle the armor into crystals—it will give half the EXP if you dismantle it.
@@ -55,11 +55,11 @@ You will need EXP crystals, which can be obtained from breaking the large crysta
 **Fusion stars will NOT carry over between pieces**, meaning new armor will have to be leveled up from the beginning. You can use previously starred armor for EXP, though it will not give 100% of the EXP you spent to reach that star (it's something like base EXP of that armor + 70–80% I think). Meaning feeding a 5 star armor into a brand new one will result in 4 stars + some EXP.
 
 <figure data-border="none">
-{% for element in ['fire', 'ice', 'physic', 'thunder'] -%}
+{% asyncEach element in ['fire', 'ice', 'physic', 'thunder'] -%}
 	<div class="item-frame">
-		<img src="/assets/images/armor/core_orange_{{ element }}.png" alt="{{ element | capitalize }} arc core" width="128" height="128">
+		{% image 'src/assets/images/armor/core_orange_' + element + '.png', element | capitalize + 'arc core' %}
 	</div>
-{%- endfor %}
+{%- endeach %}
 </figure>
 
 Arc Cores are a unique piece of armor acquired through 8-player raids. You must use materials rewarded from these raids for fusion on them—armor and EXP crystals will not work.
@@ -72,25 +72,25 @@ Leveling a weapon consumes Weapon Batteries to provide EXP to the weapon. Every 
 
 <figure data-border="none">
 	<div class="item-frame">
-		<img src="/assets/images/mat/red1.png" alt="Red breakthrough material" width="128" height="128">
+		{% image 'src/assets/images/mat/red1.png', 'Red breakthrough material' %}
 	</div>
 	<div class="item-frame">
-		<img src="/assets/images/mat/green1.png" alt="Green breakthrough material" width="128" height="128">
+		{% image 'src/assets/images/mat/green1.png', 'Green breakthrough material' %}
 	</div>
 	<div class="item-frame">
-		<img src="/assets/images/mat/black1.png" alt="Black breakthrough material" width="128" height="128">
+		{% image 'src/assets/images/mat/black1.png', 'Black breakthrough material' %}
 	</div>
 	<div class="item-frame">
-		<img src="/assets/images/mat/fire1.png" alt="Fire breakthrough material" width="128" height="128">
+		{% image 'src/assets/images/mat/fire1.png', string.element.fire.name | capitalize + 'breakthrough material' %}
 	</div>
 	<div class="item-frame">
-		<img src="/assets/images/mat/ice1.png" alt="Ice breakthrough material" width="128" height="128">
+	{% image 'src/assets/images/mat/ice1.png', string.element.ice.name | capitalize + 'breakthrough material' %}
 	</div>
 	<div class="item-frame">
-		<img src="/assets/images/mat/physical1.png" alt="Physical breakthrough material" width="128" height="128">
+		{% image 'src/assets/images/mat/physical1.png', string.element.physical.name | capitalize + 'breakthrough material' %}
 	</div>
 	<div class="item-frame">
-		<img src="/assets/images/mat/electric1.png" alt="Electric breakthrough material" width="128" height="128">
+		{% image 'src/assets/images/mat/electric1.png', string.element.electric.name | capitalize + 'breakthrough material' %}
 	</div>
 </figure>
 
@@ -101,7 +101,7 @@ Using duplicate copies will add stars to your current weapon, unlocking powerful
 
 <figure data-border="none">
 	<div class="item-frame">
-		<img src="/assets/images/mat/weapon_star.png" alt="Weapon star" width="128" height="128">
+		{% image 'src/assets/images/mat/weapon_star.png', 'Weapon star' %}
 	</div>
 </figure>
 
