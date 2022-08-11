@@ -70,7 +70,7 @@ a {
 	color: theme('colors.secondary');
 	text-decoration-thickness: 1px;
 	text-decoration-color: theme('colors.secondary');
-	text-underline-position: from-font;
+	text-underline-position: under;
 }
 
 a:hover {
