@@ -36,7 +36,7 @@
 										<th class="text-primary whitespace-nowrap" scope="row">
 											{{ loop.index0 }}&nbsp;★ <span class="visually-hidden"> star{{ 's' if loop.index > 1 }}</span>
 										</th>
-										<td class="stack align-top">{{ effects[i] | markdown | safe }}</td>
+										<td class="stack">{{ effects[i] | markdown | safe }}</td>
 									</tr>
 								{% endif %}
 							{% endfor %}
