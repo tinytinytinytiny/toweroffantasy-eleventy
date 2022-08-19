@@ -22,7 +22,7 @@
 ---
 
 {% macro platforms(list, size) %}
-<ul class="cluster gap-xs {{ 'my-0' if size === 's' }}">
+<ul class="cluster {% if size === 's' %}gap-2xs{% else %}gap-xs{% endif %} {{ 'my-0' if size === 's' }}">
 {% for os in list -%}
 	<li class="chip {{ 'text-step--1' if size === 's' }}" data-variant="underline" style="color: {{ articleData[os].color }};">{{ articleData[os].name }}</li>
 {%- endfor %}
