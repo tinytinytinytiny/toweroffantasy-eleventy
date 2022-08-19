@@ -4,20 +4,33 @@ summary + table {
 
 table {
 	@apply leading-normal;
+	border-collapse: collapse;
 	border-spacing: 0;
 	font-size: clamp(1rem, calc(0.8em + 0.5vw), 1em);
 	min-width: min(100%, theme('width.copy'));
 	text-align: left;
 }
 
-th {
-	color: theme('colors.bold' / 90%);
-	font-family: theme('fontFamily.fancy');
-	padding: theme('spacing.xs') theme('spacing.s-m');
+thead {
+	@apply bg-sheet-0/80;
 }
 
-th, td {
+tr {
 	border-top: 1px solid theme('colors.divider');
+}
+
+thead tr {
+	border-top-color: theme('colors.glare');
+}
+
+thead + tbody > tr:first-child {
+	@apply border-base/90;
+	border-top-width: 2px;
+}
+
+thead.visually-hidden + tbody > tr:first-child {
+	@apply border-base/90;
+	border-top: none;
 }
 
 tr > :first-child {
@@ -26,6 +39,21 @@ tr > :first-child {
 
 tr > :last-child {
 	padding-right: theme('spacing.2xs-xs');
+}
+
+th {
+	color: theme('colors.bold' / 90%);
+	font-family: theme('fontFamily.fancy');
+	padding: theme('spacing.xs') theme('spacing.s-m');
+}
+
+thead th {
+	font-size: clamp(theme('fontSize.step--2'), calc(theme('fontSize.step--2') + 0.34vw), theme('fontSize.step--1'));
+	letter-spacing: 0.07em;
+	line-height: 1.25;
+	max-width: 16ch;
+	text-transform: uppercase;
+	vertical-align: bottom;
 }
 
 td {
@@ -37,36 +65,9 @@ td {
 	padding-bottom: theme('spacing.2xs-xs');
 }
 
-thead th {
-	@apply bg-sheet-0/80;
-	border-top-color: theme('colors.glare');
-	font-size: clamp(theme('fontSize.step--2'), calc(theme('fontSize.step--2') + 0.34vw), theme('fontSize.step--1'));
-	letter-spacing: 0.07em;
-	line-height: 1.25;
-	text-transform: uppercase;
-	vertical-align: bottom;
-}
-
-thead + tbody > tr:first-child > th,
-thead + tbody > tr:first-child > td {
-	@apply border-base/90;
-	border-top-width: 2px;
-}
-
-thead.visually-hidden + tbody > tr:first-child > th,
-thead.visually-hidden + tbody > tr:first-child > td {
-	@apply border-base/90;
-	border-top: none;
-}
-
 [data-head-color="transparent"] thead th {
 	background-color: inherit;
 }
-
-/* .wrapper table {
-	min-width: var(--wrapper-max-width, 46rem);
-	min-width: min(100%, var(--wrapper-max-width, 46rem));
-} */
 
 details table,
 .copy > summary ~ table,
