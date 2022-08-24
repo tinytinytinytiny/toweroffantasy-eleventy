@@ -4,7 +4,6 @@
 
 [data-bg^="bg-"] {
 	--position: 100% 0;
-	mix-blend-mode: luminosity;
 }
 
 [data-bg="huodong_meishi_guo"] {
