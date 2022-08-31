@@ -1,6 +1,5 @@
 .copy {
-	--__default-stack-space: theme('spacing.m');
-	--stack-space: var(--__default-stack-space);
+	--stack-space: theme('spacing.m');
 }
 
 .copy > figure, .copy > figure + *,
@@ -27,7 +26,7 @@
 
 .copy > figure > *:not(.stack),
 .copy > aside > *:not(.stack) {
-	--stack-space: var(--__default-stack-space);
+	--stack-space: theme('spacing.m');
 }
 
 .copy > summary + h2,
