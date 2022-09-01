@@ -5,10 +5,9 @@ summary + table {
 table {
     --cell-padding-x: theme('spacing.s');
     --cell-padding-y: theme('spacing.2xs');
-	@apply leading-normal;
+	@apply leading-normal text-step--0.5;
 	border-collapse: collapse;
 	border-spacing: 0;
-	font-size: 1rem;
 	min-width: min(100%, theme('width.copy'));
 	text-align: left;
 }
@@ -19,8 +18,7 @@ table[data-padding="loose"] {
 }
 
 thead {
-	@apply bg-sheet-0/80;
-    font-size: 0.8rem;
+	@apply bg-sheet-0/80 text-step--1.5;
 	letter-spacing: 0.07em;
 	line-height: 1.25;
 }

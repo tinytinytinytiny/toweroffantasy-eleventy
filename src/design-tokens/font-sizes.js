@@ -21,6 +21,9 @@ const generateTokens = () => {
 		.filter(i => i)
 		.forEach((i) => tokens[i.split(': ')[0]] = i.split(': ')[1]);
 
+    tokens['step--0.5'] = `calc((${tokens['step--1']} + ${tokens['step-0']}) / 2)`;
+    tokens['step--1.5'] = `calc((${tokens['step--2']} + ${tokens['step--1']}) / 2)`;
+
 	return tokens;
 };
 
