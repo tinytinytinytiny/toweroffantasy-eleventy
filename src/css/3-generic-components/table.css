@@ -3,16 +3,26 @@ summary + table {
 }
 
 table {
+    --cell-padding-x: theme('spacing.s');
+    --cell-padding-y: theme('spacing.2xs');
 	@apply leading-normal;
 	border-collapse: collapse;
 	border-spacing: 0;
-	font-size: clamp(1rem, calc(0.8em + 0.5vw), 1em);
+	font-size: 1rem;
 	min-width: min(100%, theme('width.copy'));
 	text-align: left;
 }
 
+table[data-padding="loose"] {
+    --cell-padding-y: theme('spacing.2xs-xs');
+    --cell-padding-x: theme('spacing.s-m');
+}
+
 thead {
 	@apply bg-sheet-0/80;
+    font-size: 0.8rem;
+	letter-spacing: 0.07em;
+	line-height: 1.25;
 }
 
 tr {
@@ -33,40 +43,30 @@ thead.visually-hidden + tbody > tr:first-child {
 	border-top: none;
 }
 
-tr > :first-child {
-	padding-left: theme('spacing.2xs-xs');
-}
-
-tr > :last-child {
-	padding-right: theme('spacing.2xs-xs');
+td, th {
+	padding: var(--cell-padding-y) var(--cell-padding-x);
 }
 
 th {
 	color: theme('colors.bold' / 90%);
 	font-family: theme('fontFamily.fancy');
-	padding: theme('spacing.xs') theme('spacing.s-m');
 }
 
 thead th {
-	font-size: clamp(theme('fontSize.step--2'), calc(theme('fontSize.step--2') + 0.34vw), theme('fontSize.step--1'));
-	letter-spacing: 0.07em;
-	line-height: 1.25;
+    --cell-padding-y: theme('spacing.xs');
 	max-width: 16ch;
 	text-transform: uppercase;
 	vertical-align: bottom;
 }
 
-td {
-	padding: theme('spacing.2xs') theme('spacing.s-m');
+td:first-child,
+th:first-child {
+	padding-left: theme('spacing.2xs-xs');
 }
 
-[data-padding="loose"] td {
-	padding-top: theme('spacing.2xs-xs');
-	padding-bottom: theme('spacing.2xs-xs');
-}
-
-[data-head-color="transparent"] thead th {
-	background-color: inherit;
+td:last-child,
+th:last-child {
+	padding-right: theme('spacing.2xs-xs');
 }
 
 details table,

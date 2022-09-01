@@ -7,7 +7,6 @@ module.exports = {
 				name: (data) => data.character.name,
 				rarity: (data) => data.character.rarity
 			},
-			permalink: '/matrices/freyja/',
 			sets: [2, 4],
 			values: {
 				set2: ['15%', '18%', '21%', '25%'],

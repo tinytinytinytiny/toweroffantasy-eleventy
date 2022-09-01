@@ -7,7 +7,6 @@ module.exports = {
 				name: (data) => data.character.name,
 				rarity: (data) => data.character.rarity,
 			},
-			permalink: '/simulacra/freyja/',
 			rarity: 5,
 			weapon: {
 				name: 'Balmung',
