@@ -13,6 +13,19 @@ const css = `
 	--step-7: clamp(3.92rem, calc(2.80rem + 5.62vw), 9.11rem);
 `;
 
+const getNumbers = (str) => str.match(/(\-*\d*\d\.\d+)*(\d)/g).map(num => Number(num));
+
+const average = (...args) => args.reduce((prev, curr) => Number(prev) + Number(curr)) / args.length;
+
+const generateIntermediateStep = (step1, step2) => {
+	const step1Numbers = getNumbers(step1);
+	const step2Numbers = getNumbers(step2);
+
+	const numbers = step1Numbers.map((num, index) => average(num, step2Numbers[index]));
+
+	return `clamp(${numbers[0]}rem, ${numbers[1]}rem + ${numbers[2]}vw, ${numbers[3]}rem);`;
+};
+
 const generateTokens = () => {
 	const tokens = {};
 
@@ -21,8 +34,8 @@ const generateTokens = () => {
 		.filter(i => i)
 		.forEach((i) => tokens[i.split(': ')[0]] = i.split(': ')[1]);
 
-    tokens['step--0.5'] = `calc((${tokens['step--1']} + ${tokens['step-0']}) / 2)`;
-    tokens['step--1.5'] = `calc((${tokens['step--2']} + ${tokens['step--1']}) / 2)`;
+    tokens['step--0.5'] = generateIntermediateStep(tokens['step--1'], tokens['step-0']);
+    tokens['step--1.5'] = generateIntermediateStep(tokens['step--2'], tokens['step--1']);
 
 	return tokens;
 };
