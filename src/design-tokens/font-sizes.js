@@ -33,9 +33,9 @@ const generateTokens = () => {
 		.map(i => i.replace(/\/\*((?!\*\/).|\n)+\*\/+/g, '').trim().replace('--', ''))
 		.filter(i => i)
 		.forEach((i) => tokens[i.split(': ')[0]] = i.split(': ')[1]);
-
-    tokens['step--0.5'] = generateIntermediateStep(tokens['step--1'], tokens['step-0']);
-    tokens['step--1.5'] = generateIntermediateStep(tokens['step--2'], tokens['step--1']);
+	
+	tokens['step--0.5'] = generateIntermediateStep(tokens['step--1'], tokens['step-0']);
+	tokens['step--1.5'] = generateIntermediateStep(tokens['step--2'], tokens['step--1']);
 
 	return tokens;
 };
