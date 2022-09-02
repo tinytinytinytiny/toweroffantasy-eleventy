@@ -82,7 +82,3 @@ details table,
 table p {
 	max-width: 38rem;
 }
-
-.table-container > table p {
-	min-width: 25ch;
-}
