@@ -1,7 +1,3 @@
-summary + table {
-	margin-top: 0;
-}
-
 table {
     --cell-padding-x: theme('spacing.s');
     --cell-padding-y: theme('spacing.2xs');
@@ -11,6 +7,15 @@ table {
 	min-width: min(100%, theme('width.copy'));
 	text-align: left;
 	width: min(100%, theme('width.copy'));
+}
+
+.table-container {
+	overflow-x: auto;
+}
+
+summary + table,
+summary + .table-container {
+	margin-top: 0;
 }
 
 table[data-padding="loose"] {
@@ -78,6 +83,6 @@ table p {
 	max-width: 38rem;
 }
 
-.overflow-x-auto > table p {
+.table-container > table p {
 	min-width: 25ch;
 }

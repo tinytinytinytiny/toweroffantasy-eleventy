@@ -6,5 +6,5 @@ const md = require('markdown-it')({
 
 module.exports = (children) => {
 	const content = md.render(children);
-	return `<div class="overflow-x-auto">${content}</div>`;
+	return `<div class="table-container">${content}</div>`;
 };
