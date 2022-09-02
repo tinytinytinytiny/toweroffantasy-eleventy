@@ -64,6 +64,7 @@ module.exports = (config) => {
 	});
 	config.addPairedShortcode('aside', require('./src/_11ty/shortcodes/aside.js'));
 	config.addPairedShortcode('bigTable', require('./src/_11ty/shortcodes/big-table.js'));
+	config.addPairedShortcode('table', require('./src/_11ty/shortcodes/table.js'));
 	config.addPairedShortcode('sheet', require('./src/_11ty/shortcodes/sheet.js'));
 	config.addPairedShortcode('details', require('./src/_11ty/shortcodes/details.js'));
 	config.addPairedShortcode('detailsSheet', require('./src/_11ty/shortcodes/details-sheet.js'));

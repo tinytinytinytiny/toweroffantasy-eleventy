@@ -4,7 +4,7 @@ const md = require('markdown-it')({
 	typographer: true
 }).disable('code');
 
-module.exports = (children, stretch) => {
+module.exports = (children) => {
 	const content = md.render(children);
-	return `<div class="big-table" ${(stretch) ? 'data-width="stretch"' : ''}>${content}</div>`;
+	return `<div class="overflow-x-auto">${content}</div>`;
 };

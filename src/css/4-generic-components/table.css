@@ -10,6 +10,7 @@ table {
 	border-spacing: 0;
 	min-width: min(100%, theme('width.copy'));
 	text-align: left;
+	width: min(100%, theme('width.copy'));
 }
 
 table[data-padding="loose"] {
@@ -73,6 +74,10 @@ details table,
 	min-width: 100%;
 }
 
+table p {
+	max-width: 38rem;
+}
+
 .overflow-x-auto > table p {
-	min-width: 23ch;
+	min-width: 25ch;
 }

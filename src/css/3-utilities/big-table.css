@@ -4,19 +4,19 @@
 }
 
 .big-table > table {
-	max-width: none;
+	width: auto;
 }
 
-/* .big-table[data-width="stretch"] {
+.big-table[data-width="stretch"] {
 	max-width: 100%;
 }
 
 .big-table[data-width="stretch"] > table {
 	width: 100%;
-} */
+}
 
 .big-table > table p {
-	min-width: 23ch;
+	min-width: 25ch;
 }
 
 summary + .big-table {

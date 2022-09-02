@@ -47,7 +47,7 @@ The main source of materials is killing creatures on your Artificial Island, inc
 <img class="inline-block" src="/assets/images/guides/Home{{ item }}.png" alt="{{ item }}" width="42" height="42">
 {%- endmacro %}
 
-{% bigTable %}
+{% table %}
 <table>
 	<thead>
 		<tr>
@@ -84,12 +84,12 @@ The main source of materials is killing creatures on your Artificial Island, inc
 		</tr>
 	</tbody>
 </table>
-{% endbigTable %}
+{% endtable %}
 
 ### Building Levels
 Resources will accumulate for up to 24 hours, after which they must be collected.
 
-{% bigTable %}
+{% table %}
 | Level | Resources per Hour | Max Resources (24 hr) |
 |-------|--------------------|-----------------------|
 | 1     | 4                  | 96                    |
@@ -101,4 +101,4 @@ Resources will accumulate for up to 24 hours, after which they must be collected
 | 7     | 21                 | 504                   |
 | 8     | 23                 | 552                   |
 | 9     | 25                 | 600                   |
-{% endbigTable %}
+{% endtable %}
