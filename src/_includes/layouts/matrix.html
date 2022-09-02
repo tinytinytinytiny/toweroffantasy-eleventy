@@ -19,29 +19,31 @@
 		<h2 id="set-{{ sets[i] }}">{{ sets[i] }}-Piece Set</h2>
 		{{ content[0][i] | markdown | safe }}
 		{% if content.length > 1 %}
-			<h3>Advancement</h3>
-			<div class="table-container">
-				<table>
-					<thead>
-						<tr>
-							<th scope="col">Stars</th>
-							<th scope="col">{{ sets[i] }}-Piece Set Bonus</th>
-						</tr>
-					</thead>
-					<tbody>
-						{% for effects in content %}
-							{% if loop.index > 1 %}
-								<tr>
-									<th class="text-primary whitespace-nowrap" scope="row">
-										{{ loop.index0 }}&nbsp;★ <span class="visually-hidden"> star{{ 's' if loop.index > 1 }}</span>
-									</th>
-									<td class="stack">{{ effects[i] | markdown | safe }}</td>
-								</tr>
-							{% endif %}
-						{% endfor %}
-					</tbody>
-				</table>
-			</div>
+			<details>
+				<summary class="chip">Advancement</summary>
+				<div class="big-table wrapper">
+					<table>
+						<thead>
+							<tr>
+								<th scope="col">Stars</th>
+								<th scope="col">{{ sets[i] }}-Piece Set Bonus</th>
+							</tr>
+						</thead>
+						<tbody>
+							{% for effects in content %}
+								{% if loop.index > 1 %}
+									<tr>
+										<th class="text-primary whitespace-nowrap" scope="row">
+											{{ loop.index0 }}&nbsp;★ <span class="visually-hidden"> star{{ 's' if loop.index > 1 }}</span>
+										</th>
+										<td class="stack">{{ effects[i] | markdown | safe }}</td>
+									</tr>
+								{% endif %}
+							{% endfor %}
+						</tbody>
+					</table>
+				</div>
+			</details>
 		{% else %}
 			<p>
 				<small class="text-accent">This matrix cannot be starred.</small>
@@ -53,4 +55,11 @@
 {% block ending %}
 	{% set collection = 'matrices' %}
 	{% include "partials/mini-list.html" %}
+{% endblock %}
+
+{% block scripts %}
+	{% set js %}
+		{% include "scripts/expand-details.js" %}
+	{% endset %}
+	<script>{{ js | jsmin | safe }}</script>
 {% endblock %}
