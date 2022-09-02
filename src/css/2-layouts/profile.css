@@ -1,9 +1,10 @@
 .profile {
 	--content-min-width: 30ch;
+	--gutter: theme('spacing.m-l');
 	align-items: center;
 	display: flex;
 	flex-flow: row wrap;
-	gap: var(--gutter, theme('spacing.m-l'));
+	gap: var(--gutter);
 }
 
 .profile > :first-child {

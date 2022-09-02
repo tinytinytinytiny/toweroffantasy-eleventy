@@ -1,7 +1,7 @@
 .flex-grid {
 	display: flex;
 	flex-flow: row wrap;
-	gap: var(--gutter, theme('spacing.s-l'));
+	gap: var(--gutter);
 }
 
 .flex-grid > * {

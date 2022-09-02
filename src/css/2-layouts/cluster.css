@@ -3,5 +3,5 @@
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: flex-start;
-	gap: var(--gutter, theme('spacing.s-l'));
+	gap: var(--gutter);
 }

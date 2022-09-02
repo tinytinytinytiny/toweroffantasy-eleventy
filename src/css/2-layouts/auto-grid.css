@@ -4,7 +4,7 @@
 		var(--grid-placement, auto-fill),
 		minmax(var(--grid-min-item-size, 12rem), 1fr)
   );
-  gap: var(--gutter, theme('spacing.s'));
+  gap: var(--gutter);
 }
 
 .auto-grid[data-rows='masonry'] {

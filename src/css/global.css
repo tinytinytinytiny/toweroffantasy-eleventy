@@ -4,6 +4,7 @@
 @import-glob "3-*/*.css";
 @import-glob "4-*/*.css";
 @import-glob "5-*/*.css";
+@import-glob "6-*/*.css";
 
 @tailwind base;
 @tailwind components;

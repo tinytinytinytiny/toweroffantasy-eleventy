@@ -2,6 +2,6 @@
 	align-items: center;
 	display: flex;
 	flex-flow: row wrap;
-	gap: var(--gutter, theme('spacing.s-l'));
+	gap: var(--gutter);
 	justify-content: space-between;
 }
