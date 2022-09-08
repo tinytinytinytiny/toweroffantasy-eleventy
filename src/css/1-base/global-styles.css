@@ -66,6 +66,7 @@ main > * + * {
 
 img {
 	height: auto;
+	font-size: theme('fontSize.step-0');
 	flex: none;
 }
 
