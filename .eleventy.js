@@ -37,9 +37,7 @@ module.exports = (config) => {
 	config.addFilter('entries', obj => Object.entries(obj));
 	config.addFilter('keys', obj => Object.keys(obj));
 	config.addFilter('values', obj => Object.values(obj));
-	config.addFilter('markdown', (value) => {
-		return md.render(value);
-	});
+	config.addFilter('markdown', (value) => md.render(value));
 	config.addNunjucksAsyncFilter('jsmin', async function (code, callback) {
 		try {
 			const minified = await minify(code);

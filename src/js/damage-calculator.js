@@ -145,11 +145,11 @@ function groupDropdowns({ fieldset, group = 'options', selector } = {}) {
 				const options = dropdown.querySelectorAll(selector || 'option');
 
 				options.forEach((option) => {
-				  if (selections.includes(stripNumber(option.value)) && stripNumber(option.value) !== stripNumber(dropdown.value)) {
-				  	hide(option);
-				  } else {
-				  	unhide(option);
-				  }
+					if (selections.includes(stripNumber(option.value)) && stripNumber(option.value) !== stripNumber(dropdown.value)) {
+						hide(option);
+					} else {
+						unhide(option);
+					}
 				});
 
 				if (e.target.value && stripNumber(dropdown.value) === stripNumber(e.target.value)) {
