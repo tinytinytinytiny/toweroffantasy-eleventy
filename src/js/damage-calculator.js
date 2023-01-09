@@ -6,6 +6,20 @@ document.getElementById('damage-calculator').addEventListener('change', (e) => {
 	}
 });
 
+if (document.querySelector('fieldset#chip1 select').value.endsWith('4')) {
+	document.querySelector('fieldset#chip2').disabled = true;
+
+	document.querySelectorAll('[name*="chip2"]').forEach((input) => {
+		if (matchesTagName(input, 'select')) {
+			input.value = '';
+		}
+
+		if (matchesTagName(input, 'input') && input.value === '0') {
+			input.checked = true;
+		}
+	});
+}
+
 groupOptionCategory({
 	fieldset: document.getElementById('weapon-buffs'),
 	label: 'Bonus Effects'
@@ -24,7 +38,7 @@ groupDropdowns({
 document.getElementById('matrices').addEventListener('change', (e) => {
 	const chip2Fieldset = document.querySelector('fieldset#chip2');
 
-	if (e.target.tagName.toLowerCase() === 'select') {
+	if (matchesTagName(e.target, 'select')) {
 		if (e.target.value.endsWith('4')) {
 			chip2Fieldset.disabled = true;
 
@@ -127,7 +141,7 @@ function groupDropdowns({ fieldset, optgroup }) {
  * @param {String} label the 'label' attribute of the <optgroup>
  */
 function groupOptionCategory({ fieldset, label }) {
-	const optgroupChildren = [...fieldset.querySelectorAll(`optgroup[label="${label}"] > *`)];
+	const optgroupChildren = [...fieldset.querySelectorAll(`optgroup[label="${label}"] > option`)];
 	const optgroupValues = new Set();
 
 	optgroupChildren.forEach(option => optgroupValues.add(option.value));
@@ -140,16 +154,20 @@ function groupOptionCategory({ fieldset, label }) {
 
 		// check all sibling <select> elements for <optgroup>s that contain <option>s with values that match the current selection
 		siblingDropdowns.forEach((sibling) => {
-			const optgroup = sibling.querySelector(`optgroup[label="${label}"]`);
-			const optgroupChildren = optgroup.querySelectorAll('option');
+			const siblingOptgroup = sibling.querySelector(`optgroup[label="${label}"]`);
+			const siblingOptgroupChildren = siblingOptgroup.querySelectorAll('option');
 
-			if (optgroupValues.has(stripNumber(sibling.value))) {
-				hide(optgroup);
-				optgroupChildren.forEach((option) => hide(option));
+			if (
+				optgroupValues.has(stripNumber(sibling.value))
+				&& optgroupValues.has(dropdown.value)
+			) {
+				hide(siblingOptgroup);
+				siblingOptgroupChildren.forEach((option) => hide(option));
 			} else {
-				if (!selections.filter(i => optgroupValues.has(i)).length) {
-					unhide(optgroup);
-					optgroupChildren.forEach((option) => unhide(option));
+				const selectedOptgroupValues = selections.filter(selection => optgroupValues.has(selection));
+				if (!selectedOptgroupValues.length) {
+					unhide(siblingOptgroup);
+					siblingOptgroupChildren.forEach((option) => unhide(option));
 				}
 			}
 		});
@@ -172,7 +190,8 @@ function groupOptionCategory({ fieldset, label }) {
 				hide(optgroup);
 				optgroupChildren.forEach((option) => hide(option));
 			} else {
-				if (!selections.filter(i => optgroupValues.has(i)).length) {
+				const selectedOptgroupValues = selections.filter(selection => optgroupValues.has(selection));
+				if (!selectedOptgroupValues.length) {
 					unhide(optgroup);
 					optgroupChildren.forEach((option) => unhide(option));
 				}

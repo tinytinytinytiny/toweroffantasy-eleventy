@@ -1,12 +1,5 @@
 :disabled {
-	color: theme('colors.accent');
-	opacity: 0.65;
-	pointer-events: none;
-	mix-blend-mode: luminosity;
-}
-
-:disabled * {
-	color: theme('colors.accent');
+	cursor: not-allowed;
 }
 
 ::selection {
@@ -14,7 +7,8 @@
 	color: theme('colors.sheet.0')
 }
 
-html, body {
+html,
+body {
 	overflow-x: -moz-hidden-unscrollable;
 	overflow-x: clip;
 }
@@ -36,10 +30,9 @@ body {
 #site {
 	--sidebar-content-min-width: 50rem;
 	background-image: linear-gradient(90deg,
-		theme('colors.sheet.0 / 95%'),
-		theme('colors.sheet.0 / 65%') 70rem,
-		transparent 120rem
-	);
+			theme('colors.sheet.0 / 95%'),
+			theme('colors.sheet.0 / 65%') 70rem,
+			transparent 120rem);
 	min-height: inherit;
 	max-width: 120rem;
 }
@@ -82,7 +75,8 @@ figure:not([data-border="none"]) > iframe {
 	box-shadow: 0 0 0 1px theme('colors.primary' / 70%), var(--tw-shadow);
 }
 
-a:focus, summary:focus {
+a:focus,
+summary:focus {
 	border: 0;
 	outline: 0.12em solid theme('colors.primary');
 	outline-offset: 0.2em;
@@ -92,6 +86,13 @@ fieldset {
 	border: none;
 	padding: 0;
 	margin: 0;
+}
+
+fieldset:disabled * {
+	color: theme('colors.accent');
+	opacity: 0.65;
+	mix-blend-mode: luminosity;
+	pointer-events: none;
 }
 
 legend {
