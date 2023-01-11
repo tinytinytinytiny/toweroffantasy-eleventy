@@ -1,25 +1,25 @@
 <div class="character-info profile sheet" data-china="{{ isChina }}">
 	{% image 'src/assets/images/charts/' + page.fileSlug + '.png', 'Radar chart of ' + name + '’s personality traits' %}
-	<div class="auto-grid">
+	<dl class="auto-grid">
 		<div class="infobite">
-			<h3>Gender</h3>
-			<p>{{ traits.gender }}</p>
+			<dt>Gender</dt>
+			<dd>{{ traits.gender }}</dd>
 		</div>
 		<div class="infobite">
-			<h3>Height</h3>
-			<p>{{ traits.height }}</p>
+			<dt>Height</dt>
+			<dd>{{ traits.height }}</dd>
 		</div>
 		<div class="infobite">
-			<h3>Birthplace</h3>
-			<p>{{ traits.birthplace }}</p>
+			<dt>Birthplace</dt>
+			<dd>{{ traits.birthplace }}</dd>
 		</div>
 		<div class="infobite">
-			<h3>Horoscope</h3>
-			<p>{{ traits.horoscope }}</p>
+			<dt>Horoscope</dt>
+			<dd>{{ traits.horoscope }}</dd>
 		</div>
 		<div class="infobite">
-			<h3>Birthday</h3>
-			<p>{{ traits.birthday }}</p>
+			<dt>Birthday</dt>
+			<dd>{{ traits.birthday }}</dd>
 		</div>
-	</div>
+	</dl>
 </div>
