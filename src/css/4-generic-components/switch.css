@@ -3,6 +3,10 @@
 	user-select: none;
 }
 
+.switch label {
+	display: contents;
+}
+
 .switch__toggle {
 	cursor: pointer;
 	display: inline-block;
@@ -39,20 +43,24 @@
 	@apply bg-bold;
 }
 
-input:focus-visible + .switch__toggle {
+input:focus-visible + .switch__toggle,
+input:focus-visible + * .switch__toggle {
 	outline: 0.12em solid theme('colors.primary');
 	outline-offset: 0.2em;
 }
 
-input:checked + .switch__toggle::before {
+input:checked + .switch__toggle::before,
+input:checked + * .switch__toggle::before {
 	@apply bg-primary/20;
 }
 
-input:checked + .switch__toggle::after {
+input:checked + .switch__toggle::after,
+input:checked + * .switch__toggle::after {
 	@apply bg-primary;
 	transform: translateX(150%);
 }
 
-input:checked + .switch__toggle:hover::after {
+input:checked + .switch__toggle:hover::after,
+input:checked + * .switch__toggle:hover::after {
 	@apply bg-primary;
 }
