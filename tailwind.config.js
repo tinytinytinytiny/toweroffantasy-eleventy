@@ -28,6 +28,11 @@ module.exports = {
 			opacity: {
 				'25': '.25'
 			},
+			letterSpacing: {
+				wide: '0.035em',
+				wider: '0.06em',
+				widest: '0.085em'
+			},
 			maxWidth: {
 				copy: '46rem'
 			},
@@ -67,7 +72,7 @@ module.exports = {
 	},
 	plugins: [
 		// Generates custom property values from tailwind config
-		plugin(function({ addComponents, config }) {
+		plugin(function ({ addComponents, config }) {
 			if (process.env.NODE_ENV === 'production') return;
 
 			let result = '';
@@ -123,18 +128,18 @@ module.exports = {
 		}),
 
 		// Generates custom utility classes
-		plugin(function({ addUtilities, config }) {
+		plugin(function ({ addUtilities, config }) {
 			const currentConfig = config();
 			const customUtilities = [{
-					key: 'spacing',
-					prefix: 'stack-space',
-					property: '--stack-space'
-				},
-				{
-					key: 'spacing',
-					prefix: 'gutter',
-					property: '--gutter'
-				}
+				key: 'spacing',
+				prefix: 'stack-space',
+				property: '--stack-space'
+			},
+			{
+				key: 'spacing',
+				prefix: 'gutter',
+				property: '--gutter'
+			}
 			];
 
 			customUtilities.forEach(({

@@ -23,7 +23,7 @@ module.exports = {
 	},
 
 	// Text
-	base: '#c8c8cc',
+	base: '#bdbec0',
 	bold: '#fafafa',
 	accent: '#c5c8e7',
 

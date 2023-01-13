@@ -7,7 +7,7 @@
 	font-family: theme('fontFamily.sans');
 	font-size: theme('fontSize.step--1');
 	font-weight: normal;
-	line-height: 1.15;
+	line-height: 1.2;
 }
 
 .infobite > :last-child {

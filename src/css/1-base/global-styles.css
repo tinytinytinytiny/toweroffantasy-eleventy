@@ -23,8 +23,8 @@ body {
 	color: theme('colors.base');
 	font-family: theme('fontFamily.sans');
 	font-size: theme('fontSize.step-0');
-	letter-spacing: 0.016em;
-	line-height: 1.55;
+	letter-spacing: 0.024em;
+	line-height: 1.6;
 }
 
 #site {

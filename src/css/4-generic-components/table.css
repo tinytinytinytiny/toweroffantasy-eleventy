@@ -1,7 +1,7 @@
 table {
-    --cell-padding-x: theme('spacing.s');
-    --cell-padding-y: theme('spacing.2xs');
-	@apply leading-normal text-step--0.5;
+	--cell-padding-x: theme('spacing.s');
+	--cell-padding-y: theme('spacing.2xs');
+	@apply leading-normal text-step--0.5 tracking-wide;
 	border-collapse: collapse;
 	border-spacing: 0;
 	min-width: min(100%, theme('width.copy'));
@@ -19,8 +19,8 @@ summary + .table-container {
 }
 
 table[data-padding="loose"] {
-    --cell-padding-y: theme('spacing.2xs-xs');
-    --cell-padding-x: theme('spacing.s-m');
+	--cell-padding-y: theme('spacing.2xs-xs');
+	--cell-padding-x: theme('spacing.s-m');
 }
 
 thead {
@@ -47,7 +47,8 @@ thead.visually-hidden + tbody > tr:first-child {
 	border-top: none;
 }
 
-td, th {
+td,
+th {
 	padding: var(--cell-padding-y) var(--cell-padding-x);
 }
 
@@ -57,7 +58,7 @@ th {
 }
 
 thead th {
-    --cell-padding-y: theme('spacing.xs');
+	--cell-padding-y: theme('spacing.xs');
 	max-width: 16ch;
 	text-transform: uppercase;
 	vertical-align: bottom;

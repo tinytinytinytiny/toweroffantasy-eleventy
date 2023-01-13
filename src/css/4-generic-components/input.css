@@ -1,4 +1,6 @@
-input[type="text"], input[type="number"], select {
+input[type="text"],
+input[type="number"],
+select {
 	background-color: theme('colors.sheet.1');
 	border: 1px solid theme('colors.divider');
 	box-shadow: none;
@@ -32,8 +34,9 @@ input:invalid {
 	color: theme('colors.error');
 }
 
-label[for], .label {
-	@apply tracking-wide;
+label[for],
+.label {
+	@apply tracking-wider;
 	color: theme('colors.accent');
 	font-family: theme('fontFamily.fancy');
 	font-size: theme('fontSize.step--1');
