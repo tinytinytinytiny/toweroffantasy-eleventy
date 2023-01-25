@@ -1,35 +1,36 @@
 {% extends "layouts/base.html" %}
 
 {% block content %}
-	{% asyncEach mount in mounts %}
-		<article class="sheet profile max-w-full">
-			<div>
-				{% image 'src/assets/images/mount/' + mount + '.png', '', '', '', 'lazy' %}
-			</div>
-			<div class="stack copy">
-				<h2 id="{{ items.mounts[mount].name | slugify }}" data-appearance="none">{{ items.mounts[mount].name }} {% if items.mounts[mount].isChina %}{% china %}{% endif %}</h2>
-				{{ items.mounts[mount].source | markdown | safe }}
-				{% if items.mounts[mount].materials %}
-					<details>
-						<summary class="chip">Materials ({{ items.mounts[mount].materials }})</summary>
-						<ul class="sheet padded p-s reel gutter-2xs m-0" data-layer="3" tabindex="0">
-							{% asyncEach i in range(0, items.mounts[mount].materials) %}
-								<li class="item-frame" data-size="m" data-rarity="{{ '3' if loop.index === 1 else '1' }}">
-									{% image 'src/assets/images/mount/' + mount + '-' + loop.index + '.png', '', '', '', 'lazy' %}
-								</li>
-							{% endeach %}
-						</ul>
-					</details>
-				{% endif %}
-			</div>
-		</article>
-	{% endeach %}
+{% asyncEach mount in mounts %}
+<article class="sheet profile max-w-full">
+	<div>
+		{% image 'src/assets/images/mount/' + mount + '.png', '', '', '', 'lazy' %}
+	</div>
+	<div class="stack copy">
+		<h2 id="{{ items.mounts[mount].name | slugify }}" data-appearance="none">{{ items.mounts[mount].name }} {% if
+			items.mounts[mount].isChina %}{% china %}{% endif %}</h2>
+		{{ items.mounts[mount].source | markdown | safe }}
+		{% if items.mounts[mount].materials %}
+		<details>
+			<summary class="chip">Materials ({{ items.mounts[mount].materials }})</summary>
+			<ul class="sheet p-s reel gutter-2xs m-0" data-layer="3" tabindex="0">
+				{% asyncEach i in range(0, items.mounts[mount].materials) %}
+				<li class="item-frame" data-size="m" data-rarity="{{ '3' if loop.index === 1 else '1' }}">
+					{% image 'src/assets/images/mount/' + mount + '-' + loop.index + '.png', '', '', '', 'lazy' %}
+				</li>
+				{% endeach %}
+			</ul>
+		</details>
+		{% endif %}
+	</div>
+</article>
+{% endeach %}
 {% endblock %}
 
 {% block scripts %}
-	{% set js %}
-		{% include "scripts/expand-details.js" %}
-		{% include "scripts/reel.js" %}
-	{% endset %}
-	<script>{{ js | jsmin | safe }}</script>
+{% set js %}
+{% include "scripts/expand-details.js" %}
+{% include "scripts/reel.js" %}
+{% endset %}
+<script>{{ js | jsmin | safe }}</script>
 {% endblock %}
