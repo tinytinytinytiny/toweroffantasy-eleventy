@@ -3,6 +3,6 @@
 	--stack-space: var(--__default-stack-space);
 }
 
-.stack > * + * {
+.stack > :where(* + *) {
 	margin-top: var(--stack-space);
 }

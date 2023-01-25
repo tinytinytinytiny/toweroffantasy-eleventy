@@ -2,65 +2,55 @@
 	--stack-space: theme('spacing.m');
 }
 
-.copy > figure, .copy > figure + *,
-.copy > hr, .copy > hr + * {
+.copy > :where(figure, figure + *, hr, hr + *) {
 	--modified-stack-space: theme('spacing.xl');
 }
 
-.copy > aside,
-.copy > aside + * {
+.copy > :where(aside, aside + *) {
 	--modified-stack-space: theme('spacing.l');
 }
 
-.copy > aside,
-.copy > figure,
-.copy > hr {
+.copy > :where(aside, figure, hr) {
 	--stack-space: var(--modified-stack-space);
 }
 
-.copy > aside:not(:last-child),
-.copy > figure:not(:last-child),
-.copy > hr:not(:last-child) {
+.copy > :where(aside, figure, hr):not(:last-child) {
 	margin-bottom: var(--modified-stack-space);
 }
 
-.copy > figure > *:not(.stack),
-.copy > aside > *:not(.stack) {
+:where(.copy > aside, .copy > figure) > * {
 	--stack-space: theme('spacing.m');
 }
 
-.copy > summary + h2,
-.copy > summary + h3,
-.copy > summary + h4,
-.copy > summary + p {
+.copy > :where(summary + :is(h2, h3, h4, p)) {
 	--stack-space: 1.32em;
 }
 
-.copy > h2 {
+.copy > :where(h2) {
 	--stack-space: theme('spacing.2xl');
 }
 
-.copy > h3 {
+.copy > :where(h3) {
 	--stack-space: theme('spacing.l-xl');
 }
 
-.copy > h4 {
+.copy > :where(h4) {
 	--stack-space: theme('spacing.l')
 }
 
-.copy > h2 + *:not([class*="mt-"]) {
+.copy > :where(h2 + *) {
 	margin-top: theme('spacing.m');
 }
 
-.copy > h2[data-appearance="none"] + *:not([class*="mt-"]) {
+.copy > :where(h2[data-appearance="none"] + *) {
 	margin-top: 1em;
 }
 
-.copy > h3 + *:not([class*="mt-"]) {
+.copy > :where(h3 + *) {
 	margin-top: theme('spacing.xs');
 }
 
-.copy > h4 + *:not([class*="mt-"]) {
+.copy > :where(h4 + *) {
 	margin-top: theme('spacing.2xs');
 }
 

@@ -4,7 +4,7 @@
 *,
 *::before,
 *::after {
-  box-sizing: border-box;
+	box-sizing: border-box;
 }
 
 [hidden] {
@@ -22,16 +22,16 @@ figure,
 blockquote,
 dl,
 dd {
-  margin: 0;
+	margin: 0;
 }
 
 /* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
 ul[role='list'],
 ol[role='list'] {
-  list-style: none;
+	list-style: none;
 }
 
-ul, ol {
+:where(ul, ol) {
 	margin-top: 0;
 	margin-bottom: 0;
 }
@@ -39,31 +39,31 @@ ul, ol {
 /* Prevent zooming when orientation changes on some iOS devices */
 html {
 	-webkit-text-size-adjust: none;
-  text-size-adjust: none;
+	text-size-adjust: none;
 }
 
 /* Set core root defaults */
 html:focus-within {
-  scroll-behavior: smooth;
+	scroll-behavior: smooth;
 }
 
 /* Set core body defaults */
 body {
-  min-height: 100vh;
+	min-height: 100vh;
 	min-height: 100lvh;
 }
 
 /* A elements that don't have a class get default styles */
 a:not([class]) {
-  text-decoration-skip-ink: auto;
+	text-decoration-skip-ink: auto;
 }
 
 /* Make images easier to work with */
 img,
 picture,
 video {
-  max-width: 100%;
-  display: block;
+	max-width: 100%;
+	display: block;
 }
 
 /* Inherit fonts for inputs and buttons */
@@ -71,14 +71,17 @@ input,
 button,
 textarea,
 select {
-  font: inherit;
+	font: inherit;
 }
 
 input[type="range"] {
-	-webkit-appearance: none; /* Hides the slider so that custom slider can be made */
+	-webkit-appearance: none;
+	/* Hides the slider so that custom slider can be made */
 	appearance: none;
-	width: 100%; /* Specific width is required for Firefox. */
-	background: transparent; /* Otherwise white in Chrome */
+	width: 100%;
+	/* Specific width is required for Firefox. */
+	background: transparent;
+	/* Otherwise white in Chrome */
 }
 
 input[type="range"]::-webkit-slider-thumb {
@@ -87,7 +90,8 @@ input[type="range"]::-webkit-slider-thumb {
 }
 
 input[type="range"]:focus {
-	outline: none; /* Removes the blue border. You should probably do some kind of focus styling for accessibility reasons though. */
+	outline: none;
+	/* Removes the blue border. You should probably do some kind of focus styling for accessibility reasons though. */
 }
 
 input[type="range"]::-ms-track {
