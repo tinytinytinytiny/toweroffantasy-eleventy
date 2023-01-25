@@ -157,6 +157,6 @@ ol:where([class]) {
 	padding: 0;
 }
 
-ul:where([class]) > li {
+:where(ul[class]) > li {
 	list-style: none;
 }
