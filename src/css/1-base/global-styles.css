@@ -31,8 +31,8 @@ body {
 	--sidebar-content-min-width: 50rem;
 	background-image: linear-gradient(90deg,
 			theme('colors.sheet.0 / 95%'),
-			theme('colors.sheet.0 / 65%') 70rem,
-			transparent 120rem);
+			theme('colors.sheet.0 / 65%') 1120px,
+			transparent 1920px);
 	min-height: inherit;
 	max-width: 120rem;
 }
