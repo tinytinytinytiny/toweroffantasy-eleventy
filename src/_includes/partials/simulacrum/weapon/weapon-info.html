@@ -1,13 +1,3 @@
-{% macro weaponStat(statTitle, statValue) %}
-	<div class="mr-xs-m">
-		{{ caller() }}
-		<div class="infobite align-middle inline-block">
-			<h4>{{ statTitle }}</h4>
-			<p>{{ statValue }}</p>
-		</div>
-	</div>
-{% endmacro %}
-
 <article class="weapon" data-element="{{ weapon.element }}">
 	<div class="sheet stack p-s" data-border="top">
 		<h3 class="weapon-header">
