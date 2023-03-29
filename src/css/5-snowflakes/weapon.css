@@ -82,6 +82,7 @@
 	background-size: 32px 29px, 100%;
 	border-radius: 2px;
 	content: attr(data-rank) / '';
+	display: block;
 	font-size: 21.5px;
 	font-style: italic;
 	height: 31px;
