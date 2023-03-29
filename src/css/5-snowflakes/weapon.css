@@ -67,6 +67,10 @@
 	--attribute-icon: url('/assets/images/icon/ele_ice.png');
 }
 
+.weapon-info__attribute[data-element="physical"] {
+	--attribute-icon: url('/assets/images/icon/ele_physical.png');
+}
+
 .weapon-info__rating {
 	position: relative;
 }
