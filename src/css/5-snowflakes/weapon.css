@@ -15,13 +15,13 @@
 	margin-top: -68px;
 }
 
-.weapon-stats {
-	--gutter: 0.8rem;
-}
-
 .weapon-img {
 	filter: drop-shadow(0 16px 19px rgba(0, 0, 0, 0.3));
 	z-index: 1;
+}
+
+.weapon-info {
+	--gutter: 0.8rem;
 }
 
 .weapon-info__title {
@@ -30,32 +30,66 @@
 	margin-top: theme('spacing.s');
 }
 
+.weapon-info__attribute,
 .weapon-info__rating {
-	background-image: linear-gradient(-45deg, transparent 15%, var(--rarity-color) 15%);
-	border-radius: 2px;
-	font-size: 1.35rem;
-	font-style: italic;
-	height: 31px;
-	line-height: 31px;
-	padding: 0;
-	position: relative;
-	text-align: center;
-	width: 34px;
+	margin-right: theme('spacing.xs-m');
+	padding-left: 44px;
+	vertical-align: middle;
 }
 
-.weapon-info__rating > * {
+.weapon-info__attribute {
+	background-image: var(--attribute-icon);
+	background-position-y: center;
+	background-repeat: no-repeat;
+}
+
+.weapon-info__attribute[data-resonance="damage"] {
+	--attribute-icon: url('/assets/images/icon/reso_damage.png');
+}
+
+.weapon-info__attribute[data-resonance="support"] {
+	--attribute-icon: url('/assets/images/icon/reso_support.png');
+}
+
+.weapon-info__attribute[data-resonance="tank"] {
+	--attribute-icon: url('/assets/images/icon/reso_tank.png');
+}
+
+.weapon-info__attribute[data-element="electric"] {
+	--attribute-icon: url('/assets/images/icon/ele_electric.png');
+}
+
+.weapon-info__attribute[data-element="fire"] {
+	--attribute-icon: url('/assets/images/icon/ele_fire.png');
+}
+
+.weapon-info__attribute[data-element="ice"] {
+	--attribute-icon: url('/assets/images/icon/ele_ice.png');
+}
+
+.weapon-info__rating {
 	position: relative;
-	z-index: 1;
 }
 
 .weapon-info__rating::before {
-	content: '';
-	background-image: linear-gradient(-45deg, transparent 15%, rgba(0, 0, 0, 0.85) 15%);
+	background-image: linear-gradient(-45deg, transparent 15%, rgba(0, 0, 0, 0.85) 15%), linear-gradient(-45deg, transparent 15%, var(--rarity-color) 15%);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: 32px 29px, 100%;
+	border-radius: 2px;
+	content: attr(data-rank) / '';
+	font-size: 21.5px;
+	font-style: italic;
+	height: 31px;
+	line-height: 31px;
 	position: absolute;
-	top: 1px;
-	right: 1px;
-	bottom: 1px;
-	left: 1px;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	margin: auto;
+	text-align: center;
+	text-transform: uppercase;
+	width: 34px;
 }
 
 [data-element="electric"] > .sheet {
