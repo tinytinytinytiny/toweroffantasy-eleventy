@@ -81,7 +81,7 @@
 	background-repeat: no-repeat;
 	background-size: 32px 29px, 100%;
 	border-radius: 2px;
-	content: attr(data-rank) / '';
+	content: attr(data-rank);
 	display: block;
 	font-size: 21.5px;
 	font-style: italic;
@@ -95,6 +95,18 @@
 	text-align: center;
 	text-transform: uppercase;
 	width: 34px;
+}
+
+@supports (content: 'x' / 'y') {
+	.weapon-info__rating::before {
+		content: attr(data-rank) / '';
+	}
+}
+
+@supports not (content: 'x' / 'y') {
+	.weapon-info__rating::before {
+		alt: '';
+	}
 }
 
 [data-element="electric"] > .sheet {
