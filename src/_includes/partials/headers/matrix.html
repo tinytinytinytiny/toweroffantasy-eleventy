@@ -2,12 +2,12 @@
 
 {% block content %}
 <div class="page-header__inner" data-page="item">
-	<div>
+	<hgroup>
 		<h1>{{ title }}</h1>
 		<p class="font-fancy uppercase text-step-2 tracking-wide text-bold/90">
 			<span class="highlight-rarity italic" data-rarity="{{ rarity }}">{{ string.rarity[rarity - 1] }}</span> Matrix
 		</p>
-	</div>
+	</hgroup>
 	<div class="item-frame" data-variant="matrix">
 		{% image 'src/assets/images/chip/' + page.fileSlug + '.png', '' %}
 	</div>
