@@ -7,8 +7,17 @@
 		{% image 'src/assets/images/mount/' + mount + '.png', '', '', '', 'lazy' %}
 	</div>
 	<div class="stack copy">
-		<h2 id="{{ items.mounts[mount].name | slugify }}" data-appearance="none">{{ items.mounts[mount].name }} {% if
-			items.mounts[mount].isChina %}{% china %}{% endif %}</h2>
+		<h2 id="{{ items.mounts[mount].name | slugify }}" data-appearance="none">
+			{% if items.mounts[mount].isChina %}
+			<span class="visually-hidden">
+				(China Exclusive)&nbsp;
+			</span>
+			{% endif %}
+			{{ items.mounts[mount].name }}
+			{% if items.mounts[mount].isChina %}
+			<span aria-hidden="true">{% china %}</span>
+			{% endif %}
+		</h2>
 		{{ items.mounts[mount].source | markdown | safe }}
 		{% if items.mounts[mount].materials %}
 		<details>

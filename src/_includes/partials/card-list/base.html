@@ -2,19 +2,20 @@
 
 <ul class="card-list auto-grid gap-xs">
 	{% asyncEach item in items | sortBy('name') | reverse | sortBy(['isNew', 'isChina']) | reverse %}
-		<li class="sheet card stack p-s">
-			{% block cardImage %}{% endblock %}
-			<div class="font-bold text-center stack">
-				{% if item.data.isChina %}
-					<div class="absolute top-3xs left-3xs leading-none">
-						{% china %}
-					</div>
-				{% endif %}
-				<a class="text-bold/90" href="{{ item.url }}" data-underline="on-hover">
-					{{ item.data.name }}
-				</a>
-				{% block extraInformation %}{% endblock %}
+	<li class="sheet card stack p-s">
+		{% block cardImage %}{% endblock %}
+		<div class="font-bold text-center stack">
+			{% if item.data.isChina %}
+			<div class="absolute top-3xs left-3xs leading-none" aria-hidden="true">
+				{% china %}
 			</div>
-		</li>
+			{% endif %}
+			<a class="text-bold/90" href="{{ item.url }}" data-underline="on-hover">
+				{% if item.data.isChina %}<span class="visually-hidden">(China Exclusive)&nbsp;</span>{% endif %}
+				{{ item.data.name }}
+			</a>
+			{% block extraInformation %}{% endblock %}
+		</div>
+	</li>
 	{% endeach %}
 </ul>
