@@ -2,35 +2,44 @@
 	Data reflects unleveled weapons.
 </p>
 {% for category, list in skills | entries %}
-	<h3>{{ string.skillCategories[category] }}</h3>
-	{% for skillSlug in list %}
-		{% if skillSlug in string.skills[page.fileSlug] %}
-			{% set skill = string.skills[page.fileSlug][skillSlug] %}
-		{% else %}
-			{% set skill = string.skills[skillSlug] %}
-		{% endif %}
-		<details>
-			<summary class="chip">
-				<span class="skill-summary spread">
-					<span>
-						{{ skill.name }}
-						<br class="visually-hidden">
-					</span>
-					{% if skill.input %}
-						{% include "partials/simulacrum/skill-input.html" %}
-					{% endif %}
-				</span>
-			</summary>
-			<div class="sheet stack copy">
-				{{ skill.desc | markdown | safe }}
-				{% if skill.breakdown %}
-					<ol>
-						{% for attack in skill.breakdown %}
-							<li>{{ attack | markdown | safe }}</li>
-						{% endfor %}
-					</ol>
+<h3>{{ string.skillCategories[category] }}</h3>
+{% for skillSlug in list %}
+{% if skillSlug in string.skills[page.fileSlug] %}
+{% set skill = string.skills[page.fileSlug][skillSlug] %}
+{% else %}
+{% set skill = string.skills[skillSlug] %}
+{% endif %}
+<details>
+	<summary class="chip">
+		<span class="skill-summary spread">
+			<span>
+				{{ skill.name }}
+				<br class="visually-hidden">
+			</span>
+			<span aria-hidden="true">
+				{% if skill.input %}
+				{% include "partials/simulacrum/skill-input.html" %}
 				{% endif %}
-			</div>
-		</details>
-	{% endfor %}
+			</span>
+		</span>
+	</summary>
+	<dl class="sheet">
+		{% if skill.input %}
+		<dt class="visually-hidden">Input</dt>
+		<dd class="visually-hidden">{% include "partials/simulacrum/skill-input.html" %}</dd>
+		{% endif %}
+		<dt class="visually-hidden">Description</dt>
+		<dd class="stack copy">
+			{{ skill.desc | markdown | safe }}
+			{% if skill.breakdown %}
+			<ol>
+				{% for attack in skill.breakdown %}
+				<li>{{ attack | markdown | safe }}</li>
+				{% endfor %}
+			</ol>
+			{% endif %}
+		</dd>
+	</dl>
+</details>
+{% endfor %}
 {% endfor %}

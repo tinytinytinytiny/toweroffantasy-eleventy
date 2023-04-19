@@ -3,17 +3,17 @@ module.exports = {
 		let response = '';
 
 		if (itemUrl === pageUrl) {
-		  response = ' aria-current="page"';
+			response = ' aria-current="page"';
 		}
 
 		if (itemUrl.length > 1 && pageUrl.indexOf(itemUrl) === 0) {
-		  response += ' data-state="active"';
+			response += ' data-state="active"';
 		}
 
 		return response;
-  },
+	},
 	getWeaponRating(value, data) {
-		return data.find(i => value > i.threshold );
+		return data.find(i => value > i.threshold);
 	},
 	getFilteredByTag(collection, tag) {
 		return collection.filter(i => i.data.tags.includes(tag));
@@ -24,7 +24,7 @@ module.exports = {
 		if (random) {
 			for (let i = 0; i < filteredItems.length; i++) {
 				const j = Math.floor(Math.random() * (i + 1));
-			  [filteredItems[i], filteredItems[j]] = [filteredItems[j], filteredItems[i]];
+				[filteredItems[i], filteredItems[j]] = [filteredItems[j], filteredItems[i]];
 			}
 		}
 

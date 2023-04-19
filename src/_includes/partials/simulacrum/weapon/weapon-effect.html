@@ -1,15 +1,15 @@
 <h3>Weapon Effect</h3>
-<div class="highlight-bold stack copy">
-	<h4 class="text-primary">{{ string.element[weapon.element].effectName }}</h4>
+<dl class="highlight-bold stack copy">
+	<dt class="h4 text-primary">{{ string.element[weapon.element].effectName }}</dt>
 	{% if 'rarity' + rarity in string.element[weapon.element].description %}
-		{{ string.element[weapon.element].description['rarity' + rarity] | markdown | safe }}
+	<dd>{{ string.element[weapon.element].description['rarity' + rarity] | markdown | safe }}</dd>
 	{% else %}
-		{{ string.element[weapon.element].description | markdown | safe }}
+	<dd>{{ string.element[weapon.element].description | markdown | safe }}</dd>
 	{% endif %}
 	{% if weapon.exclusiveEffect %}
-		{% for effect in content.wepEffects %}
-			<h4 class="text-primary">{{ effect.name }}</h4>
-			{{ effect.effect | markdown | safe }}
-		{% endfor %}
+	{% for effect in content.wepEffects %}
+	<dt class="h4 text-primary">{{ effect.name }}</dt>
+	<dd>{{ effect.effect | markdown | safe }}</dd>
+	{% endfor %}
 	{% endif %}
-</div>
+</dl>

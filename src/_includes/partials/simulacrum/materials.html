@@ -1,14 +1,18 @@
 <div class="stack copy">
 	<h4>Upgrade Materials</h4>
-	<div class="cluster gap-2xs">
-		<div class="item-frame" data-size="s" data-rarity="1">
-			{% image 'src/assets/images/mat/' + weapon.element + '1.png', string.element[weapon.element].name | capitalize + ' upgrade material' %}
-		</div>
+	<ul class="upgrade-materials-list" role="list">
+		<li class="inline-block">
+			<div class="item-frame" data-size="s" data-rarity="1">
+				{% image 'src/assets/images/mat/' + weapon.element + '1.png', string.element[weapon.element].name |
+				capitalize + ' upgrade material' %}
+			</div>
+		</li>
 		{% for material in weapon.materials %}
-			<span>+</span>
+		<li class="inline-block">
 			<div class="item-frame" data-size="s" data-rarity="1">
 				{% image 'src/assets/images/mat/' + material + '1.png', material | capitalize + ' upgrade material' %}
 			</div>
+		</li>
 		{% endfor %}
-	</div>
+	</ul>
 </div>

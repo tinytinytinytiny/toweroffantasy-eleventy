@@ -22,19 +22,19 @@
 	--stack-space: theme('spacing.m');
 }
 
-.copy > :where(summary + :is(h2, h3, h4, p)) {
+.copy > :where(summary + :is(h2, .h2, h3, .h3, h4, .h4, p)) {
 	--stack-space: 1.32em;
 }
 
-.copy > :where(h2) {
+.copy > :where(h2, .h2) {
 	--stack-space: theme('spacing.2xl');
 }
 
-.copy > :where(h3) {
+.copy > :where(h3, .h3) {
 	--stack-space: theme('spacing.l-xl');
 }
 
-.copy > :where(h4) {
+.copy > :where(h4, .h4) {
 	--stack-space: theme('spacing.l')
 }
 
@@ -46,11 +46,11 @@
 	margin-top: 1em;
 }
 
-.copy > :where(h3 + *) {
+.copy > :where(h3 + *, .h3 + *) {
 	margin-top: theme('spacing.xs');
 }
 
-.copy > :where(h4 + *) {
+.copy > :where(h4 + *, .h4 + *) {
 	margin-top: theme('spacing.2xs');
 }
 

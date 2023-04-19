@@ -12,6 +12,8 @@
 }
 
 .weapon-header {
+	display: flex;
+	flex-flow: column nowrap;
 	margin-top: -68px;
 }
 
@@ -25,9 +27,8 @@
 }
 
 .weapon-info__title {
-	display: block;
-	font-size: theme('fontSize.step-2');
 	margin-top: theme('spacing.s');
+	order: 1;
 }
 
 .weapon-info__attribute,
@@ -123,4 +124,16 @@
 
 [data-element="physical"] > .sheet {
 	--border-color: theme('colors.element.physical');
+}
+
+.upgrade-materials-list > li + li::before {
+	alt: '';
+	content: ' + ';
+	white-space: break-spaces;
+}
+
+@supports (content: 'x' / 'y') {
+	.upgrade-materials-list > li + li::before {
+		content: ' + ' / '';
+	}
 }

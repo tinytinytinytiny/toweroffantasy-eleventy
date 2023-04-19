@@ -1,6 +1,6 @@
 <nav class="cluster items-start gap-l" aria-label="Footer">
-	<section class="grow stack">
-		<h2 class="text-step-0 font-sans normal-case tracking-[inherit]" data-appearance="none">Site Navigation</h2>
+	<div class="grow stack">
+		<p class="font-bold text-bold leading-none">Site Navigation</p>
 		<ul class="auto-grid content-start gap-2xs copy">
 			{% for item in site.navigation.pages %}
 			{% if not item.external %}
@@ -10,17 +10,17 @@
 			{% endif %}
 			{% endfor %}
 		</ul>
-	</section>
-	<section class="stack">
-		<h2 class="text-step-0 font-sans normal-case tracking-[inherit]" data-appearance="none">Community</h2>
+	</div>
+	<div class="stack">
+		<p class="font-bold text-bold leading-none">Community</p>
 		<ul class="auto-grid content-start gap-2xs copy">
 			{% for item in site.navigation.socials -%}
 			<li>
-				<a href="{{ item.url }}" data-underline="on-hover" {% if item.external %}target="_blank"{% endif %}>
+				<a href="{{ item.url }}" data-underline="on-hover" {% if item.external %}target="_blank" {% endif %}>
 					{{ item.text }}
 				</a>
 			</li>
 			{% endfor %}
 		</ul>
-	</section>
+	</div>
 </nav>

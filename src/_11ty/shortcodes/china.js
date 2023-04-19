@@ -1,1 +1,1 @@
-module.exports = (variant = 'default') => `<span class="china-badge" data-variant="${variant}"><abbr title="China">CN</abbr><span class="visually-hidden"> Exclusive:</span></span>`;
+module.exports = (variant = 'default') => `<span class="china-badge" data-variant="${variant}"><abbr title="China" aria-hidden="true">CN</abbr><span class="visually-hidden">(China Exclusive)&nbsp;</span></span>`;
