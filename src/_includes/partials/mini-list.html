@@ -1,5 +1,5 @@
-<nav class="bg-sheet-1/90 shadow-xl region wrapper copy stack" data-wrapper="site">
-	<h2>Other {{ collection | capitalize }}</h2>
+<nav class="bg-sheet-1/90 shadow-xl region wrapper copy stack" data-wrapper="site" aria-labelledby="{{ 'other-' + collection | slugify }}">
+	<h2 id="{{ 'other-' + collection | slugify }}">Other {{ collection | capitalize }}</h2>
 	<div class="stack with-rule">
 		{% for rarity, items in collections[collection] | sortBy('rarity') | groupBy('rarity') | reverse %}
 			<div class="copy stack">

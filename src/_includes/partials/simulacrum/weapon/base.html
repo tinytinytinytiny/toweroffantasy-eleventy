@@ -1,7 +1,10 @@
-<div class="sidebar gap-l-xl" data-direction="rtl">
-	{% include "partials/simulacrum/weapon/weapon-info.html" %}
-	<div class="stack copy">
-		{% include "partials/simulacrum/weapon/weapon-effect.html" %}
-		{% include "partials/simulacrum/weapon/weapon-advancement.html" %}
+<div>
+	<p class="visually-hidden">{{ name }}’s weapon is the {{ weapon.name }}.</p>
+	<div class="sidebar gap-l-xl" data-direction="rtl">
+		{% include "partials/simulacrum/weapon/weapon-info.html" %}
+		<div class="stack copy">
+			{% include "partials/simulacrum/weapon/weapon-effect.html" %}
+			{% include "partials/simulacrum/weapon/weapon-advancement.html" %}
+		</div>
 	</div>
 </div>
