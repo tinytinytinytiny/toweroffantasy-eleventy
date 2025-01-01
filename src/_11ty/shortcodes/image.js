@@ -19,6 +19,6 @@ module.exports = async (src, alt = '', className, attributes = '', loading, id) 
 		${Object.values(metadata).map(imageFormat => {
 		return `<source type="${imageFormat[0].sourceType}" srcset="${imageFormat.map(entry => entry.url)}">`;
 	}).join("\n")}
-		<img src="${data.url}" width="${data.width}" height="${data.height}" alt="${alt}" decoding="async" ${(loading && loading === 'lazy') ? 'loading="lazy"' : ''} ${(id) ? `id="${id}"` : ''}>
+		<img src="${data.url}" width="${data.width}" height="${data.height}" alt="${alt}" ${(loading && loading === 'lazy') ? 'loading="lazy"' : ''} ${(id) ? `id="${id}"` : ''}>
 	</picture>`;
 };
