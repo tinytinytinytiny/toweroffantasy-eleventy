@@ -1,6 +1,6 @@
 const Image = require('@11ty/eleventy-img');
 
-module.exports = async (src, alt = '', className, attributes = '', loading) => {
+module.exports = async (src, alt = '', className, attributes = '', loading, id) => {
 	if (alt === undefined) {
 		// You bet we throw an error on missing alt (alt="" works okay)
 		throw new Error(`Missing \`alt\` on myImage from: ${src}`);
@@ -17,8 +17,8 @@ module.exports = async (src, alt = '', className, attributes = '', loading) => {
 
 	return `<picture ${(className && className.length) ? `class="${className}"` : ''} ${attributes}>
 		${Object.values(metadata).map(imageFormat => {
-			return `<source type="${imageFormat[0].sourceType}" srcset="${imageFormat.map(entry => entry.url)}">`;
-		}).join("\n")}
-		<img src="${data.url}" width="${data.width}" height="${data.height}" alt="${alt}" decoding="async" ${(loading && loading === 'lazy') ? 'loading="lazy"' : ''}>
+		return `<source type="${imageFormat[0].sourceType}" srcset="${imageFormat.map(entry => entry.url)}">`;
+	}).join("\n")}
+		<img src="${data.url}" width="${data.width}" height="${data.height}" alt="${alt}" decoding="async" ${(loading && loading === 'lazy') ? 'loading="lazy"' : ''} ${(id) ? `id="${id}"` : ''}>
 	</picture>`;
 };

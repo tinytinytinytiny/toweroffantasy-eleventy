@@ -9,6 +9,7 @@
 	position: fixed;
 	-webkit-user-select: none;
 	user-select: none;
+	view-transition-name: site-bg;
 	width: 100vw;
 	width: 100lvw;
 	z-index: -1;
@@ -37,5 +38,27 @@
 	.site-bg.legacy {
 		background-image: none;
 		display: none;
+	}
+}
+
+::view-transition-old(site-bg) {
+	animation: fade 0.5s ease-out forwards;
+}
+
+::view-transition-new(site-bg) {
+	animation: fade 1s ease-in reverse;
+}
+
+::view-transition-group(site-bg) {
+	z-index: 0;
+}
+
+@keyframes fade {
+	from {
+		opacity: 1;
+	}
+
+	to {
+		opacity: 0;
 	}
 }

@@ -1,3 +1,7 @@
+@view-transition {
+	navigation: auto;
+}
+
 :disabled {
 	cursor: not-allowed;
 }
@@ -11,6 +15,7 @@ html,
 body {
 	overflow-x: -moz-hidden-unscrollable;
 	overflow-x: clip;
+	font-size-adjust: from-font;
 }
 
 html {
@@ -35,12 +40,17 @@ body {
 			transparent 1920px);
 	min-height: inherit;
 	max-width: 120rem;
+	view-transition-name: site;
 }
 
 #site::after {
 	content: '';
 	flex-basis: 20rem;
 	flex-grow: 1;
+}
+
+::view-transition-group(site) {
+	z-index: 1;
 }
 
 .site-content > * {

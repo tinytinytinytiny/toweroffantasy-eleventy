@@ -9,6 +9,7 @@
 		<link rel="stylesheet" href="/css/fonts.css">
 		<link rel="stylesheet" href="/css/global.css">
 		<link rel="icon" href="/assets/images/avatar/tata.png">
+		<link rel="expect" blocking="render" href="#site-bg-img">
   </head>
   <body>
 		{% include "partials/skip-link.html" %}
@@ -35,11 +36,17 @@
 		{% set navScript %}
 			{% include "scripts/nav.js" %}
 		{% endset %}
+		{% set speculationrules %}
+			{% include "scripts/speculationrules.json" %}
+		{% endset %}
 		<script>
 			{{ webStorageDetectionScript | jsmin | safe }}
 		</script>
 		<script src="/js/main.js"></script>
 		<script>{{ navScript | jsmin | safe }}</script>
+		<script type="speculationrules">
+			{{ speculationrules | safe }}
+		</script>
 		{% block scripts %}{% endblock %}
   </body>
 </html>
