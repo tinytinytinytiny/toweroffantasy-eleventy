@@ -50,13 +50,19 @@ body {
 }
 
 ::view-transition-group(site) {
+	animation: none;
+	animation-duration: 0s !important;
 	z-index: 1;
 }
 
-@media (prefers-reduced-motion: reduce) {
-	::view-transition-group(site) {
-		animation-duration: 0s !important;
-	}
+::view-transition-image-pair(site),
+::view-transition-new(site),
+::view-transition-old(site) {
+	animation: none;
+}
+
+::view-transition-old(site) {
+	display: none;
 }
 
 .site-content > * {
