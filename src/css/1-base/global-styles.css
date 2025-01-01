@@ -53,6 +53,12 @@ body {
 	z-index: 1;
 }
 
+@media (prefers-reduced-motion: reduce) {
+	::view-transition-group(site) {
+		animation-duration: 0s !important;
+	}
+}
+
 .site-content > * {
 	max-width: 72rem;
 }
