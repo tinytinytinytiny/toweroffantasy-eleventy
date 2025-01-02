@@ -89,12 +89,26 @@ picture {
 	flex: none;
 }
 
-figure:not([data-border="none"]) > img,
-figure:not([data-border="none"]) > picture,
-figure:not([data-border="none"]) > video,
-figure:not([data-border="none"]) > iframe {
+video {
+	height: auto;
+}
+
+figure:not([data-border="none"]):has(img, picture, video, iframe) {
 	@apply shadow-lg shadow-primary/10;
 	box-shadow: 0 0 0 1px theme('colors.primary' / 70%), var(--tw-shadow);
+	overflow: auto;
+	/* needed so box-shadow isn't cut off */
+}
+
+@supports not selector(:has(*)) {
+
+	figure:not([data-border="none"]) > img,
+	figure:not([data-border="none"]) > picture,
+	figure:not([data-border="none"]) > video,
+	figure:not([data-border="none"]) > iframe {
+		@apply shadow-lg shadow-primary/10;
+		box-shadow: 0 0 0 1px theme('colors.primary' / 70%), var(--tw-shadow);
+	}
 }
 
 a:focus,

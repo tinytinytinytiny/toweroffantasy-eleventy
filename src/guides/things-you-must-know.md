@@ -12,8 +12,9 @@ Vidya comin soon. Maybe. For now just a text guide.
 
 ## 1. Infinite Climb
 <figure class="max-w-full">
-	<video controls width="1280">
-		<source src="/assets/videos/infinite-climb.mp4">
+	<video controls width="1280" height="720">
+		<source src="/assets/videos/infinite-climb.webm" type="video/webm">
+		<source src="/assets/videos/infinite-climb.mp4" type="video/mp4">
 	</video>
 </figure>
 
@@ -31,8 +32,9 @@ Advanced users can use Samir’s weapon’s Aerial hold attack to gain even more
 
 ## 2. Jetpack Dash
 <figure class="max-w-full">
-	<video controls width="1280">
-		<source src="/assets/videos/glider-dashing.mp4">
+	<video controls width="1280" height="720">
+		<source src="/assets/videos/glider-dashing.webm" type="video/webm">
+		<source src="/assets/videos/glider-dashing.mp4" type="video/mp4">
 	</video>
 </figure>
 
