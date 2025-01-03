@@ -12,8 +12,13 @@
 }
 
 ::view-transition-group(navigation) {
+	animation: none;
 	animation-duration: 0s !important;
 	z-index: 10;
+}
+
+::view-transition-old(navigation) {
+	display: none;
 }
 
 @supports (padding: max(0px)) {
@@ -183,6 +188,17 @@
 .nav__links [data-state="active"] {
 	color: theme('colors.primary');
 	font-weight: bold;
+	view-transition-name: navigation-link;
+}
+
+::view-transition-group(navigation-link) {
+	animation: none;
+	animation-duration: 0s !important;
+	z-index: 2;
+}
+
+::view-transition-old(navigation-link) {
+	display: none;
 }
 
 .nav__links a[data-state="active"]::before {
