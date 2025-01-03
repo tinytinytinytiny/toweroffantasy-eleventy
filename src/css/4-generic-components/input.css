@@ -30,6 +30,13 @@ select:focus {
 	outline: none;
 }
 
+input[type="text"]:focus::selection,
+input[type="number"]:focus::selection,
+select:focus::selection {
+	background-color: theme('colors.sheet.0');
+	color: theme('colors.bold');
+}
+
 input:invalid {
 	color: theme('colors.error');
 }
