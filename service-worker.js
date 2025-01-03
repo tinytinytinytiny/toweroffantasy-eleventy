@@ -1,4 +1,4 @@
-const VERSION = '0.0.1';
+const VERSION = '0.0.2';
 const coreCacheName = VERSION + '_core';
 const imagesCacheName = VERSION + '_images';
 const pagesCacheName = VERSION + '_pages';
@@ -86,7 +86,7 @@ self.addEventListener('fetch', (event) => {
 	// PAGES: network first, cache fallback
 	if (
 		request.headers.get('Accept').includes('text/html')
-		&& !request.url.match(/\/(offline)$/)
+		&& !request.url.match(/\/(damage-calculator)/)
 	) {
 		event.respondWith(
 			fetch(request).then((responseFromFetch) => {
@@ -96,7 +96,7 @@ self.addEventListener('fetch', (event) => {
 				return responseFromFetch;
 			}).catch(() => {
 				return caches.match(request)
-					.then((responseFromCache) => responseFromCache || caches.match('offline.html'));
+					.then((responseFromCache) => responseFromCache);
 			})
 		); // end respondWith
 		return;
