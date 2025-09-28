@@ -8,7 +8,7 @@
 }
 
 .character-info > .auto-grid {
-	--grid-min-item-size: 8rem;
+	--grid-min-item-size: 8em;
 }
 
 .character-info[data-china="true"] img {

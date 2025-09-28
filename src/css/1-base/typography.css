@@ -21,6 +21,7 @@ h1,
 	font-size: theme('fontSize.step-5');
 	letter-spacing: -0.015em;
 	text-transform: uppercase;
+	text-wrap: balance;
 }
 
 @media screen and (min-width: 32rem) {

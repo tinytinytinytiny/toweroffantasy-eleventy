@@ -89,6 +89,7 @@ figure:not([data-border="none"]):has(img, picture, video, iframe) {
 
 figure:not([data-border="none"]):has(figcaption) {
 	box-shadow: none;
+	overflow: initial;
 }
 
 figure:not([data-border="none"]):has(figcaption) > :where(img, picture, video, iframe) {
